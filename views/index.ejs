@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Gravitas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css'/>
@@ -64,28 +65,13 @@
 
     window.onload = function(){
         start();
-    };
-    function start(){
-        var  m = document.getElementById('count');
-        counter(m);
-    }
-    function counter(m){
-        var time  = countdown();
-       // d.innerHTML =;
-        m.innerHTML = Math.round(time.months)+ ' Months & ' +  Math.round(time.days) + ' Days till GraVITas \'16';
-
-
-    }
-</script>
-<script>
-    var overlay =  document.getElementById('overlay');
-    $(document).ready(function () {
         $('.slider').slider({full_width: true});
-        $(".button-collapse").sideNav();
-
-        overlay.style.height = window.innerHeight + 'px';
-    });
-
+    };
+    function start() {
+        var m = document.getElementById('count');
+        var time = countdown();
+        m.innerHTML = Math.round(time.months) + ' Months & ' + Math.round(time.days) + ' Days till GraVITas \'16';
+    }
 </script>
 </body>
 </html>
