@@ -12,19 +12,13 @@
 </head>
 <body>
 
-<!--<nav>
-    <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center" id="count">GraVITas '16</a>
-    </div>
-</nav>-->
-
     <div class="slider fullscreen">
         <ul class="slides">
             <li>
                 <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">
                 <!-- random image -->
                 <div class="caption center-align">
-                    <h1 style="font-size: 1000%">GRAVITAS '15</h1>
+                    <h1 style="font-size: 700%">GRAVITAS '15</h1>
                     <h5 class="light grey-text text-lighten-3">Design | Create | Patent</h5>
                     <h5 class="light grey-text text-lighten-3">Memories</h5>
                 </div>
@@ -54,11 +48,12 @@
                 </div>
             </li>
             <li>
-                <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243745/prev/young2.jpg">
+                <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243678/prev/dark2.jpg">
                 <!-- random image -->
                 <div class="caption center-align">
                     <h3>GraVITas '15</h3>
                     <h5 class="light grey-text text-lighten-3">View more <a href="https://www.facebook.com/graVITas15" style="color:yellow">here.</a></h5>
+                    <h4 class="light grey-text text-lighten-3" id="count"> </h4>
                 </div>
             </li>
         </ul>
@@ -71,7 +66,6 @@
         start();
     };
     function start(){
-        var clear = countdown.deadline;
         var  m = document.getElementById('count');
         counter(m);
     }
@@ -84,10 +78,14 @@
     }
 </script>
 <script>
+    var overlay =  document.getElementById('overlay');
     $(document).ready(function () {
         $('.slider').slider({full_width: true});
         $(".button-collapse").sideNav();
+
+        overlay.style.height = window.innerHeight + 'px';
     });
+
 </script>
 </body>
 </html>
