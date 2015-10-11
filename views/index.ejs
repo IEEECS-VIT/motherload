@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gravitas</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link href='/bower/materialize/dist/css/materialize.min.css' rel="stylesheet"/>
+
+    <script src="/bower/jquery/dist/jquery.min.js"></script>
+    <script src="/bower/materialize/dist/js/materialize.min.js"></script>
+</head>
+<body>
+
+<!--<nav>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center" id="count">GraVITas '16</a>
+    </div>
+</nav>-->
+
+    <div class="slider fullscreen">
+        <ul class="slides">
+            <li>
+                <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h1 style="font-size: 1000%">GRAVITAS '15</h1>
+                    <h5 class="light grey-text text-lighten-3">Design | Create | Patent</h5>
+                    <h5 class="light grey-text text-lighten-3">Memories</h5>
+                </div>
+            </li>
+            <li>
+                <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random4.jpg">
+                <!-- random image -->
+                <div class="caption left-align">
+                    <h3>Design</h3>
+                    <h5 class="light grey-text text-lighten-3">New 3-D printer donated to VIT University by Botzlab.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243746/prev/y2b.jpg">
+                <!-- random image -->
+                <div class="caption right-align">
+                    <h3>Create</h3>
+                    <h5 class="light grey-text text-lighten-3">3 new products were presented at the opening ceremony.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444592387/patent.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Patent</h3>
+                    <h5 class="light grey-text text-lighten-3">7 patents were filed on the first day of graVITas '15.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243745/prev/young2.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h3>GraVITas '15</h3>
+                    <h5 class="light grey-text text-lighten-3">View more <a href="https://www.facebook.com/graVITas15" style="color:yellow">here.</a></h5>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+<script src="/javascripts/countdown.js"></script>
+<script>
+
+    window.onload = function(){
+        start();
+    };
+    function start(){
+        var clear = countdown.deadline;
+        var  m = document.getElementById('count');
+        counter(m);
+    }
+    function counter(m){
+        var time  = countdown();
+       // d.innerHTML =;
+        m.innerHTML = Math.round(time.months)+ ' Months & ' +  Math.round(time.days) + ' Days till GraVITas \'16';
+
+
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        $('.slider').slider({full_width: true});
+        $(".button-collapse").sideNav();
+    });
+</script>
+</body>
+</html>

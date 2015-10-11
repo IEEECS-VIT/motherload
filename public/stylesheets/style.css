@@ -1,0 +1,38 @@
+body {
+ font: 14px Open Sans Condensed,"Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+.slider{
+  z-index: -1 !important;
+}
+nav{
+  z-index: 1 !important;
+}
+nav{
+  background: rgba(25,25,25,0.9)!important;
+  margin: 0;
+}
+.counter{
+
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+}
+.counter #count{
+  margin: 0;
+  padding: 0;
+  width:20%;
+  font-size: 200%;
+  background:rgba(25,25,25,0.9);
+  margin-left: 40%;
+
+}
+@media (max-width: 900px){
+  .counter #count{
+    width:100%;
+    margin: 0;
+
+  }
+}
