@@ -7,9 +7,6 @@ body {
   z-index: -1 !important;
 }
 nav{
-  z-index: 1 !important;
-}
-nav{
   background: rgba(25,25,25,0.9)!important;
   margin: 0;
 }
@@ -19,6 +16,10 @@ nav{
   padding: 0;
   color: white;
   text-align: center;
+}
+
+.main-caption{
+  font-size: 800%;
 }
 .counter #count{
   margin: 0;
@@ -35,4 +36,8 @@ nav{
     margin: 0;
 
   }
+  .main-caption{
+    font-size: 500%;
+  }
+
 }
