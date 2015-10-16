@@ -21,7 +21,7 @@ function get_time() {
 function countdown(){
     var time = function(){};
     var month = 9; //final month
-    var date = 1; //final date
+    var date = 23; //final date
     var hour = 0;//final hour 0-23
     var mins = 0;//final minutes
     var sec = 0;//final seconds
@@ -40,8 +40,11 @@ function countdown(){
     if(year - currentYear >0){
         deadline = (year - currentYear)*31622400 + time_deadline -get_time();
         var months = 12*(year - currentYear) - current.getMonth() + month -1;
-
-        days =m_days[current.getMonth()]-current.getDate();
+        if(current.getDate() > date)
+        {
+            days = m_days[current.getMonth()] + date - current.getDate();
+        }
+        else days =date-current.getDate();
     }
     time.deadline = deadline;
 
