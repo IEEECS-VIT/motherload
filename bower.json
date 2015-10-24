@@ -2,6 +2,7 @@
   "name": "Gravitas16",
   "description": "",
   "dependencies": {
-    "materialize": "~0.97.1"
+    "materialize": "~0.97.1",
+    "bootstrap": "~3.3.5"
   }
 }
