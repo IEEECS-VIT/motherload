@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Gallery | Gravitas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <![endif]-->
+    <link href="/images/favicon-96x96.png" rel="icon" />
+    <link href="/stylesheets/styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+</head>
+<body>
+
+<script src="/bower/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+<script>
+    $(function($){
+        var addToAll = false;
+        var gallery = true;
+        var titlePosition = 'inside';
+        $(addToAll ? 'img' : 'img.fancybox').each(function(){
+            var $this = $(this);
+            var title = $this.attr('title');
+            var src = $this.attr('data-big') || $this.attr('src');
+            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+            $this.wrap(a);
+        });
+        if (gallery)
+            $('a.fancybox').attr('rel', 'fancyboxgallery');
+        $('a.fancybox').fancybox({
+            titlePosition: titlePosition
+        });
+    });
+    $.noConflict();
+</script>
+<!-- Wrap all page content here -->
+<div id="wrap">
+
+
+    <header class="masthead">
+
+        <!-- Carousel
+      ================================================== -->
+        <div id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243737/prev/robostacle1.jpg" >
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h2>Design</h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243746/prev/viaropes.jpg">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h2>Create</h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h2>Patent</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.carousel-inner -->
+            <div class="logo">graVITas' 15</div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <!-- /.carousel -->
+
+    </header>
+
+</div>
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-custom navbar-inverse navbar-fixed-top" id="nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav nav-justified">
+                <li id="all"><a href="#nav"class="active">All</a></li>
+                <li id="prev"><a href="#nav" >Previous</a></li>
+                <li id="events"><a href="#nav">Events</a></li>
+                <li id="organizer"><a href="#nav">Organizers</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="gal" class="container">
+
+</div>
+
+<script src="/javascripts/gall.js">
+
+
+
+</script>
+
+
+<script src="bootstrap.min.js"></script>
+
+<script src="/javascripts/scripts.js"></script>
+</body>
+</html>
