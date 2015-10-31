@@ -6,6 +6,7 @@ body {
     /* The html and body elements cannot have any padding or margin. */
     -webkit-font-smoothing: antialiased;
     font-family: 'Open Sans', sans-serif;
+    background-image: url('background.jpg');
 }
 
 .row {
@@ -31,6 +32,10 @@ body {
     margin-top:50px;
     padding-top:20px;
     padding-bottom:20px;
+}
+#gal
+{
+
 }
 
 
@@ -96,16 +101,39 @@ header {
 }
 #nav
 {
-    background-color: rgba(34, 34, 34, 0.74);
-    color: #d4d4d4;
-}
+    background-color: rgba(238, 248, 251, 0.74);
+    color: #141414;
+    padding-left: 30%;
 
+}
+#all
+{
+    padding-right: 55px;
+}
+#previous
+{
+    padding-right: 55px;
+}
+#events
+{
+    padding-right: 55px;
+}
+#organisers
+{
+    padding-right: 55px;
+}
 header .dropdown-menu {
     top:74px;
     background: #ffcc33;
     border-width:0;
 }
-
+.navbar-collapse li a.active{
+   background-color: black;
+}
+.navbar-inverse .navbar-nav>li>a:active
+{
+    color: black;
+}
 h1 {
     font-size:50px;
 }
@@ -121,12 +149,13 @@ h1 {
     text-shadow: 0px 7px 7px rgba(158, 158, 158, 0.69);
 }
 
-#nav {
+/*#nav {
     width: 100%;
     position:static;
     top:-32px;
+    background-color: transparent;
 }
-
+*/
 #nav.affix {
     position: fixed;
     top: 0;
@@ -153,7 +182,7 @@ img
 }
 
 @media (min-width: 767px) {
-    .navbar-nav.nav-justified > li{
+    .navbar-nav.navbar-inverse > li{
         float:none;
     }
 }
@@ -163,34 +192,38 @@ img
 }
 
 /* customize nav style */
-.navbar-custom {
-    background-color: rgba(46, 46, 46, 0);
+.navbar-inverse{
+    background-color: rgba(46, 46, 46, 0.29);
     font-weight:700;
     text-transform:uppercase;
     border-width:0;
     box-shadow: 0 0 5px rgba(136, 134, 134, 0.54);
 }
 
-.navbar-custom  .navbar-nav>li>a {
+.navbar-inverse  .navbar-nav>li>a {
     color: #9c9c9c;
 }
 a .active
 {
     color: rgba(63, 63, 63, 0.8);
 }
-.navbar-custom  .navbar-nav li>a:hover, .navbar-nav li .open, .navbar-custom .navbar-nav .active a  {
-    background-color: rgba(0, 0, 0, 0.33);
+.navbar-inverse  .navbar-nav li>a:hover, .navbar-nav li .open, .navbar-inverse .navbar-nav .active a  {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding-right: 55px;
+    padding-left: 55px;
 }
-.navbar-custom .navbar-nav>.dropdown>a .caret {
+.navbar-inverse .navbar-nav>.dropdown>a .caret {
     border-top-color: #999;
     border-bottom-color: #999;
 }
-.nav .navbar-nav .nav-justified > li > a:active{
+.nav .navbar-inverse .navbar-nav > li > a:active{
     color: black;
 }
-.navbar-collapse.in { /*3.0.2 bug workaround*/
-    overflow-y: visible;
+.nav .navbar-inverse .navbar-nav > li > a:visited{
+    color: black;
 }
+
+
 
 .navbar-toggle {
     outline:0;
