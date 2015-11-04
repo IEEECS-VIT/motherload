@@ -1218,9 +1218,428 @@ var myArrayevents = [
     }
 
 ];
+var myArrayorganizers = [
+    {
+        "display": "SulabhAggarwal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442356761/2015/organizers/website/SulabhAggarwal.jpg"
+    },
+    {
+        "display": "ShivamMathur",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442356544/2015/organizers/website/ShivamMathur.jpg"
+    },
+    {
+        "display": "SetuShubham",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355179/2015/organizers/website/SetuShubham.jpg"
+    },
+    {
+        "display": "Neeraj",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355172/2015/organizers/website/Neeraj.jpg"
+    },
+    {
+        "display": "RajeshwariJoshi",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355168/2015/organizers/website/RajeshwarJoshi.jpg"
+    },
+    {
+        "display": "AshrinMathur",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355159/2015/organizers/website/AshrinMathur.jpg"
+    },
+    {
+        "display": "SasetaVadlamudi",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355134/2015/organizers/sponsorship/SasetaVadlamudi.jpg"
+    },
+    {
+        "display": "SahilArora",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355115/2015/organizers/sponsorship/SahilArora.jpg"
+    },
+    {
+        "display": "RahulGnani",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355107/2015/organizers/sponsorship/RahulGnani.jpg"
+    },
+    {
+        "display": "KaranSingh",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355093/2015/organizers/sponsorship/KaranSingh.jpg"
+    },
+    {
+        "display": "ShubhamMahajan",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355061/2015/organizers/specialguestcare/ShubhamMahajan.jpg"
+    },
+    {
+        "display": "SantoshRouth",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355037/2015/organizers/specialguestcare/SantoshRouth.jpg"
+    },
+    {
+        "display": "SanskarChandra",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355021/2015/organizers/specialguestcare/SanskarChandra.jpg"
+    },
+    {
+        "display": "SanjayAgarwal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442355009/2015/organizers/specialguestcare/SanjayAgarwal.jpg"
+    },
+    {
+        "display": "RobinAlphonse",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354995/2015/organizers/specialguestcare/RobinAlphonse.jpg"
+    },
+    {
+        "display": "PrajactaNagraj",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354983/2015/organizers/specialguestcare/PrajactaNagraj.jpg"
+    },
+    {
+        "display": "LatikaGupta",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354975/2015/organizers/specialguestcare/LatikaGupta.jpg"
+    },
+    {
+        "display": "KrishnaKhandelwal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354972/2015/organizers/specialguestcare/KrishnaKhandelwal.jpg"
+    },
+    {
+        "display": "KushalSharma",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354953/2015/organizers/specialguestcare/KhushalSharma.jpg"
+    },
+    {
+        "display": "DivyaNegi",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354945/2015/organizers/specialguestcare/DivyaNegi.jpg"
+    },
+    {
+        "display": "AnkitBansal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354935/2015/organizers/specialguestcare/AnkitBansal.jpg"
+    },
+    {
+        "display": "AakanshaSinha",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354919/2015/organizers/specialguestcare/AakankshaSinha.jpg"
+    },
+    {
+        "display": "Siddharth",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354850/2015/organizers/purchase/Siddharth.jpg"
+    },
+    {
+        "display": "SaiCharitha",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354838/2015/organizers/purchase/SaiCharitha.jpg"
+    },
+    {
+        "display": "NirmalSunil",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354826/2015/organizers/purchase/NirmalSunil.jpg"
+    },
+    {
+        "display": "MahaveerSingh",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354822/2015/organizers/purchase/MahaveerSingh.jpg"
+    },
+    {
+        "display": "DharmpalChoudhary",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354813/2015/organizers/purchase/DharmpalChoudhary.jpg"
+    },
+    {
+        "display": "AjayPal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354797/2015/organizers/purchase/AjayPal.jpg"
+    },
+    {
+        "display": "AditiKothari",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354721/2015/organizers/purchase/AditiKothari.jpg"
+    },
+    {
+        "display": "WasimBora",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354691/2015/organizers/registration/WasimBora.jpg"
+    },
+    {
+        "display": "VarunModi",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354683/2015/organizers/registration/VarunModi.jpg"
+    },
+    {
+        "display": "UrvashiDesai",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354675/2015/organizers/registration/UrvashiDesai.jpg"
+    },
+    {
+        "display": "SRajyalakshmi",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354660/2015/organizers/registration/SRajyalakshmi.jpg"
+    },
+    {
+        "display": "ShubhamGoyal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354651/2015/organizers/registration/ShubhamGoyal.jpg"
+    },
+    {
+        "display": "SanchitWazir",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354371/2015/organizers/registration/SanchitWazir.jpg"
+    },
+    {
+        "display": "PoondlaSrujith",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354280/2015/organizers/registration/PoondlaSrujith.jpg"
+    },
+    {
+        "display": "NikithaNagelli",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354256/2015/organizers/registration/NikithaNagelli.jpg"
+    },
+    {
+        "display": "MVinoth",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354241/2015/organizers/registration/MVinoth.jpg"
+    },
+
+    {
+        "display": "MahesanJB",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354231/2015/organizers/registration/MahesanJB.jpg"
+    },
+
+    {
+        "display": "Kavya",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354218/2015/organizers/registration/Kavya.jpg"
+    },
+
+    {
+        "display": "ArunSethupat",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354205/2015/organizers/registration/ArunSethupat.jpg"
+    },
+    {
+        "display": "ArpitMehta",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354195/2015/organizers/registration/ArpitMehta.jpg"
+    },
+    {
+        "display": "AishwaryaPathak",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354184/2015/organizers/registration/AishwaryaPathak.jpg"
+    },
+    {
+        "display": "UtkarshSobti",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442354011/2015/organizers/marketing/UtkarshSobti.jpg"
+    },
+    {
+        "display": "SusomDatta",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353988/2015/organizers/marketing/SusomDatta.jpg"
+    },
+    {
+        "display": "SuryaTeja",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353970/2015/organizers/marketing/SuryaTeja.jpg"
+    },
+    {
+        "display": "SiddharthSharma",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353964/2015/organizers/marketing/SiddharthSharma.jpg"
+    },
+    {
+        "display": "ShivamKumar",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353951/2015/organizers/marketing/ShivamKumar.jpg"
+    },
+    {
+        "display": "SamarthGarg",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353939/2015/organizers/marketing/SamarthGarg.jpg"
+    },
+    {
+        "display": "NazimShah",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353923/2015/organizers/marketing/NazimShah.jpg"
+    },
+    {
+        "display": "MadeepYadav",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353907/2015/organizers/marketing/MandeepYadav.jpg"
+    },
+    {
+        "display": "MadhuriKalki",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353878/2015/organizers/marketing/MadhuriKalki.jpg"
+    },
+    {
+        "display": "KaranDesai",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353866/2015/organizers/marketing/KaranDesai.jpg"
+    },
+    {
+        "display": "AmitiDave",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353856/2015/organizers/marketing/AmitiDave.jpg"
+    },
+    {
+        "display": "Abhishek",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353811/2015/organizers/marketing/Abhishek.jpg"
+    },
+    {
+        "display": "PiyushChoudhary",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353745/2015/organizers/documentation/PiyushChoudhary.jpg"
+    },
+    {
+        "display": "AyushRastogi",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353739/2015/organizers/documentation/AyushRastogi.jpg"
+    },
+    {
+        "display": "AsifImam",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353725/2015/organizers/documentation/AsifImam.jpg"
+    },
+    {
+        "display": "AdityaGupta",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353718/2015/organizers/documentation/AdityaGupta.jpg"
+    },
+    {
+        "display": "TarangSinghal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353709/2015/organizers/documentation/TarangSinghal.jpg"
+    },
+    {
+        "display": "HariPrasad",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353663/2015/organizers/hall/HariPrasad.jpg"
+    },
+    {
+        "display": "PraveenGehlot",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353636/2015/organizers/hall/PraveenGehlot.jpg"
+    },
+    {
+        "display": "RJagadeesh",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353609/2015/organizers/hall/RJagadeesh.jpg"
+    },
+    {
+        "display": "AmrithaPrasad",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353604/2015/organizers/hall/AmrithaPrasad.jpg"
+    },
+    {
+        "display": "RaviTeja",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353603/2015/organizers/hall/RaviTeja.jpg"
+    },
+    {
+        "display": "MeharTharun",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353595/2015/organizers/hall/MeharTharun.jpg"
+    },
+
+    {
+        "display": "LalithChaitanya",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353585/2015/organizers/hall/LalithChaitanya.jpg"
+    },
+    {
+        "display": "KalluriSathwik",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353563/2015/organizers/hall/KalluriSathwik.jpg"
+    },
+    {
+        "display": "SatwikSanka",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353555/2015/organizers/hall/SatwikSanka.jpg"
+    },
+    {
+        "display": "IraShukla",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353547/2015/organizers/hall/IraShukla.jpg"
+    },
+    {
+        "display": "KasturiSanyal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353515/2015/organizers/guestcare/KasturiSanyal.jpg"
+    },
+    {
+        "display": "NishantMeel",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353430/2015/organizers/guestcare/NishantMeel.jpg"
+    },
+    {
+        "display": "MRMadhav",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353424/2015/organizers/guestcare/MRMadhav.jpg"
+    },
+    {
+        "display": "NPremkumar",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353414/2015/organizers/guestcare/NPremkumar.jpg"
+    },
+    {
+        "display": "KadariHarshini",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353401/2015/organizers/guestcare/KadariHarshini.jpg"
+    },
+    {
+        "display": "SaiCharan",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353393/2015/organizers/guestcare/SaiCharan.jpg"
+    },
+    {
+        "display": "SaiChaithanya",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353386/2015/organizers/guestcare/SaiChaithanya.jpg"
+    },
+    {
+        "display": "SaiTharun",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353283/2015/organizers/generalenquiry/SaiTharun.jpg"
+    },
+    {
+        "display": "AishwaryaRavichandran",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353275/2015/organizers/generalenquiry/AishwaryaRavichandran.jpg"
+    },
+    {
+        "display": "PriyangaM",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353274/2015/organizers/generalenquiry/PriyangaM.jpg"
+    },
+    {
+        "display": "MatheshK",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353264/2015/organizers/generalenquiry/MatheshK.jpg"
+    },
+    {
+        "display": "SheshankReddy",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353244/2015/organizers/generalenquiry/SheshankReddy.jpg"
+    },
+    {
+        "display": "NehalSingla",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353203/2015/organizers/finance/NehalSingla.jpg"
+    },
+    {
+        "display": "AayushKarwatkar",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353197/2015/organizers/finance/AayushKarwatkar.jpg"
+    },
+    {
+        "display": "Rughved",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353194/2015/organizers/finance/Rugved.jpg"
+    },
+    {
+        "display": "KartikKamra",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353188/2015/organizers/finance/KartikKamra.jpg"
+    },
+    {
+        "display": "AayushPandey",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353108/2015/organizers/events/AayushPandey.jpg"
+    },
+    {
+        "display": "KaranAggarwal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353106/2015/organizers/events/KaranAggarwal.jpg"
+    },
+    {
+        "display": "JaiAnand",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353105/2015/organizers/events/JaiAnand.jpg"
+    },
+    {
+        "display": "DanishKhullar",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353102/2015/organizers/events/DanishKhullar.jpg"
+    },
+    {
+        "display": "AbhaySuchindra",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353082/2015/organizers/events/AbhaySuchindra.jpg"
+    },
+    {
+        "display": "ChirayuAgarwal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353069/2015/organizers/events/ChirayuAgarwal.jpg"
+    },
+    {
+        "display": "ShikharMittal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353061/2015/organizers/events/ShikharMittal.jpg"
+    },
+    {
+        "display": "MeravModi",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353051/2015/organizers/events/MeravModi.jpg"
+    },
+    {
+        "display": "ShubhamChauhan",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353048/2015/organizers/events/ShubhamChauhan.jpg"
+    },
+    {
+        "display": "KunalNagpal",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353044/2015/organizers/events/KunalNagpal.jpg"
+    },
+    {
+        "display": "RahulVijay",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442353036/2015/organizers/events/RahulVijay.jpg"
+    },
+    {
+        "display": "AdityaRola",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442352953/2015/organizers/design/AdityaRola.jpg"
+    },
+    {
+        "display": "RithvikBoda",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442352951/2015/organizers/design/RithvikBoda.jpg"
+    },
+    {
+        "display": "RaunagSingh",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442352950/2015/organizers/design/RaunaqSingh.jpg"
+    },
+    {
+        "display": "MitLadola",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442352946/2015/organizers/design/MitLadola.jpg"
+    },
+    {
+        "display": "Banga",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442352943/2015/organizers/design/Banga.jpg"
+    },
+    {
+        "display": "Jameer",
+        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442352932/2015/organizers/design/Jameer.jpg"
+    }
+];
 var out="";
 display(myArrayprev);
 display(myArrayevents);
+display(myArrayorganizers);
 function fancy(){
     var addToAll = false;
     var gallery = true;
@@ -1258,16 +1677,19 @@ $(document).ready(function(){
         out="";
         display(myArrayevents);
         fadeout(myArrayprev);
+        fadeout(myArrayorganizers);
         fancy();
     });
     $("#prev").on("click",function(){
         out="";
         display(myArrayprev);
         fadeout(myArrayevents);
+        fadeout(myArrayorganizers);
         fancy();
     });
     $("#organizer").on("click",function(){
         out="";
+        display(myArrayorganizers);
         fadeout(myArrayprev);
         fadeout(myArrayevents);
         fancy();
@@ -1288,7 +1710,20 @@ function display(arr) {
     var i;
     var j;
     for(i = 0; i < arr.length; i=i+4) {
-        out += '<div class="row">';
+        var count=0;
+        var a="";
+        for(var k=0;k<out.length-22;k++)
+        {
+            a+=out.charAt(k);
+            for(var l=1;l<22;l++)
+            {
+                a+=out.charAt(k+l);
+            }
+            if(a=='<div class="col-sm-3">')
+            count++;
+        }
+        if(count==4)
+            out += '<div class="row">';
         for(j=0;j<4;j++)
         {
             if((j+i)<arr.length) {
@@ -1321,6 +1756,7 @@ $(document).ready(function() {
         y.style.zIndex = "0";
         y.style.borderColor= "grey";
         y.style.borderWidth= "0";
+        y.style.opacity="0.5";
 
     })
 });
