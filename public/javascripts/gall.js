@@ -471,10 +471,7 @@ var myArrayprev = [
         "display": "expo6",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1444243688/prev/expo6.jpg"
     },
-    {
-        "display": "expo6",
-        "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1444243688/prev/expo6.jpg"
-    },
+
     {
         "display": "astro2",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1444243688/prev/astro2.jpg"
@@ -884,7 +881,7 @@ var myArrayevents = [
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442941842/2015/events/informals/human-fooseball.png"
     },
     {
-        "display": "forensics",
+        "display": "forensics1",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442941814/2015/events/informals/forensics.jpg"
     },
     {
@@ -1654,92 +1651,109 @@ var setup = function () {
 setup();
 $(document).ready(function () {
     $("#all").on("click", function () {
-        out = "";
-        display(myArrayprev);
-        display(myArrayevents);
-        display(myArrayorganizers);
-        var z = '<a href="#nav" class="active">All</a>';
-        document.getElementById("all").innerHTML = z;
-        z = '<a href="#nav">Events</a>';
-        document.getElementById("events").innerHTML = z;
-        z = '<a href="#nav">Previous</a>';
-        document.getElementById("previous").innerHTML = z;
-        z = '<a href="#nav">Organizers</a>';
-        document.getElementById("organisers").innerHTML = z;
+        var x;
+        var y=document.getElementsByClassName('org');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="inline";
+        }
+        y=document.getElementsByClassName('previous');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="inline";
+        }
+        y=document.getElementsByClassName('eve');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="inline";
+        }
+
 
     });
     $("#events").on("click", function () {
-        out = "";
-        display(myArrayevents);
-        // fadeout(myArrayprev);
-        // fadeout(myArrayorganizers);
-        var z = '<a href="#nav">All</a>';
-        document.getElementById("all").innerHTML = z;
-        z = '<a href="#nav" class="active">Events</a>';
-        document.getElementById("events").innerHTML = z;
-        z = '<a href="#nav">Previous</a>';
-        document.getElementById("previous").innerHTML = z;
-        z = '<a href="#nav">Organizers</a>';
-        document.getElementById("organisers").innerHTML = z;
+        var x;
+        var y=document.getElementsByClassName('org');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="none";
+        }
+        y=document.getElementsByClassName('previous');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="none";
+        }
+        y=document.getElementsByClassName('eve');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="inline";
+        }
     });
     $("#previous").on("click", function () {
-        out = "";
-        display(myArrayprev);
-        // fadeout(myArrayevents);
-        // fadeout(myArrayorganizers);
-        var z = '<a href="#nav">All</a>';
-        document.getElementById("all").innerHTML = z;
-        z = '<a href="#nav">Events</a>';
-        document.getElementById("events").innerHTML = z;
-        z = '<a href="#nav" class="active">Previous</a>';
-        document.getElementById("previous").innerHTML = z;
-        z = '<a href="#nav">Organizers</a>';
-        document.getElementById("organisers").innerHTML = z;
+        var x;
+        var y=document.getElementsByClassName('org');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="none";
+        }
+        y=document.getElementsByClassName('previous');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="inline";
+        }
+        y=document.getElementsByClassName('eve');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="none";
+        }
     });
     $("#organisers").on("click", function () {
-        out = "";
-        display(myArrayorganizers);
-        // fadeout(myArrayprev);
-        // fadeout(myArrayevents);
-        var z = '<a href="#nav">All</a>';
-        document.getElementById("all").innerHTML = z;
-        z = '<a href="#nav">Events</a>';
-        document.getElementById("events").innerHTML = z;
-        z = '<a href="#nav">Previous</a>';
-        document.getElementById("previous").innerHTML = z;
-        z = '<a href="#nav" class="active">Organizers</a>';
-        document.getElementById("organisers").innerHTML = z;
+        var x;
+        var y=document.getElementsByClassName('org');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="initial";
+        }
+        y=document.getElementsByClassName('previous');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="none";
+        }
+        y=document.getElementsByClassName('eve');
+        for(x=0;x< y.length;x++)
+        {
+            y[x].style.display="none";
+        }
     });
 });
 
 function display(arr) {
-    var i;
+
     var j;
-    for (i = 0; i < arr.length; i = i + 4) {
-        var count = 0;
-        var a = "";
-        for (var k = 0; k < out.length - 22; k++) {
-            a += out.charAt(k);
-            for (var l = 1; l < 22; l++) {
-                a += out.charAt(k + l);
+    var i;
+
+
+        for (j = 0; j < arr.length; j++) {
+            if(arr[0].display=="patent")
+            {
+                i="previous";
             }
-            if (a == '<div class="col-sm-3">')
-                count++;
-        }
-        if (count == 4)
-            out += '<div class="row">';
-        for (j = 0; j < 4; j++) {
-            if ((j + i) < arr.length) {
-                out += '<div class="col-sm-3">' +
-                    '<a href="' + arr[j + i].url + '" class="swipebox">' + '<img  data-position="50" data-blur="2" data-focus="10" data-falloff="10" data-direction="y" id="' + arr[(j + i)].display + '"src="' + arr[(j + i)].url + '" alt="' + arr[(j + i)].display + '">' +
+            else if(arr[0].display=="stock_gyaan")
+            {
+                i="eve";
+            }
+            else
+            {
+                i="org";
+            }
+                out += '<div class="col-sm-3 '+i+'">' +
+                    '<a href="' + arr[j].url + '" class="swipebox">' + '<img  data-position="50" data-blur="2" data-focus="10" data-falloff="10" data-direction="y" id="' + arr[(j)].display + '"src="' + arr[(j)].url + '" alt="' + arr[(j)].display + '">' +
                     '</a>' + '</div>';
 
-            }
+
 
         }
         out += '</div>';
 
-    }
     document.getElementById("gal").innerHTML = out;
 }
 (function ($) {
