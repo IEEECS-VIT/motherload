@@ -6,7 +6,8 @@ body {
     /* The html and body elements cannot have any padding or margin. */
     -webkit-font-smoothing: antialiased;
     font-family: 'Open Sans', sans-serif;
-}
+    background-color: #006151;
+    background-image: url(http://www.transparenttextures.com/patterns/back-pattern.png);}
 
 .row {
     margin-left:0px;
@@ -35,6 +36,7 @@ body {
 #gal
 {
 
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 
@@ -61,7 +63,8 @@ body {
 /* Declare heights because of positioning of img element */
 #myCarousel  .item {
     height: 600px;
-    background-color:#bbb;
+    min-width: 100%;
+    margin: 0px;
 }
 #myCarousel img {
     position: absolute;
@@ -127,7 +130,7 @@ header .dropdown-menu {
     border-width:0;
 }
 .navbar-collapse li a.active{
-   background-color: black;
+    background-color: black;
 }
 .navbar-inverse .navbar-nav>li>a:active
 {

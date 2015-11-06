@@ -1636,33 +1636,16 @@ var myArrayorganizers = [
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442352932/2015/organizers/design/Jameer.jpg"
     }
 ];
+
 var out="";
 display(myArrayprev);
 display(myArrayevents);
 display(myArrayorganizers);
-function fancy(){
-    var addToAll = false;
-    var gallery = true;
-    var titlePosition = 'inside';
-    $(addToAll ? 'img' : 'img.fancybox').each(function(){
-        var $this = $(this);
-        var title = $this.attr('title');
-        var src = $this.attr('data-big') || $this.attr('src');
-        var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
-        $this.wrap(a);
-    });
-    if (gallery)
-        $('a.fancybox').attr('rel', 'fancyboxgallery');
-    $('a.fancybox').fancybox({
-        titlePosition: titlePosition
-    });
-}
 $(document).ready(function(){
     $("#all").on("click",function(){
         out="";
         display(myArrayprev);
         display(myArrayevents);
-        fancy();
         var z='<a href="#nav" class="active">All</a>';
         document.getElementById("all").innerHTML=z;
         z='<a href="#nav">Events</a>';
@@ -1678,34 +1661,27 @@ $(document).ready(function(){
         display(myArrayevents);
         fadeout(myArrayprev);
         fadeout(myArrayorganizers);
-        fancy();
+        var k='<a href="#nav">Events</a>';
+        document.getElementById("events").innerHTML=k;
     });
     $("#prev").on("click",function(){
         out="";
         display(myArrayprev);
         fadeout(myArrayevents);
         fadeout(myArrayorganizers);
-        fancy();
+      var q='<a href="#nav">Previous</a>';
+        document.getElementById("prev").innerHTML=q;
     });
     $("#organizer").on("click",function(){
         out="";
         display(myArrayorganizers);
         fadeout(myArrayprev);
         fadeout(myArrayevents);
-        fancy();
-    })
+        var z='<a href="#nav">Organiser</a>';
+        document.getElementById("organizer").innerHTML=Z;
+    });
 });
 
-function fadeout(arr)
-{
-    var x;
-    var i;
-    for(i=0;i<arr.length;i++)
-    {
-        x='#'+arr[i].display;
-        $(x).fadeOut(200);
-    }
-}
 function display(arr) {
     var i;
     var j;
@@ -1720,7 +1696,7 @@ function display(arr) {
                 a+=out.charAt(k+l);
             }
             if(a=='<div class="col-sm-3">')
-            count++;
+                count++;
         }
         if(count==4)
             out += '<div class="row">';
@@ -1728,35 +1704,23 @@ function display(arr) {
         {
             if((j+i)<arr.length) {
                 out += '<div class="col-sm-3">' +
-                    '<img class="fancybox" id="'+arr[(j+i)].display+'"src="' + arr[(j + i)].url + '" alt="' + arr[(j + i)].display + '">' +
-                    '</a></div>';
+                '<a href="'+arr[j+i].url+'" class="swipebox">'+ '<img  data-position="50" data-blur="2" data-focus="10" data-falloff="10" data-direction="y" id="'+arr[(j+i)].display+'"src="' + arr[(j + i)].url + '" alt="' + arr[(j + i)].display + '">' +
+                '</a>'+'</div>';
 
             }
 
         }
         out+='</div>';
+
     }
     document.getElementById("gal").innerHTML = out;
-}
+};
+( function( $ ) {
 
-$(document).ready(function() {
-    $("a .fancybox").on("mouseover", function () {
-        var x = this.id;
-        var y = document.getElementById(x);
-        y.style.zIndex = "7px";
-        y.style.borderColor= "grey";
-        y.style.borderWidth= "10px";
+    $( '.swipebox' ).swipebox();
 
-    })
-});
-$(document).ready(function() {
-    $("a .fancybox").on("mouseout", function () {
-        var x = this.id;
-        var y = document.getElementById(x);
-        y.style.zIndex = "0";
-        y.style.borderColor= "grey";
-        y.style.borderWidth= "0";
-        y.style.opacity="0.5";
+} )( jQuery );
 
-    })
-});
+/**
+ * Created by pc on 05-11-2015.
+ */

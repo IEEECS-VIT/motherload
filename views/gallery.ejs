@@ -1,103 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Gallery | Gravitas</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
     <link href="/bower/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--[endif]-->
-    <link href="/images/favicon-96x96.png" rel="icon" />
-    <link href="/stylesheets/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
-    <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+    <link rel="stylesheet" href="/stylesheets/swipebox.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/javascripts/jquery.swipebox.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        ;( function( $ ) {
+
+            $( '.swipebox' ).swipebox( {
+                useCSS : true, // false will force the use of jQuery for animations
+                useSVG : true, // false to force the use of png for buttons
+                initialIndexOnArray : 0, // which image index to init when a array is passed
+                hideCloseButtonOnMobile : false, // true will hide the close button on mobile devices
+                hideBarsDelay : 3000, // delay before hiding bars on desktop
+                videoMaxWidth : 1140, // videos max width
+                beforeOpen: function() {}, // called before opening
+                afterOpen: null, // called after opening
+                afterClose: function() {}, // called after closing
+                loopAtEnd: false // true will return to the first image after the last image is reached
+            } );
+
+        } )( jQuery );
+
+    </script>
+
+
 </head>
 <body>
+<div class="container-fluid">
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
 
-<script src="/bower/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg"  width="460" height="345">
 
-<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script><script>
-
-    $(function($){
-        var addToAll = false;
-        var gallery = true;
-        var titlePosition = 'inside';
-        $(addToAll ? 'img' : 'img.fancybox').each(function(){
-            var $this = $(this);
-            var title = $this.attr('title');
-            var src = $this.attr('data-big') || $this.attr('src');
-            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
-            $this.wrap(a);
-        });
-        if (gallery)
-            $('a.fancybox').attr('rel', 'fancyboxgallery');
-        $('a.fancybox').fancybox({
-            titlePosition: titlePosition
-        });
-    });
-    $.noConflict();
-</script>
-
-<!-- Wrap all page content here -->
-<div id="wrap">
-
-
-    <header class="masthead">
-
-        <!-- Carousel
-      ================================================== -->
-        <div id="myCarousel" class="carousel slide">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src=" http://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg" >
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h2>Design</h2>
-
-                        </div>
-                    </div>
+                <div class="carousel-caption">
+                    <h2>Design</h2>
                 </div>
-                <div class="item">
-                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243746/prev/viaropes.jpg">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h2>Create</h2>
-
-                        </div>
-                    </div>
+            </div>
+            <div class="item">
+                <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243746/prev/viaropes.jpg"  width="460" height="345">
+                <div class="carousel-caption">
+                    <h2>Create</h2>
                 </div>
-                <div class="item">
-                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243737/prev/robostacle1.jpg">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h2>Patent</h2>
-
-                        </div>
-                    </div>
+            </div>
+            <div class="item">
+                <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243737/prev/robostacle1.jpg"  width="460" height="345">
+                <div class="carousel-caption">
+                    <h2>Patent</h2>
                 </div>
-            </div><!-- /.carousel-inner -->
-            <div class="logo">graVITas' 15</div>
-            <!-- Controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
+            </div>
+
         </div>
-        <!-- /.carousel -->
-
-    </header>
-
+        <div class="logo">graVITas'2015</div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 </div>
 
-<!-- Fixed navbar -->
+<div class="item"></div>
 <nav class="navbar navbar-inverse" id="nav">
     <div class="container-fluid">
         <div>
@@ -111,19 +95,18 @@
     </div>
 </nav>
 
-<div id="gal" class="container">
+<div id="gal" class="container" onmouseover="init()">
+    <div id=" swipebox-bottom-bar">
+        <div id="swipebox-arrows">
+            <a id="swipebox-prev" style="background-image: url(/images/icons.svg)"></a>
+            <a id="swipebox-next" style="background-image: url(/images/icons.svg);" class="disabled"></a>
+        </div>
+    </div>
+    <a id="swipebox-close" style="background-image: url(/images/icons.svg);"></a>
 
 </div>
-
 <script src="/javascripts/gall.js">
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-
-
-</script>
-
-
-<script src="/bower/bootstrap/dist/js/bootstrap.min.js"></script>
-
-<script src="/javascripts/scripts.js"></script>
 </body>
 </html>
