@@ -1633,11 +1633,20 @@ var myArrayorganizers = [
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442352932/2015/organizers/design/Jameer.jpg"
     }
 ];
+$('body').delegate('.nav li a', 'click', function(){
+    var $thisLi = $(this).parents('li:first');
+    var $ul = $thisLi.parents('ul:first');
+    if (!$thisLi.hasClass('active')){
+        $ul.find('li.active').removeClass('active');
+        $thisLi.addClass('active');
+    }
+});
 
 var out = "";
 display(myArrayprev);
 display(myArrayevents);
 display(myArrayorganizers);
+
 
 $(document).ready(function () {
     $("#all").on("click", function () {
