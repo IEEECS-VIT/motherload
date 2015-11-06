@@ -1638,17 +1638,7 @@ var out = "";
 display(myArrayprev);
 display(myArrayevents);
 display(myArrayorganizers);
-var setup = function () {
-    var z = '<a href="#nav" class="active">All</a>';
-    document.getElementById("all").innerHTML = z;
-    z = '<a href="#nav">Events</a>';
-    document.getElementById("events").innerHTML = z;
-    z = '<a href="#nav">Previous</a>';
-    document.getElementById("previous").innerHTML = z;
-    z = '<a href="#nav">Organizers</a>';
-    document.getElementById("organisers").innerHTML = z;
-};
-setup();
+
 $(document).ready(function () {
     $("#all").on("click", function () {
         var x;
@@ -1756,6 +1746,24 @@ function display(arr) {
 
     document.getElementById("gal").innerHTML = out;
 }
+$(document).ready(function(){
+    $('a > img').on("mouseover",function(){
+        var x=this.id;
+        var j=document.getElementById(x);
+        j.style.zIndex= "8px";
+        j.style.border="solid rgba(171, 173, 171, 0.5) 3px";
+        j.style.opacity="0.9";
+        j.style.boxShadow="0 5px 7px rgba(0, 64, 54, 0.85)";
+    });
+    $('a > img').on("mouseout",function(){
+        var x=this.id;
+        var j=document.getElementById(x);
+        j.style.zIndex="3px";
+        j.style.opacity="1";
+        j.style.border="solid rgba(171, 173, 171, 0.5) 0px";
+        j.style.boxShadow="0 0 0 rgba(102, 102, 102, 0.9)";
+    })
+})
 (function ($) {
 
     $('.swipebox').swipebox();
