@@ -175,7 +175,7 @@ img
     padding-top: 5px;
     padding-bottom: 5px;
 }
-#nav.active{
+#nav .active{
     background-color: #222222;
     color: #ffffff;
 }
@@ -204,6 +204,7 @@ img
 
 .navbar-inverse  .navbar-nav>li>a {
     color: #9c9c9c;
+    padding:auto 10% ;
 }
 a .active
 {
@@ -211,8 +212,7 @@ a .active
 }
 .navbar-inverse  .navbar-nav li>a:hover, .navbar-nav li .open, .navbar-inverse .navbar-nav .active a  {
     background-color: rgba(0, 0, 0, 0.85);
-    padding-right: 55px;
-    padding-left: 55px;
+
 }
 .navbar-inverse .navbar-nav>.dropdown>a .caret {
     border-top-color: #999;

@@ -1143,10 +1143,10 @@ var myArrayevents = [
     {
         "display": "chemomatics",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442938962/2015/events/chemomatics.gif"
-    },{
+    }, {
         "display": "swing-o-golf",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442938936/2015/events/swing-o-golf.jpg"
-    },{
+    }, {
         "display": "self-made-engineers",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442938852/2015/events/self-made-engineer.jpg"
     },
@@ -1158,7 +1158,7 @@ var myArrayevents = [
         "display": "REVERSE_ENGINEERING",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442938574/2015/events/REVERSE-ENGINEERING.png"
     }
-    ,{
+    , {
         "display": "maze-hustle",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442938573/2015/events/maze-hustle.png"
     },
@@ -1189,10 +1189,10 @@ var myArrayevents = [
     {
         "display": "chem-e-clock",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442938568/2015/events/chem-e-clock.png"
-    },{
+    }, {
         "display": "machniser",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442938462/2015/events/mechaniser.jpg"
-    },{
+    }, {
         "display": "chain-reaction",
         "url": "http://res.cloudinary.com/events-gravitas/image/upload/v1442931117/2015/events/applied/chain-reaction.jpg"
     },
@@ -1637,89 +1637,116 @@ var myArrayorganizers = [
     }
 ];
 
-var out="";
+var out = "";
 display(myArrayprev);
 display(myArrayevents);
 display(myArrayorganizers);
-$(document).ready(function(){
-    $("#all").on("click",function(){
-        out="";
+var setup = function () {
+    var z = '<a href="#nav" class="active">All</a>';
+    document.getElementById("all").innerHTML = z;
+    z = '<a href="#nav">Events</a>';
+    document.getElementById("events").innerHTML = z;
+    z = '<a href="#nav">Previous</a>';
+    document.getElementById("previous").innerHTML = z;
+    z = '<a href="#nav">Organizers</a>';
+    document.getElementById("organisers").innerHTML = z;
+};
+setup();
+$(document).ready(function () {
+    $("#all").on("click", function () {
+        out = "";
         display(myArrayprev);
         display(myArrayevents);
-        var z='<a href="#nav" class="active">All</a>';
-        document.getElementById("all").innerHTML=z;
-        z='<a href="#nav">Events</a>';
-        document.getElementById("events").innerHTML=z;
-        z='<a href="#nav">Previous</a>';
-        document.getElementById("prev").innerHTML=z;
-        z='<a href="#nav">Organizers</a>';
-        document.getElementById("organizer").innerHTML=z;
+        display(myArrayorganizers);
+        var z = '<a href="#nav" class="active">All</a>';
+        document.getElementById("all").innerHTML = z;
+        z = '<a href="#nav">Events</a>';
+        document.getElementById("events").innerHTML = z;
+        z = '<a href="#nav">Previous</a>';
+        document.getElementById("previous").innerHTML = z;
+        z = '<a href="#nav">Organizers</a>';
+        document.getElementById("organisers").innerHTML = z;
 
     });
-    $("#events").on("click",function(){
-        out="";
+    $("#events").on("click", function () {
+        out = "";
         display(myArrayevents);
-        fadeout(myArrayprev);
-        fadeout(myArrayorganizers);
-        var k='<a href="#nav">Events</a>';
-        document.getElementById("events").innerHTML=k;
+        // fadeout(myArrayprev);
+        // fadeout(myArrayorganizers);
+        var z = '<a href="#nav">All</a>';
+        document.getElementById("all").innerHTML = z;
+        z = '<a href="#nav" class="active">Events</a>';
+        document.getElementById("events").innerHTML = z;
+        z = '<a href="#nav">Previous</a>';
+        document.getElementById("previous").innerHTML = z;
+        z = '<a href="#nav">Organizers</a>';
+        document.getElementById("organisers").innerHTML = z;
     });
-    $("#prev").on("click",function(){
-        out="";
+    $("#previous").on("click", function () {
+        out = "";
         display(myArrayprev);
-        fadeout(myArrayevents);
-        fadeout(myArrayorganizers);
-      var q='<a href="#nav">Previous</a>';
-        document.getElementById("prev").innerHTML=q;
+        // fadeout(myArrayevents);
+        // fadeout(myArrayorganizers);
+        var z = '<a href="#nav">All</a>';
+        document.getElementById("all").innerHTML = z;
+        z = '<a href="#nav">Events</a>';
+        document.getElementById("events").innerHTML = z;
+        z = '<a href="#nav" class="active">Previous</a>';
+        document.getElementById("previous").innerHTML = z;
+        z = '<a href="#nav">Organizers</a>';
+        document.getElementById("organisers").innerHTML = z;
     });
-    $("#organizer").on("click",function(){
-        out="";
+    $("#organisers").on("click", function () {
+        out = "";
         display(myArrayorganizers);
-        fadeout(myArrayprev);
-        fadeout(myArrayevents);
-        var z='<a href="#nav">Organiser</a>';
-        document.getElementById("organizer").innerHTML=Z;
+        // fadeout(myArrayprev);
+        // fadeout(myArrayevents);
+        var z = '<a href="#nav">All</a>';
+        document.getElementById("all").innerHTML = z;
+        z = '<a href="#nav">Events</a>';
+        document.getElementById("events").innerHTML = z;
+        z = '<a href="#nav">Previous</a>';
+        document.getElementById("previous").innerHTML = z;
+        z = '<a href="#nav" class="active">Organizers</a>';
+        document.getElementById("organisers").innerHTML = z;
     });
 });
 
 function display(arr) {
     var i;
     var j;
-    for(i = 0; i < arr.length; i=i+4) {
-        var count=0;
-        var a="";
-        for(var k=0;k<out.length-22;k++)
-        {
-            a+=out.charAt(k);
-            for(var l=1;l<22;l++)
-            {
-                a+=out.charAt(k+l);
+    for (i = 0; i < arr.length; i = i + 4) {
+        var count = 0;
+        var a = "";
+        for (var k = 0; k < out.length - 22; k++) {
+            a += out.charAt(k);
+            for (var l = 1; l < 22; l++) {
+                a += out.charAt(k + l);
             }
-            if(a=='<div class="col-sm-3">')
+            if (a == '<div class="col-sm-3">')
                 count++;
         }
-        if(count==4)
+        if (count == 4)
             out += '<div class="row">';
-        for(j=0;j<4;j++)
-        {
-            if((j+i)<arr.length) {
+        for (j = 0; j < 4; j++) {
+            if ((j + i) < arr.length) {
                 out += '<div class="col-sm-3">' +
-                '<a href="'+arr[j+i].url+'" class="swipebox">'+ '<img  data-position="50" data-blur="2" data-focus="10" data-falloff="10" data-direction="y" id="'+arr[(j+i)].display+'"src="' + arr[(j + i)].url + '" alt="' + arr[(j + i)].display + '">' +
-                '</a>'+'</div>';
+                    '<a href="' + arr[j + i].url + '" class="swipebox">' + '<img  data-position="50" data-blur="2" data-focus="10" data-falloff="10" data-direction="y" id="' + arr[(j + i)].display + '"src="' + arr[(j + i)].url + '" alt="' + arr[(j + i)].display + '">' +
+                    '</a>' + '</div>';
 
             }
 
         }
-        out+='</div>';
+        out += '</div>';
 
     }
     document.getElementById("gal").innerHTML = out;
-};
-( function( $ ) {
+}
+(function ($) {
 
-    $( '.swipebox' ).swipebox();
+    $('.swipebox').swipebox();
 
-} )( jQuery );
+})(jQuery);
 
 /**
  * Created by pc on 05-11-2015.
