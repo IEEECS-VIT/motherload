@@ -7,7 +7,9 @@ body {
     -webkit-font-smoothing: antialiased;
     font-family: 'Open Sans', sans-serif;
     background-color: #006151;
-    background-image: url(http://www.transparenttextures.com/patterns/back-pattern.png);}
+    background-image: url(http://www.transparenttextures.com/patterns/back-pattern.png);
+    margin-top: -10px;
+}
 
 .row {
     margin-left:0px;
@@ -35,7 +37,7 @@ body {
 }
 #gal
 {
-
+padding-top: 39px;
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 #myNavbar
@@ -62,7 +64,20 @@ body {
 .carousel-caption {
     z-index: 10;
 }
+nav>ul>li:hover
+{
+    border-bottom: 2px solid #F117B4;
+    text-decoration: none;
 
+}
+.carousel-inner
+{
+  min-height: 100%;
+}
+#myCarousel
+{
+    padding-top: 0;
+}
 /* Declare heights because of positioning of img element */
 #myCarousel  .item {
     height: 600px;
@@ -76,6 +91,7 @@ body {
     min-width: 100%;
     height: 600px;
 }
+
 .container-fluid
 {
     margin-top: 0;
@@ -228,6 +244,8 @@ a .active
 }
 .navbar-inverse  .navbar-nav li>a:hover, .navbar-nav li .open, .navbar-inverse .navbar-nav .active a  {
     background-color: rgba(0, 0, 0, 0.85);
+    border-bottom: 2px solid #006151;
+    text-decoration: none;
 
 }
 .navbar-inverse .navbar-nav>.dropdown>a .caret {
