@@ -64,19 +64,9 @@ padding-top: 39px;
 .carousel-caption {
     z-index: 10;
 }
-nav>ul>li:hover
-{
-    border-bottom: 2px solid #F117B4;
-    text-decoration: none;
-
-}
-.carousel-inner
-{
-  min-height: 100%;
-}
 #myCarousel
 {
-    padding-top: 0;
+    padding-top: 0px;
 }
 /* Declare heights because of positioning of img element */
 #myCarousel  .item {
@@ -244,8 +234,6 @@ a .active
 }
 .navbar-inverse  .navbar-nav li>a:hover, .navbar-nav li .open, .navbar-inverse .navbar-nav .active a  {
     background-color: rgba(0, 0, 0, 0.85);
-    border-bottom: 2px solid #006151;
-    text-decoration: none;
 
 }
 .navbar-inverse .navbar-nav>.dropdown>a .caret {
