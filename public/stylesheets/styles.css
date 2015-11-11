@@ -6,8 +6,7 @@ body {
     /* The html and body elements cannot have any padding or margin. */
     -webkit-font-smoothing: antialiased;
     font-family: 'Open Sans', sans-serif;
-    background-color: #006151;
-    background-image: url(http://www.transparenttextures.com/patterns/back-pattern.png);
+
     margin-top: -10px;
 }
 

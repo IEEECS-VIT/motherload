@@ -1724,7 +1724,15 @@ $(document).ready(function () {
         }
     });
 });
-
+$(document).ready(function() {
+    var backgrounds = ['#4db6ac, rgba(77, 182, 172, 0.15)','#66bb6a, rgba(102, 187, 106, 0.15)','#ffbcad, rgba(255, 188, 173, 0.15)','#ff9c91, rgba(255, 156, 145, 0.15)','#eeb0ff, rgba(238, 176, 255, 0.15)','#cab6ff, rgba(202, 182, 255, 0.15)','#92ceff, rgba(146, 206, 255, 0.15)','#fff176, rgba(255, 241, 118, 0.15)','#ffcc80, rgba(255, 204, 128, 0.15)','#f0ffbb, rgba(240, 255, 187, 0.15)'];
+    var x=Math.random()*10000;
+    x=x%backgrounds.length;
+    x=Math.floor(x);
+    var y=backgrounds[x];
+    y='linear-gradient(90deg,'+y+'),url("http://www.transparenttextures.com/patterns/back-pattern.png")';
+    $('body').css('background', y);
+});
 function display(arr) {
 
     var j;
