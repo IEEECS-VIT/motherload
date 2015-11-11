@@ -43,6 +43,8 @@ padding-top: 39px;
 #myNavbar
 {
  padding-left: 29%;
+    border: 0;
+    z-index: 120;
 }
 
 /* Custom page CSS
@@ -167,7 +169,6 @@ h1 {
 .logo {
     font-size:40px;
     position:absolute;
-    z-index:1200;
     color: #ffffff;
     top:70px;
     text-align:center;
