@@ -3,7 +3,22 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+    if (req.signedCookies.name)
+    {
+        res.send({message:true});
+        console.log('users');
+
+    }else{
+        res.send({message:false});
+    }
+
+});
+router.get('/logout',function(req,res){
+    if (req.signedCookies.name)
+    {
+        res.clearCookie('name');
+    }
+    res.redirect('/main');
 });
 
 module.exports = router;
