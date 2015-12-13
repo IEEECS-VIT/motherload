@@ -14,6 +14,10 @@
                                 <label for="c_name">Company*: </label>
                                 <input placeholder="Company Name" name="c_name" type="text"
                                        ng-model="formDatain.c_name"/></div>
+                            <div class="col s12 m4">
+                                <label for="website">Website*: </label>
+                                <input placeholder="Website" name="website" type="text"
+                                       ng-model="formDatain.website"/></div>
                         </div>
                         <div class="col s12">
                             <label for="contentText">Content*: </label>
@@ -21,10 +25,17 @@
                                       placeholder="Type Content Here" ng-model="formDatain.contentText"
                                       style="height:auto"></textarea>
                         </div>
+                        <div class="row">
+                            <label for="imgfile">Upload Image File: </label>
+                            <input type="file" onchange="angular.element(this).scope().formDatain.logo = this.value" name="imgfile" id="imgfile" nv-file-select uploader="uploader"
+                                   options="{ url: '/input/upload'}"/>
+                        </div>
                         <div class="col s12 m4">
                             <input class="btn" type="submit" value="Submit"/>
                         </div>
+
                     </div>
+
                 </form>
             </div>
         </li>
@@ -50,17 +61,28 @@
                                            ng-model="formDataGet.main_category"/></div>
                                 <div class="col s12 m4">
                                     <label for="e_c_name">Company: </label>
-                                    <input placeholder="Topic of Article" name="e_c_name" type="text"
+                                    <input placeholder="Company Name" name="e_c_name" type="text"
                                            ng-model="formDataGet.c_name"/></div>
+                                <div class="col s12 m4">
+                                    <label for="e_website">Website: </label>
+                                    <input placeholder="Website" name="e_website" type="text"
+                                           ng-model="formDataGet.website"/></div>
                             </div>
                             <div class="col s12">
                                 <label for="e_contentText" valign="top">Content: </label>
                             <textarea rows="20" name="e_contentText"
                                       placeholder="Type Content Here" ng-model="formDataGet.content"
                                       style="height:auto"></textarea></div>
+                            <div class="row">
+                                <label for="imgfile">Upload Image File: </label>
+                                <input type="file" onchange="angular.element(this).scope().formDataGet.logo = this.value" name="imgfile" id="imgfile" nv-file-select uploader="uploader"
+                                       options="{ url: '/input/upload'}"/>
+                            </div>
                             <div class="col s12 m4">
-                                <input class="btn" type="submit" value="Submit"/></div>
+                                <input class="btn" type="submit" value="Submit"/>
+                            </div>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -73,20 +95,6 @@
                         <label for="c_name">Topic: </label>
                         <input type="text" placeholder="Company" name="d_c_name" ng-model="formDelete.d_c_name"/>
                         <input class="btn" type="submit" value="Submit"/></div>
-                </form>
-            </div>
-        </li>
-        <li>
-            <div class="collapsible-header"><i class="mdi-image-add-to-photos"></i>Upload Image</div>
-            <div class="collapsible-body">
-
-                <form ng-submit="addImage()">
-                    <div class="container">
-                        <label for="imgfile">Upload Image File: </label>
-                        <input type="file" name="imgfile" id="imgfile" nv-file-select uploader="uploader"
-                               options="{ url: '/input/upload'}"/>
-                        <input class="btn" type="submit" value="Upload"/>
-                    </div>
                 </form>
             </div>
         </li>

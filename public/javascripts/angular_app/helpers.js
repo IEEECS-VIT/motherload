@@ -8,7 +8,7 @@
 function edit($http, $scope, editData) {
     $http({
         method: 'POST',
-        url: 'users/input/edit',
+        url: '/input/edit',
         data: $.param(editData),  // pass in data as strings
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
     })
@@ -24,7 +24,7 @@ function edit($http, $scope, editData) {
 function newArticle($http, $scope) {
     $http({
         method: 'POST',
-        url: 'users/input/new',
+        url: '/input/new',
         data: $.param($scope.formDatain),  // pass in data as strings
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
     })
@@ -46,7 +46,7 @@ function newArticle($http, $scope) {
 function deleteArt($http, $scope) {
     $http({
         method: 'POST',
-        url: 'users/input/delete',
+        url: '/input/delete',
         data: $.param($scope.formDelete),  // pass in data as strings
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
     })
@@ -73,7 +73,7 @@ function clearData($scope) {
 function find_article($http, $scope) {
     $http({
         method: 'POST',
-        url: 'users/input/find',
+        url: '/input/find',
         data: $.param($scope.formDataFind),  // pass in data as strings
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}  // set the headers so angular passing info as form data (not request payload)
     })
@@ -110,4 +110,20 @@ function user_login($http,callback) {
         callback(data.message);
 
     });
+}
+function parseImageName(path){
+    var filename;
+    var i = path.lastIndexOf('\\');
+    var j = path.lastIndexOf('/');
+    console.log(path.length);
+    if(i>j){
+        filename = path.substr(i+1,path.length-1);
+    }
+    else if(j>i){
+        filename = path.substr(j+1,path.length-1);
+    }else{
+        filename = path;
+    }
+    console.log(filename);
+    return filename.replace(/\s+/g, "").toLowerCase()
 }

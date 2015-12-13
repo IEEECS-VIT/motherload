@@ -4,7 +4,7 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var cloudinary = require('cloudinary');
 var mongo = require('mongodb').MongoClient;
 var multer = require('multer');
 var routes = require('./routes/index');
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(multer({
   dest: './public/images',
   rename: function (fieldname, filename) {
-    return filename.replace(/\s+/g, "-").toLowerCase();
+    return filename.replace(/\s+/g, "").toLowerCase();
   },
   limits: {
     files: 1
@@ -35,7 +35,7 @@ app.use(multer({
 }));
 var mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/gravitas16';
 var mongodb;
-
+cloudinary.config(process.env.CLOUDINARY_URL);
 const onConnect = function (err, db) {
   if (!err) {
     mongodb = db;
