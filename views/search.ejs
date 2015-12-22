@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>graVITas</title>
+    <meta name="keywords" content="gravitas memories gravitas15 2015 technical fest festival college engineering">
+    <meta name="description" content="Gravitas 2015 was an international Technical fest. This page contains glimpses of the fest.">
+    <meta content="index, follow" name="robots" />
+    <meta content="index, follow" name="googlebot" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="/images/favicon-96x96.png" rel="icon" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <link href="/bower/materialize/dist/css/materialize.min.css" rel="stylesheet">
+    <link href="/stylesheets/searchcss.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="/bower/angular/angular.js"></script>
+
+</head>
+<body ng-app="searchapp" ng-controller="searchControl">
+
+    <nav>
+        <a href="#" class="brand-logo center">graVITas '16</a>
+        <ul class="right side-nav hide-on-med-and-down" id="side">
+
+        </ul>
+        <ul id="slide-out" class="side-nav">
+
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
+    </nav>
+
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="input-field col m6 l6 s12">
+                    <i class="material-icons prefix">search</i>
+                    <input placeholder="Search By Name" id="search" type="text" ng-model="test.name">
+                    <label for="search"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m6 l6 s12">
+                    <li ng-repeat="x in names">
+                        {{x.c_name}};
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l12 m12">
+                    <h5 class="center">Content</h5>
+                    <p>dnf wdfkl erfnkllf ermnflkerf lerknfl klernfl efnlkrewf lrnfk</p>
+                </div>
+                <div class="col s12 l6 m6">
+                    <h6>Gravitas logo</h6>
+                </div>
+                <div class="col s12 l6 m6">
+                    <img src="/images/logo.png" alt="Vit" width="30%" height="10%">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="/bower/jquery/dist/jquery.js"></script>
+<script src="/javascripts/searchcontrol.js"></script>
+<script src="/bower/materialize/dist/js/materialize.min.js"></script>
+<script src="/javascripts/searchjs.js"></script>
+</html>

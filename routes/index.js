@@ -36,6 +36,9 @@ router.get('/gallery', function(req, res, next) {
 router.get('/login',function(req,res){
     res.render('login');
 });
+router.get('/search',function(reg,res){
+    res.render('search');
+});
 router.post('/login', function (req, res) {
     var user = req.body.username;
     var password = req.body.password;

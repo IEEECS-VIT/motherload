@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+nav
+{
+    background-color: #000000;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.53);
+}
+.side-nav
+{
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 5px 9px 5px rgba(0, 0, 0, 0.53);
+    left: 0;
+    width: 78px;
+    color: white;
+    z-index: 100;
+}
+.side-nav li{
+    background-color: rgba(2, 3, 2, 0.100);
+    padding: 7px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.53);
+}
+.side-nav a{
+    padding: 7px;
+}
+#sidenav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120vh;
+    background-color: rgba(0,0,0,0);
+    z-index: 0;
+    will-change: opacity;
+}
+footer.page-footer
+{
+    background-color: #000000;
+}
+#main {
+    flex: 1 0 auto;
+}
+li
+{
+    padding: 0;
+    height: 80px;
+    left: 0;
+    align-content: center;
+    border-left: 0 solid rgba(0, 0, 0, 0);
+}
+li > a{
+    padding: 0;
+    align-content: center;
+}
+li > a > img
+{
+
+    padding: 0;
+
+}
+nav> ul.side-nav > li:hover{
+    background-color: #2b2b2b;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    z-index: -10;
+
+}
+#heading{
+    color: white;
+    text-align: left;
+}
+.collection-item.avatar > a > i.material-icons{
+    color: #000000;
+}
+footer
+{
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    bottom: 0;
+}
