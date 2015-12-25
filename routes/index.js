@@ -36,7 +36,7 @@ router.get('/gallery', function(req, res, next) {
 router.get('/login',function(req,res){
     res.render('login');
 });
-router.get('/search',function(reg,res){
+router.get('/search',function(req,res){
     res.render('search');
 });
 router.post('/login', function (req, res) {
@@ -64,7 +64,7 @@ router.post('/login', function (req, res) {
             {
                 res.cookie('name', doc['_id'], {maxAge: 86400000, signed: true});
                 console.log('logged in');
-                res.redirect('/users');
+                res.redirect('/main')
             }
             else
             {
