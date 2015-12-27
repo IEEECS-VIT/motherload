@@ -60,6 +60,12 @@ function active(){
     y.style.backgroundColor= op[0].color;
     $('body').css('background-color',op[0].color);
 }
+cardDisplay();
+function cardDisplay(){
+    $('li > a > i').on('click',function(){
+        alert('clicked');
+    })
+}
 $(document).ready(function(){
     $(window).resize(function(){
         side();
