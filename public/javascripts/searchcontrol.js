@@ -1,6 +1,7 @@
 var ap=angular.module('searchapp',[]);
 ap.controller('searchControl',function($scope,$http)
 {
+    $scope.win=$(window).width();
     $scope.activecard= null;
     $scope.activeelement='';
     $scope.show={
@@ -10,7 +11,7 @@ ap.controller('searchControl',function($scope,$http)
         'Food': false,
         'Health': false,
         'Digital': false
-    }
+    };
     $http({
             method: 'GET',
             url: '/articles',
@@ -117,83 +118,107 @@ ap.controller('searchControl',function($scope,$http)
             $scope.activecard=null;
         }
     });
+    $(window).resize(function(){
+        $scope.win=$(window).width();
+        $scope.check();
+        $scope.activate($scope.activecard);
+    });
+    $(document).ready(function(){
+        $("#overlay").on('click',function(){
+            $scope.checkval=false;
+            $scope.checkvalsmall=false;
+            $(this).fadeOut();
+            $("#popup-content").fadeOut();
+        });
+        $scope.check();
+    });
 
-    $scope.activate=function(a){
-    $scope.activecard=a;
-    if($scope.show.Environment==true)
-    {
-        for(x=0;x<$scope.env.length;x++)
-        {
-            if($scope.env[x]._id==$scope.activecard)
-            {
-                $scope.activeelement=$scope.env[x]
-                break;
+    $scope.activate=function(a) {
+        $("#overlay").css({
+            'display': 'block'
+        });
+        $("#popup-content").css({
+            'display': 'block'
+        });
+
+
+        $scope.activecard = a;
+        $scope.check();
+
+        if ($scope.show.Environment == true) {
+            for (x = 0; x < $scope.env.length; x++) {
+                if ($scope.env[x]._id == $scope.activecard) {
+                    $scope.activeelement = $scope.env[x];
+                    break;
+                }
             }
         }
-    }
-    else if($scope.show.Energy==true)
-    {
-        for(x=0;x<$scope.energy.length;x++)
-        {
-            if($scope.energy[x]._id==$scope.activecard)
-            {
-                $scope.activeelement=$scope.energy[x];
-                break;
+        else if ($scope.show.Energy == true) {
+            for (x = 0; x < $scope.energy.length; x++) {
+                if ($scope.energy[x]._id == $scope.activecard) {
+                    $scope.activeelement = $scope.energy[x];
+                    break;
+                }
             }
         }
-    }
-    else if($scope.show.Manufacturing==true)
-    {
-        for(x=0;x<$scope.manu.length;x++)
-        {
-            if($scope.manu[x]._id==$scope.activecard)
-            {
-                $scope.activeelement=$scope.manu[x];
-                break;
+        else if ($scope.show.Manufacturing == true) {
+            for (x = 0; x < $scope.manu.length; x++) {
+                if ($scope.manu[x]._id == $scope.activecard) {
+                    $scope.activeelement = $scope.manu[x];
+                    break;
+                }
             }
         }
-    }
-    else if($scope.show.Food==true)
-    {
-        for(x=0;x<$scope.food.length;x++)
-        {
-            if($scope.food[x]._id==$scope.activecard)
-            {
-                $scope.activeelement=$scope.food[x];
-                break;
+        else if ($scope.show.Food == true) {
+            for (x = 0; x < $scope.food.length; x++) {
+                if ($scope.food[x]._id == $scope.activecard) {
+                    $scope.activeelement = $scope.food[x];
+                    break;
+                }
             }
         }
-    }
-    else if($scope.show.Health==true)
-    {
-        for(x=0;x<$scope.health.length;x++)
-        {
-            if($scope.health[x]._id==$scope.activecard)
-            {
-                $scope.activeelement=$scope.health[x];
-                break;
+        else if ($scope.show.Health == true) {
+            for (x = 0; x < $scope.health.length; x++) {
+                if ($scope.health[x]._id == $scope.activecard) {
+                    $scope.activeelement = $scope.health[x];
+                    break;
+                }
             }
         }
-    }
-    else
-    {
-        for(x=0;x<$scope.digi.length;x++)
-        {
-            if($scope.digi[x]._id==$scope.activecard)
-            {
-                $scope.activeelement=$scope.digi[x];
-                break;
+        else {
+            for (x = 0; x < $scope.digi.length; x++) {
+                if ($scope.digi[x]._id == $scope.activecard) {
+                    $scope.activeelement = $scope.digi[x];
+                    break;
+                }
             }
         }
-    }
-}
+    };
+    $scope.checkval=false;
+    $scope.checkvalsmall=false;
     $scope.check=function()
     {
         if($scope.activecard==null)
         {
-            return false;
+            $scope.checkval=false;
+            $scope.checkvalsmall=false;
+
+
         }
-        return true;
-    }
+        else if($scope.win<=600){
+            $scope.checkval = false;
+            $scope.checkvalsmall=true;
+
+
+        }
+        else {
+            $scope.checkval=true;
+            $scope.checkvalsmall=false;
+
+        }
+
+    };
+
+
 });
 

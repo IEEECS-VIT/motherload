@@ -2,32 +2,38 @@ var op=[
     {
         'name': 'Environment',
         'src': '/images/environment.png',
-        'color': '#e57373'
+        'color': '#603137',
+        'image': 'url(/images/red.jpg)'
     },
     {
         'name':"Energy",
         'src': '/images/energy.png',
-        'color': '#5c6bc0'
+        'color': '#3e4861',
+        'image': 'url(/images/blue.jpg)'
     },
     {
         'name': "Manufacturing",
         'src': '/images/manufacturing.png',
-        'color': '#4db6ac'
+        'color': '#627677',
+        'image': 'url(/images/grey.jpg)'
     },
     {
         'name': "Health",
         'src': '/images/health.png',
-        'color': '#81c784'
+        'color': '#27733e',
+        'image': 'url(/images/teal.jpg)'
     },
     {
         'name': 'Digital',
         'src': '/images/digital.png',
-        'color': '#ffb74d'
+        'color': '#c34f42',
+        'image': 'url(/images/orange.jpg)'
     },
     {
         'name': 'Food',
         'src': '/images/food.png',
-        'color': '#ff8a65'
+        'image': 'url(/images/green.jpg)',
+        'color': '#74a798'
     }
 
 ];
@@ -41,7 +47,7 @@ function side(){
     var d=document.getElementsByClassName('side-nav');
     var $window=$(window);
     var windowsize=$window.width();
-    if(windowsize>992){
+    if(windowsize>993){
         d[0].innerHTML=i;
         d[1].innerHTML="";
         sideClick();
@@ -57,19 +63,26 @@ active();
 function active(){
     var y=document.getElementById('Environment');
     y.style.borderLeft= '0 solid '+op[0].color;
-    y.style.backgroundColor= op[0].color;
-    $('body').css('background-color',op[0].color);
+    y.style.backgroundImage= op[0].image;
+    $('body').css('background-image',op[0].image);
 }
-cardDisplay();
-function cardDisplay(){
-    $('li > a > i').on('click',function(){
-        alert('clicked');
-    })
+updatepopup();
+
+function updatepopup(){
+    var popup=$("#popup-content");
+    var top=($(window).height()-popup.outerHeight())/2;
+    var left=($(window).width()-popup.outerWidth())/2;
+    popup.css({
+        'top': top,
+        'left': left
+    });
 }
 $(document).ready(function(){
     $(window).resize(function(){
+        updatepopup();
         side();
     });
+
     $('li').on('mouseover',function(){
         var x=$(this).attr('id');
         var y=document.getElementById(x);
@@ -108,15 +121,20 @@ $(document).ready(function(){
         for(i=0;i<op.length;i++)
         {
             var a= document.getElementById(op[i].name);
+            a.style.backgroundImage= 'url(nil)';
             a.style.backgroundColor= 'rgba(2, 3, 2, 0.1)';
         }
         y.style.borderLeft= '0 solid '+op[z].color;
-        y.style.backgroundColor= op[z].color;
-        $('body').css('background-color',op[z].color);
+        y.style.backgroundImage= op[z].image;
+        $('body').css('background-image',op[z].image);
     });
     $('.button-collapse').sideNav();
+    $('div.popup-open').click(function(){
+        alert("button clicked");
+    });
 
 });
+
 function sideClick(){
     $('li').on('mouseover',function(){
         var x=$(this).attr('id');
@@ -156,11 +174,12 @@ function sideClick(){
         for(i=0;i<op.length;i++)
         {
             var a= document.getElementById(op[i].name);
+            a.style.backgroundImage= 'url(nil)';
             a.style.backgroundColor= 'rgba(2, 3, 2, 0.1)';
         }
         y.style.borderLeft= '0 solid '+op[z].color;
-        y.style.backgroundColor= op[z].color;
-        $('body').css('background-color',op[z].color);
+        y.style.backgroundImage= op[z].image;
+        $('body').css('background-image',op[z].image);
     });
 
 }

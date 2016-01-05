@@ -7,6 +7,7 @@ nav
 {
     background-color: rgba(0, 0, 0, 1);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.53);
+    z-index: 0;
 }
 .side-nav
 {
@@ -15,12 +16,13 @@ nav
     left: 0;
     width: 78px;
     color: white;
-    z-index: 100;
+    z-index: 0;
 }
 .side-nav li{
     background-color: rgba(2, 3, 2, 0.100);
     padding: 7px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.53);
+    z-index: 0;
 }
 .side-nav a{
     padding: 7px;
@@ -35,9 +37,12 @@ nav
     z-index: 0;
     will-change: opacity;
 }
+nav .brand-logo{
+    z-index: 0;
+}
 footer.page-footer
 {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.71);
 }
 #main {
     flex: 1 0 auto;
@@ -80,21 +85,162 @@ footer
 }
 .collection{
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.56);
-    border: solid white 0px;
-    border-radius: 2%;
-    background-color: rgba(194, 194, 194, 0.10);
-    z-index: 5px;
+    border: solid #060606 0px;
+    background-color: rgba(0, 0, 0, 0.92);
     color: white;
 }
 .collection > li
 {
-    border: solid rgba(255, 255, 255, 1) 1px;
+    border: solid rgb(5, 5, 5) 1px;
+}
+#popup-content{
+    position: fixed;
+    z-index: 2002;
+    max-width: 300px;
+    width: 80%;
+    border: 1px solid whitesmoke;
+    box-shadow: 5px 2px 7px rgba(88, 88, 88, 0.35);
+}
+#search{
+    color: black;
+}
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all .3s;
+}
+.input-field > i.material-icons{
+    color: #9e9e9e;
+}
+.input-field > i.material-icons.active{
+    color: #dedede;
+}
+
+input:not([type]):disabled, input:not([type])[readonly="readonly"],
+input[type=text]:disabled,
+input[type=text][readonly="readonly"],
+input[type=password]:disabled,
+input[type=password][readonly="readonly"],
+input[type=email]:disabled,
+input[type=email][readonly="readonly"],
+input[type=url]:disabled,
+input[type=url][readonly="readonly"],
+input[type=time]:disabled,
+input[type=time][readonly="readonly"],
+input[type=date]:disabled,
+input[type=date][readonly="readonly"],
+input[type=datetime-local]:disabled,
+input[type=datetime-local][readonly="readonly"],
+input[type=tel]:disabled,
+input[type=tel][readonly="readonly"],
+input[type=number]:disabled,
+input[type=number][readonly="readonly"],
+input[type=search]:disabled,
+input[type=search][readonly="readonly"],
+textarea.materialize-textarea:disabled,
+textarea.materialize-textarea[readonly="readonly"] {
+    color: rgba(143, 143, 143, 0.99);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.26);
+}
+
+input:not([type]):disabled + label, input:not([type])[readonly="readonly"] + label,
+input[type=text]:disabled + label,
+input[type=text][readonly="readonly"] + label,
+input[type=password]:disabled + label,
+input[type=password][readonly="readonly"] + label,
+input[type=email]:disabled + label,
+input[type=email][readonly="readonly"] + label,
+input[type=url]:disabled + label,
+input[type=url][readonly="readonly"] + label,
+input[type=time]:disabled + label,
+input[type=time][readonly="readonly"] + label,
+input[type=date]:disabled + label,
+input[type=date][readonly="readonly"] + label,
+input[type=datetime-local]:disabled + label,
+input[type=datetime-local][readonly="readonly"] + label,
+input[type=tel]:disabled + label,
+input[type=tel][readonly="readonly"] + label,
+input[type=number]:disabled + label,
+input[type=number][readonly="readonly"] + label,
+input[type=search]:disabled + label,
+input[type=search][readonly="readonly"] + label,
+textarea.materialize-textarea:disabled + label,
+textarea.materialize-textarea[readonly="readonly"] + label {
+    color: rgba(144, 144, 144, 1);
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #dedede;
+    box-shadow: 0 1px 0 0 #a4a6a3;
+}
+.close-button{
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: white;
+    cursor: pointer;
 }
 ul.collection > li:hover{
-    border-left: solid white 5px;
-    box-shadow: 0 5px 5px rgba(93, 93, 93, 0.59);
-    background-color: rgba(194, 194, 194, 0.12);
+    border-left: solid rgba(255, 255, 255, 0.76) 5px;
+    box-shadow: 0 5px 5px rgba(38, 38, 38, 0.59);
+    background-color: rgba(33, 33, 33, 0.51);
+}
+.collection .collection-item{
+    background-color: rgba(0, 0, 0, 0);
 }
 .card{
-    background-color: rgba(255, 255, 255, 0.14);
+    background-color: rgba(0, 0, 0, 0.93);
+    color: white;
 }
+.material-icons{
+    color: #dadada;
+}
+.card .card-reveal{
+    background-color: #000000;
+    color: rgba(248, 248, 248, 1);
+}
+.card-reveal .material-icons{
+    color: #fafafa;
+}
+#overlay{
+    background-color: rgba(0, 0, 0, 0.74);
+    z-index: 2000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left:0;
+    top:0;
+}
+
