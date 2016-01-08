@@ -53,10 +53,11 @@ router.post('/login', function (req, res) {
     };
     var onFetch = function (err, doc)
     {
+        console.log(err);
         if (err)
         {
-            console.log(err.message);
-            res.redirect('/login');
+            console.log(err);
+            res.redirect('/main');
         }
         else if (doc)
         {
@@ -70,6 +71,9 @@ router.post('/login', function (req, res) {
             {
                 console.log('Incorrect');
             }
+        }else{
+            console.log('bad username');
+            res.redirect('/main')
         }
     };
     mongoUsers.fetch(credentials, onFetch);
