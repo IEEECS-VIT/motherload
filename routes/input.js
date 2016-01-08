@@ -140,9 +140,29 @@ router.post('/edit', function (request, response) {
             console.log('error: ' + err);
         }
         else {
-            response.status(200).send({message: 'Updated: ', results: null,name: name});
+            if(name){
+                response.status(200).send({message: 'Updated: ', results: null,name: name});
+            }
+            else {
+                response.status(200).send({message: 'Updated: ', results: null, name: 'No image change'});
+            }
         }
     };
+    collection.findAndModify(
+        {c_name: newArticle.c_name},
+        [['c_name', 'asc']],
+        {
+            $set: {
+                main_category: newArticle.main_category,
+                content: newArticle.content,
+                logo: newArticle.logo,
+                website: newArticle.website,
+                timestamp: newArticle.timestamp
+            }
+        },
+        {new: true}
+        , onUpdate
+    );
 
 
 });
