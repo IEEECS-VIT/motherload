@@ -125,6 +125,7 @@ router.post('/register', function (req, res) {
                     {
                         var name = newUser._id;
                         res.cookie('name', name, {maxAge: 86400000, signed: true});
+                        res.redirect('/main');
                     }
                 };
                 mongoUsers.insert(newUser, onInsert);
