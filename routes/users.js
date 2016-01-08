@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
         console.log('users');
 
     }else{
+        console.log('user login false');
         res.send({message:false});
     }
 
