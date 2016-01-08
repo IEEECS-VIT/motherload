@@ -16,10 +16,10 @@ function edit($http, $scope, editData) {
             console.log(data);
             // if successful, bind success message to message
                 $scope.msg = data.message;
-                alert($scope.msg);
+                alert($scope.msg+data.name);
                 clearData($scope);
 
-        });
+        }).error(function(data){console.log(data);});
 }
 function newArticle($http, $scope) {
     $http({

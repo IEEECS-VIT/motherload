@@ -24,19 +24,24 @@ router.post('/new', function (request, response) {
         website: request.body.website,
         timestamp: new Date()
     };
+    console.log(newArticle.logo);
     if (newArticle.logo) {
         var logo = newArticle.logo;
         var c_name = newArticle.c_name;
+        console.log(newArticle.c_name);
         var imgPath = 'public/images/' + logo;
+        console.log(imgPath);
         var syspath = path.join(__dirname, '..', imgPath);
         var replace_with = c_name.replace(/\s+/g, "").toLowerCase();
         var stats = fs.statSync(syspath);
         if (!stats) {
-            console.log(err);
             newArticle.logo = logo;
         }
         else {
             if (stats.isFile()) {
+                var newFileName = replace_with + logo.substr(logo.length - 4, logo.length - 1);
+                cloudinary.api.resource('sample',
+                    function(result)  { console.log(result) });
                 cloudinary.uploader.upload(imgPath, function (result) {
                 }, {public_id: replace_with, folder: 'startup'});
                 fs.unlink(imgPath, function (err) {
@@ -44,7 +49,7 @@ router.post('/new', function (request, response) {
                         console.log(err);
                     }
                 });
-                newArticle.logo = replace_with + logo.substr(logo.length - 4, logo.length - 1);
+                newArticle.logo = newFileName;
             }
         }
     }
@@ -88,7 +93,7 @@ router.post('/edit', function (request, response) {
     };
     var test = newArticle.c_name.replace(/\s+/g, "").toLowerCase() + newArticle.logo.substr(newArticle.logo.length - 4, newArticle.logo.length - 1);
     console.log(test);
-    if (newArticle.logo && !(newArticle.logo === test)) {
+    if (newArticle.logo) {
         var logo = newArticle.logo;
         var c_name = newArticle.c_name;
         var imgPath = 'public/images/' + logo;
@@ -96,46 +101,49 @@ router.post('/edit', function (request, response) {
         var replace_with = c_name.replace(/\s+/g, "").toLowerCase();
         var stats = fs.statSync(syspath);
         if (!stats) {
-            console.log(err);
+            //console.log(err);
             newArticle.logo = logo;
         }
         else {
             if (stats.isFile()) {
+                var newFileName = replace_with + logo.substr(logo.length - 4, logo.length - 1);
                 cloudinary.uploader.upload(imgPath, function (result) {
+                    console.log(result);
+                    newFileName = 'v'+result.version+'/startup/'+newFileName;
+                    newArticle.logo = newFileName;
+                    collection.findAndModify(
+                        {c_name: newArticle.c_name},
+                        [['c_name', 'asc']],
+                        {
+                            $set: {
+                                main_category: newArticle.main_category,
+                                content: newArticle.content,
+                                logo: newArticle.logo,
+                                website: newArticle.website,
+                                timestamp: newArticle.timestamp
+                            }
+                        },
+                        {new: true}
+                        , onUpdate(null,newArticle.c_name)
+                    );
                 }, {public_id: replace_with, folder: 'startup'});
                 fs.unlink(imgPath, function (err) {
                     if (err) {
                         console.log(err);
                     }
                 });
-                newArticle.logo = replace_with + logo.substr(logo.length - 4, logo.length - 1);
             }
         }
     }
-    var onUpdate = function (err) {
-        console.log('here');
+    var onUpdate = function (err,name) {
         if (err) {
             console.log('error: ' + err);
         }
         else {
-            response.status(200).send({message: 'Updated', results: null});
+            response.status(200).send({message: 'Updated: ', results: null,name: name});
         }
     };
-    collection.findAndModify(
-        {c_name: newArticle.c_name},
-        [['c_name', 'asc']],
-        {
-            $set: {
-                main_category: newArticle.main_category,
-                content: newArticle.content,
-                logo: newArticle.logo,
-                website: newArticle.website,
-                timestamp: newArticle.timestamp
-            }
-        },
-        {new: true}
-        , onUpdate
-    );
+
 
 });
 
@@ -175,5 +183,6 @@ router.post('/upload', function (request, response) {
 
     response.status(200).send({message: 'Uploaded', results: null});
 });
+
 
 module.exports = router;

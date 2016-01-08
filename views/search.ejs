@@ -45,42 +45,42 @@
 
                     <ul class="collection" ng-show="show.Environment">
                         <li class="collection-item avatar" ng-repeat="x in env | filter: test">
-                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/startup/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                             <span class="title">{{x.c_name}}</span>
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)" class="secondary-content"><i class="small material-icons">play_arrow</i></a>
                         </li>
                     </ul>
                     <ul class="collection" ng-show="show.Energy">
                         <li class="collection-item avatar"  ng-repeat="x in energy | filter: test">
-                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/startup/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                             <span class="title">{{x.c_name}}</span>
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)" class="secondary-content"><i class="small material-icons">play_arrow</i></a>
                         </li>
                     </ul>
                     <ul class="collection"  ng-show="show.Manufacturing">
                         <li class="collection-item avatar"  ng-repeat="x in manu | filter: test">
-                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/startup/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                             <span class="title">{{x.c_name}}</span>
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)" class="secondary-content"><i class="small material-icons">play_arrow</i></a>
                         </li>
                     </ul>
                     <ul class="collection" ng-show="show.Digital">
                         <li class="collection-item avatar"  ng-repeat="x in digi | filter: test">
-                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/startup/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                             <span class="title">{{x.c_name}}</span>
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)" class="secondary-content"><i class="small material-icons">play_arrow</i></a>
                         </li>
                     </ul>
                     <ul class="collection" ng-show="show.Food">
                         <li class="collection-item avatar" ng-repeat="x in food | filter: test">
-                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/startup/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                             <span class="title">{{x.c_name}}</span>
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)" class="secondary-content"><i class="small material-icons">play_arrow</i></a>
                         </li>
                     </ul>
                     <ul class="collection" ng-show="show.Health">
                         <li class="collection-item avatar"  ng-repeat="x in health | filter: test">
-                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/startup/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                            <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                             <span class="title">{{x.c_name}}</span>
                             <a href="#"  id="{{x._id}}" ng-click="activate(x._id)" class="secondary-content"><i class="small material-icons">play_arrow</i></a>
                         </li>
@@ -89,7 +89,7 @@
                 <div class="col m6 l6 s12">
                     <div class="card small" ng-if="checkval==true">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="http://res.cloudinary.com/events-gravitas/image/upload/startup/{{activeelement.logo}}">
+                            <img class="activator" src="http://res.cloudinary.com/events-gravitas/image/upload/{{activeelement.logo}}">
 
                         </div>
                         <div class="card-content">
@@ -106,7 +106,7 @@
         </div>
         <div class="card small" id="popup-content" ng-if="checkvalsmall==true">
             <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="http://res.cloudinary.com/events-gravitas/image/upload/startup/{{activeelement.logo}}">
+                <img class="activator" src="http://res.cloudinary.com/events-gravitas/image/upload/{{activeelement.logo}}">
 
             </div>
             <div class="card-content">

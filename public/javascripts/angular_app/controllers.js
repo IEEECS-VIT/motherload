@@ -1,11 +1,21 @@
 
 var controllers={};
 controllers.input = function ($scope, $http, FileUploader,$location) {
+    /**
+     * Setup
+     */
+
     $scope.setup = function(){
         $('.collapsible').collapsible({
             accordion: false
         });
         $scope.state=user_login($http,checkState);
+    };
+    /**
+     * Go to login
+     */
+    var completedEntry = function(){
+        $location.path('/login');
     };
     var checkState = function(state){
         $scope.state=state;
@@ -52,6 +62,7 @@ controllers.input = function ($scope, $http, FileUploader,$location) {
             $scope.formDatain.logo = null;
         }
         newArticle($http, $scope);
+        completedEntry();
     };
     $scope.editArticle = function () {
         var formDataEdit = {};
@@ -69,9 +80,11 @@ controllers.input = function ($scope, $http, FileUploader,$location) {
         formDataEdit.e_website = $scope.formDataGet.website;
         console.log(formDataEdit);
         edit($http, $scope, formDataEdit);
+        completedEntry();
     };
     $scope.deleteArticle = function () {
         deleteArt($http, $scope);
+        completedEntry();
     };
 
 };
