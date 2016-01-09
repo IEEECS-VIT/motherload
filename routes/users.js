@@ -12,7 +12,6 @@ router.get('/', function(req, res, next) {
         console.log('user login false');
         res.send({message:false});
     }
-    console.log('user login false');
 
 });
 router.get('/logout',function(req,res){

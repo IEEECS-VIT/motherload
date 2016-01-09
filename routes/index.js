@@ -137,7 +137,7 @@ router.post('/register', function (req, res) {
             else
             {
                 console.log("Incorrect Password");
-                res.render('register', {response: "Passwords do not match", csrfToken: req.csrfToken()});
+                res.render('register', {response: "Passwords do not match"});
             }
         }
         else{
