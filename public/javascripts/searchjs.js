@@ -2,38 +2,43 @@ var op=[
     {
         'name': 'Environment',
         'src': '/images/environment.png',
-        'color': '#603137',
-        'image': 'url(/images/red.jpg)'
+        'image': 'url(/images/green.jpg)',
+        'color': '#64ce69'
+
     },
     {
         'name':"Energy",
         'src': '/images/energy.png',
-        'color': '#3e4861',
-        'image': 'url(/images/blue.jpg)'
+        'color': '#ff9362',
+        'image': 'url(/images/orange.jpg)'
+
     },
     {
         'name': "Manufacturing",
         'src': '/images/manufacturing.png',
-        'color': '#627677',
+        'color': '#767676',
         'image': 'url(/images/grey.jpg)'
     },
     {
         'name': "Health",
         'src': '/images/health.png',
-        'color': '#27733e',
-        'image': 'url(/images/teal.jpg)'
+        'color': '#fe9c9b',
+        'image': 'url(/images/red.jpg)'
+
     },
     {
         'name': 'Digital',
         'src': '/images/digital.png',
-        'color': '#c34f42',
-        'image': 'url(/images/orange.jpg)'
+        'color': '#94a1e7',
+        'image': 'url(/images/blue.jpg)'
+
     },
     {
         'name': 'Food',
         'src': '/images/food.png',
-        'image': 'url(/images/green.jpg)',
-        'color': '#74a798'
+        'color': '#d3b4a9',
+        'image': 'url(/images/yellow.jpg)'
+
     }
 
 ];
@@ -63,8 +68,9 @@ active();
 function active(){
     var y=document.getElementById('Environment');
     y.style.borderLeft= '0 solid '+op[0].color;
-    y.style.backgroundImage= op[0].image;
+    y.style.backgroundColor= op[0].color;
     $('body').css('background-image',op[0].image);
+    document.getElementById('heading').innerHTML=op[0].name;
 }
 updatepopup();
 
@@ -125,8 +131,9 @@ $(document).ready(function(){
             a.style.backgroundColor= 'rgba(2, 3, 2, 0.1)';
         }
         y.style.borderLeft= '0 solid '+op[z].color;
-        y.style.backgroundImage= op[z].image;
+        y.style.backgroundColor= op[z].color;
         $('body').css('background-image',op[z].image);
+        document.getElementById('heading').innerHTML=op[z].name;
     });
     $('.button-collapse').sideNav();
     $('div.popup-open').click(function(){
@@ -178,8 +185,9 @@ function sideClick(){
             a.style.backgroundColor= 'rgba(2, 3, 2, 0.1)';
         }
         y.style.borderLeft= '0 solid '+op[z].color;
-        y.style.backgroundImage= op[z].image;
+        y.style.backgroundColor= op[z].color;
         $('body').css('background-image',op[z].image);
+        document.getElementById('heading').innerHTML=op[z].name;
     });
 
 }

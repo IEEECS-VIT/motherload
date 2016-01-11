@@ -1,3 +1,6 @@
+html{
+    font-family: Material-Design-Icons;
+}
 body {
     display: flex;
     min-height: 100vh;
@@ -9,6 +12,10 @@ nav
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.53);
     z-index: 0;
 }
+.navbar-fixed{
+    display: none;
+
+}
 .side-nav
 {
     background-color: rgba(0, 0, 0, 1);
@@ -16,7 +23,7 @@ nav
     left: 0;
     width: 78px;
     color: white;
-    z-index: 0;
+    z-index: 200;
 }
 .side-nav li{
     background-color: rgba(2, 3, 2, 0.100);
@@ -42,11 +49,12 @@ nav .brand-logo{
 }
 footer.page-footer
 {
-    background-color: rgba(0, 0, 0, 0.71);
+    background-color: rgba(0, 0, 0, 1);
 }
 #main {
     flex: 1 0 auto;
 }
+
 li
 {
     padding: 0;
@@ -72,8 +80,14 @@ nav> ul.side-nav > li:hover{
 
 }
 #heading{
-    color: white;
-    text-align: left;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 2px 2px rgba(41, 41, 41, 0.65);
+    z-index: 300;
+
+}
+.button-collapse .material-icons{
+    color: black;
 }
 footer
 {
@@ -101,9 +115,7 @@ footer
     border: 1px solid whitesmoke;
     box-shadow: 5px 2px 7px rgba(88, 88, 88, 0.35);
 }
-#search{
-    color: black;
-}
+
 input:not([type]),
 input[type=text],
 input[type=password],
@@ -118,7 +130,7 @@ input[type=search],
 textarea.materialize-textarea {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #9e9e9e;
+    border-bottom: 1px solid #000000;
     border-radius: 0;
     outline: none;
     height: 3rem;
@@ -129,12 +141,13 @@ textarea.materialize-textarea {
     box-shadow: none;
     box-sizing: content-box;
     transition: all .3s;
+    color: black;
 }
 .input-field > i.material-icons{
-    color: #9e9e9e;
+    color: #000000;
 }
 .input-field > i.material-icons.active{
-    color: #dedede;
+    color: #030303;
 }
 
 input:not([type]):disabled, input:not([type])[readonly="readonly"],
@@ -160,8 +173,9 @@ input[type=search]:disabled,
 input[type=search][readonly="readonly"],
 textarea.materialize-textarea:disabled,
 textarea.materialize-textarea[readonly="readonly"] {
-    color: rgba(143, 143, 143, 0.99);
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.26);
+    color: rgba(0, 0, 0, 0.99);
+    border-bottom: 1px dotted rgb(0, 0, 0);
+
 }
 
 input:not([type]):disabled + label, input:not([type])[readonly="readonly"] + label,
@@ -187,7 +201,8 @@ input[type=search]:disabled + label,
 input[type=search][readonly="readonly"] + label,
 textarea.materialize-textarea:disabled + label,
 textarea.materialize-textarea[readonly="readonly"] + label {
-    color: rgba(144, 144, 144, 1);
+    color: rgb(0, 0, 0);
+
 }
 
 input:not([type]):focus:not([readonly]),
@@ -202,8 +217,10 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #dedede;
+    border-bottom: 1px solid #030303;
+
     box-shadow: 0 1px 0 0 #a4a6a3;
+    color: black;
 }
 .close-button{
     position: fixed;
@@ -221,18 +238,22 @@ ul.collection > li:hover{
     background-color: rgba(0, 0, 0, 0);
 }
 .card{
-    background-color: rgba(0, 0, 0, 0.93);
-    color: white;
+    background-color: rgba(255, 255, 255, 1);
+    color: #000000;
 }
 .material-icons{
     color: #dadada;
 }
 .card .card-reveal{
-    background-color: #000000;
-    color: rgba(248, 248, 248, 1);
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+.card .material-icons{
+    color: black;
+    cursor: pointer;
 }
 .card-reveal .material-icons{
-    color: #fafafa;
+    color: #000000;
 }
 #overlay{
     background-color: rgba(0, 0, 0, 0.74);
