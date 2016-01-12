@@ -69,6 +69,8 @@ function active(){
     var y=document.getElementById('Environment');
     y.style.borderLeft= '0 solid '+op[0].color;
     y.style.backgroundColor= op[0].color;
+    y.style.zIndex='20';
+    y.style.boxShadow= '0 3px 5px rgba(0,0,0,0.2)';
     $('body').css('background-image',op[0].image);
     document.getElementById('heading').innerHTML=op[0].name;
 }
@@ -128,10 +130,14 @@ $(document).ready(function(){
         {
             var a= document.getElementById(op[i].name);
             a.style.backgroundImage= 'url(nil)';
-            a.style.backgroundColor= 'rgba(2, 3, 2, 0.1)';
+            a.style.backgroundColor= 'rgba(255, 255, 255, 1)';
+            a.style.zIndex='0';
+            a.style.boxShadow='0 0 0 rgba(0,0,0,0)';
         }
         y.style.borderLeft= '0 solid '+op[z].color;
         y.style.backgroundColor= op[z].color;
+        y.style.zIndex='20';
+        y.style.boxShadow= '0 5px 8px rgba(0,0,0,0.4)';
         $('body').css('background-image',op[z].image);
         document.getElementById('heading').innerHTML=op[z].name;
     });
@@ -182,10 +188,14 @@ function sideClick(){
         {
             var a= document.getElementById(op[i].name);
             a.style.backgroundImage= 'url(nil)';
-            a.style.backgroundColor= 'rgba(2, 3, 2, 0.1)';
+            a.style.backgroundColor= 'rgba(255, 255, 255, 1)';
+            a.style.zIndex= '0';
+            a.style.boxShadow='0 0 0 rgba(0,0 ,0 ,0)';
         }
         y.style.borderLeft= '0 solid '+op[z].color;
         y.style.backgroundColor= op[z].color;
+        y.style.zIndex='20';
+        y.style.boxShadow= '0 3px 5px rgba(0,0,0,0.2)';
         $('body').css('background-image',op[z].image);
         document.getElementById('heading').innerHTML=op[z].name;
     });

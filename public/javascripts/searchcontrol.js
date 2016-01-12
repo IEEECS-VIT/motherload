@@ -65,7 +65,8 @@ ap.controller('searchControl',function($scope,$http)
             $scope.show.Digital=false;
             $scope.show.Health=false;
             $scope.show.Food=false;
-            $scope.activecard=null;
+            $scope.activecard=$scope.env[0]._id;
+            $scope.activate($scope.activecard);
         }
         if($scope.i=='Energy')
         {
@@ -75,7 +76,8 @@ ap.controller('searchControl',function($scope,$http)
             $scope.show.Digital=false;
             $scope.show.Health=false;
             $scope.show.Food=false;
-            $scope.activecard=null;
+            $scope.activecard=$scope.energy[0]._id;
+            $scope.activate($scope.activecard);
         }
         if($scope.i=='Manufacturing')
         {
@@ -85,7 +87,8 @@ ap.controller('searchControl',function($scope,$http)
             $scope.show.Digital=false;
             $scope.show.Health=false;
             $scope.show.Food=false;
-            $scope.activecard=null;
+            $scope.activecard=$scope.manu[0]._id;
+            $scope.activate($scope.activecard);
         }
         if($scope.i=='Digital')
         {
@@ -95,7 +98,8 @@ ap.controller('searchControl',function($scope,$http)
             $scope.show.Digital=true;
             $scope.show.Health=false;
             $scope.show.Food=false;
-            $scope.activecard=null;
+            $scope.activecard=$scope.digi[0]._id;
+            $scope.activate($scope.activecard);
         }
         if($scope.i=='Health')
         {
@@ -105,7 +109,8 @@ ap.controller('searchControl',function($scope,$http)
             $scope.show.Digital=false;
             $scope.show.Health=true;
             $scope.show.Food=false;
-            $scope.activecard=null;
+            $scope.activecard=$scope.health[0]._id;
+            $scope.activate($scope.activecard);
         }
         if($scope.i=='Food')
         {
@@ -115,7 +120,8 @@ ap.controller('searchControl',function($scope,$http)
             $scope.show.Digital=false;
             $scope.show.Health=false;
             $scope.show.Food=true;
-            $scope.activecard=null;
+            $scope.activecard=$scope.food[0]._id;
+            $scope.activate($scope.activecard);
         }
     });
     $(window).resize(function(){
