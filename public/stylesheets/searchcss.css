@@ -117,10 +117,14 @@ footer
     bottom: 0;
 }
 .collection{
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     background-color: rgba(255, 255, 255, 1);
     color: #000000;
-    border: black solid 0;
+    border-right: black solid 1px;
+    border-left: black solid 0;
+    border-top: black solid 0;
+    border-bottom: black solid 0;
+
 }
 #popup-content{
     position: fixed;
@@ -129,6 +133,7 @@ footer
     width: 80%;
     border: 1px solid whitesmoke;
     box-shadow: 5px 2px 7px rgba(88, 88, 88, 0.35);
+    display: none;
 }
 
 input:not([type]),
@@ -254,6 +259,9 @@ li.collection-item:hover{
     background-color: rgba(0, 0, 0, 0);
     color: black;
 }
+.collection .collection-item.avatar{
+    min-height: 40px;
+}
 .collection .collection-item.avatar .title{
     font-size: 20px;
 }
@@ -286,5 +294,6 @@ li.collection-item:hover{
     position: fixed;
     left:0;
     top:0;
+    display: none;
 }
 

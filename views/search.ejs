@@ -31,7 +31,6 @@
 
     </ul>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons small">menu</i></a>
-    {{activate(env[0]._id)}};
     <div class="container"><h4 id="heading"></h4></div>
     <div id="main">
 
@@ -50,7 +49,7 @@
                         <div ng-repeat="x in env | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
                                 <li class="collection-item avatar hoverable">
-                                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
                                 </li>
@@ -61,7 +60,7 @@
                         <div ng-repeat="x in energy | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
                                 <li class="collection-item avatar hoverable">
-                                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
                                 </li>
@@ -72,7 +71,7 @@
                         <div ng-repeat="x in manu | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
                                 <li class="collection-item avatar hoverable">
-                                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
                                 </li>
@@ -83,7 +82,7 @@
                         <div ng-repeat="x in digi | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
                                 <li class="collection-item avatar hoverable">
-                                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
                                 </li>
@@ -94,7 +93,7 @@
                         <div ng-repeat="x in food | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
                                 <li class="collection-item avatar hoverable">
-                                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
                                 </li>
@@ -105,7 +104,7 @@
                         <div ng-repeat="x in health | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
                                 <li class="collection-item avatar hoverable">
-                                    <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
                                 </li>
@@ -114,7 +113,7 @@
                     </ul>
                 </div>
                 <div class="col m6 l6 s12">
-                    <div class="content" ng-if="checkval==true">
+                    <div class="content" ng-if="large==true">
                         <h5 style="text-align: center">{{activeelement.c_name}}</h5>
                         <a href="{{activeelement.website}}" class="right">{{activeelement.website}}</a>
                         <p>{{activeelement.content}}</p>
@@ -124,7 +123,7 @@
                 </div>
             </div>
         </div>
-        <div class="card small" id="popup-content" ng-if="checkvalsmall==true">
+        <div class="card small" id="popup-content" ng-if="small==true">
             <div class="card-image waves-effect waves-block waves-light">
                 <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{activeelement.logo}}">
                 <span class="card-title">{{activeelement.c_name}}</span>
@@ -153,7 +152,7 @@
             </div>
         </div>
     </footer>-->
-<div id="overlay" ng-show="checkvalsmall"><span class="close-button"><i class="material-icons">close</i></span></div>
+<div id="overlay" ng-show="small"><span class="close-button"><i class="material-icons">close</i></span></div>
 
 </body>
 <script src="/bower/jquery/dist/jquery.js"></script>
