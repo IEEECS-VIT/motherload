@@ -40,16 +40,31 @@ router.post('/new', function (request, response) {
         else {
             if (stats.isFile()) {
                 var newFileName = replace_with + logo.substr(logo.length - 4, logo.length - 1);
-                cloudinary.api.resource('sample',
-                    function(result)  { console.log(result) });
                 cloudinary.uploader.upload(imgPath, function (result) {
+                    console.log(result);
+                    newFileName = 'v'+result.version+'/startup/'+newFileName;
+                    newArticle.logo = newFileName;
+                    collection.findAndModify(
+                        {c_name: newArticle.c_name},
+                        [['c_name', 'asc']],
+                        {
+                            $set: {
+                                main_category: newArticle.main_category,
+                                content: newArticle.content,
+                                logo: newArticle.logo,
+                                website: newArticle.website,
+                                timestamp: newArticle.timestamp
+                            }
+                        },
+                        {new: true}
+                        , onUpdate(null,newArticle.c_name)
+                    );
                 }, {public_id: replace_with, folder: 'startup'});
                 fs.unlink(imgPath, function (err) {
                     if (err) {
                         console.log(err);
                     }
                 });
-                newArticle.logo = newFileName;
             }
         }
     }
@@ -62,6 +77,20 @@ router.post('/new', function (request, response) {
         }
     };
     collection.insert(newArticle, onInsert);
+    var onUpdate = function (err,name) {
+        if (err) {
+            console.log('error: ' + err);
+        }
+        else {
+            if(name){
+                //  response.status(200).send({message: 'Updated: ', results: null,name: name});
+            }
+            else {
+                response.status(200).send({message: 'Updated: ', results: null, name: 'No image change'});
+            }
+        }
+    };
+
 });
 
 router.post('/find', function (request, response) {
@@ -141,7 +170,7 @@ router.post('/edit', function (request, response) {
         }
         else {
             if(name){
-                response.status(200).send({message: 'Updated: ', results: null,name: name});
+              //  response.status(200).send({message: 'Updated: ', results: null,name: name});
             }
             else {
                 response.status(200).send({message: 'Updated: ', results: null, name: 'No image change'});
