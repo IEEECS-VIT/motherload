@@ -57,7 +57,14 @@ controllers.input = function ($scope, $http, FileUploader,$location) {
     };
     $scope.processForm = function () {
         if($scope.formDatain.logo) {
-            $scope.addImage();
+            var file = document.getElementById('newimgfile').files[0];
+            var fileSizeKB = file.size / 1024;
+            if(fileSizeKB<200) {
+                $scope.addImage();
+            }
+            else{
+                alert('File size exceeds limit.');
+            }
         }else{
             $scope.formDatain.logo = null;
         }
@@ -67,7 +74,14 @@ controllers.input = function ($scope, $http, FileUploader,$location) {
     $scope.editArticle = function () {
         var formDataEdit = {};
         if($scope.formDataGet.logo) {
-            $scope.addImage();
+            var file = document.getElementById('editimgfile').files[0];
+            var fileSizeKB = file.size / 1024;
+            if(fileSizeKB<200) {
+                $scope.addImage();
+            }
+            else{
+                alert('File size exceeds limit.');
+            }
         }
         formDataEdit.e_m_category = $scope.formDataGet.main_category;
         formDataEdit.e_c_name = $scope.formDataGet.c_name;

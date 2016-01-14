@@ -28,7 +28,7 @@
                         </div>
                         <div class="row">
                             <label for="imgfile">Upload Image File: </label>
-                            <input type="file" onchange="angular.element(this).scope().formDatain.logo = this.value" name="imgfile" id="imgfile" nv-file-select uploader="uploader"
+                            <input type="file" onchange="angular.element(this).scope().formDatain.logo = this.value" name="imgfile" id="newimgfile" nv-file-select uploader="uploader"
                                    options="{ url: '/input/upload'}"/>
                         </div>
                         <div class="col s12 m4">
@@ -76,7 +76,7 @@
                                       style="height:auto"></textarea></div>
                             <div class="row">
                                 <label for="imgfile">Upload Image File: </label>
-                                <input type="file" onchange="angular.element(this).scope().formDataGet.logo = this.value" name="imgfile" id="imgfile" nv-file-select uploader="uploader"
+                                <input type="file" onchange="angular.element(this).scope().formDataGet.logo = this.value" name="imgfile" id="editimgfile" nv-file-select uploader="uploader"
                                        options="{ url: '/input/upload'}"/>
                             </div>
                             <div class="col s12 m4">
