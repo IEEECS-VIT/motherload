@@ -46,6 +46,7 @@ mongo.connect(mongoURI, onConnect);
 
 app.use(function (req, res, next) {
   req.db = mongodb;
+  console.log('DB set .................................................');
   next();
 });
 
