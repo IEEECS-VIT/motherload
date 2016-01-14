@@ -127,10 +127,11 @@
         <div class="card small" id="popup-content" ng-if="small==true">
             <div class="card-image waves-effect waves-block waves-light">
                 <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{activeelement.logo}}">
-                <span class="card-title">{{activeelement.c_name}}</span>
+
             </div>
             <div class="card-content">
-                <p>{{activeelement.content}}</p>
+                <span class="card-title black-text">{{activeelement.c_name}}</span>
+                <p class="truncate">{{activeelement.content}}</p>
             </div>
             <div class="card-action">
                 <a target="_blank" href="http://{{activeelement.website}}">Read More...</a>
