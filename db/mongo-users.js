@@ -22,7 +22,7 @@ var flag;
 var collection;
 var path = require('path');
 var MongoClient = require('mongodb').MongoClient;
-var mongoUri = process.env.MONGOLAB_URI || 'mongodb://127.0.0.1:27017/gravitas16';
+var mongoUri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/gravitas16';
 var collection_name = 'users';
 
 exports.getCount = function (query, callback)
