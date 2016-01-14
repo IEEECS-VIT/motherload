@@ -213,10 +213,6 @@ router.post('/delete', function (request, response) {
                     });
                 response.status(200).send({message: 'Deleted', results: null});
             } else {
-                cloudinary.api.delete_resources(['startup/' + c_name.replace(/\s+/g, "").toLowerCase()],
-                    function (result) {
-                        console.log(result);
-                    });
                 response.status(200).send({message: 'Article Not Found', results: null});
             }
         }
