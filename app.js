@@ -41,11 +41,19 @@ const onConnect = function (err, db) {
   if (!err) {
     mongodb = db;
     console.log('mongodb');
+    reUseDB();
   }
 };
 
 mongo.connect(mongoURI, onConnect);
+var reUseDB = function(){
+  app.use(function (req, res, next) {
+    req.db = mongodb;
+    console.log('DB Check');
+    next();
+  });
 
+};
 app.use(function (req, res, next) {
   req.db = mongodb;
   console.log('DB Check');
