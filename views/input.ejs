@@ -27,7 +27,7 @@
                                       style="height:auto"></textarea>
                         </div>
                         <div class="row">
-                            <label for="imgfile">Upload Image File: </label>
+                            <label for="imgfile">Upload Image File(Max 200KB): </label>
                             <input type="file" onchange="angular.element(this).scope().formDatain.logo = this.value" name="imgfile" id="newimgfile" nv-file-select uploader="uploader"
                                    options="{ url: '/input/upload'}"/>
                         </div>
@@ -75,7 +75,7 @@
                                       placeholder="Type Content Here" ng-model="formDataGet.content"
                                       style="height:auto"></textarea></div>
                             <div class="row">
-                                <label for="imgfile">Upload Image File: </label>
+                                <label for="imgfile">Upload Image File(Max 200KB): </label>
                                 <input type="file" onchange="angular.element(this).scope().formDataGet.logo = this.value" name="imgfile" id="editimgfile" nv-file-select uploader="uploader"
                                        options="{ url: '/input/upload'}"/>
                             </div>
