@@ -1,25 +1,24 @@
-
-var controllers={};
-controllers.input = function ($scope, $http, FileUploader,$location) {
+var controllers = {};
+controllers.input = function ($scope, $http, FileUploader, $location) {
     /**
      * Setup
      */
 
-    $scope.setup = function(){
+    $scope.setup = function () {
         $('.collapsible').collapsible({
             accordion: false
         });
-        $scope.state=user_login($http,checkState);
+        $scope.state = user_login($http, checkState);
     };
     /**
      * Go to login
      */
-    var completedEntry = function(){
+    var completedEntry = function () {
         $location.path('/login');
     };
-    var checkState = function(state){
-        $scope.state=state;
-        if(!$scope.state){
+    var checkState = function (state) {
+        $scope.state = state;
+        if (!$scope.state) {
             $location.path('/login');
 
         }
@@ -35,20 +34,20 @@ controllers.input = function ($scope, $http, FileUploader,$location) {
     $scope.uploader = new FileUploader({
         url: '/input/upload'
     });
-    $scope.uploader.onSuccessItem = function(fileItem, response, status, headers) {
+    $scope.uploader.onSuccessItem = function (fileItem, response, status, headers) {
         alert(response.message);
         console.info('onSuccessItem', fileItem, response, status, headers);
     };
     $scope.addImage = function () {
-        if($scope.formDatain.logo){
+        if ($scope.formDatain.logo) {
             $scope.formDatain.logo = parseImageName($scope.formDatain.logo);
             $scope.uploader.queue[0].upload();
         }
-        else if($scope.formDataGet.logo){
+        else if ($scope.formDataGet.logo) {
             $scope.formDataGet.logo = parseImageName($scope.formDataGet.logo);
             $scope.uploader.queue[0].upload();
         }
-        else{
+        else {
             alert('Enter Company Name');
         }
     };
@@ -56,39 +55,43 @@ controllers.input = function ($scope, $http, FileUploader,$location) {
         find_article($http, $scope)
     };
     $scope.processForm = function () {
-        if($scope.formDatain.logo) {
-            var file = document.getElementById('newimgfile').files[0];
-            var fileSizeKB = file.size / 1024;
-            if(fileSizeKB<200) {
-                $scope.addImage();
+        if ($scope.formDatain.c_name.length > 0) {
+            if ($scope.formDatain.logo) {
+                var file = document.getElementById('newimgfile').files[0];
+                var fileSizeKB = file.size / 1024;
+                if (fileSizeKB < 200) {
+                    $scope.addImage();
+                }
+                else {
+                    alert('File size exceeds limit.');
+                }
             }
-            else{
-                alert('File size exceeds limit.');
+            else {
+                $scope.formDatain.logo = null;
             }
-        }else{
-            $scope.formDatain.logo = null;
+
+            newArticle($http, $scope);
+            completedEntry();
         }
-        newArticle($http, $scope);
-        completedEntry();
     };
     $scope.editArticle = function () {
         var formDataEdit = {};
-        if($scope.formDataGet.logo) {
+        if ($scope.formDataGet.logo) {
             var file = document.getElementById('editimgfile').files[0];
             var fileSizeKB = file.size / 1024;
-            if(fileSizeKB<200) {
+            if (fileSizeKB < 200) {
                 $scope.addImage();
             }
-            else{
+            else {
                 alert('File size exceeds limit.');
             }
         }
         formDataEdit.e_m_category = $scope.formDataGet.main_category;
         formDataEdit.e_c_name = $scope.formDataGet.c_name;
         formDataEdit.e_contentText = $scope.formDataGet.content;
-        if($scope.formDataGet.logo) {
+        if ($scope.formDataGet.logo) {
             formDataEdit.e_logo = parseImageName($scope.formDataGet.logo);
-        }else{
+        } else {
             formDataEdit.e_logo = null;
         }
         formDataEdit.e_website = $scope.formDataGet.website;
@@ -102,18 +105,18 @@ controllers.input = function ($scope, $http, FileUploader,$location) {
     };
 
 };
-controllers.login = function($scope, $http,$location){
-    $scope.setup = function(){
-       $scope.state=user_login($http,checkState);
+controllers.login = function ($scope, $http, $location) {
+    $scope.setup = function () {
+        $scope.state = user_login($http, checkState);
         console.log($scope.state);
     };
-    var checkState = function(state){
-        $scope.state=state;
-        if($scope.state){
+    var checkState = function (state) {
+        $scope.state = state;
+        if ($scope.state) {
             $location.path('/input');
         }
         console.log(state);
-       return state;
+        return state;
     };
 
 
