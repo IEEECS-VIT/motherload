@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cloudinary = require('cloudinary');
-var mongo = require('mongodb').MongoClient;
+var mongodb = require('express-mongo-db');
 var multer = require('multer');
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -34,31 +34,11 @@ app.use(multer({
   }
 }));
 var mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/gravitas16';
-var mongodb;
+
 cloudinary.config(process.env.CLOUDINARY_URL);
 console.log('Cloudinary set');
-const onConnect = function (err, db) {
-  if (!err) {
-    mongodb = db;
-    console.log('mongodb');
-    reUseDB();
-  }
-};
 
-mongo.connect(mongoURI, onConnect);
-var reUseDB = function(){
-  app.use(function (req, res, next) {
-    req.db = mongodb;
-    console.log('DB Check');
-    next();
-  });
-
-};
-app.use(function (req, res, next) {
-  req.db = mongodb;
-  console.log('DB Check');
-  next();
-});
+app.use(mongodb(mongoURI));
 
 app.use('/', routes);
 app.use('/users', users);
