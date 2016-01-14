@@ -85,6 +85,7 @@ router.get('/articles', function (request, response) {
     if (m_category) {
         collection.find({main_category: m_category}).toArray(function (err, docs) {
             if (err) {
+                console.log(err);
                 response.status(500).send('Internal Server Error');
             }
             else {
