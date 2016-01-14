@@ -37,19 +37,11 @@ function countdown(){
     }
     var time_deadline = days * d_hour * h_min * m_sec + date * d_hour * h_min * m_sec + hour * h_min * m_sec + mins * m_sec + sec;
     var deadline = time_deadline - get_time();
-    if(year - currentYear >0){
-        deadline = (year - currentYear)*31622400 + time_deadline -get_time();
-        var months = 12*(year - currentYear) - current.getMonth() + month -1;
-        if(current.getDate() > date)
-        {
-            days = m_days[current.getMonth()] + date - current.getDate();
-        }
-        else days =date-current.getDate();
-    }
     time.deadline = deadline;
-
+    time.months = month - current.getMonth();
     temp = ((deadline /(d_hour * h_min * m_sec))*10)%10;
     time.days = deadline /(d_hour * h_min * m_sec) - temp/10;
+    time.days -= days +1;
     deadline -= time.days* d_hour * h_min * m_sec;
     temp = ((deadline /(h_min * m_sec))*10)%10;
     time.hour = deadline /(h_min * m_sec) - temp/10;
@@ -58,10 +50,6 @@ function countdown(){
     time.mins = (deadline /(m_sec)) - temp/10;
     deadline -= time.mins * m_sec;
     time.sec = deadline;
-    if(year - currentYear >0){
-        time.months=months;
-        time.days = days;
-    }
 
     return time;
 }
