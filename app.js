@@ -36,9 +36,11 @@ app.use(multer({
 var mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/gravitas16';
 var mongodb;
 cloudinary.config(process.env.CLOUDINARY_URL);
+console.log('Cloudinary set');
 const onConnect = function (err, db) {
   if (!err) {
     mongodb = db;
+    console.log('mongodb');
   }
 };
 
@@ -46,6 +48,7 @@ mongo.connect(mongoURI, onConnect);
 
 app.use(function (req, res, next) {
   req.db = mongodb;
+  console.log('DB Check');
   next();
 });
 
