@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>CSS Dock Menu</title>
+
+    <link href="/stylesheets/home.css" rel="stylesheet" type="text/css" />
+
+
+    <!--[if lt IE 7]>
+    <style type="text/css">
+        .dock img { behavior: url(iepngfix.htc) }
+    </style>
+    <![endif]-->
+    <style>
+        HTML, BODY {
+            height: 100%;
+        }
+
+        BODY {
+            font: 16em/1 Arial;
+        }
+
+        .text--line {
+            font-size: .5em;
+        }
+
+        svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .text-copy {
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 7% 28%;
+            stroke-width: 3px;
+            -webkit-animation: stroke-offset 15s infinite linear;
+            animation: stroke-offset 7s infinite linear;
+        }
+        .text-copy:nth-child(1) {
+            stroke: #360745;
+            stroke-dashoffset: 7%;
+        }
+        .text-copy:nth-child(2) {
+            stroke: #D61C59;
+            stroke-dashoffset: 14%;
+        }
+        .text-copy:nth-child(3) {
+            stroke: #E7D84B;
+            stroke-dashoffset: 21%;
+        }
+        .text-copy:nth-child(4) {
+            stroke: #EFEAC5;
+            stroke-dashoffset: 28%;
+        }
+        .text-copy:nth-child(5) {
+            stroke: #1B8798;
+            stroke-dashoffset: 35%;
+        }
+
+        @-webkit-keyframes stroke-offset {
+            50% {
+                stroke-dashoffset: 35%;
+                stroke-dasharray: 0 87.5%;
+            }
+        }
+
+        @keyframes stroke-offset {
+            50% {
+                stroke-dashoffset: 35%;
+                stroke-dasharray: 0 87.5%;
+            }
+        }
+    </style>
+</head>
+<body>
+<svg viewBox="0 0 800 600">
+    <symbol id="s-text">
+        <text text-anchor="middle"
+              x="50%"
+              y="35%"
+              class="text--line"
+                >
+            graVITas
+        </text>
+        <text text-anchor="middle"
+              x="50%"
+              y="68%"
+              class="text--line2"
+                >
+            2016
+        </text>
+
+    </symbol>
+
+    <g class="g-ants">
+        <use xlink:href="#s-text"
+             class="text-copy"></use>
+        <use xlink:href="#s-text"
+             class="text-copy"></use>
+        <use xlink:href="#s-text"
+             class="text-copy"></use>
+        <use xlink:href="#s-text"
+             class="text-copy"></use>
+        <use xlink:href="#s-text"
+             class="text-copy"></use>
+    </g>
+
+
+</svg>
+<div class="dock" id="dock2">
+    <div class="dock-container2">
+        <a class="dock-item2" href="#"><span>HOME</span><img src="/images/home.png" alt="home" /></a>
+        <a class="dock-item2" href="#"><span>ABOUT</span><img src="/images/about.png" alt="contact" /></a>
+        <a class="dock-item2" href="#"><span>GUESTS</span><img src="/images/guests.png" alt="portfolio" /></a>
+        <a class="dock-item2" href="#"><span>EVENTS</span><img src="/images/events.png" alt="events" /></a>
+        <a class="dock-item2" href="#"><span>SCHEDULE</span><img src="/images/schedule.png" alt="schedule" /></a>
+        <a class="dock-item2" href="#"><span>REGISTER</span><img src="/images/Register.png" alt="Register" /></a>
+        <a class="dock-item2" href="#"><span>SPONSORS</span><img src="/images/sponsors.png" alt="sponsors" /></a>
+        <a class="dock-item2" href="#"><span>TEAM GRAVITAS</span><img src="/images/teamgravitas.png" alt="links" /></a>
+        <a class="dock-item2" href="#"><span>CONTACT PAST GRAVITAS</span><img src="/images/contactpg.png" alt="rss" /></a>
+
+    </div>
+</div>
+
+<!--dock menu JS options -->
+<script type="text/javascript" src="/bower/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(
+            function()
+            {
+                $('#dock').Fisheye(
+                        {
+                            maxWidth: 50,
+                            items: 'a',
+                            itemsText: 'span',
+                            container: '.dock-container',
+                            itemWidth: 40,
+                            proximity: 90,
+                            halign : 'center'
+                        }
+                );
+                $('#dock2').Fisheye(
+                        {
+                            maxWidth: 100,
+                            items: 'a',
+                            itemsText: 'span',
+                            container: '.dock-container2',
+                            itemWidth: 70,
+                            proximity: 85,
+                            alignment : 'left',
+                            valign: 'bottom',
+                            halign : 'center'
+                        }
+                )
+            }
+    );
+
+</script>
+
+<script type="text/javascript" src="/javascripts/interface.js"></script>
+</body>
+</html>

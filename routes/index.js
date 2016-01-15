@@ -11,7 +11,7 @@ var record = {
 };
 try
 {
-    bcrypt = require('bcrypt');
+    bcrypt = require('bcryptjs');
 }
 catch (err)
 {
@@ -32,6 +32,9 @@ router.get('/', function(req, res, next) {
 });
 router.get('/gallery', function(req, res, next) {
     res.render('gallery');
+});
+router.get('/home',function(req,res,next){
+ res.render('home');
 });
 router.get('/login',function(req,res){
     res.render('login');
@@ -85,7 +88,6 @@ router.get('/articles', function (request, response) {
     if (m_category) {
         collection.find({main_category: m_category}).toArray(function (err, docs) {
             if (err) {
-                console.log(err);
                 response.status(500).send('Internal Server Error');
             }
             else {
