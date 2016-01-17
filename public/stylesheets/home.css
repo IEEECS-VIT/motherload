@@ -1,5 +1,5 @@
 body {
-    background: url('/images/T1.jpg');
+    background: url('/images/homeback.jpg');
 
 	font: 11px Arial, Helvetica, sans-serif;
 	-moz-background-size: cover;
@@ -15,7 +15,10 @@ img {
 	border: none;
 }
 
-
+#about1,#guests1,#events1,#schedule1,#register1,#sponsors1,#tg1,#cpg1
+{
+    display: none;
+}
 /* dock2 - bottom */
 #dock2 {
 	width: 100%;
