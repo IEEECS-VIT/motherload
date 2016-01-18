@@ -37,10 +37,7 @@ router.post('/new', function (request, response) {
     console.log(newArticle.logo);
 
     if (newArticle.logo) {
-        var queueItem = {
-            c_name: newArticle.c_name,
-            logo: newArticle.logo
-        };
+        var queueItem = newArticle;
         var onPush = function(err,results){
             if(err){
                 console.log(err);
@@ -89,19 +86,16 @@ router.post('/edit', function (request, response) {
         website: request.body.e_website,
         timestamp: new Date()
     };
-    var test = newArticle.c_name.replace(/\s+/g, "").toLowerCase() + newArticle.logo.substr(newArticle.logo.length - 4, newArticle.logo.length - 1);
-    console.log(test);
-
     var onUpdate = function (err,name) {
         if (err) {
             console.log('error: ' + err);
         }
         else {
             if(name){
-                response.status(200).send({message: 'Updated: ', results: null,name: name});
+                response.status(200).send({message: 'Updated: ', results: null,name: name.c_name});
             }
             else {
-                response.status(200).send({message: 'Updated: ', results: null, name: 'No image change'});
+                response.status(200).send({message: 'Updated. ', results: null, name: 'No image change'});
             }
         }
     };
@@ -121,10 +115,7 @@ router.post('/edit', function (request, response) {
         , onUpdate
     );
     if (newArticle.logo) {
-        var queueItem = {
-            c_name: newArticle.c_name,
-            logo: newArticle.logo
-        };
+        var queueItem = newArticle;
         var onPush = function(err,results){
             if(err){
                console.log(err);
@@ -132,7 +123,7 @@ router.post('/edit', function (request, response) {
               //  console.log(results);
             }
         };
-        articleQueue.push(queueItem,request.db,onPush);
+        articleQueue.push(request.db,queueItem,onPush);
     }
 
 });
@@ -167,7 +158,7 @@ router.post('/upload',function (request, response) {
         if (err) {
             //console.log(request.file);
             // An error occurred when uploading
-            //console.log(err);
+            console.log(err);
             response.status(500).send({message: 'Error', results: null});
 
         }else{
@@ -185,13 +176,14 @@ router.post('/upload',function (request, response) {
                             }
                             else {
                                 if(name){
+                                    console.log(name);
                                     response.status(200).send({message: 'Updated: ', results: null,name: name});
                                 }
                                 else {
                                    response.status(200).send({message: 'Updated: ', results: null, name: 'No image change'});
                                 }
                             }
-                            db.close();
+                           // db.close();
                         };
                        // console.log(doc.ops);
                         uploadToCloud(doc,db,onUpdate);
@@ -242,20 +234,26 @@ var uploadToCloud =function(newArticle,db,callback){
     fs.access(syspath, fs.R_OK | fs.W_OK, function (err) {
      //   console.log(err ? 'no access!' : 'can read/write');
         if(err){
-            //console.log(err);
+            console.log(err);
         }
         else{
             var newFileName = replace_with + logo.substr(logo.length - 4, logo.length - 1);
             cloudinary.uploader.upload(imgPath, function (result) {
-               // console.log(result);
+              // console.log(result);
                 newFileName = 'v'+result.version+'/startup/'+newFileName;
-                newArticle.logo = newFileName;
+                //console.log(newFileName);
+                newArticle.logo =  newFileName;
+               // console.log(newArticle);
                 collection.findAndModify(
                     {c_name: newArticle.c_name},
                     [['c_name', 'asc']],
                     {
                         $set: {
-                            logo: newArticle.logo
+                            main_category: newArticle.main_category,
+                            content: newArticle.content,
+                            logo: newArticle.logo,
+                            website: newArticle.website,
+                            timestamp: newArticle.timestamp
                         }
                     },
                     {new: true}
@@ -270,6 +268,5 @@ var uploadToCloud =function(newArticle,db,callback){
             });
         }
     });
-    db.close();
 };
 module.exports = router;
