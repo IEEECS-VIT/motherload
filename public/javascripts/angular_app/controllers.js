@@ -59,7 +59,7 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
             if ($scope.formDatain.logo) {
                 var file = document.getElementById('newimgfile').files[0];
                 var fileSizeKB = file.size / 1024;
-                if (fileSizeKB < 200) {
+                if (fileSizeKB < 300) {
                     $scope.addImage();
                 }
                 else {
@@ -79,7 +79,7 @@ controllers.input = function ($scope, $http, FileUploader, $location) {
         if ($scope.formDataGet.logo) {
             var file = document.getElementById('editimgfile').files[0];
             var fileSizeKB = file.size / 1024;
-            if (fileSizeKB < 200) {
+            if (fileSizeKB < 300) {
                 $scope.addImage();
             }
             else {
