@@ -21,21 +21,12 @@ var log;
 var flag;
 var collection;
 var path = require('path');
-var MongoClient = require('mongodb').MongoClient;
-var mongoUri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/gravitas16';
+
 var collection_name = 'users';
 
-exports.getCount = function (query, callback)
+exports.getCount = function (query,db, callback)
 {
-    var onConnect = function (err, db)
-    {
-        if (err)
-        {
-            callback(err);
-        }
-        else
-        {
-            collection = db.collection(collection_name);
+     collection = db.collection(collection_name);
             var onFetch = function (err, count)
             {
                 db.close();
@@ -49,9 +40,7 @@ exports.getCount = function (query, callback)
                 }
             };
             collection.count(query, onFetch);
-        }
-    };
-    MongoClient.connect(mongoUri, onConnect);
+
 };
 
 exports.insert = function (doc, callback)
@@ -83,17 +72,9 @@ exports.insert = function (doc, callback)
     MongoClient.connect(mongoUri, onConnect);
 };
 
-exports.fetch = function (doc, callback)
+exports.fetch = function (doc,db, callback)
 {
-    var onConnect = function (err, db)
-    {
-        if (err)
-        {
-            callback(err);
-        }
-        else
-        {
-            collection = db.collection(collection_name);
+    collection = db.collection(collection_name);
             var onFetch = function (err, document)
             {
                 db.close();
@@ -111,7 +92,5 @@ exports.fetch = function (doc, callback)
                 }
             };
             collection.findOne(doc, onFetch);
-        }
-    };
-    MongoClient.connect(mongoUri, onConnect);
+
 };

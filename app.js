@@ -6,13 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cloudinary = require('cloudinary');
 var mongodb = require('express-mongo-db');
-var multer = require('multer');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var apiRoutes = require(path.join(__dirname, 'routes', 'api'));
 var inputRoutes = require(path.join(__dirname, 'routes', 'input'));
 var app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -24,15 +22,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET || 'randomsecretstring', {signed: true}));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(multer({
-  dest: './public/images',
-  rename: function (fieldname, filename) {
-    return filename.replace(/\s+/g, "").toLowerCase();
-  },
-  limits: {
-    files: 1
-  }
-}));
 var mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/gravitas16';
 
 cloudinary.config(process.env.CLOUDINARY_URL);

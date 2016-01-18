@@ -45,6 +45,7 @@ router.get('/search',function(req,res){
 router.post('/login', function (req, res) {
     var user = req.body.username;
     var password = req.body.password;
+    var db = req.db;
     if (req.signedCookies.name)
     {
         res.clearCookie('name');
@@ -79,7 +80,7 @@ router.post('/login', function (req, res) {
             res.redirect('/main')
         }
     };
-    mongoUsers.fetch(credentials, onFetch);
+    mongoUsers.fetch(credentials,db, onFetch);
 });
 
 router.get('/articles', function (request, response) {

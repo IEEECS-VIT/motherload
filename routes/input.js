@@ -3,6 +3,16 @@ var path = require('path');
 var express = require('express');
 var fs = require('fs');
 var cloudinary = require('cloudinary');
+var multer = require('multer');
+var upload = multer({
+    dest:  './public/images',
+    rename: function (fieldname, filename,originalname) {
+        return originalname.replace(/\s+/g, "").toLowerCase();
+    },
+    limits:{
+        files:1
+    }
+});
 
 var router = express.Router();
 
@@ -220,14 +230,45 @@ router.post('/delete', function (request, response) {
     var query = {c_name: c_name};
     collection.remove(query, onDelete);
 });
+router.post('/upload',function (request, response) {
+    upload.single('file')(request, response, function (err) {
+        if (err) {
+            console.log(request.file);
+            // An error occurred when uploading
+            console.log(err);
+            response.status(500).send({message: 'Error', results: null});
 
-router.post('/upload', function (request, response) {
-    console.log('Image uploaded: ' + request.files.file.name);
-    // console.log(request.body);
-    // console.log(request.files.file);
+        }else{
+            console.log(request.file);
+            fileRename(request.file.filename,request.file.originalname);
+            response.status(200).send({message: 'Uploaded', results: null});
+        }
+   });
 
-    response.status(200).send({message: 'Uploaded', results: null});
 });
 
+var fileRename = function(fileName,originalName,callback){
 
+    var imgPath = 'public/images/' + fileName;
+    console.log('file rename');
+    var syspath = path.join(__dirname, '..', imgPath);
+    console.log(imgPath);
+    console.log(syspath);
+    var replace_with = originalName.replace(/\s+/g, "").toLowerCase();
+    console.log(replace_with);
+    fs.access(syspath, fs.R_OK | fs.W_OK, function (err) {
+        console.log(err ? 'no access!' : 'can read/write')
+        fs.rename(syspath,'public/images/'+replace_with,function(err){
+            if(err){
+                console.log('rename error');
+                console.log(err);
+            }else{
+                console.log('file renamed');
+            }
+        });
+    });
+
+
+
+};
 module.exports = router;
