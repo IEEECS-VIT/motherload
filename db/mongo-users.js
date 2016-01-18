@@ -43,17 +43,9 @@ exports.getCount = function (query,db, callback)
 
 };
 
-exports.insert = function (doc, callback)
+exports.insert = function (doc, db,callback)
 {
-    var onConnect = function (err, db)
-    {
-        if (err)
-        {
-            callback(err);
-        }
-        else
-        {
-            collection = db.collection(collection_name);
+    collection = db.collection(collection_name);
             var onInsert = function (err, docs)
             {
                 db.close();
@@ -67,9 +59,6 @@ exports.insert = function (doc, callback)
                 }
             };
             collection.insertOne(doc, {w: 1}, onInsert);
-        }
-    };
-    MongoClient.connect(mongoUri, onConnect);
 };
 
 exports.fetch = function (doc,db, callback)
