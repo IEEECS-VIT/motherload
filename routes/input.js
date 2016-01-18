@@ -98,7 +98,7 @@ router.post('/edit', function (request, response) {
         }
         else {
             if(name){
-              //  response.status(200).send({message: 'Updated: ', results: null,name: name});
+                response.status(200).send({message: 'Updated: ', results: null,name: name});
             }
             else {
                 response.status(200).send({message: 'Updated: ', results: null, name: 'No image change'});
@@ -127,7 +127,7 @@ router.post('/edit', function (request, response) {
         };
         var onPush = function(err,results){
             if(err){
-               // console.log(err);
+               console.log(err);
             }else{
               //  console.log(results);
             }
