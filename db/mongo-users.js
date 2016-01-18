@@ -29,7 +29,7 @@ exports.getCount = function (query,db, callback)
      collection = db.collection(collection_name);
             var onFetch = function (err, count)
             {
-                db.close();
+                //db.close();
                 if (err)
                 {
                     callback(err);
@@ -48,7 +48,7 @@ exports.insert = function (doc, db,callback)
     collection = db.collection(collection_name);
             var onInsert = function (err, docs)
             {
-                db.close();
+               // db.close();
                 if (err)
                 {
                     callback(err, null);
@@ -66,7 +66,7 @@ exports.fetch = function (doc,db, callback)
     collection = db.collection(collection_name);
             var onFetch = function (err, document)
             {
-                db.close();
+               // db.close();
                 if (err)
                 {
                     callback(err, null);

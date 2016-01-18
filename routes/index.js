@@ -101,6 +101,7 @@ router.get('/register',function(req,res){
     res.render('register');
 });
 router.post('/register', function (req, res) {
+    var db = req.db;
     if (req.signedCookies.name)
     {
         res.clearCookie('name');
@@ -113,6 +114,7 @@ router.post('/register', function (req, res) {
         }
         else if(req.body.username&&req.body.password&&req.body.confirm_password)
         {
+
             if (req.body.confirm_password === req.body.password)
             {
                 var newUser = record;
@@ -136,7 +138,7 @@ router.post('/register', function (req, res) {
                         res.redirect('/main');
                     }
                 };
-                mongoUsers.insert(newUser, onInsert);
+                mongoUsers.insert(newUser,db, onInsert);
             }
             else
             {
@@ -148,7 +150,7 @@ router.post('/register', function (req, res) {
             console.log('no data');
         }
     };
-    mongoUsers.getCount({}, onGetCount);
+    mongoUsers.getCount({},db, onGetCount);
 });
 
 router.get('/main',function(req,res){
