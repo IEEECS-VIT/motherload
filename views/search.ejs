@@ -19,11 +19,6 @@
 </head>
 <body ng-app="searchapp" ng-controller="searchControl">
 
-    <nav class="navbar-fixed">
-
-
-
-    </nav>
     <ul class="right side-nav hide-on-med-and-down" id="side">
 
     </ul>
@@ -31,10 +26,12 @@
 
     </ul>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons small">menu</i></a>
-    <div class="container"><h4 id="heading"></h4></div>
     <div id="main">
 
         <div class="container">
+            <div class="row">
+                <h4 id="heading"></h4>
+            </div>
             <div class="row">
                 <div class="input-field col m12 l12 s12">
                     <i class="material-icons prefix">search</i>
@@ -48,7 +45,7 @@
                     <ul class="collection" ng-show="show.Environment">
                         <div ng-repeat="x in env | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
-                                <li class="collection-item avatar hoverable">
+                                <li class="collection-item avatar waves-effect waves-block waves-env">
                                     <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
@@ -59,7 +56,7 @@
                     <ul class="collection" ng-show="show.Energy">
                         <div ng-repeat="x in energy | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
-                                <li class="collection-item avatar hoverable">
+                                <li class="collection-item avatar waves-effect waves-block waves-energy">
                                     <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
@@ -70,7 +67,7 @@
                     <ul class="collection" ng-show="show.Manufacturing">
                         <div ng-repeat="x in manu | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
-                                <li class="collection-item avatar hoverable">
+                                <li class="collection-item avatar waves-effect waves-block waves-manu">
                                     <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
@@ -81,7 +78,7 @@
                     <ul class="collection" ng-show="show.Digital">
                         <div ng-repeat="x in digi | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
-                                <li class="collection-item avatar hoverable">
+                                <li class="collection-item avatar waves-effect waves-block waves-digi">
                                     <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
@@ -92,7 +89,7 @@
                     <ul class="collection" ng-show="show.Food">
                         <div ng-repeat="x in food | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
-                                <li class="collection-item avatar hoverable">
+                                <li class="collection-item avatar waves-effect waves-block waves-food">
                                     <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
@@ -103,7 +100,7 @@
                     <ul class="collection" ng-show="show.Health">
                         <div ng-repeat="x in health | filter: test">
                             <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
-                                <li class="collection-item avatar hoverable">
+                                <li class="collection-item avatar waves-effect waves-block waves-health">
                                     <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
                                     <span class="title"><b>{{x.c_name}}</b></span>
                                     <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
@@ -112,7 +109,7 @@
                         </div>
                     </ul>
                 </div>
-                <div class="col m6 l6 s12">
+                <div class="col m6 l6 s12" id="con">
                     <div class="content" ng-if="large==true" style="text-align: center;">
                         <h5 style="text-align: center">{{activeelement.c_name}}</h5>
                         <a href="http://{{activeelement.website}}"  target="_blank">Website</a>

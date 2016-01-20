@@ -5,6 +5,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background: fixed;
 }
 nav
 {
@@ -67,6 +68,13 @@ footer.page-footer
 .content{
     padding: 7px;
 }
+div.col.m6.l6.s12{
+    padding-right: 0;
+}
+#con{
+    padding-left:0;
+
+}
 li
 {
     padding: 0;
@@ -94,16 +102,23 @@ nav> ul.side-nav > li:hover{
 #heading{
     color: #000000;
     text-align: center;
-    text-shadow: 0 2px 2px rgba(41, 41, 41, 0.65);
-    z-index: 300;
+    text-shadow: 0 1px 1px rgba(41, 41, 41, 0.33);
+    z-index: 100;
     background-color: white;
     padding: 5px;
     width: 250px;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right:auto;
     border-radius: 3px;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.4);
+    box-shadow: 0 0 0 rgba(0,0,0,0.4);
 
+}
+.row{
+    margin-bottom: 0;
+}
+a.button-collapse{
+    width: 28px;
 }
 .button-collapse .material-icons{
     color: black;
@@ -250,11 +265,28 @@ textarea.materialize-textarea:focus:not([readonly]) {
     cursor: pointer;
 }
 li.collection-item:hover{
-    border-left: solid rgba(0, 0, 0, 1) 5px;
+    border-left: solid rgba(0, 0, 0, 1) 2px;
     box-shadow: 0 1px 1px rgba(224, 224, 224, 1);
     background-color: rgb(255, 255, 255);
 }
-
+.waves-effect.waves-env .waves-ripple {
+    background-color: rgba(100, 206, 105, 0.9);
+}
+.waves-effect.waves-energy .waves-ripple {
+    background-color: rgba(255, 147, 98, 0.9);
+}
+.waves-effect.waves-manu .waves-ripple {
+    background-color: rgba(118, 118, 118, 0.9);
+}
+.waves-effect.waves-digi .waves-ripple {
+    background-color: rgba(148, 161, 231, 0.90);
+}
+.waves-effect.waves-health .waves-ripple {
+    background-color: rgba(254, 156, 155, 0.90);
+}
+.waves-effect.waves-food .waves-ripple {
+    background-color: rgba(211, 180, 169, 0.90);
+}
 .collection .collection-item{
     background-color: rgba(0, 0, 0, 0);
     color: black;
