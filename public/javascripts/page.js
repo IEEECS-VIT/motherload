@@ -37,8 +37,6 @@ $(document).ready(function() {
             var y;
             y =arr[i].id;
             if (y != x) {
-
-
                  $('#'+y+' > img').attr('src','/images/'+arr[i].id+'.png');
                 $('#' + y + '1').hide();
             }
