@@ -71,6 +71,7 @@ function active(){
     y.style.backgroundColor= op[0].color;
     y.style.zIndex='20';
     y.style.boxShadow= '0 3px 5px rgba(0,0,0,0.2)';
+    $('body').css('background-color',op[0].color);
     $('body').css('background-image',op[0].image);
     document.getElementById('heading').innerHTML=op[0].name;
 }
@@ -138,6 +139,7 @@ $(document).ready(function(){
         y.style.backgroundColor= op[z].color;
         y.style.zIndex='20';
         y.style.boxShadow= '0 5px 8px rgba(0,0,0,0.4)';
+        $('body').css('background-color',op[z].color);
         $('body').css('background-image',op[z].image);
         document.getElementById('heading').innerHTML=op[z].name;
     });
@@ -196,6 +198,7 @@ function sideClick(){
         y.style.backgroundColor= op[z].color;
         y.style.zIndex='20';
         y.style.boxShadow= '0 3px 5px rgba(0,0,0,0.2)';
+        $('body').css('background-color',op[z].color);
         $('body').css('background-image',op[z].image);
         document.getElementById('heading').innerHTML=op[z].name;
     });
