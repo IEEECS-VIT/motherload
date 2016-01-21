@@ -3,40 +3,31 @@
  */
 var arr=[
     {
-        'id' : 'home',
-        'src' : 'home.png'
+        'id' : 'home'
     },
     {
-        'id' : 'about',
-        'src' : 'about.png'
+        'id' : 'about'
     },
     {
-        'id' : 'guests',
-        'src' : 'guests.png'
+        'id' : 'guests'
     },
     {
-        'id' : 'events',
-        'src' : 'events.png'
+        'id' : 'events'
     },
     {
-        'id' : 'schedule',
-        'src' : 'schedule.png'
+        'id' : 'schedule'
     },
     {
-        'id' : 'register',
-        'src' : 'register.png'
+        'id' : 'register'
     },
     {
-        'id': 'sponsors',
-        'src':'sponsors.png'
+        'id': 'sponsors'
     },
     {
-        'id':'tg',
-        src:'tg.png'
+        'id':'tg'
     },
     {
-        'id':'cpg',
-        src:'cpg.png'
+        'id':'cpg'
     }
 ];
 $(document).ready(function() {
@@ -55,17 +46,10 @@ $(document).ready(function() {
             {
 
                 $('#'+x+' > img').attr('src','/images/'+arr[i].id+'open.png');
-                $('body').css({'background-image' :'url('+'/images/'+arr[i].id+'back.jpg)','transition':'1s','left':'0','-webkit-animation': 'slide 0.5s forwards'
-                    });
+                $('body').css({'background-image' :'url('+'/images/'+arr[i].id+'back.jpg)','background-size':'cover'                    });
                 $('#'+x+'1').show();
 
- {
 
-            }
- {
-
-
-        }
             }
         }
     });
