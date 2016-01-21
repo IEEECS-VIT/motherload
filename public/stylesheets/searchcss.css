@@ -67,12 +67,14 @@ footer.page-footer
 }
 .content{
     padding: 7px;
+
 }
 div.col.m6.l6.s12{
     padding-right: 0;
 }
 #con{
     padding-left:0;
+    border-left: solid black 1px;
 
 }
 li
@@ -135,7 +137,7 @@ footer
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     background-color: rgba(255, 255, 255, 1);
     color: #000000;
-    border-right: black solid 1px;
+    border-right: black solid 0px;
     border-left: black solid 0;
     border-top: black solid 0;
     border-bottom: black solid 0;

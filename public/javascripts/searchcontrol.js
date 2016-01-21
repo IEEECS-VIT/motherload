@@ -21,10 +21,10 @@ ap.controller('searchControl',function($scope,$http) {
         'Digital': false
     };
     $scope.color = {
-        'Environment': '#64ce69',
+        'Environment': '#b7ee76',
         'Energy':'#ff9362',
         'Manufacturing':'#767676',
-        'Digital': '#94a1e7',
+        'Digital': '#8e9be1',
         'Health': '#fe9c9b',
         'Food': '#d3b4a9'
     };

@@ -3,7 +3,7 @@ var op=[
         'name': 'Environment',
         'src': '/images/environment.png',
         'image': 'url(/images/green.jpg)',
-        'color': '#64ce69'
+        'color': '#b7ee76'
 
     },
     {
@@ -29,7 +29,7 @@ var op=[
     {
         'name': 'Digital',
         'src': '/images/digital.png',
-        'color': '#94a1e7',
+        'color': '#8e9be1',
         'image': 'url(/images/blue.jpg)'
 
     },
