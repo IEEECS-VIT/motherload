@@ -46,7 +46,7 @@ $(document).ready(function() {
             {
 
                 $('#'+x+' > img').attr('src','/images/'+arr[i].id+'open.png');
-                $('body').css({'background-image' :'url('+'/images/'+arr[i].id+'back.jpg)','background-size':'cover'                    });
+                $('body').css({'background-image' :'url('+'/images/'+arr[i].id+'back.jpg)','background-size':'cover'});
                 $('#'+x+'1').show();
 
 
