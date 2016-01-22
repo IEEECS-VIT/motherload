@@ -37,13 +37,13 @@ $(document).ready(function() {
             var y;
             y =arr[i].id;
             if (y != x) {
-                 $('#'+y+' > img').attr('src','/images/'+arr[i].id+'.png');
+                $('#'+y+' > img').css({ '-webkit-filter': 'drop-shadow(0px 0px 0px )',
+                    'filter': 'drop-shadow(0px 0px 0px )'});
                 $('#' + y + '1').hide();
             }
             else
             {
-
-                $('#'+x+' > img').attr('src','/images/'+arr[i].id+'open.png');
+                $('#'+x+' > img').css({ '-webkit-filter': 'drop-shadow(0px 1px 0px blue)'});
                 $('body').css({'background-image' :'url('+'/images/'+arr[i].id+'back.jpg)','background-size':'cover'});
                 $('#'+x+'1').show();
 
