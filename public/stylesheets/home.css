@@ -16,20 +16,20 @@ img {
 	border: none;
 }
 #about1 {
-
+    margin-top: 0;
+   font-family: papyrus;
     padding: 40px;
     text-align: center;
     color: white;
     font-size: 35px;
-    margin: 100px;
+    margin-top: 0px;
 }
-#heading
+.heading
 {
     text-align: center;
     font-size: 40px;
-    font-weight: 200;
-    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-    color: white;
+    font-family: papyrus;
+    color: #E7D84B;
 }
 
 #about1,#guests1,#events1,#schedule1,#register1,#sponsors1,#tg1,#cpg1
