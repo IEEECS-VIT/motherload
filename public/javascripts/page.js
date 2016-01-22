@@ -43,7 +43,7 @@ $(document).ready(function() {
             }
             else
             {
-                $('#'+x+' > img').css({ '-webkit-filter': 'drop-shadow(0px 1px 0px blue)'});
+                $('#'+x+' > img').css({ '-webkit-filter': 'drop-shadow(2px 2px 0 #FFEB3B)'});
                 $('body').css({'background-image' :'url('+'/images/'+arr[i].id+'back.jpg)','background-size':'cover'});
                 $('#'+x+'1').show();
 
