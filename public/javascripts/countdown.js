@@ -31,17 +31,22 @@ function countdown(){
 
     var days = 0; //total days left
     var temp;//To manage decimals e.g days = 100.3, above .5 decimal value results in negative deadline using Math.round()
-            // Math.round(0.5) = 1 .
+    // Math.round(0.5) = 1 .
     for (var i = 0; i < month-1; i++) {
         days += m_days[i];
     }
+
     var time_deadline = days * d_hour * h_min * m_sec + date * d_hour * h_min * m_sec + hour * h_min * m_sec + mins * m_sec + sec;
     var deadline = time_deadline - get_time();
+    days=0;
+    for (i = current.getMonth(); i < month-1; i++) {
+        days += m_days[i];
+    }
     time.deadline = deadline;
-    time.months = month - current.getMonth();
+    time.months = month - current.getMonth() -1;
     temp = ((deadline /(d_hour * h_min * m_sec))*10)%10;
-    time.days = deadline /(d_hour * h_min * m_sec) - temp/10;
-    time.days -= days +1;
+    time.days = deadline /(d_hour * h_min * m_sec) - days;
+    //time.days -= days +1;
     deadline -= time.days* d_hour * h_min * m_sec;
     temp = ((deadline /(h_min * m_sec))*10)%10;
     time.hour = deadline /(h_min * m_sec) - temp/10;
