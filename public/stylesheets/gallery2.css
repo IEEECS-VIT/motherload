@@ -56,7 +56,10 @@ nav .brand-logo{
     position: fixed;
     left: 50%;
 }
-
+#images img{
+    top: 0;
+    bottom: 0;
+}
 img{
     padding: 0;
     margin: 0;
@@ -67,8 +70,13 @@ img{
     border: solid black 0;
 }
 .heading{
-    padding-top: 9%;
+    padding-top: 7%;
+    color: white;
 }
-.heading>a{
+.heading a{
     text-decoration: none;
+    color: white;
+}
+.heading a:hover{
+    border-bottom: solid #ff8426 5px;
 }

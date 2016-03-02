@@ -1217,6 +1217,7 @@ var myArrayevents = [
 ];
 $(document).ready(function() {
     $('.button-collapse').sideNav();
+    activateTab('previous');
     $('div.popup-open').click(function () {
         alert("button clicked");
     });
@@ -1224,10 +1225,14 @@ $(document).ready(function() {
     var x="";
     for(var j=0;j<myArrayprev.length;j++)
     {
-        x+="<div class='col l4 m4 s6'><img id='"+myArrayprev[j].display+"' style='width: 100%; height: 200PX' src='"+myArrayprev[j].url+"' alt='"+myArrayprev[j].display+"'></div>";
+        x+="<div class='col l4 m4 s6'><img id='"+myArrayprev[j].display+"' style='width: 100%' src='"+myArrayprev[j].url+"' alt='"+myArrayprev[j].display+"'></div>";
     }
     x+="";
     i.innerHTML=x;
+    var u=$('img').width();
+    $('img').css({
+        height: 0.8*u
+    });
     addtolarge(0);
 
     $('img').on('mouseover',function(){
@@ -1240,9 +1245,8 @@ $(document).ready(function() {
         var b=document.getElementById(a);
         if(b!=null)
         {
-            b.style.border='solid rgba(255, 132, 38, 0.6) 1px';
+            b.style.border='solid rgba(255, 132, 38, 0.6) 3px';
         }
-
 
     });
     $('img').on('click',function(){
@@ -1265,12 +1269,39 @@ $(document).ready(function() {
             addtolarge(index);
         }
     });
+    $('#large').on('mouseover',function() {
+
+        $('#images').fadeOut(200);
+    });
+    $('#large').on('mouseout',function(){
+        $('#images').fadeIn(200);
+    });
+    $('h4').on('click',function(){
+        var x=this.id;
+        activateTab(x);
+    });
     function addtolarge(j)
     {
         var k=document.getElementById("large");
         x="";
         x+="<div class='col l3 m4 s6'><img src='"+myArrayprev[j].url+"' alt='"+myArrayprev[j].display+"'></div>";
         k.innerHTML=x;
+    }
+    function activateTab(x)
+    {
+        var a=document.getElementById(x);
+        a.style.borderBottom='solid #ff8426 5px';
+        if(x=='previous')
+        {
+            var b=document.getElementById('events');
+            b.style.borderBottom='solid #ff8426 0';
+        }
+        else
+        {
+            var b=document.getElementById('previous');
+            b.style.borderBottom='solid #ff8426 0';
+        }
+
     }
 
 });
