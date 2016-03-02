@@ -33,6 +33,9 @@ router.get('/', function(req, res, next) {
 router.get('/gallery', function(req, res, next) {
     res.render('gallery');
 });
+router.get('/gallery2', function(req, res, next) {
+    res.render('gallery2');
+});
 router.get('/home',function(req,res,next){
  res.render('home');
 });

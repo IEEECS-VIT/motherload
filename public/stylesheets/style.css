@@ -6,9 +6,16 @@ body {
 .slider{
   z-index: -1 !important;
 }
-nav{
-  background: rgba(25,25,25,0.9)!important;
-  margin: 0;
+
+nav
+{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.53);
+    z-index: 0;
+}
+.navbar-fixed{
+    display: none;
+
 }
 .counter{
 
