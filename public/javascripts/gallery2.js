@@ -1266,25 +1266,25 @@ $(document).ready(function() {
             for(var z=0;z<myArrayprev.length;z++)
             {
                 var c=document.getElementById(myArrayprev[z].display);
-                c.style.border='solid black 3px';
+                c.style.border='solid #009999 3px';
             }
             var a=this.id;
             var b=document.getElementById(a);
             if(b!=null)
             {
-                b.style.border='solid rgba(255, 132, 38, 1) 3px';
+                b.style.border='solid #009999 3px';
             }
 
             for(var z=0;z<myArrayevents.length;z++)
             {
                 var c=document.getElementById(myArrayevents[z].display);
-                c.style.border='solid black 3px';
+                c.style.border='solid 009999 3px';
             }
             var a=this.id;
             var b=document.getElementById(a);
             if(b!=null)
             {
-                b.style.border='solid rgba(255, 132, 38, 1) 3px';
+                b.style.border='solid #009999 3px';
             }
     });
 
@@ -1295,7 +1295,7 @@ $(document).ready(function() {
             for(z=0;z<myArrayprev.length;z++)
             {
                 var c=document.getElementById(myArrayprev[z].display);
-                c.style.border='solid black 3px';
+                c.style.border='solid #009999 3px';
                 if(a==myArrayprev[z].display)
                 {
                     console.log(a);
@@ -1305,7 +1305,7 @@ $(document).ready(function() {
             var b=document.getElementById(a);
             if(b!=null && active=='previous')
             {
-                b.style.border='solid black 3px';
+                b.style.border='solid #009999 3px';
                 addtolarge(index);
             }
             var g=this.id;
@@ -1314,7 +1314,7 @@ $(document).ready(function() {
             for(d=0;d<myArrayevents.length;d++)
             {
                 var c=document.getElementById(myArrayevents[d].display);
-                c.style.border='solid black 3px';
+                c.style.border='solid #009999 3px';
                 if(g==myArrayevents[d].display)
                 {
                     console.log(g);
@@ -1324,7 +1324,7 @@ $(document).ready(function() {
             var b2=document.getElementById(g);
             if(b2!=null && active=='events')
             {
-                b2.style.border='solid black 3px';
+                b2.style.border='solid #009999 3px';
                 addtolarge(index2);
             }
     });
@@ -1359,16 +1359,16 @@ $(document).ready(function() {
     function activateTab(x)
     {
         var a=document.getElementById(x);
-        a.style.borderBottom='solid #ff8426 5px';
+        a.style.borderBottom='solid #009999 5px';
         if(x=='previous')
         {
             var b=document.getElementById('events');
-            b.style.borderBottom='solid #ff8426 0';
+            b.style.borderBottom='solid #009999 0';
         }
         else
         {
             var b=document.getElementById('previous');
-            b.style.borderBottom='solid #ff8426 0';
+            b.style.borderBottom='solid #009999 0';
         }
 
     }
