@@ -35,6 +35,8 @@ img{
 }
 #large img{
     border: solid black 0;
+    box-shadow: 0 5px 5px rgba(206, 206, 206, 0.45);
+    z-index: 10;
 }
 .heading{
     padding-top: 15%;

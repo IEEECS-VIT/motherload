@@ -1328,9 +1328,12 @@ $(document).ready(function() {
                 addtolarge(index2);
             }
     });
-    $('#large').on('mouseover',function() {
+    $('#large').on('click',function() {
 
         $('#images').fadeOut();
+        var x=this.childNodes;
+        animation(x[0]);
+
     });
     $('h4').on('click',function(){
         var x=this.id;
@@ -1342,14 +1345,14 @@ $(document).ready(function() {
             console.log('image displayed in previous');
             var k = document.getElementById("large");
             x = "";
-            x += "<div class='col l3 m4 s6'><img src='" + myArrayprev[j].url + "' alt='" + myArrayprev[j].display + "'></div>";
+            x += "<img src='" + myArrayprev[j].url + "' alt='" + myArrayprev[j].display + "'>";
             k.innerHTML = x;
         }
         else{
             console.log('image displayed in events');
             var k = document.getElementById("large");
             x = "";
-            x += "<div class='col l3 m4 s6'><img src='" + myArrayevents[j].url + "' alt='" + myArrayevents[j].display + "'></div>";
+            x += "<img src='" + myArrayevents[j].url + "' alt='" + myArrayevents[j].display + "'>";
             k.innerHTML = x;
         }
     }
@@ -1367,6 +1370,24 @@ $(document).ready(function() {
             var b=document.getElementById('previous');
             b.style.borderBottom='solid #ff8426 0';
         }
+
+    }
+
+    function animation(x){
+        var w=$(window).width();
+        console.log(w);
+        var iw=$(x).width();
+        console.log(iw);
+        var dist=(w-iw)/2;
+        console.log(dist);
+        $('#previous').slideUp(1000);
+        $('#events').slideUp(1000);
+        $('#large').animate({
+            left: dist,
+            boxShadow: "0px 5px 5px rgba(255,255,255,1)"
+
+        },1000);
+
 
     }
 
