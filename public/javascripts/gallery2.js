@@ -1226,11 +1226,11 @@ $(document).ready(function() {
     var x="";
     for(var j=0;j<myArrayprev.length;j++)
     {
-        x+="<div class='col l4 m4 s6 previous'><img id='"+myArrayprev[j].display+"' style='width: 100%' src='"+myArrayprev[j].url+"' alt='"+myArrayprev[j].display+"'></div>";
+        x+="<div class='col l4 m4 s6 previous'><img class='overlay' id='"+myArrayprev[j].display+"' style='width: 100%' src='"+myArrayprev[j].url+"' alt='"+myArrayprev[j].display+"'></div>";
     }
     for(var j=0;j<myArrayevents.length;j++)
     {
-        x+="<div class='col l4 m4 s6 events' style='display: none'><img id='"+myArrayevents[j].display+"' style='width: 100%' src='"+myArrayevents[j].url+"' alt='"+myArrayevents[j].display+"'></div>";
+        x+="<div class='col l4 m4 s6 events' style='display: none'><img class='overlay' id='"+myArrayevents[j].display+"' style='width: 100%' src='"+myArrayevents[j].url+"' alt='"+myArrayevents[j].display+"'></div>";
     }
     x+="";
     i.innerHTML=x;
@@ -1272,7 +1272,7 @@ $(document).ready(function() {
             var b=document.getElementById(a);
             if(b!=null)
             {
-                b.style.border='solid rgba(255, 132, 38, 0.6) 3px';
+                b.style.border='solid rgba(255, 132, 38, 1) 3px';
             }
 
             for(var z=0;z<myArrayevents.length;z++)
@@ -1284,7 +1284,7 @@ $(document).ready(function() {
             var b=document.getElementById(a);
             if(b!=null)
             {
-                b.style.border='solid rgba(255, 132, 38, 0.6) 3px';
+                b.style.border='solid rgba(255, 132, 38, 1) 3px';
             }
     });
 
