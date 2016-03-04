@@ -1226,11 +1226,11 @@ $(document).ready(function() {
     var x="";
     for(var j=0;j<myArrayprev.length;j++)
     {
-        x+="<div class='col l4 m4 s6 previous'><img class='overlay' id='"+myArrayprev[j].display+"' style='width: 100%' src='"+myArrayprev[j].url+"' alt='"+myArrayprev[j].display+"'></div>";
+        x+="<div class='col l4 m4 s6 previous'><img class='overlay z-depth-2' id='"+myArrayprev[j].display+"' style='width: 100%' src='"+myArrayprev[j].url+"' alt='"+myArrayprev[j].display+"'></div>";
     }
     for(var j=0;j<myArrayevents.length;j++)
     {
-        x+="<div class='col l4 m4 s6 events' style='display: none'><img class='overlay' id='"+myArrayevents[j].display+"' style='width: 100%' src='"+myArrayevents[j].url+"' alt='"+myArrayevents[j].display+"'></div>";
+        x+="<div class='col l4 m4 s6 events' style='display: none'><img class='overlay z-depth-2' id='"+myArrayevents[j].display+"' style='width: 100%' src='"+myArrayevents[j].url+"' alt='"+myArrayevents[j].display+"'></div>";
     }
     x+="";
     i.innerHTML=x;
@@ -1333,7 +1333,11 @@ $(document).ready(function() {
         $('#images').fadeOut();
         var x=this.childNodes;
         animation(x[0]);
+    });
+    $('#back').on('click',function(){
 
+        var x=this.childNodes;
+        animationback(x[0]);
     });
     $('h4').on('click',function(){
         var x=this.id;
@@ -1345,14 +1349,14 @@ $(document).ready(function() {
             console.log('image displayed in previous');
             var k = document.getElementById("large");
             x = "";
-            x += "<img src='" + myArrayprev[j].url + "' alt='" + myArrayprev[j].display + "'>";
+            x += "<img class='z-depth-4' src='" + myArrayprev[j].url + "' alt='" + myArrayprev[j].display + "'>";
             k.innerHTML = x;
         }
         else{
             console.log('image displayed in events');
             var k = document.getElementById("large");
             x = "";
-            x += "<img src='" + myArrayevents[j].url + "' alt='" + myArrayevents[j].display + "'>";
+            x += "<img class='z-depth-4' src='" + myArrayevents[j].url + "' alt='" + myArrayevents[j].display + "'>";
             k.innerHTML = x;
         }
     }
@@ -1380,15 +1384,23 @@ $(document).ready(function() {
         console.log(iw);
         var dist=(w-iw)/2;
         console.log(dist);
-        $('#previous').slideUp(1000);
-        $('#events').slideUp(1000);
+        $('#previous').fadeOut(1000);
+        $('#events').fadeOut(1000);
+        $('#back').fadeOut(200).delay(1000).fadeIn();
         $('#large').animate({
-            left: dist,
-            boxShadow: "0px 5px 5px rgba(255,255,255,1)"
+            left: dist
 
         },1000);
-
-
+    }
+    function animationback(x)
+    {
+        $('#back').fadeOut(500);
+        $('#previous').fadeOut().delay(500).fadeIn(1000);
+        $('#events').fadeOut().delay(500).fadeIn(1000);
+        $('#images').fadeOut().delay(1000).fadeIn(500);
+        $('#large').animate({
+            left: "50%"
+        },1000);
     }
 
 });

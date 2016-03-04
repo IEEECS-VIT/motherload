@@ -62,3 +62,11 @@ img{
     background-color: rgba(0, 153, 153, 0.42);
     z-index: 20;
 }
+#back{
+    padding-top: 10%;
+}
+.material-icons{
+    font-size: x-large;
+    color: #009999;
+    cursor: pointer;
+}
