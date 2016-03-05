@@ -1384,22 +1384,30 @@ $(document).ready(function() {
         console.log(iw);
         var dist=(w-iw)/2;
         console.log(dist);
+        $('nav').fadeOut(1000);
         $('#previous').fadeOut(1000);
+        $('#content').fadeOut(1000);
         $('#events').fadeOut(1000);
         $('#back').fadeOut(200).delay(1000).fadeIn();
         $('#large').animate({
-            left: dist
+            left: dist,
+            top: "1%",
+            paddingTop: '7px'
 
         },1000);
     }
     function animationback(x)
     {
         $('#back').fadeOut(500);
+        $('nav').fadeOut().delay(500).fadeIn(1000);
+        $('#content').fadeOut().delay(500).fadeIn(1000);
         $('#previous').fadeOut().delay(500).fadeIn(1000);
         $('#events').fadeOut().delay(500).fadeIn(1000);
         $('#images').fadeOut().delay(1000).fadeIn(500);
         $('#large').animate({
-            left: "50%"
+            left: "50%",
+            top: '20%',
+            paddingTop: '7px'
         },1000);
     }
 
