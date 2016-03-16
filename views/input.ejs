@@ -26,10 +26,9 @@
                                       placeholder="Type Content Here" ng-model="formDatain.contentText"
                                       style="height:auto"></textarea>
                         </div>
-                        <div class="row">
-                            <label for="imgfile">Upload Image File(Max 300KB): </label>
-                            <input type="file" onchange="angular.element(this).scope().formDatain.logo = this.value" name="imgfile" id="newimgfile" nv-file-select uploader="uploader"
-                                   options="{ url: '/input/upload'}"/>
+                        <div class="col s12">
+                            <label for="vid">Video:</label>
+                            <input type="text" name="vid" id="vid" ng-model="formDatain.vid"/>
                         </div>
                         <div class="col s12 m4">
                             <input class="btn" type="submit" value="Submit"/>
@@ -74,10 +73,9 @@
                             <textarea rows="20" name="e_contentText"
                                       placeholder="Type Content Here" ng-model="formDataGet.content"
                                       style="height:auto"></textarea></div>
-                            <div class="row">
-                                <label for="imgfile">Upload Image File(Max 300KB): </label>
-                                <input type="file" onchange="angular.element(this).scope().formDataGet.logo = this.value" name="imgfile" id="editimgfile" nv-file-select uploader="uploader"
-                                       options="{ url: '/input/upload'}"/>
+                            <div class="col s12">
+                                <label for="vid">Video:</label>
+                                <input type="text" name="vid" id="vid" ng-model="formDataGet.vid"/>
                             </div>
                             <div class="col s12 m4">
                                 <input class="btn" type="submit" value="Submit"/>
@@ -105,3 +103,11 @@
 <div align="center">
 <a class="waves-effect waves-light btn" href="/users/logout">Logout</a>
 </div>
+
+<script type="text/javascript">
+    window.onload = function(){
+        if(window.location.href.indexOf("#") == -1){
+            window.location.assign("/#/")
+        }
+    };
+</script>

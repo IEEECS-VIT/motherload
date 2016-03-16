@@ -110,7 +110,7 @@ function user_login($http,callback) {
         callback(data.message);
 
     });
-}
+}/*
 function parseImageName(path){
     var filename;
     var i = path.lastIndexOf('\\');
@@ -126,4 +126,4 @@ function parseImageName(path){
     }
     console.log(filename);
     return filename.replace(/\s+/g, "").toLowerCase()
-}
+}*/

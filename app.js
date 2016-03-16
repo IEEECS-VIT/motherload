@@ -4,7 +4,7 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var cloudinary = require('cloudinary');
+//var cloudinary = require('cloudinary');
 var mongodb = require('express-mongo-db');
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -24,8 +24,8 @@ app.use(cookieParser(process.env.COOKIE_SECRET || 'randomsecretstring', {signed:
 app.use(express.static(path.join(__dirname, 'public')));
 var mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/gravitas16';
 
-cloudinary.config(process.env.CLOUDINARY_URL);
-console.log('Cloudinary set');
+//cloudinary.config(process.env.CLOUDINARY_URL);
+//console.log('Cloudinary set');
 
 app.use(mongodb(mongoURI));
 

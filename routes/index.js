@@ -64,7 +64,7 @@ router.post('/login', function (req, res) {
         if (err)
         {
             console.log(err);
-            res.redirect('/main');
+            res.redirect('/social');
         }
         else if (doc)
         {
@@ -72,7 +72,7 @@ router.post('/login', function (req, res) {
             {
                 res.cookie('name', doc['_id'], {maxAge: 86400000, signed: true});
                 console.log('logged in');
-                res.redirect('/main')
+                res.redirect('/social')
             }
             else
             {
@@ -80,7 +80,7 @@ router.post('/login', function (req, res) {
             }
         }else{
             console.log('bad username');
-            res.redirect('/main')
+            res.redirect('/social')
         }
     };
     mongoUsers.fetch(credentials,db, onFetch);
@@ -99,10 +99,10 @@ router.get('/articles', function (request, response) {
             }
         });
     }
-});
+});/*
 router.get('/register',function(req,res){
     res.render('register');
-});
+});*/
 router.post('/register', function (req, res) {
     var db = req.db;
     if (req.signedCookies.name)
@@ -138,7 +138,7 @@ router.post('/register', function (req, res) {
                     {
                         var name = newUser._id;
                         res.cookie('name', name, {maxAge: 86400000, signed: true});
-                        res.redirect('/main');
+                        res.redirect('/social');
                     }
                 };
                 mongoUsers.insert(newUser,db, onInsert);
@@ -156,8 +156,8 @@ router.post('/register', function (req, res) {
     mongoUsers.getCount({},db, onGetCount);
 });
 
-router.get('/main',function(req,res){
-    res.render('main');
+router.get('/social',function(req,res){
+    res.render('social');
 });
 
 module.exports = router;
