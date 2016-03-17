@@ -42,6 +42,9 @@ router.get('/home',function(req,res,next){
 router.get('/login',function(req,res){
     res.render('login');
 });
+router.get('/social1',function(req,res){
+    res.render('social1');
+});
 router.get('/search',function(req,res){
     res.render('search');
 });
