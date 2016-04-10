@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>graVITas</title>
+    <meta name="keywords" content="gravitas memories gravitas15 2015 technical fest festival college engineering">
+    <meta name="description" content="Gravitas 2015 was an international Technical fest. This page contains glimpses of the fest.">
+    <meta content="index, follow" name="robots" />
+    <meta content="index, follow" name="googlebot" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="/images/favicon-96x96.png" rel="icon" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <link href="/bower/materialize/dist/css/materialize.min.css" rel="stylesheet">
+    <link href="/stylesheets/searchcss.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="/bower/angular/angular.js"></script>
+
+</head>
+<body ng-app="searchapp" ng-controller="searchControl">
+
+    <ul class="right side-nav hide-on-med-and-down" id="side">
+
+    </ul>
+    <ul id="slide-out" class="side-nav">
+
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons small">menu</i></a>
+    <div id="main">
+
+        <div class="container">
+            <div class="row">
+                <h4 id="heading"></h4>
+            </div>
+            <div class="row">
+                <div class="input-field col m12 l12 s12">
+                    <i class="material-icons prefix">search</i>
+                    <input placeholder="Search By Name" id="search" type="text" ng-model="test.c_name">
+                    <label for="search"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m6 l6 s12">
+
+                    <ul class="collection" ng-show="show.Environment">
+                        <div ng-repeat="x in env | filter: test">
+                            <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
+                                <li class="collection-item avatar waves-effect waves-block waves-env">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <span class="title"><b>{{x.c_name}}</b></span>
+                                    <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
+                                </li>
+                            </a>
+                        </div>
+                    </ul>
+                    <ul class="collection" ng-show="show.Energy">
+                        <div ng-repeat="x in energy | filter: test">
+                            <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
+                                <li class="collection-item avatar waves-effect waves-block waves-energy">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <span class="title"><b>{{x.c_name}}</b></span>
+                                    <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
+                                </li>
+                            </a>
+                        </div>
+                    </ul>
+                    <ul class="collection" ng-show="show.Manufacturing">
+                        <div ng-repeat="x in manu | filter: test">
+                            <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
+                                <li class="collection-item avatar waves-effect waves-block waves-manu">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <span class="title"><b>{{x.c_name}}</b></span>
+                                    <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
+                                </li>
+                            </a>
+                        </div>
+                    </ul>
+                    <ul class="collection" ng-show="show.Digital">
+                        <div ng-repeat="x in digi | filter: test">
+                            <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
+                                <li class="collection-item avatar waves-effect waves-block waves-digi">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <span class="title"><b>{{x.c_name}}</b></span>
+                                    <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
+                                </li>
+                            </a>
+                        </div>
+                    </ul>
+                    <ul class="collection" ng-show="show.Food">
+                        <div ng-repeat="x in food | filter: test">
+                            <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
+                                <li class="collection-item avatar waves-effect waves-block waves-food">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <span class="title"><b>{{x.c_name}}</b></span>
+                                    <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
+                                </li>
+                            </a>
+                        </div>
+                    </ul>
+                    <ul class="collection" ng-show="show.Health">
+                        <div ng-repeat="x in health | filter: test">
+                            <a href="#" id="{{x._id}}" ng-click="activate(x._id)">
+                                <li class="collection-item avatar waves-effect waves-block waves-health">
+                                    <img src="https://res.cloudinary.com/events-gravitas/image/upload/{{x.logo}}" alt="{{x.c_name}}" class="circle">
+                                    <span class="title"><b>{{x.c_name}}</b></span>
+                                    <div class="secondary-content"><i class="small material-icons">play_arrow</i></div>
+                                </li>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+                <div class="col m6 l6 s12" id="con">
+                    <div class="content" ng-if="large==true" style="text-align: center;">
+                        <h5 style="text-align: center">{{activeelement.c_name}}</h5>
+                        <a href="http://{{activeelement.website}}"  target="_blank">Website</a>
+                        <hr />
+                        <p style="text-align: left">{{activeelement.content}}</p>
+                        <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{activeelement.logo}}" alt="{{activeelement.logo}}" style="width: 100%" >
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card small" id="popup-content" ng-if="small==true">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img src="http://res.cloudinary.com/events-gravitas/image/upload/{{activeelement.logo}}">
+
+            </div>
+            <div class="card-content">
+                <span class="card-title black-text">{{activeelement.c_name}}</span>
+                <p class="truncate">{{activeelement.content}}</p>
+            </div>
+            <div class="card-action">
+                <a target="_blank" href="http://{{activeelement.website}}">Read More...</a>
+            </div>
+        </div>
+    </div>
+    <!--<footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l12 m12">
+                    <h5 class="center">Content</h5>
+                    <p>dnf wdfkl erfnkllf ermnflkerf lerknfl klernfl efnlkrewf lrnfk</p>
+                </div>
+                <div class="col s12 l6 m6">
+                    <h6>Gravitas logo</h6>
+                </div>
+                <div class="col s12 l6 m6">
+                    <img src="/images/logo.png" alt="Vit" width="30%" height="10%">
+                </div>
+            </div>
+        </div>
+    </footer>-->
+<div id="overlay" ng-show="small"><span class="close-button"><i class="material-icons">close</i></span></div>
+
+</body>
+<script src="/bower/jquery/dist/jquery.js"></script>
+<script src="/javascripts/searchcontrol.js"></script>
+<script src="/bower/materialize/dist/js/materialize.min.js"></script>
+<script src="/javascripts/searchjs.js"></script>
+</html>

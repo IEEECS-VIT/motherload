@@ -15,10 +15,12 @@
 
     <script src="/bower/jquery/dist/jquery.min.js"></script>
     <script src="/bower/materialize/dist/js/materialize.min.js"></script>
+
+    <link href="/stylesheets/gallery2.css" rel="stylesheet">
 </head>
 <body>
 
-    <div class="slider fullscreen">
+    <div class="slider">
         <ul class="slides">
             <li>
                 <img src="http://res.cloudinary.com/events-gravitas/image/upload/v1444243677/prev/dynasty.jpg">
@@ -59,8 +61,28 @@
             </li>
         </ul>
     </div>
+    <div class="row gallery">
+        <div class="col l6 m12 s12">
+            <div class="row">
+                <div class="col l6 m6 s6">
+                    <h4 class="right heading" id="previous"><a href="#">PREVIOUS</a></h4>
+                </div>
+                <div class="col l6 m6 s6">
+                    <h4 class="left heading" id="events"><a href="#">EVENTS</a></h4>
+                </div>
+            </div>
+            <h5 id="content">Click on the image to view it on full screen</h5>
+            <div id="back" style="display: none"><i class="material-icons">undo</i></div>
+            <div id="images">
 
+            </div>
+        </div>
+        <div class="col l6 m6 s12" id="large">
+
+        </div>
+    </div>
 <script src="/javascripts/countdown.js"></script>
+    <script src="/javascripts/gallery2.js"></script>
 <script>
 
     window.onload = function(){

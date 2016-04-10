@@ -1235,8 +1235,11 @@ $(document).ready(function() {
     x+="";
     i.innerHTML=x;
     var u=$('img').width();
-    $('img').css({
+   /* $('img').css({
         height: 0.8*u
+    });*/
+    $('img').css({
+        height: auto
     });
     addtolarge(0);
     $('.heading').on('click',function(){
