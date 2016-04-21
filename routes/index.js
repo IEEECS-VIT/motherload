@@ -54,6 +54,9 @@ router.get('/modal',function(req,res){
 router.get('/search',function(req,res){
     res.render('search');
 });
+router.get('/mainpage',function(req,res){
+    res.render('mainpage');
+});
 router.post('/login', function (req, res) {
     var user = req.body.username;
     var password = req.body.password;

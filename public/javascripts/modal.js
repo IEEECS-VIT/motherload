@@ -65,7 +65,7 @@ $(document).ready(function(){
     for(i=0;i<7;i++)
     {
         //alert(myarr[i].id);
-        alert(myarr[i].top);
+        //alert(myarr[i].top);
         out+='<img src="/images/man.svg" width="50" height="50" id="'+myarr[i].id+'">';
         $('#'+myarr[i].id).css({
             'position':'fixed',
