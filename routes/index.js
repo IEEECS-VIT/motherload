@@ -45,6 +45,12 @@ router.get('/login',function(req,res){
 router.get('/social1',function(req,res){
     res.render('social1');
 });
+router.get('/home2',function(req,res){
+    res.render('home2');
+});
+router.get('/modal',function(req,res){
+    res.render('modal');
+});
 router.get('/search',function(req,res){
     res.render('search');
 });
