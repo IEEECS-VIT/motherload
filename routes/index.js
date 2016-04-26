@@ -42,6 +42,9 @@ router.get('/home',function(req,res,next){
 router.get('/login',function(req,res){
     res.render('login');
 });
+router.get('/socialinnovation',function(req,res){
+    res.render('socialinnovation');
+});
 router.get('/social1',function(req,res){
     res.render('social1');
 });
@@ -57,6 +60,7 @@ router.get('/search',function(req,res){
 router.get('/mainpage',function(req,res){
     res.render('mainpage');
 });
+
 router.post('/login', function (req, res) {
     var user = req.body.username;
     var password = req.body.password;
