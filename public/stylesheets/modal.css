@@ -1,6 +1,6 @@
 .modal {
-    width:70%;
-    height:100%;
+    width:90%;
+    height:20px;
 }
 #semic
 {
@@ -8,7 +8,7 @@
     position: fixed;
     bottom: 0;
 }
-#man1
+/*#man1
 {
     position: fixed;
     top: 92%;
@@ -56,4 +56,39 @@
     top: 67.5%;
     left: -1%;
     transform: rotate(5deg);
+}*/
+.a
+{
+    padding: 20px 20px 20px 20px;
+    border: 2px solid #000000;
+}
+.b
+{
+    margin-top: 20px;
+    padding: 20px 20px 20px 20px;
+    border: 2px solid #000000;
+}
+.c
+{
+
+    margin-top: 20px;
+    padding: 20px 20px 20px 20px;
+    border: 2px solid #000000;
+}
+#formals:hover
+{
+    cursor:hand;
+    cursor: pointer;
+}
+#o
+{
+    margin-left: 95%;
+}
+#k
+{
+    border: none;
+}
+#line
+{
+    margin-left: 50%;
 }
