@@ -1,10 +1,10 @@
 'use strict';
 var path = require('path');
 var express = require('express');
-var fs = require('fs');
-var cloudinary = require('cloudinary');
-var multer = require('multer');
-var upload = multer({
+//var fs = require('fs');
+//var cloudinary = require('cloudinary');
+//var multer = require('multer');
+/*var upload = multer({
     dest:  './public/images',
     rename: function (fieldname, filename,originalname) {
         return originalname.replace(/\s+/g, "").toLowerCase();
@@ -12,8 +12,8 @@ var upload = multer({
     limits:{
         files:1
     }
-});
-var articleQueue = require(path.join(__dirname, '..', 'db','mongoQueue'));
+});*/
+/*var articleQueue = require(path.join(__dirname, '..', 'db','mongoQueue'));*/
 var router = express.Router();
 
 router.get('/', function (request, response) {
@@ -30,13 +30,13 @@ router.post('/new', function (request, response) {
         main_category: request.body.m_category,
         c_name: request.body.c_name,
         content: request.body.contentText,
-        logo: request.body.logo,
+        vid: request.body.vid,
         website: request.body.website,
         timestamp: new Date()
     };
-    console.log(newArticle.logo);
+   // console.log(newArticle.logo);
 
-    if (newArticle.logo) {
+ /*   if (newArticle.logo) {
         var queueItem = newArticle;
         var onPush = function(err,results){
             if(err){
@@ -46,7 +46,7 @@ router.post('/new', function (request, response) {
             }
         };
         articleQueue.push(request.db,queueItem,onPush);
-    }
+    }*/
     var onInsert = function (err) {
         if (err) {
             console.log('error: ' + err);
@@ -82,7 +82,7 @@ router.post('/edit', function (request, response) {
         main_category: request.body.e_m_category,
         c_name: request.body.e_c_name,
         content: request.body.e_contentText,
-        logo: request.body.e_logo,
+        vid: request.body.e_vid,
         website: request.body.e_website,
         timestamp: new Date()
     };
@@ -106,7 +106,7 @@ router.post('/edit', function (request, response) {
             $set: {
                 main_category: newArticle.main_category,
                 content: newArticle.content,
-                logo: newArticle.logo,
+                vid: newArticle.vid,
                 website: newArticle.website,
                 timestamp: newArticle.timestamp
             }
@@ -114,7 +114,7 @@ router.post('/edit', function (request, response) {
         {new: true}
         , onUpdate
     );
-    if (newArticle.logo) {
+  /* if (newArticle.logo) {
         var queueItem = newArticle;
         var onPush = function(err,results){
             if(err){
@@ -124,7 +124,7 @@ router.post('/edit', function (request, response) {
             }
         };
         articleQueue.push(request.db,queueItem,onPush);
-    }
+    }*/
 
 });
 
@@ -139,10 +139,10 @@ router.post('/delete', function (request, response) {
         else {
             //console.log(results);
             if (results.result.n != 0) {
-                cloudinary.api.delete_resources(['startup/' + c_name.replace(/\s+/g, "").toLowerCase()],
+              /*  cloudinary.api.delete_resources(['startup/' + c_name.replace(/\s+/g, "").toLowerCase()],
                     function (result) {
                        // console.log(result);
-                    });
+                    });*/
                 response.status(200).send({message: 'Deleted', results: null});
             } else {
                 response.status(200).send({message: 'Article Not Found', results: null});
@@ -151,7 +151,7 @@ router.post('/delete', function (request, response) {
     };
     var query = {c_name: c_name};
     collection.remove(query, onDelete);
-});
+});/*
 router.post('/upload',function (request, response) {
     var db = request.db;
     upload.single('file')(request, response, function (err) {
@@ -268,5 +268,5 @@ var uploadToCloud =function(newArticle,db,callback){
             });
         }
     });
-};
+};*/
 module.exports = router;

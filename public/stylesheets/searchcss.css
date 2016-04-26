@@ -1,82 +1,29 @@
 html{
     font-family: Material-Design-Icons;
 }
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background: fixed;
-}
-nav
-{
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.53);
-    z-index: 0;
-}
-.navbar-fixed{
-    display: none;
 
-}
 .side-nav
 {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 9px 5px rgba(0, 0, 0, 0.53);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.53);
     left: 0;
-    width: 78px;
+    width: auto;
     color: rgba(0, 0, 0, 1);
     z-index: 200;
 }
 .side-nav li{
-    background-color: rgba(255, 255, 255, 1);
     padding: 7px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     z-index: 0;
 }
 .side-nav a{
     padding: 7px;
 }
-#sidenav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 120vh;
-    background-color: rgba(0,0,0,0);
-    z-index: 0;
-    will-change: opacity;
-}
-nav .brand-logo{
-    z-index: 0;
-}
-footer.page-footer
-{
-    background-color: rgb(255, 255, 255);
-    color: black;
-}
-#main {
-    flex: 1 0 auto;
+hr{
+    height: 3px;
 
+    border: none;
 }
-#main .container
-{
-    margin-top: 5px;
-    background-color: white;
-    box-shadow: 0 5px 7px rgba(0,0,0,0.4);
-    padding: 5px;
-    border-radius: 5px;
-}
-.content{
-    padding: 7px;
 
-}
-div.col.m6.l6.s12{
-    padding-right: 0;
-}
-#con{
-    padding-left:0;
-    border-left: solid black 1px;
-
-}
 li
 {
     padding: 0;
@@ -101,239 +48,28 @@ nav> ul.side-nav > li:hover{
     z-index: -10;
 
 }
-#heading{
-    color: #000000;
-    text-align: center;
-    text-shadow: 0 1px 1px rgba(41, 41, 41, 0.33);
-    z-index: 100;
-    background-color: white;
-    padding: 5px;
-    width: 250px;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right:auto;
-    border-radius: 3px;
-    box-shadow: 0 0 0 rgba(0,0,0,0.4);
 
-}
 .row{
     margin-bottom: 0;
 }
-a.button-collapse{
-    width: 28px;
+#main{
+    position: relative;
 }
-.button-collapse .material-icons{
-    color: black;
+@media only screen and  (min-width: 993px){
+    #main{
+        left:0;
+    }
 }
-footer
-{
-    color: #000000;
-    text-align: center;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    bottom: 0;
+@media only screen and (min-width: 600px){
+    #main{
+        left: 40px;
+    }
 }
-.collection{
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    background-color: rgba(255, 255, 255, 1);
-    color: #000000;
-    border-right: black solid 0px;
-    border-left: black solid 0;
-    border-top: black solid 0;
-    border-bottom: black solid 0;
-
-}
-#popup-content{
-    position: fixed;
-    z-index: 2002;
-    max-width: 300px;
-    width: 80%;
-    border: 1px solid whitesmoke;
-    box-shadow: 5px 2px 7px rgba(88, 88, 88, 0.35);
-    display: none;
-}
-
-input:not([type]),
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=url],
-input[type=time],
-input[type=date],
-input[type=datetime-local],
-input[type=tel],
-input[type=number],
-input[type=search],
-textarea.materialize-textarea {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #000000;
-    border-radius: 0;
-    outline: none;
-    height: 3rem;
-    width: 100%;
-    font-size: 1rem;
-    margin: 0 0 15px 0;
-    padding: 0;
-    box-shadow: none;
-    box-sizing: content-box;
-    transition: all .3s;
-    color: black;
-}
-.input-field > i.material-icons{
-    color: #000000;
-}
-.input-field > i.material-icons.active{
-    color: #030303;
-}
-
-input:not([type]):disabled, input:not([type])[readonly="readonly"],
-input[type=text]:disabled,
-input[type=text][readonly="readonly"],
-input[type=password]:disabled,
-input[type=password][readonly="readonly"],
-input[type=email]:disabled,
-input[type=email][readonly="readonly"],
-input[type=url]:disabled,
-input[type=url][readonly="readonly"],
-input[type=time]:disabled,
-input[type=time][readonly="readonly"],
-input[type=date]:disabled,
-input[type=date][readonly="readonly"],
-input[type=datetime-local]:disabled,
-input[type=datetime-local][readonly="readonly"],
-input[type=tel]:disabled,
-input[type=tel][readonly="readonly"],
-input[type=number]:disabled,
-input[type=number][readonly="readonly"],
-input[type=search]:disabled,
-input[type=search][readonly="readonly"],
-textarea.materialize-textarea:disabled,
-textarea.materialize-textarea[readonly="readonly"] {
-    color: rgba(0, 0, 0, 0.99);
-    border-bottom: 1px dotted rgb(0, 0, 0);
-
-}
-
-input:not([type]):disabled + label, input:not([type])[readonly="readonly"] + label,
-input[type=text]:disabled + label,
-input[type=text][readonly="readonly"] + label,
-input[type=password]:disabled + label,
-input[type=password][readonly="readonly"] + label,
-input[type=email]:disabled + label,
-input[type=email][readonly="readonly"] + label,
-input[type=url]:disabled + label,
-input[type=url][readonly="readonly"] + label,
-input[type=time]:disabled + label,
-input[type=time][readonly="readonly"] + label,
-input[type=date]:disabled + label,
-input[type=date][readonly="readonly"] + label,
-input[type=datetime-local]:disabled + label,
-input[type=datetime-local][readonly="readonly"] + label,
-input[type=tel]:disabled + label,
-input[type=tel][readonly="readonly"] + label,
-input[type=number]:disabled + label,
-input[type=number][readonly="readonly"] + label,
-input[type=search]:disabled + label,
-input[type=search][readonly="readonly"] + label,
-textarea.materialize-textarea:disabled + label,
-textarea.materialize-textarea[readonly="readonly"] + label {
-    color: rgb(0, 0, 0);
-
-}
-
-input:not([type]):focus:not([readonly]),
-input[type=text]:focus:not([readonly]),
-input[type=password]:focus:not([readonly]),
-input[type=email]:focus:not([readonly]),
-input[type=url]:focus:not([readonly]),
-input[type=time]:focus:not([readonly]),
-input[type=date]:focus:not([readonly]),
-input[type=datetime-local]:focus:not([readonly]),
-input[type=tel]:focus:not([readonly]),
-input[type=number]:focus:not([readonly]),
-input[type=search]:focus:not([readonly]),
-textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #030303;
-
-    box-shadow: 0 1px 0 0 #a4a6a3;
-    color: black;
-}
-.close-button{
-    position: fixed;
-    top: 0;
-    right: 0;
-    color: white;
-    cursor: pointer;
-}
-li.collection-item:hover{
-    border-left: solid rgba(0, 0, 0, 1) 2px;
-    box-shadow: 0 1px 1px rgba(224, 224, 224, 1);
-    background-color: rgb(255, 255, 255);
-}
-.waves-effect.waves-env .waves-ripple {
-    background-color: rgba(100, 206, 105, 0.9);
-}
-.waves-effect.waves-energy .waves-ripple {
-    background-color: rgba(255, 147, 98, 0.9);
-}
-.waves-effect.waves-manu .waves-ripple {
-    background-color: rgba(118, 118, 118, 0.9);
-}
-.waves-effect.waves-digi .waves-ripple {
-    background-color: rgba(148, 161, 231, 0.90);
-}
-.waves-effect.waves-health .waves-ripple {
-    background-color: rgba(254, 156, 155, 0.90);
-}
-.waves-effect.waves-food .waves-ripple {
-    background-color: rgba(211, 180, 169, 0.90);
-}
-.collection .collection-item{
-    background-color: rgba(0, 0, 0, 0);
-    color: black;
-}
-.collection .collection-item.avatar{
-    min-height: 40px;
-}
-.collection .collection-item.avatar .title{
-    font-size: 20px;
-}
-.collection-item .material-icons{
-    color: black;
-}
-.card{
-    background-color: rgba(255, 255, 255, 1);
-    color: #000000;
-}
-.material-icons{
-    color: #dadada;
-}
-.card .card-reveal{
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-}
-.card .material-icons{
-    color: black;
-    cursor: pointer;
-}
-.card-reveal .material-icons{
-    color: #000000;
-}
-#overlay{
-    background-color: rgba(0, 0, 0, 0.74);
-    z-index: 2000;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    left:0;
-    top:0;
-    display: none;
-}
-
-.truncate {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+@media only screen and (max-width: 600px){
+    #main{
+        left: 70px;
+    }
+    .small{
+        max-width: 80%;
+    }
 }

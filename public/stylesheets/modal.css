@@ -1,0 +1,59 @@
+.modal {
+    width:70%;
+    height:100%;
+}
+#semic
+{
+    margin-left: -24px;
+    position: fixed;
+    bottom: 0;
+}
+#man1
+{
+    position: fixed;
+    top: 92%;
+    left: 10%;
+    transform: rotate(90deg);
+}
+#man2
+{
+    position: fixed;
+    top: 85%;
+    left: 9.25%;
+    transform: rotate(80deg);
+}
+#man3
+{
+    position: fixed;
+    top: 78%;
+    left: 7.5%;
+    transform: rotate(60deg);
+}
+#man4
+{
+    position: fixed;
+    top: 74%;
+    left: 5.75%;
+    transform: rotate(45deg);
+}
+#man5
+{
+    position: fixed;
+    top: 71%;
+    left: 3.75%;
+    transform: rotate(35deg);
+}
+#man6
+{
+    position: fixed;
+    top: 69%;
+    left: 1.5%;
+    transform: rotate(25deg);
+}
+#man7
+{
+    position: fixed;
+    top: 67.5%;
+    left: -1%;
+    transform: rotate(5deg);
+}

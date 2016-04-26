@@ -11,7 +11,6 @@
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.14.2",
     "bower": "^1.5.2",
-    "cloudinary": "^1.2.6",
     "cookie-parser": "^1.4.1",
     "debug": "^2.2.0",
     "ejs": "~2.3.1",
