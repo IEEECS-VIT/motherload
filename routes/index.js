@@ -48,6 +48,9 @@ router.get('/socialinnovation',function(req,res){
 router.get('/social1',function(req,res){
     res.render('social1');
 });
+router.get('/mainhome',function(req,res){
+    res.render('index_main');
+});
 router.get('/home2',function(req,res){
     res.render('home2');
 });
