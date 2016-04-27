@@ -54,7 +54,7 @@ $(document).ready(function(){
         console.log(b);
         b[0].style.backgroundColor="#e8adaa";
     }
-    setInterval(lights,10000);
+    setInterval(lights,3000);
     setInterval(off,60000);
 
 
