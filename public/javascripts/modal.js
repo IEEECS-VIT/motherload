@@ -106,7 +106,7 @@ $(document).ready(function(){
         direction: 'top' // only applicable to slide, is the direction (top, left, down, right) the character slides from
     });
 
-    man();
+   // man();
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal(
         {
