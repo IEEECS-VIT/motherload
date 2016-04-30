@@ -178,5 +178,8 @@ router.post('/register', function (req, res) {
 router.get('/social',function(req,res){
     res.render('social');
 });
+router.get('/index2',function(req,res){
+    res.render('index2');
+});
 
 module.exports = router;
