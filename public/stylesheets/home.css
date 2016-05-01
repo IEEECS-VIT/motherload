@@ -1,6 +1,6 @@
 body {
-    background: url('/images/homeback.jpg');
-    background-color: black;
+    /**background: url('/images/homeback.jpg');**/
+    background-color: #f57951;
 	font: 16em/1 Arial;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
@@ -42,13 +42,12 @@ img {
 #dock2 {
 	width: 100%;
 	bottom: 50px;
-	position: absolute;
+	position: fixed;
 	left: 0px;
 }
 .dock-container2 {
 	position: absolute;
 	height: 50px;
-
 	padding-left: 80px;
 }
 a.dock-item2 {
@@ -130,4 +129,19 @@ svg {
     color: white;
     font-size: 35px;
     margin-top: 0px;
+}
+#events1{
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+    width: 40%;
+    alignment: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+    color: white;
+
+}
+#categories{
+    margin-top: 15%;
+    margin-bottom: 100px;
 }

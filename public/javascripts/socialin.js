@@ -21,10 +21,9 @@ function off(){
 
 }
 $(document).ready(function(){
-    console.log($(window).width());
-    console.log($(window).height());
    var d=new Date();
-    var h= d.getHours();
+    //var h= d.getHours();
+    var h=18;
     if((h>=19 && h<=23) ||(h>=0 && h<6))
     {
         var b=document.getElementsByTagName('body');
@@ -52,7 +51,7 @@ $(document).ready(function(){
     else if(h>=16 && h<19){
         var b=document.getElementsByTagName('body');
         console.log(b);
-        b[0].style.backgroundColor="#e8adaa";
+        b[0].style.backgroundColor="#f1bb98";
     }
     setInterval(lights,3000);
     setInterval(off,60000);
