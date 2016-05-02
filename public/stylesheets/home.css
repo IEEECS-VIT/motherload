@@ -83,8 +83,8 @@ svg {
     stroke: white;
     stroke-dasharray: 7% 28%;
     stroke-width: 3px;
-    -webkit-animation: stroke-offset 15s infinite linear;
-    animation: stroke-offset 7s infinite linear;
+    -webkit-animation: stroke-offset 15s forwards;
+    animation: stroke-offset 7s  forwards;
 }
 .text-copy:nth-child(1) {
     stroke: #360745;

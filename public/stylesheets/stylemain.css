@@ -30,20 +30,20 @@
   height: 100%;
   bottom: -5%;
 
-  background: url(/images/handss.jpg) 0 0 repeat;
+  /*background: url(/images/handss.jpg) 0 0 repeat;
 
-  background: url(/images/handss.jpg) 0 0 repeat;
+  background: url(/images/handss.jpg) 0 0 repeat;*/
 
   border-radius:2%;
   background-size:cover;
-  animation: rotate 30s linear infinite;
-  transition: transform 200ms linear;
+  /*animation: rotate 30s linear infinite;
+  transition: transform 200ms linear;*/
   transform-style: preserve-3d;
   box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
   color: #000;
 }
 
-#earth:after {
+/**#earth:after {
   content: "";
   position: absolute;
   top: 0%;
