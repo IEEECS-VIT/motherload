@@ -132,16 +132,23 @@ svg {
 }
 #events1{
     font-family: "Roboto", sans-serif;
-    font-size: large;
-    width: 40%;
-    alignment: center;
-    margin-left: 30%;
-    margin-right: 30%;
+    font-size: 10px;
     text-align: center;
     color: white;
 
 }
-#categories{
-    margin-top: 15%;
-    margin-bottom: 100px;
+.card .small{
+    height: 150px;
+    cursor: pointer;
+}
+#category .card{
+    text-align: left;
+}
+p{
+    font-size: medium;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.club{
+    color: #737373;
 }
