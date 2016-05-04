@@ -159,15 +159,9 @@
 <script>
     var pattern = Trianglify({
         width: window.innerWidth,
-        height: window.innerHeight,
-        palette: Trianglify.colorbrewer,
-        cell_size: 40,
-        seed: 'vl164',
-        x_colors: 'random'
+        height: window.innerHeight
     });
-    document.body.appendChild(pattern.canvas());
-   // document.getElementById('events1').appendChild(pattern.canvas());
-
+    document.body.appendChild(pattern.canvas())
 </script>
 <script type="text/javascript" src="/javascripts/page.js"></script>
 <script type="text/javascript" src="/javascripts/interface.js"></script>

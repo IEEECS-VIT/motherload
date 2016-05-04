@@ -168,3 +168,9 @@ p{
     font-weight: 300;
     position: absolute;
 }
+canvas{
+    z-index: -10;
+    position:fixed;
+    top: 0;
+    background-repeat: repeat-y;
+}
