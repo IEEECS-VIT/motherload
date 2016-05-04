@@ -169,8 +169,12 @@ p{
     position: absolute;
 }
 canvas{
+    position: fixed;
     z-index: -10;
-    position:fixed;
-    top: 0;
     background-repeat: repeat-y;
+    top:0;
+    /* z-index: -10;
+     position:fixed;
+      top: 0;
+      background-repeat: repeat-y;*/
 }
