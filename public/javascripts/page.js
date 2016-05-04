@@ -44,7 +44,7 @@ $(document).ready(function() {
             else
             {
 
-                $('#'+x+' > img').css({ '-webkit-filter': 'drop-shadow(2px 2px 0 #FFEB3B)'});
+                $('#'+x+' > img').css({ '-webkit-filter': 'drop-shadow(2px 2px 0 black)'});
                 //$('body').css({'background-image' :'url('+'/images/'+arr[i].id+'back.jpg)','background-size':'cover'});
                 $('#'+x+'1').show();
 
