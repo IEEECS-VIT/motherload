@@ -580,10 +580,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Workshops</h5><div class="container"><div class="row">';
         for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-        '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+workshops[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-        '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+workshops[i].subcat+'<i class="material-icons right">close</i></span>'+
-        '<h6 class="club">'+workshops[i].club+'</h6><p class="grey-text text-darken-3">'+workshops[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[0].color+'"><h2><span>'+workshops[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[0].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +workshops[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+                 workshops[i].subcat+
+            '</h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -594,10 +606,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Builtrix</h5><div class="container"><div class="row">';
         for(var i=0;i<builtrix.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+builtrix[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+builtrix[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+builtrix[i].club+'</h6><p class="grey-text text-darken-3">'+builtrix[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[1].color+'"><h2><span>'+builtrix[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[1].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +builtrix[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            builtrix[i].subcat +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -607,10 +631,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Applied Engineering</h5><div class="container"><div class="row">';
         for(var i=0;i<appeng.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+appeng[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+appeng[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+appeng[i].club+'</h6><p class="grey-text text-darken-3">'+appeng[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[2].color+'"><h2><span>'+appeng[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[2].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +appeng[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            appeng[i].subcat+
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -620,10 +656,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Bits and Bytes</h5><div class="container"><div class="row">';
         for(var i=0;i<bab.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+bab[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+bab[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+bab[i].club+'</h6><p class="grey-text text-darken-3">'+bab[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[3].color+'"><h2><span>'+bab[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[3].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +bab[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            bab[i].subcat +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -633,10 +681,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Circuit</h5><div class="container"><div class="row">';
         for(var i=0;i<circuit.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+circuit[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+circuit[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+circuit[i].club+'</h6><p class="grey-text text-darken-3">'+circuit[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[4].color+'"><h2><span>'+circuit[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[4].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +circuit[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            circuit[i].subcat +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -646,10 +706,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Quiz</h5><div class="container"><div class="row">';
         for(var i=0;i<quiz.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+quiz[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+quiz[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+quiz[i].club+'</h6><p class="grey-text text-darken-3">'+quiz[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[5].color+'"><h2><span>'+quiz[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[5].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +quiz[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+                quiz[i].subcat            +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -659,10 +731,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Robotics</h5><div class="container"><div class="row">';
         for(var i=0;i<robotics.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+robotics[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+robotics[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+robotics[i].club+'</h6><p class="grey-text text-darken-3">'+robotics[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[6].color+'"><h2><span>'+quiz[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[6].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +workshops[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            robotics[i].subcat +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -672,10 +756,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Management/ Debate/ Discussion</h5><div class="container"><div class="row">';
         for(var i=0;i<mdd.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+mdd[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+mdd[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+mdd[i].club+'</h6><p class="grey-text text-darken-3">'+mdd[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[7].color+'"><h2><span>'+robotics[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[7].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +robotics[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            robotics[i].subcat +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -685,10 +781,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Bio/Chemical</h5><div class="container"><div class="row">';
         for(var i=0;i<biochem.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+biochem[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+biochem[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+biochem[i].club+'</h6><p class="grey-text text-darken-3">'+biochem[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[8].color+'"><h2><span>'+biochem[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[8].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +biochem[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            biochem[i].subcat +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -698,10 +806,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Science and Tech</h5><div class="container"><div class="row">';
         for(var i=0;i<sct.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+sct[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+sct[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+sct[i].club+'</h6><p class="grey-text text-darken-3">'+sct[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[9].color+'"><h2><span>'+sct[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[9].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +sct[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            sct[i].subcat +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -711,10 +831,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Informals</h5><div class="container"><div class="row">';
         for(var i=0;i<informal.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+informal[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+informal[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+informal[i].club+'</h6><p class="grey-text text-darken-3">'+informal[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[10].color+'"><h2><span>'+informal[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[10].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +informal[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            informal[i].subcat +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -724,10 +856,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Online</h5><div class="container"><div class="row">';
         for(var i=0;i<online.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+online[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+online[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+online[i].club+'</h6><p class="grey-text text-darken-3">'+online[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[11].color+'"><h2><span>'+online[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[11].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +online[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            online[i].subcat +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;
@@ -737,10 +881,22 @@ function display(a)
         var x='<a href="#" class="back" onclick="goback()">Back</a><h5>SSIC</h5><div class="container"><div class="row">';
         for(var i=0;i<ssic.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><div class="card small">'+'<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
-            '</div><div class="card-content"><span class="card-title activator grey-text text-darken-4">'+ssic[i].subcat+'<i class="material-icons right">more_vert</i></span><hr>'+
-            '<p><a href="#">Register</a></p>'+'</div><div class="card-reveal"><span class="card-title grey-text text-darken-4">'+ssic[i].subcat+'<i class="material-icons right">close</i></span>'+
-            '<h6 class="club">'+ssic[i].club+'</h6><p class="grey-text text-darken-3">'+ssic[i].description+'</p></div></div></div>';
+            x+='<div class="col s12 l4 m6"><article class="material-card '+events[12].color+'"><h2><span>'+ssic[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[12].name+'</strong></h2><div class="mc-content">' +
+            '  <div class="img-container">' +
+            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
+            '        </div>' +
+            '        <div class="mc-description">' +ssic[i].description+
+            '        </div>' +
+            '        </div>' +
+            '        <a class="mc-btn-action">' +
+            '        <i class="fa fa-bars"></i>' +
+            '        </a>' +
+            '        <div class="mc-footer">' +
+            '        <h4>' +
+            ssic[i].subcat +
+            '        </h4>' +
+            '        </div>' +
+            '        </article></div>';
         }
         x+='</div></div>';
         document.getElementById('category').innerHTML=x;

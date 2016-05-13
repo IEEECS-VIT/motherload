@@ -89,11 +89,11 @@ svg {
     animation: stroke-offset 7s  forwards;
 }
 .text-copy:nth-child(1) {
-    stroke: #360745;
+    stroke: #9714c1;
     stroke-dashoffset: 7%;
 }
 .text-copy:nth-child(2) {
-    stroke: #D61C59;
+    stroke: #ef4847;
     stroke-dashoffset: 14%;
 }
 .text-copy:nth-child(3) {
@@ -101,11 +101,11 @@ svg {
     stroke-dashoffset: 21%;
 }
 .text-copy:nth-child(4) {
-    stroke: #EFEAC5;
+    stroke: #f44336;
     stroke-dashoffset: 28%;
 }
 .text-copy:nth-child(5) {
-    stroke: #1B8798;
+    stroke: #197d8d;
     stroke-dashoffset: 35%;
 }
 
@@ -188,6 +188,7 @@ canvas{
     position: relative;
 
 }
+
 .card-gravitas{
     margin:0;
     position: relative;
@@ -213,6 +214,9 @@ nav
 {
     background-color: #4b0082;
     z-index: 10;
+}
+.material-card{
+    z-index: 0;
 }
 .material-card h2{
     font-size: large;

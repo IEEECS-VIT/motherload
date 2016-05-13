@@ -52,5 +52,12 @@ $(document).ready(function() {
             }
         }
     });
+    $('.material-card').materialCard({
+            icon_close: 'fa-chevron-left',
+    icon_open: 'fa-thumbs-o-up',
+    icon_spin: 'fa-spin-fast',
+    card_activator: 'click'
+});
+
 
 });
