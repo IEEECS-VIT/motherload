@@ -532,374 +532,495 @@ var biochem=[
 
 
 ];
+var e;
 $(document).ready(function(){
-    //size of card
-    var ww=$(window).width();
-    console.log("window width=",ww);
-    var wh=$(window).height();
-    console.log("window height=",wh);
-    var cw=$(".card-gravitas").width();
-    var ch=$(".card-gravitas").height();
-    console.log("card width=",cw);
-    console.log("card height",ch);
-    ww=ww/2;
-    wh=wh/2;
-    cw=cw/2;
-    ch=ch/2;
 
-    //$(".card-gravitas").css('marginTop',(ww-cw)/2);
-    //$(".card-gravitas").css('marginBottom',t);
-    //$(".card-gravitas").css('marginRight',wh-ch);
-    //$(".card-gravitas").css('marginLeft',(wh-ch)*2);
 
     $(".button-collapse").sideNav();
-
-   var ev=document.getElementById('events');
-    var l=events.length;
-    var a='<h3>EVENTS</h3><div class="container"><div class="row">';
-    for(var i=0;i<l;i++)
-    {
-        a+='<div class="col s12 m4 l4" onclick="display(\''+events[i].name+'\')"><article class="material-card '+events[i].color+'"><h2><span>'+events[i].name+'</span>Know More...</strong></h2><div class="mc-content"><div class="img-container">'+
-    '<img src="'+events[i].url+'"></div></div><div class="mc-footer">'+
-    '</div></article></div>'
-    }
-    a+='</div></div>';
-    ev.innerHTML=a;
+    $('.material-card').materialCard({
+        icon_close: 'fa-chevron-left',
+        icon_open: 'fa-thumbs-o-up',
+        icon_spin: 'fa-spin-fast',
+        card_activator: 'click' // or hover
+    });
+        //displaying the events
+        displayevents();
 
 
 });
-function goback(){
-    $('#category').hide();
-    $('#events').show();
+function displayevents(){
+    var ev=document.getElementById('events1');
+    var l=events.length;
+    var a='<div id="events" data-animation="hierarchical-display" ><h3>EVENTS</h3><div class="container"><div class="row">';
+    for(var i=0;i<l;i++)
+    {
+        a+='<div class="col s12 m4 l4" onclick="display(\''+events[i].name+'\')"><article class="material-card Indigo"><h2 class="z-depth-3"><span>'+events[i].name+'</span><strong><i class="fa fa-fw fa-star"></i>Know More...</strong></h2><div class="mc-content"><div class="img-container z-depth-3">'+
+        '<img src="'+events[i].url+'"></div></div><div class="mc-footer">'+
+        '</div></article></div>'
+    }
+    a+='</div></div></div>';
+    e=a;
+    ev.innerHTML=a;
 }
 function display(a)
 {
-    $('#events').hide();
+
     if(a=='Workshops')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Workshops</h5><div class="container"><div class="row">';
+
+        var x='<div id="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Workshops</h1><div class="container"><div class="row">';
         for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[0].color+'"><h2><span>'+workshops[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[0].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +workshops[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-                 workshops[i].subcat+
-            '</h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+        '<h2 class="z-depth-2">'+
+        '<span>'+workshops[i].subcat+'</span>'+
+        '<strong>'+
+        '<i class="fa fa-fw fa-star"></i>'+
+        workshops[i].club+
+        '</strong>'+
+        '</h2>'+
+        '<div class="mc-content">'+
+        '<div class="img-container z-depth-2">'+
+        '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+        '</div>'+
+        '<div class="mc-description">'+
+         workshops[i].description+
+        '</div>'+
+        '</div>'+
+        '<a class="mc-btn-action">'+
+        '<i class="fa fa-thumbs-o-up"></i>'+
+        '</a>'+
+        '<div class="mc-footer">'+
+        '<h4>'+
+        'abhi ke liye kuch nai'+
+        '</h4></div>'+
+        '</article>'+
+        '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
 
     }
     else if(a=='Builtrix')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Builtrix</h5><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Builtrix</h1><div class="container"><div class="row">';
         for(var i=0;i<builtrix.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[1].color+'"><h2><span>'+builtrix[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[1].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +builtrix[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            builtrix[i].subcat +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+builtrix[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            builtrix[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container z-depth-2">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            builtrix[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=='Applied Engineering')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Applied Engineering</h5><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Applied Engineering</h1><div class="container"><div class="row">';
         for(var i=0;i<appeng.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[2].color+'"><h2><span>'+appeng[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[2].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +appeng[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            appeng[i].subcat+
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+appeng[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            appeng[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container z-depth-2">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            appeng[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=='Bits and Bytes')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Bits and Bytes</h5><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Bits and Bytes</h1><div class="container"><div class="row">';
         for(var i=0;i<bab.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[3].color+'"><h2><span>'+bab[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[3].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +bab[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            bab[i].subcat +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+bab[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            bab[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            bab[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=='Circuit')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Circuit</h5><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Circuit</h1><div class="container"><div class="row">';
         for(var i=0;i<circuit.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[4].color+'"><h2><span>'+circuit[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[4].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +circuit[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            circuit[i].subcat +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+circuit[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            circuit[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            circuit[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=='Quiz')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Quiz</h5><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Quiz</h1><div class="container"><div class="row">';
         for(var i=0;i<quiz.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[5].color+'"><h2><span>'+quiz[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[5].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +quiz[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-                quiz[i].subcat            +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+quiz[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            quiz[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container z-depth-2">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            quiz[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=='Robotics')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Robotics</h5><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Robotics</h1><div class="container"><div class="row">';
         for(var i=0;i<robotics.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[6].color+'"><h2><span>'+quiz[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[6].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +workshops[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            robotics[i].subcat +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+robotics[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            robotics[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container z-depth-2">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            robotics[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=="Management/ Debate/ Discussion")
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Management/ Debate/ Discussion</h5><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Management/ Debate/ Discussion</h1><div class="container"><div class="row">';
         for(var i=0;i<mdd.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[7].color+'"><h2><span>'+robotics[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[7].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +robotics[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            robotics[i].subcat +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+mdd[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            mdd[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container z-depth-2">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            mdd[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=='Bio/Chemical')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Bio/Chemical</h5><div class="container"><div class="row">';
+        var x='<div class="category"> <a href="#" class="back" onclick="displayevents()">Back</a><h1>Bio/ Chemical</h1><div class="container"><div class="row">';
         for(var i=0;i<biochem.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[8].color+'"><h2><span>'+biochem[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[8].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +biochem[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            biochem[i].subcat +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+biochem[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            biochem[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container z-depth-2">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            biochem[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=='Science and tech')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Science and Tech</h5><div class="container"><div class="row">';
-        for(var i=0;i<sct.length;i++)
+        var x='<div class="category"> <a href="#" class="back" onclick="displayevents()">Back</a><h1>Science and Tech</h1><div class="container"><div class="row">';
+        for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[9].color+'"><h2><span>'+sct[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[9].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +sct[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            sct[i].subcat +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+workshops[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            workshops[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container z-depth-2">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            workshops[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=='Informals')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Informals</h5><div class="container"><div class="row">';
-        for(var i=0;i<informal.length;i++)
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Workshops</h1><div class="container"><div class="row">';
+        for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[10].color+'"><h2><span>'+informal[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[10].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +informal[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            informal[i].subcat +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+workshops[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            workshops[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container z-depth-2">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            workshops[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=='Online')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>Online</h5><div class="container"><div class="row">';
-        for(var i=0;i<online.length;i++)
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Workshops</h1><div class="container"><div class="row">';
+        for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[11].color+'"><h2><span>'+online[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[11].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +online[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            online[i].subcat +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+workshops[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            workshops[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container z-depth-2">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            workshops[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else if(a=='SSIC')
     {
-        var x='<a href="#" class="back" onclick="goback()">Back</a><h5>SSIC</h5><div class="container"><div class="row">';
-        for(var i=0;i<ssic.length;i++)
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Workshops</h1><div class="container"><div class="row">';
+        for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s12 l4 m6"><article class="material-card '+events[12].color+'"><h2><span>'+ssic[i].subcat+'</span><strong><i class="fa fa-fw fa-star"></i>'+events[12].name+'</strong></h2><div class="mc-content">' +
-            '  <div class="img-container">' +
-            '   <img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">' +
-            '        </div>' +
-            '        <div class="mc-description">' +ssic[i].description+
-            '        </div>' +
-            '        </div>' +
-            '        <a class="mc-btn-action">' +
-            '        <i class="fa fa-bars"></i>' +
-            '        </a>' +
-            '        <div class="mc-footer">' +
-            '        <h4>' +
-            ssic[i].subcat +
-            '        </h4>' +
-            '        </div>' +
-            '        </article></div>';
+            x+='<div class="col s1 l4 m4">'+
+            '<article class="material-card Indigo">'+
+            '<h2 class="z-depth-2">'+
+            '<span>'+workshops[i].subcat+'</span>'+
+            '<strong>'+
+            '<i class="fa fa-fw fa-star"></i>'+
+            workshops[i].club+
+            '</strong>'+
+            '</h2>'+
+            '<div class="mc-content">'+
+            '<div class="img-container z-depth-2">'+
+            '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
+            '</div>'+
+            '<div class="mc-description">'+
+            workshops[i].description+
+            '</div>'+
+            '</div>'+
+            '<a class="mc-btn-action">'+
+            '<i class="fa fa-thumbs-o-up"></i>'+
+            '</a>'+
+            '<div class="mc-footer">'+
+            '<h4>'+
+            'abhi ke liye kuch nai'+
+            '</h4></div>'+
+            '</article>'+
+            '</div>'
         }
-        x+='</div></div>';
-        document.getElementById('category').innerHTML=x;
+        x+='</div></div></div>';
+        document.getElementById('events1').innerHTML=x;
     }
     else
     {
