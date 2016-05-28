@@ -237,3 +237,7 @@ nav
 article {
     z-index: 10;
 }
+hr{
+    margin-top: 0;
+    margin-bottom: 0;
+}

@@ -545,6 +545,7 @@ $(document).ready(function(){
     });
         //displaying the events
         displayevents();
+    $('.modal-trigger').leanModal();
 
 
 });
@@ -554,7 +555,7 @@ function displayevents(){
     var a='<div id="events" data-animation="hierarchical-display" ><h3>EVENTS</h3><div class="container"><div class="row">';
     for(var i=0;i<l;i++)
     {
-        a+='<div class="col s12 m4 l4" onclick="display(\''+events[i].name+'\')"><article class="material-card Indigo"><h2 class="z-depth-3"><span>'+events[i].name+'</span><strong><i class="fa fa-fw fa-star"></i>Know More...</strong></h2><div class="mc-content"><div class="img-container z-depth-3">'+
+        a+='<div class="col s12 m4 l4" onclick="display(\''+events[i].name+'\')"><article class="material-card Indigo"><h2 class="z-depth-2"><span>'+events[i].name+'</span><strong><i class="fa fa-fw fa-star"></i>Know More...</strong></h2><div class="mc-content"><div class="img-container waves-effect waves-light z-depth-3">'+
         '<img src="'+events[i].url+'"></div></div><div class="mc-footer">'+
         '</div></article></div>'
     }
