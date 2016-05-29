@@ -1,13 +1,14 @@
 $(document).ready(function() {
     var
-        $gallery = $(".gravitas"),
-        $galleryPictures = $(".gravitas-section"),
-        $galleryPicture = $(".cards"),
+        $gravitas = $(".gravitas"),
+        $gravitasSection = $(".gravitas-section"),
+        $cards = $(".cards"),
         lastPos = {x:0},
         galleryPos = {x:0},
         currentImage = -1,
         imageWidth = 700,
-        imageTotalWidth=imageWidth,
+        imageSpacing = 0,
+        imageTotalWidth=imageWidth+imageSpacing,
         speedLog=[],
         speedLogLimit=5,
         minBlur=2,
@@ -24,7 +25,7 @@ $(document).ready(function() {
         momentumTween=null
         ;
 
-    function setBlur(v){
+   function setBlur(v){
         if(v<minBlur) v=0;
         if(v>maxBlur) v=maxBlur;
         if(v!=lastBlur){
@@ -33,11 +34,12 @@ $(document).ready(function() {
         lastBlur=v;
     }
 
-    $galleryPictures.css({
+    $gravitasSection.css({
         webkitFilter:"url('#blur')",
-        filter:"url('#blur')"
+        filter:"url('#blur')",
+
     });
-    $galleryPicture.each(function(i) {
+    $cards.each(function(i) {
         var cur = $(this);
         cur.click(function(){
             if(Math.abs(totalDist)<distThreshold)
@@ -60,7 +62,7 @@ $(document).ready(function() {
     }
 
     function updateGalleryPos(){
-        TweenMax.set($galleryPictures,{
+        TweenMax.set($gravitasSection,{
             x:galleryPos.x+(($(window).width()-imageWidth)/2),
             force3D:true,
             lazy:true
@@ -73,7 +75,7 @@ $(document).ready(function() {
         var _currentImage=Math.round(-galleryPos.x/imageTotalWidth);
 
     }
-    $gallery.mousedown(function(event){
+    $gravitas.mousedown(function(event){
         event.preventDefault();
         dragging=true;
         dragPos.x=event.pageX;
@@ -120,9 +122,9 @@ $(document).ready(function() {
             if(targetImage<0){
                 excess=targetImage;
                 targetImage=0;
-            }else if(targetImage>=$galleryPicture.length){
-                excess=targetImage-($galleryPicture.length-1);
-                targetImage=$galleryPicture.length-1;
+            }else if(targetImage>=$cards.length){
+                excess=targetImage-($cards.length-1);
+                targetImage=$cards.length-1;
             }
             if(excess!=0){
                 targetX=-targetImage*imageTotalWidth;
@@ -150,3 +152,5 @@ $(document).ready(function() {
 
    setGalleryPos(0,false);
 })
+
+
