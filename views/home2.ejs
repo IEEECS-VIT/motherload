@@ -19,8 +19,9 @@
 
 </head>
 <body>
+
 <div class="graphics">
-        <h1 style="display: none">gravitas 16</h1>
+    <h1 style="display: none">gravitas 16</h1>
 </div>
 <nav>
     <div class="nav-wrapper fixed z-depth-1">
@@ -62,45 +63,61 @@
 <div id="cpg1">
     <h3 class="heading1">COMING  &nbsp &nbspSOON</h3>
 </div>
+<div id="home">
+<div class="content">
+    <div class="gravitas">
+        <ul class="gravitas-section">
+            <li class="cards" >
 
-<div id="home1">
+                <svg viewBox="0 0 800 600" class="card-gravitas z-depth-4">
+                    <symbol id="s-text">
+                        <text text-anchor="middle"
+                              x="50%"
+                              y="35%"
+                              class="text--line"
+                                >
+                            graVITas
+                        </text>
+                        <text text-anchor="middle"
+                              x="50%"
+                              y="68%"
+                              class="text--line2"
+                                >
+                            2016
+                        </text>
 
-<svg viewBox="0 0 800 600" class="card-gravitas z-depth-4">
-    <symbol id="s-text">
-        <text text-anchor="middle"
-              x="50%"
-              y="35%"
-              class="text--line"
-                >
-            graVITas
-        </text>
-        <text text-anchor="middle"
-              x="50%"
-              y="68%"
-              class="text--line2"
-                >
-            2016
-        </text>
+                    </symbol>
 
-    </symbol>
-
-    <g class="g-ants">
-        <use xlink:href="#s-text"
-             class="text-copy"></use>
-        <use xlink:href="#s-text"
-             class="text-copy"></use>
-        <use xlink:href="#s-text"
-             class="text-copy"></use>
-        <use xlink:href="#s-text"
-             class="text-copy"></use>
-        <use xlink:href="#s-text"
-             class="text-copy"></use>
-    </g>
+                    <g class="g-ants">
+                        <use xlink:href="#s-text"
+                             class="text-copy"></use>
+                        <use xlink:href="#s-text"
+                             class="text-copy"></use>
+                        <use xlink:href="#s-text"
+                             class="text-copy"></use>
+                        <use xlink:href="#s-text"
+                             class="text-copy"></use>
+                        <use xlink:href="#s-text"
+                             class="text-copy"></use>
+                    </g>
 
 
-</svg>
+                </svg>
+            </li>
+            <li class="cards da-slide">
+                <div id="about" class="card-gravitas z-depth-4">
+                </div>
+            </li>
+            <li class="cards da-slide">
+                <div id="" class="card-gravitas z-depth-4">
+
+                </div>
+
+
+        </ul>
+    </div>
 </div>
-
+</div>
 <div class="dock" id="dock2">
     <div class="dock-container2">
         <a class="dock-item2" href="#" id="home"><span>HOME</span><img src="/images/home.svg" alt="home" /></a>
@@ -170,6 +187,13 @@
     </div>
 
 </div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
 <!--dock menu JS options -->
 <script type="text/javascript" src="/bower/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
@@ -205,13 +229,26 @@
     );
 
 </script><script type="text/javascript" src="/bower/materialize/dist/js/materialize.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.js"></script>-->
-
+<script type="text/javascript" src="/javascripts/TweenMax.min.js"></script>
+<script type="text/javascript" src="/javascripts/home2.js"></script>
 <script src="/javascripts/jquery.material-cards.js"></script>
 <script type="text/javascript" src="/javascripts/page.js"></script>
 <script type="text/javascript" src="/javascripts/interface.js"></script>
 <script src="/javascripts/events2.js" type="text/javascript"></script>
 <script src="/javascripts/jquery.zmd.hierarchical-display.min.js"></script>
+<script type="text/javascript" src="js/jquery.cslider.js"></script>
+<script type="text/javascript">
+    $(function() {
+
+        $('#da-slider').cslider({
+            autoplay	: true,
+            bgincrement	: 450
+        });
+
+    });
+</script>
 
 </body>
 </html>
