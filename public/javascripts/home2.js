@@ -185,10 +185,10 @@ k=1;
 
            $("#b"+k).click();
            k++;
-           if(k==11)
+           if(k>=11)
            {
-               rotate();
-
+           setGalleryPos(j,false);
+            k=1;
            }
        },3000)
     }
