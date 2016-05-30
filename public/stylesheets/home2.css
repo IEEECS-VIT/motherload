@@ -200,11 +200,11 @@ canvas{
     border-radius: 1%;
     background-color: #ffffff;
     height: 400px;
-    width:90%;
+    width:100%;
     padding-top:3%;
 
     margin-top: 3%;
-    margin-left: 2%;
+    margin-left: 0%;
     -webkit-transform: rotateY(0);
     transform: rotateY(0);
 
@@ -214,7 +214,15 @@ canvas{
     font: 16em/1 Arial;
 }
 
-
+#g-text{
+    font: 16em/1 Roboto;
+}
+#water-text{
+    font: 16em/1 Roboto;
+}
+#energy-text{
+    font: 16em/1 Roboto;
+}
 .graphics{
     position: fixed;
     width: 100%;
@@ -287,7 +295,7 @@ width: 50%;
 }
 
 .gallery-pagination-dot {
-    background: #333;
+    background: #d1d1d1;
     border-radius: 50%;
     width: 16px;
     height: 16px;
@@ -298,10 +306,22 @@ width: 50%;
 }
 
 .gallery-pagination-dot-selected {
-    background: #197d8d;
+    background: #3f51b5;
 }
 .filters
 {
     width: 0;
     height:0;
+}
+img.circle{
+    max-width: 164px;
+    height: 144px;
+}
+#team{
+    align-content: center;
+    text-align: center;
+}
+.social img.responsive-img{
+    width:60px;
+    height: 60px;
 }

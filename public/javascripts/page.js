@@ -33,24 +33,22 @@ var arr=[
 $(document).ready(function() {
     $('a').on('click', function () {
         var x=$(this).attr('id');
-        for (var i = 0; i < arr.length; i++) {
-            var y;
-            y =arr[i].id;
-            if (y != x) {
-                $('#'+y+' > img').css({ '-webkit-filter': 'drop-shadow(0px 0px 0px )',
-                    'filter': 'drop-shadow(0px 0px 0px )'});
-                $('#' + y + '1').hide();
+
+            if ('events' == x) {
+
+                $('#home').hide();
+                $('#events1').show();
             }
             else
             {
+                $('#home').show();
 
-                $('#'+x+' > img').css({ '-webkit-filter': 'drop-shadow(2px 2px 0 black)'});
                 //$('body').css({'background-image' :'url('+'/images/'+arr[i].id+'back.jpg)','background-size':'cover'});
-                $('#'+x+'1').show();
+                $('#events1').hide();
 
 
             }
-        }
+
     });
     $('.material-card').materialCard({
             icon_close: 'fa-chevron-left',
