@@ -179,7 +179,7 @@ $(document).ready(function() {
     function rotate()
     {
 j=0;
-k=2;
+k=1;
         setGalleryPos(j,false);
        setInterval(function(){
 
