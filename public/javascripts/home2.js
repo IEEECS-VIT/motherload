@@ -36,7 +36,7 @@ $(document).ready(function() {
 
     $gravitasSection.css({
         webkitFilter:"url('#blur')",
-        filter:"url('#blur')",
+        filter:"url('#blur')"
 
     });
     $cards.each(function(i) {
@@ -73,6 +73,12 @@ $(document).ready(function() {
         lastPos.x=galleryPos.x;
 
         var _currentImage=Math.round(-galleryPos.x/imageTotalWidth);
+        if(_currentImage!=currentImage){
+            currentImage=_currentImage;
+            $(".gallery-pagination-dot-selected").removeClass('gallery-pagination-dot-selected');
+            $(".gallery-pagination-dot").eq(currentImage).addClass('gallery-pagination-dot-selected')
+        }
+
 
     }
     $gravitas.mousedown(function(event){

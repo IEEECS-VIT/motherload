@@ -199,6 +199,7 @@ canvas{
     height: 400px;
     width:90%;
     padding-top:3%;
+
     margin-top: 3%;
     margin-left: 2%;
     -webkit-transform: rotateY(0);
@@ -270,9 +271,29 @@ hr{
 {
 
 width: 50%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
     display: inline-block;
     -webkit-transform: rotateY(0);
     transform: rotateY(0);
+}
+.gallery-pagination {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.gallery-pagination-dot {
+    background: #333;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: none;
+    margin: 0 7px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.gallery-pagination-dot-selected {
+    background: #197d8d;
 }
