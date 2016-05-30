@@ -157,6 +157,24 @@ $(document).ready(function() {
     }
 
    setGalleryPos(0,false);
+    $('#b1').click();
+i=1;
+    function slider()
+    {
+
+        setInterval(function() {
+            $("#b"+i).click();
+            i++;
+
+        }, 3000);
+
+    }
+
+slider();
+
+
+
+
 })
 
 
