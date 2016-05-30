@@ -178,10 +178,21 @@ $(document).ready(function() {
     }
     function rotate()
     {
-        setGalleryPos(0,false);
+j=0;
+k=2;
+        setGalleryPos(j,false);
+       setInterval(function(){
+
+           $("#b"+k).click();
+           k++;
+           if(k==11)
+           {
+               rotate();
+           }
+       },3000)
     }
     }
-setInterval(start(),1000);
+setInterval(start(),2000);
 
 
 
