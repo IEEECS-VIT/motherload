@@ -1,7 +1,7 @@
 body {
     /**background: url('/images/homeback.jpg');**/
     /*background-color: #f57951;*/
-	font: 16em/1 Arial;
+	/*font: 16em/1 Arial;*/
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -11,6 +11,11 @@ body {
 	padding: 0;
 	margin: 0;
     height: 100%;
+
+}
+#home
+{
+    width: 100%;
 }
 img {
 	border: none;
@@ -195,24 +200,31 @@ canvas{
     border-radius: 1%;
     background-color: #ffffff;
     height: 400px;
-    width: 40%;
+    width:90%;
     padding-top:3%;
-    margin-top: 3%;
-    margin-left: 32%;
 
+    margin-top: 3%;
+    margin-left: 2%;
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
 
 }
+#s-text
+{
+    font: 16em/1 Arial;
+}
+
 
 .graphics{
     position: fixed;
     width: 100%;
     height: 55%;
-    background-color: #4b0082;
+    background-color: #3f51b5;
     z-index: 0;
 }
 nav
 {
-    background-color: #4b0082;
+    background-color: #3f51b5;
     z-index: 10;
 }
 .material-card{
@@ -220,4 +232,76 @@ nav
 }
 .material-card h2{
     font-size: large;
+}
+.animateblock
+{
+    opacity: 0;
+    transition: all 0.55s linear;
+}
+.animateblock .animated
+{
+    opacity:1;
+}
+.brand-logo{
+    margin-top: 10px;
+    margin-left:5px;
+}
+article {
+    z-index: 10;
+}
+hr{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.gravitas
+{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 1em 0 2.5em;
+
+}
+.gravitas-section
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: -webkit-grab;
+    -webkit-transform: rotateY(0);
+    white-space: nowrap;
+}
+.cards
+{
+
+width: 50%;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: inline-block;
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+.gallery-pagination {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.gallery-pagination-dot {
+    background: #333;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: none;
+    margin: 0 7px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.gallery-pagination-dot-selected {
+    background: #197d8d;
+}
+.filters
+{
+    width: 0;
+    height:0;
 }
