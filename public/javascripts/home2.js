@@ -157,20 +157,31 @@ $(document).ready(function() {
     }
 
    setGalleryPos(0,false);
+    function start()
+    {
     $('#b1').click();
-i=1;
+    i=1;
+        slider();
     function slider()
     {
 
         setInterval(function() {
             $("#b"+i).click();
             i++;
-
+            if(i==11)
+            {
+                rotate();
+            }
         }, 3000);
 
-    }
 
-slider();
+    }
+    function rotate()
+    {
+        setGalleryPos(0,false);
+    }
+    }
+setInterval(start(),1000);
 
 
 
