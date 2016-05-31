@@ -190,10 +190,10 @@ k=1;
            setGalleryPos(j,false);
             k=1;
            }
-       },3000)
+       },4000)
     }
     }
-setInterval(start(),2000);
+setInterval(start(),3000);
 
 
 

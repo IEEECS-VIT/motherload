@@ -93,27 +93,87 @@ svg {
     -webkit-animation: stroke-offset 15s forwards;
     animation: stroke-offset 7s  forwards;
 }
-.text-copy:nth-child(1) {
+#gravitas:nth-child(1) {
     stroke: #9714c1;
     stroke-dashoffset: 7%;
 }
-.text-copy:nth-child(2) {
+#gravitas:nth-child(2) {
     stroke: #ef4847;
     stroke-dashoffset: 14%;
 }
-.text-copy:nth-child(3) {
+#gravitas:nth-child(3) {
     stroke: #E7D84B;
     stroke-dashoffset: 21%;
 }
-.text-copy:nth-child(4) {
+#gravitas:nth-child(4) {
     stroke: #f44336;
     stroke-dashoffset: 28%;
 }
-.text-copy:nth-child(5) {
+#gravitas:nth-child(5) {
     stroke: #197d8d;
     stroke-dashoffset: 35%;
 }
+#reduce:nth-child(1) {
+    stroke:#028002;
+    stroke-dashoffset: 7%;
+}
+#reduce:nth-child(2) {
+    stroke:#028002;
+    stroke-dashoffset: 14%;
+}
+#reduce:nth-child(3) {
+    stroke: #028002;
+    stroke-dashoffset: 21%;
+}
+#reduce:nth-child(4) {
+    stroke: #028002;
+    stroke-dashoffset: 28%;
+}
+#reduce:nth-child(5) {
+    stroke: #028002;
+    stroke-dashoffset: 35%;
+}
 
+#water:nth-child(1) {
+    stroke:#72A6E0;
+    stroke-dashoffset: 7%;
+}
+#water:nth-child(2) {
+    stroke:#72A6E0;
+    stroke-dashoffset: 14%;
+}
+#water:nth-child(3) {
+    stroke: #72A6E0;
+    stroke-dashoffset: 21%;
+}
+#water:nth-child(4) {
+    stroke: #72A6E0;
+    stroke-dashoffset: 28%;
+}
+#water:nth-child(5) {
+    stroke: #72A6E0;
+    stroke-dashoffset: 35%;
+}
+#energy:nth-child(1) {
+    stroke:#fefd06;
+    stroke-dashoffset: 7%;
+}
+#energy:nth-child(2) {
+    stroke:#fefd06;
+    stroke-dashoffset: 14%;
+}
+#energy:nth-child(3) {
+    stroke: #fefd06;
+    stroke-dashoffset: 21%;
+}
+#energy:nth-child(4) {
+    stroke: #fefd06;
+    stroke-dashoffset: 28%;
+}
+#energy:nth-child(5) {
+    stroke: #fefd06;
+    stroke-dashoffset: 35%;
+}
 @-webkit-keyframes stroke-offset {
     50% {
         stroke-dashoffset: 35%;

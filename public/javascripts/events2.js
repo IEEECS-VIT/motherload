@@ -545,7 +545,7 @@ $(document).ready(function(){
     });
         //displaying the events
         displayevents();
-    
+
     $('.modal-trigger').leanModal();
 
 
