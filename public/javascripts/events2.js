@@ -570,7 +570,7 @@ function display(a)
     if(a=='Workshops')
     {
 
-        var x='<div id="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></i></a><h1>Workshops</h1><div class="container"><div class="row">';
+        var x='<div id="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true" style="margin-left: 20px;"></i></i></a><h1>Workshops</h1><div class="container"><div class="row">';
         for(var i=0;i<workshops.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -606,7 +606,7 @@ function display(a)
     }
     else if(a=='Builtrix')
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Builtrix</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true" style="margin-left: 20px;"></i></a><h1>Builtrix</h1><div class="container"><div class="row">';
         for(var i=0;i<builtrix.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
