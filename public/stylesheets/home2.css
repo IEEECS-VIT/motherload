@@ -114,23 +114,23 @@ svg {
     stroke-dashoffset: 35%;
 }
 #reduce:nth-child(1) {
-    stroke:#028002;
+    stroke: #8aff78;
     stroke-dashoffset: 7%;
 }
 #reduce:nth-child(2) {
-    stroke:#028002;
+    stroke: #89ff1a;
     stroke-dashoffset: 14%;
 }
 #reduce:nth-child(3) {
-    stroke: #028002;
+    stroke: #18ff2d;
     stroke-dashoffset: 21%;
 }
 #reduce:nth-child(4) {
-    stroke: #028002;
+    stroke: #99ff65;
     stroke-dashoffset: 28%;
 }
 #reduce:nth-child(5) {
-    stroke: #028002;
+    stroke: #4eff91;
     stroke-dashoffset: 35%;
 }
 
@@ -139,39 +139,39 @@ svg {
     stroke-dashoffset: 7%;
 }
 #water:nth-child(2) {
-    stroke:#72A6E0;
+    stroke: #7fb2e0;
     stroke-dashoffset: 14%;
 }
 #water:nth-child(3) {
-    stroke: #72A6E0;
+    stroke: #1aa7f4;
     stroke-dashoffset: 21%;
 }
 #water:nth-child(4) {
-    stroke: #72A6E0;
+    stroke: #23e0c4;
     stroke-dashoffset: 28%;
 }
 #water:nth-child(5) {
-    stroke: #72A6E0;
+    stroke: #94bdff;
     stroke-dashoffset: 35%;
 }
 #energy:nth-child(1) {
-    stroke:#fefd06;
+    stroke: #fe7e46;
     stroke-dashoffset: 7%;
 }
 #energy:nth-child(2) {
-    stroke:#fefd06;
+    stroke: #e7754d;
     stroke-dashoffset: 14%;
 }
 #energy:nth-child(3) {
-    stroke: #fefd06;
+    stroke: #e76b1c;
     stroke-dashoffset: 21%;
 }
 #energy:nth-child(4) {
-    stroke: #fefd06;
+    stroke: #fd5812;
     stroke-dashoffset: 28%;
 }
 #energy:nth-child(5) {
-    stroke: #fefd06;
+    stroke: #e76b1c;
     stroke-dashoffset: 35%;
 }
 @-webkit-keyframes stroke-offset {
@@ -311,8 +311,17 @@ nav
     opacity:1;
 }
 .brand-logo{
+    position: absolute;
+    width: 155px;
+    height: 50px;
+    z-index: 0;
     margin-top: 10px;
     margin-left:5px;
+}
+.brand-logo img{
+    width: 155px;
+    height: 50px;
+
 }
 article {
     z-index: 10;
