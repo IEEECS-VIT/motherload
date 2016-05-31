@@ -63,6 +63,9 @@ router.get('/search',function(req,res){
 router.get('/mainpage',function(req,res){
     res.render('mainpage');
 });
+router.get('/register',function(req,res){
+    res.render('registration');
+});
 
 router.post('/login', function (req, res) {
     var user = req.body.username;
