@@ -545,7 +545,7 @@ $(document).ready(function(){
     });
         //displaying the events
         displayevents();
-    alert("bdjk")
+    
     $('.modal-trigger').leanModal();
 
 

@@ -168,7 +168,7 @@ $(document).ready(function() {
         setInterval(function() {
             $("#b"+i).click();
             i++;
-            if(i==11)
+            if(i==6)
             {
                 rotate();
             }
@@ -185,7 +185,7 @@ k=1;
 
            $("#b"+k).click();
            k++;
-           if(k>=11)
+           if(k>=6)
            {
            setGalleryPos(j,false);
             k=1;
