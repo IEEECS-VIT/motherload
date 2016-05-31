@@ -573,7 +573,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back left" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Workshops</h1></div>';
         for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
         '<h2 class="z-depth-2">'+
         '<span>'+workshops[i].subcat+'</span>'+
@@ -609,7 +609,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Builtrix</h1></div>';
         for(var i=0;i<builtrix.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+builtrix[i].subcat+'</span>'+
@@ -644,7 +644,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Applied Engineering</h1></div>';
         for(var i=0;i<appeng.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+appeng[i].subcat+'</span>'+
@@ -679,7 +679,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Bits and Bytes</h1></div>';
         for(var i=0;i<bab.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+bab[i].subcat+'</span>'+
@@ -714,7 +714,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Circuits</h1></div>';
         for(var i=0;i<circuit.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+circuit[i].subcat+'</span>'+
@@ -749,7 +749,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Quiz</h1></div>';
         for(var i=0;i<quiz.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+quiz[i].subcat+'</span>'+
@@ -784,7 +784,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Robotics</h1></div>';
         for(var i=0;i<robotics.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+robotics[i].subcat+'</span>'+
@@ -819,7 +819,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Management/ Debate/ Discussion</h1></div>';
         for(var i=0;i<mdd.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+mdd[i].subcat+'</span>'+
@@ -854,7 +854,7 @@ function display(a)
         var x='<div class="category"> <div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Bio/ Chemical</h1></div>';
         for(var i=0;i<biochem.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+biochem[i].subcat+'</span>'+
@@ -889,7 +889,7 @@ function display(a)
         var x='<div class="category"> <div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Science and Tech</h1></div>';
         for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+workshops[i].subcat+'</span>'+
@@ -924,7 +924,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Informals</h1></div>';
         for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+workshops[i].subcat+'</span>'+
@@ -959,7 +959,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Online</h1></div>';
         for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+workshops[i].subcat+'</span>'+
@@ -994,7 +994,7 @@ function display(a)
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>SSIC</h1></div>';
         for(var i=0;i<workshops.length;i++)
         {
-            x+='<div class="col s1 l4 m4">'+
+            x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
             '<span>'+workshops[i].subcat+'</span>'+
