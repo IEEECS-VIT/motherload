@@ -570,7 +570,7 @@ function display(a)
     if(a=='Workshops')
     {
 
-        var x='<div id="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Workshops</h1><div class="container"><div class="row">';
+        var x='<div id="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></i></a><h1>Workshops</h1><div class="container"><div class="row">';
         for(var i=0;i<workshops.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -606,7 +606,7 @@ function display(a)
     }
     else if(a=='Builtrix')
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Builtrix</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Builtrix</h1><div class="container"><div class="row">';
         for(var i=0;i<builtrix.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -641,7 +641,7 @@ function display(a)
     }
     else if(a=='Applied Engineering')
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Applied Engineering</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Applied Engineering</h1><div class="container"><div class="row">';
         for(var i=0;i<appeng.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -676,7 +676,7 @@ function display(a)
     }
     else if(a=='Bits and Bytes')
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Bits and Bytes</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Bits and Bytes</h1><div class="container"><div class="row">';
         for(var i=0;i<bab.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -711,7 +711,7 @@ function display(a)
     }
     else if(a=='Circuit')
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Circuit</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Circuit</h1><div class="container"><div class="row">';
         for(var i=0;i<circuit.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -746,7 +746,7 @@ function display(a)
     }
     else if(a=='Quiz')
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Quiz</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Quiz</h1><div class="container"><div class="row">';
         for(var i=0;i<quiz.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -781,7 +781,7 @@ function display(a)
     }
     else if(a=='Robotics')
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Robotics</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Robotics</h1><div class="container"><div class="row">';
         for(var i=0;i<robotics.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -816,7 +816,7 @@ function display(a)
     }
     else if(a=="Management/ Debate/ Discussion")
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Management/ Debate/ Discussion</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Management/ Debate/ Discussion</h1><div class="container"><div class="row">';
         for(var i=0;i<mdd.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -851,7 +851,7 @@ function display(a)
     }
     else if(a=='Bio/Chemical')
     {
-        var x='<div class="category"> <a href="#" class="back" onclick="displayevents()">Back</a><h1>Bio/ Chemical</h1><div class="container"><div class="row">';
+        var x='<div class="category"> <a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Bio/ Chemical</h1><div class="container"><div class="row">';
         for(var i=0;i<biochem.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -886,7 +886,7 @@ function display(a)
     }
     else if(a=='Science and tech')
     {
-        var x='<div class="category"> <a href="#" class="back" onclick="displayevents()">Back</a><h1>Science and Tech</h1><div class="container"><div class="row">';
+        var x='<div class="category"> <a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Science and Tech</h1><div class="container"><div class="row">';
         for(var i=0;i<workshops.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -921,7 +921,7 @@ function display(a)
     }
     else if(a=='Informals')
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Workshops</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Workshops</h1><div class="container"><div class="row">';
         for(var i=0;i<workshops.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -956,7 +956,7 @@ function display(a)
     }
     else if(a=='Online')
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Workshops</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Workshops</h1><div class="container"><div class="row">';
         for(var i=0;i<workshops.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
@@ -991,7 +991,7 @@ function display(a)
     }
     else if(a=='SSIC')
     {
-        var x='<div class="category"><a href="#" class="back" onclick="displayevents()">Back</a><h1>Workshops</h1><div class="container"><div class="row">';
+        var x='<div class="category"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Workshops</h1><div class="container"><div class="row">';
         for(var i=0;i<workshops.length;i++)
         {
             x+='<div class="col s1 l4 m4">'+
