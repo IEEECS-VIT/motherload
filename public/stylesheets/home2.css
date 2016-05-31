@@ -85,7 +85,7 @@ svg {
     position: relative;
 
 }
-.text-copy {
+#gravitas {
     fill: none;
     stroke: white;
     stroke-dasharray: 7% 28%;
@@ -113,6 +113,15 @@ svg {
     stroke: #197d8d;
     stroke-dashoffset: 35%;
 }
+#reduce {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 7% 28%;
+    stroke-width: 3px;
+    -webkit-animation: stroke-offset 15s forwards;
+    animation: stroke-offset 7s  forwards;
+    animation-delay: 2s;
+}
 #reduce:nth-child(1) {
     stroke:#028002;
     stroke-dashoffset: 7%;
@@ -133,7 +142,15 @@ svg {
     stroke: #028002;
     stroke-dashoffset: 35%;
 }
-
+#water {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 7% 28%;
+    stroke-width: 3px;
+    -webkit-animation: stroke-offset 15s forwards;
+    animation: stroke-offset 7s  forwards;
+    animation-delay: 4s;
+}
 #water:nth-child(1) {
     stroke:#72A6E0;
     stroke-dashoffset: 7%;
@@ -153,6 +170,15 @@ svg {
 #water:nth-child(5) {
     stroke: #72A6E0;
     stroke-dashoffset: 35%;
+}
+#energy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 7% 28%;
+    stroke-width: 3px;
+    -webkit-animation: stroke-offset 15s forwards;
+    animation: stroke-offset 7s  forwards;
+    animation-delay: 8s;
 }
 #energy:nth-child(1) {
     stroke:#fefd06;
