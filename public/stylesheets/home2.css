@@ -749,6 +749,11 @@ iframe{
     opacity: 1;
     visibility: visible;
 }
+footer{
+    margin-bottom: 0;
+    position: fixed;
+    width: 100%;
+}
 footer img
 {
     width: 80px;
@@ -832,6 +837,7 @@ li a h5{
 .waves-effect.waves-teal .waves-ripple {
      background-color: rgba(63, 81, 181, 0.70);
  }
+
 .close
 {
     color: #000000;
@@ -840,3 +846,4 @@ li a h5{
     font-weight: bold;
     margin-top: -1%;
 }
+
