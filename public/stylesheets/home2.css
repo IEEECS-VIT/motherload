@@ -792,6 +792,7 @@ footer.page-footer {
         -webkit-transform: translateX(-50%);
     }
 }
+<<<<<<< HEAD
 li .modal-trigger{
     padding-left: 0;
 }
@@ -807,4 +808,14 @@ li .modal-trigger img{
     width: 30px;
     height: 30px;
     vertical-align: baseline;
+=======
+@media screen and (max-width: 599px)
+{
+    .card-gravitas
+    {
+        height: 365px;
+        width: 150%;
+        padding: 2px;
+    }
+>>>>>>> e2de2f4f326687a17758a8a8910e05466e748852
 }

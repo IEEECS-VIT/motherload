@@ -3,6 +3,16 @@ $(document).ready(function() {
         $('body').addClass('loaded');
         $('h1').css('color','#222222');
     }, 3000);
+    if($(window).width()<599)
+    {
+        var
+            imageWidth = 220;
+    }
+    else
+    {
+        var
+            imageWidth = 700
+    }
     var
         $gravitas = $(".gravitas"),
         $gravitasSection = $(".gravitas-section"),
@@ -10,7 +20,7 @@ $(document).ready(function() {
         lastPos = {x:0},
         galleryPos = {x:0},
         currentImage = -1,
-        imageWidth = 700,
+        //imageWidth = 700,
         imageSpacing = 0,
         imageTotalWidth=imageWidth+imageSpacing,
         speedLog=[],
@@ -64,7 +74,34 @@ $(document).ready(function() {
             onComplete:updateGalleryPos
         });
     }
+if($(window).width()<599)
+{
+    function updateGalleryPos(){
+        TweenMax.set($gravitasSection,{
+            x:galleryPos.x+(($(window).width()-imageWidth)/2),
+            // x:galleryPos.x+((imageWidth-$(window).width())/100),
+            force3D:true,
+            lazy:true
+        });
+        //var speed=lastPos.x-galleryPos.x;
+        var speed = galleryPos.x-lastPos.x;
+        var blur=Math.abs(Math.round(speed*blurMultiplier));
+        setBlur(blur);
+        lastPos.x=galleryPos.x;
 
+        var _currentImage=Math.round(-galleryPos.x/imageTotalWidth);
+        if(_currentImage!=currentImage){
+            currentImage=_currentImage;
+            $(".gallery-pagination-dot-selected").removeClass('gallery-pagination-dot-selected');
+            $(".gallery-pagination-dot").eq(currentImage).addClass('gallery-pagination-dot-selected')
+        }
+
+
+    }
+
+}
+else
+{
     function updateGalleryPos(){
         TweenMax.set($gravitasSection,{
             x:galleryPos.x+(($(window).width()-imageWidth)/2),
@@ -85,6 +122,8 @@ $(document).ready(function() {
 
 
     }
+}
+
     $gravitas.mousedown(function(event){
         event.preventDefault();
         dragging=true;
