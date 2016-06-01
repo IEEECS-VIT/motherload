@@ -792,7 +792,7 @@ footer.page-footer {
         -webkit-transform: translateX(-50%);
     }
 }
-<<<<<<< HEAD
+
 li .modal-trigger{
     padding-left: 0;
 }
@@ -800,15 +800,15 @@ li .modal-trigger p{
     margin-top: 0;
     height: inherit;
 }
-li .modal-trigger img{
+li .modal-trigger img {
     margin-top: 18px;
     margin-right: 5px;
-    margin-left: 10px;
+    margin-left: 20px;
     float: left;
     width: 30px;
     height: 30px;
     vertical-align: baseline;
-=======
+}
 @media screen and (max-width: 599px)
 {
     .card-gravitas
@@ -817,5 +817,18 @@ li .modal-trigger img{
         width: 150%;
         padding: 2px;
     }
->>>>>>> e2de2f4f326687a17758a8a8910e05466e748852
+
 }
+li a h5{
+    vertical-align: middle;
+    position: absolute;
+    margin-top: 10%;
+    font-weight: 500;
+    font-size: large;
+}
+.waves-effect{
+    display: block;
+}
+.waves-effect.waves-teal .waves-ripple {
+     background-color: rgba(63, 81, 181, 0.70);
+ }
