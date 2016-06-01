@@ -792,3 +792,12 @@ footer.page-footer {
         -webkit-transform: translateX(-50%);
     }
 }
+@media screen and (max-width: 599px)
+{
+    .card-gravitas
+    {
+        height: 365px;
+        width: 150%;
+        padding: 2px;
+    }
+}
