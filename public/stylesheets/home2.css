@@ -410,14 +410,14 @@ svg {
     position: relative;
     visibility: visible;
     color: white;
-    font-family: 'Great Vibes', cursive;
+    font-family: "Roboto", sans-serif;
     margin-bottom: 0;
 }
 .category h1{
     position: relative;
     visibility: visible;
     color: white;
-    font-family: 'Great Vibes', cursive;
+    font-family: "Roboto", sans-serif;
     margin-bottom: 0;
 }
 .card .small{
@@ -631,7 +631,7 @@ iframe{
 }
 .modal h4,h5{
     text-align: center;
-    font-family: 'Great Vibes', cursive;
+    font-family: "Roboto", sans-serif;
 }
 .cd-stretchy-nav {
     position: relative;

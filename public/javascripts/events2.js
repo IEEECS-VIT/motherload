@@ -553,7 +553,7 @@ $(document).ready(function(){
 function displayevents(){
     var ev=document.getElementById('events1');
     var l=events.length;
-    var a='<div id="events"><div class="container"><div class="row"><div class="col s12 l12 m12"><h1>Events</h1></div>';
+    var a='<div id="events"><div class="container"><div class="row"><div class="col s12 l12 m12"><h1><span style="color:white">Events</span></h1></div>';
     for(var i=0;i<l;i++)
     {
         a+='<div class="col s12 m4 l4" onclick="display(\''+events[i].name+'\')"><article class="material-card Indigo"><h2 class="z-depth-2"><span>'+events[i].name+'</span><strong><i class="fa fa-fw fa-star"></i>Know More...</strong></h2><div class="mc-content"><div class="img-container waves-effect waves-light z-depth-3">'+
