@@ -3,10 +3,40 @@ $(document).ready(function() {
         $('body').addClass('loaded');
         $('h1').css('color','#222222');
     }, 3000);
-    if($(window).width()<599)
+    if($(window).width()<330)
+    {
+        var
+            imageWidth = 170;
+    }
+    else if($(window).width()<370)
+    {
+        var
+            imageWidth = 190;
+    }
+    else if($(window).width()<380)
+    {
+        var
+            imageWidth = 200;
+    }
+    else if($(window).width()<420)
     {
         var
             imageWidth = 220;
+    }
+    else if($(window).width()<440)
+    {
+        var
+            imageWidth = 230;
+    }
+    else if($(window).width()<599)
+    {
+        var
+            imageWidth = 220;
+    }
+    else if($(window).width()<800)
+    {
+        var
+            imageWidth = 400;
     }
     else
     {
