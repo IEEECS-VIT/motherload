@@ -792,3 +792,19 @@ footer.page-footer {
         -webkit-transform: translateX(-50%);
     }
 }
+li .modal-trigger{
+    padding-left: 0;
+}
+li .modal-trigger p{
+    margin-top: 0;
+    height: inherit;
+}
+li .modal-trigger img{
+    margin-top: 18px;
+    margin-right: 5px;
+    margin-left: 10px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    vertical-align: baseline;
+}
