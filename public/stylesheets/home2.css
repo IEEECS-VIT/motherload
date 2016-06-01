@@ -845,5 +845,6 @@ li a h5{
     font-size: 18px;
     font-weight: bold;
     margin-top: -1%;
+    cursor: pointer;
 }
 

@@ -258,11 +258,15 @@ $(document).ready(function() {
     }
 
     setInterval(start(), 3000);
+
     $('span').on('click', function () {
         var x = $(this).attr('id');
 
         var modal = x + "modal";
-       $("#"+modal).css('display','none');
+       $("#"+modal).css({
+           'display': 'none'
+
+       } );
 
     });
 
