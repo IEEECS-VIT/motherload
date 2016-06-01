@@ -34,7 +34,7 @@ $(document).ready(function() {
     $('a').on('click', function () {
         var x=$(this).attr('id');
 
-            if ('events' == x) {
+            if ('events' == x || 'events2' == x) {
 
                 $('#home').hide();
                 $('#events1').show();

@@ -749,6 +749,11 @@ iframe{
     opacity: 1;
     visibility: visible;
 }
+footer{
+    margin-bottom: 0;
+    position: fixed;
+    width: 100%;
+}
 footer img
 {
     width: 80px;
@@ -818,7 +823,6 @@ li .modal-trigger img {
         padding: 2px;
     }
 
-<<<<<<< HEAD
 }
 li a h5{
     vertical-align: middle;
@@ -833,6 +837,4 @@ li a h5{
 .waves-effect.waves-teal .waves-ripple {
      background-color: rgba(63, 81, 181, 0.70);
  }
-=======
-}
->>>>>>> 5ca495f722e28fa4ae651fe2d50c9813992067e5
+
