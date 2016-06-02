@@ -750,8 +750,9 @@ iframe{
     visibility: visible;
 }
 footer{
-    margin-bottom: 0;
     position: fixed;
+    margin-bottom: 0;
+    bottom: 0;
     width: 100%;
 }
 footer img
@@ -847,4 +848,3 @@ li a h5{
     margin-top: -1%;
     cursor: pointer;
 }
-
