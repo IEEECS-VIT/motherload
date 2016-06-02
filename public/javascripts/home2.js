@@ -261,7 +261,7 @@ $(document).ready(function() {
 
     $('span').on('click', function () {
         var x = $(this).attr('id');
-
+$('.lean-overlay').hide();
         var modal = x + "modal";
        $("#"+modal).css({
            'display': 'none'
