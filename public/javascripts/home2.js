@@ -30,7 +30,7 @@ $(document).ready(function() {
     else if ($(window).width() < 800) {
         var
             imageWidth = 400;
-        $('.close').css('color','black');
+
     }
     else {
         var
