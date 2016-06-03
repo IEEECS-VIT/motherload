@@ -30,6 +30,7 @@ $(document).ready(function() {
     else if ($(window).width() < 800) {
         var
             imageWidth = 400;
+        $('.close').css('color','black');
     }
     else {
         var
@@ -130,8 +131,8 @@ $(document).ready(function() {
                 lazy: true
             });
             var speed = lastPos.x - galleryPos.x;
-            var blur = Math.abs(Math.round(speed * blurMultiplier));
-            setBlur(blur);
+           // var blur = Math.abs(Math.round(speed * blurMultiplier));
+           // setBlur(blur);
             lastPos.x = galleryPos.x;
 
             var _currentImage = Math.round(-galleryPos.x / imageTotalWidth);
