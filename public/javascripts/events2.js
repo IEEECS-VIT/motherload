@@ -536,7 +536,10 @@ var e;
 $(document).ready(function(){
 
 
-    $(".button-collapse").sideNav();
+   // $(".button-collapse").sideNav();
+    $('.button-collapse').sideNav({
+        closeOnClick: true
+    })
     $('.material-card').materialCard({
         icon_close: 'fa-chevron-left',
         icon_open: 'fa-thumbs-o-up',
@@ -546,12 +549,15 @@ $(document).ready(function(){
         //displaying the events
         displayevents();
 
-    $('.modal-trigger').leanModal();
-    $("li").on('click',function(){
+
+   $('.modal-trigger').leanModal();
+
+   /* $("li").on('click',function(){
         var x=document.getElementsByClassName("side-nav");
-        x[0].style.transform="translateX(-100%)";
+        alert(x[0]);
+        //x[0].style.transform="translateX(-100%)";
         $("#sidenav-overlay").remove();
-    });
+    });*/
 
 });
 function displayevents(){
