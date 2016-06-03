@@ -547,7 +547,11 @@ $(document).ready(function(){
         displayevents();
 
     $('.modal-trigger').leanModal();
-
+    $("li").on('click',function(){
+        var x=document.getElementsByClassName("side-nav");
+        x[0].style.transform="translateX(-100%)";
+        $("div").remove(".drag-target");
+    });
 
 });
 function displayevents(){
