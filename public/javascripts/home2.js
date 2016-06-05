@@ -46,12 +46,7 @@ $(document).ready(function() {
     //imageWidth = 700,
         imageSpacing = 0,
         imageTotalWidth = imageWidth + imageSpacing,
-        speedLog = [],
-        speedLogLimit = 5,
-       // minBlur = 2,
-       // maxBlur = 200,
-        blurMultiplier = 0.25,
-        lastBlur = 0,
+        
         dragging = false,
         lastDragPos = {x: 0},
         dragPos = {x: 0},
@@ -61,7 +56,7 @@ $(document).ready(function() {
         distLogLimit = 10,
         momentumTween = null
         ;
-    
+
     $cards.each(function (i) {
         var cur = $(this);
         cur.click(function () {
