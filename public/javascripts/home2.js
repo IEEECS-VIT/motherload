@@ -61,21 +61,7 @@ $(document).ready(function() {
         distLogLimit = 10,
         momentumTween = null
         ;
-
-   /* function setBlur(v) {
-        if (v < minBlur) v = 0;
-        if (v > maxBlur) v = maxBlur;
-        if (v != lastBlur) {
-            $("#blur").get(0).firstElementChild.setAttribute("stdDeviation", v + ",0");
-        }
-        lastBlur = v;
-    }*/
-
-    $gravitasSection.css({
-        webkitFilter: "url('#blur')",
-        filter: "url('#blur')"
-
-    });
+    
     $cards.each(function (i) {
         var cur = $(this);
         cur.click(function () {
