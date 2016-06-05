@@ -742,21 +742,26 @@ footer.page-footer {
     padding-top: 0;
     background-color: #3f51b5;
 }
-@media screen and (min-width: 600px){
-    .large-visible{
+@media screen and (min-width: 600px) {
+    .large-visible {
         display: block;
     }
-    .large-not-visible{
-        display:none;
+
+    .large-not-visible {
+        display: none;
     }
-    #vit{
-        display:block;
+
+    #vit {
+        display: block;
     }
-    #gravitas-logo{
+
+    #gravitas-logo {
         left: 0;
         transform: translateX(0);
         -webkit-transform: translateX(0);
     }
+}
+@media screen and (min-width: 801px) {
     .cards
     {
         position: relative;
@@ -784,22 +789,7 @@ footer.page-footer {
     }
 
 }
-@media screen and (max-width: 599px)
-{
-    .large-visible{
-        display: none;
-    }
-    .large-not-visible{
-        display: block;
-    }
-    #vit{
-        display: none;
-    }
-    #gravitas-logo{
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-    }
+@media screen and (max-width: 800px){
     .cards
     {
         position: relative;
@@ -826,6 +816,24 @@ footer.page-footer {
         transform: rotateY(0);
 
     }
+}
+@media screen and (max-width: 599px)
+{
+    .large-visible{
+        display: none;
+    }
+    .large-not-visible{
+        display: block;
+    }
+    #vit{
+        display: none;
+    }
+    #gravitas-logo{
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+    }
+
 }
 
 li .modal-trigger{
