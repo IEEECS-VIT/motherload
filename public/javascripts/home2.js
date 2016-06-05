@@ -48,8 +48,8 @@ $(document).ready(function() {
         imageTotalWidth = imageWidth + imageSpacing,
         speedLog = [],
         speedLogLimit = 5,
-        minBlur = 2,
-        maxBlur = 200,
+       // minBlur = 2,
+       // maxBlur = 200,
         blurMultiplier = 0.25,
         lastBlur = 0,
         dragging = false,
@@ -62,14 +62,14 @@ $(document).ready(function() {
         momentumTween = null
         ;
 
-    function setBlur(v) {
+   /* function setBlur(v) {
         if (v < minBlur) v = 0;
         if (v > maxBlur) v = maxBlur;
         if (v != lastBlur) {
             $("#blur").get(0).firstElementChild.setAttribute("stdDeviation", v + ",0");
         }
         lastBlur = v;
-    }
+    }*/
 
     $gravitasSection.css({
         webkitFilter: "url('#blur')",
@@ -108,8 +108,8 @@ $(document).ready(function() {
             });
             //var speed=lastPos.x-galleryPos.x;
             var speed = galleryPos.x - lastPos.x;
-            var blur = Math.abs(Math.round(speed * blurMultiplier));
-            setBlur(blur);
+          //  var blur = Math.abs(Math.round(speed * blurMultiplier));
+           // setBlur(blur);
             lastPos.x = galleryPos.x;
 
             var _currentImage = Math.round(-galleryPos.x / imageTotalWidth);
