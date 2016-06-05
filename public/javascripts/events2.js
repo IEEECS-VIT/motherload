@@ -552,8 +552,26 @@ $(document).ready(function(){
         x[0].style.transform="translateX(-100%)";
         $("#sidenav-overlay").remove();
     });
+    change();
+    //setting height of cards
+    $(window).resize(change);
+
+
+
 
 });
+function change(){
+    var h=$(window).height();
+    var firsth=$("#first").height();
+    $(".card-gravitas").css("min-height",firsth);
+    $(".graphics").css("height",h/2);
+    var gh=$(".gravitas").height();
+    var fh=$(".page-footer").height();
+    var nh=$(".nav-wrapper").height();
+    var th=(h-gh-fh-nh)/2;
+    $(".gravitas").css("margin-top",th);
+    $(".gravitas").css("margin-bottom",th);
+}
 function displayevents(){
     var ev=document.getElementById('events1');
     var l=events.length;

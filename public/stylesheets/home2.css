@@ -471,21 +471,7 @@ canvas{
 
 }
 
-.card-gravitas{
-    margin:0;
-    position: relative;
-    border-radius: 1%;
-    background-color: #ffffff;
-    height: 400px;
-    width:100%;
-    padding-top:3%;
 
-    margin-top: 3%;
-    margin-left: 0%;
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-
-}
 #s-text
 {
     font: 16em/1 Arial;
@@ -575,16 +561,7 @@ hr{
     -webkit-transform: rotateY(0);
     white-space: nowrap;
 }
-.cards
-{
 
-width: 50%;
-    padding-left: 50px;
-    padding-right: 50px;
-    display: inline-block;
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
-}
 .gallery-pagination {
     margin-top: 30px;
     text-align: center;
@@ -780,6 +757,33 @@ footer.page-footer {
         transform: translateX(0);
         -webkit-transform: translateX(0);
     }
+    .cards
+    {
+        position: relative;
+        height: 50%;
+        width: 90%;
+        padding-left: 50px;
+        padding-right: 50px;
+        display: inline-block;
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    .card-gravitas{
+        margin:0;
+        position: relative;
+        border-radius: 1%;
+        background-color: #ffffff;
+        width:100%;
+        padding-top:3%;
+        height: 10%;
+        min-height: 370px;
+        margin-top: 3%;
+        margin-left: 0%;
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+
+    }
+
 }
 @media screen and (max-width: 599px)
 {
@@ -796,6 +800,32 @@ footer.page-footer {
         left: 50%;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
+    }
+    .cards
+    {
+        position: relative;
+        width: 90%;
+        height: 10%;
+        padding-left: 50px;
+        padding-right: 50px;
+        display: inline-block;
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    .card-gravitas{
+        margin:0;
+        position: relative;
+        border-radius: 1%;
+        background-color: #ffffff;
+        width:100%;
+        padding-top:3%;
+        height: 10%;
+        min-height: 230px;
+        margin-top: 3%;
+        margin-left: 0%;
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+
     }
 }
 
@@ -815,16 +845,7 @@ li .modal-trigger img {
     height: 30px;
     vertical-align: baseline;
 }
-@media screen and (max-width: 599px)
-{
-    .card-gravitas
-    {
-        height: 365px;
-        width: 150%;
-        padding: 2px;
-    }
 
-}
 li a h5{
     vertical-align: middle;
     position: absolute;
