@@ -552,12 +552,12 @@ $(document).ready(function(){
 
    $('.modal-trigger').leanModal();
 
-   /* $("li").on('click',function(){
+   $("li").on('click',function(){
         var x=document.getElementsByClassName("side-nav");
         alert(x[0]);
         //x[0].style.transform="translateX(-100%)";
         $("#sidenav-overlay").remove();
-<<<<<<< HEAD
+
     });
     change();
     //setting height of cards
@@ -565,9 +565,6 @@ $(document).ready(function(){
 
 
 
-=======
-    });*/
->>>>>>> 0a772e4d5a0bf9e366e826b2902ec812293e4dd0
 
 });
 function change(){
