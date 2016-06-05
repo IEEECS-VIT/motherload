@@ -554,8 +554,6 @@ $(document).ready(function(){
 
    $("li").on('click',function(){
         var x=document.getElementsByClassName("side-nav");
-        alert(x[0]);
-        //x[0].style.transform="translateX(-100%)";
         $("#sidenav-overlay").remove();
 
     });
