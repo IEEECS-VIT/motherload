@@ -225,6 +225,7 @@ img {
 	bottom: 50px;
 	position: fixed;
 	left: 0px;
+    z-index: 500;
 }
 .dock-container2 {
 	position: absolute;
@@ -880,3 +881,13 @@ li a h5{
     margin-top: -1%;
     cursor: pointer;
 }
+#bottom_fade
+{
+    width: 100%;
+    height: 200px;
+    z-index: 99;
+    position: fixed;
+    bottom: 0px;
+    background: url("/images/bottom-fade.png") bottom center repeat-x;
+}
+

@@ -599,6 +599,7 @@ function displayevents(){
         '<img src="'+events[i].url+'"></div></div><div class="mc-footer">'+
         '</div></article></div>'
     }
+    a+='<div id="bottom_fade"></div>'
     a+='</div></div></div>';
     e=a;
     ev.innerHTML=a;
@@ -639,6 +640,7 @@ function display(a)
         '</article>'+
         '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
 
@@ -675,6 +677,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -710,6 +713,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -745,6 +749,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -780,6 +785,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -815,6 +821,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -850,6 +857,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -885,6 +893,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -920,6 +929,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -955,6 +965,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -990,6 +1001,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -1025,6 +1037,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
@@ -1060,6 +1073,7 @@ function display(a)
             '</article>'+
             '</div>'
         }
+        x+='<div id="bottom_fade"></div>'
         x+='</div></div></div>';
         document.getElementById('events1').innerHTML=x;
     }
