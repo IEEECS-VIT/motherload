@@ -569,6 +569,16 @@ $(document).ready(function(){
 });
 function change(){
     var h=$(window).height();
+    var w=$(window).width();
+    var cw=$(".cards").width();
+    var tw=(w-cw-100)/2;
+    console.log("window width: "+w);
+    console.log("card-width:"+cw);
+    console.log("margin-left:",tw);
+
+    $(".gravitas-section").css("margin-left",tw);
+    $(".cards").css("margin-right",(tw-120));
+
     var firsth=$("#first").height();
     $(".card-gravitas").css("min-height",firsth);
     $(".graphics").css("height",h/2);

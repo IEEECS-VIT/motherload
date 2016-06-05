@@ -107,7 +107,7 @@ $(document).ready(function() {
     else {
         function updateGalleryPos() {
             TweenMax.set($gravitasSection, {
-                x: galleryPos.x + (($(window).width() - imageWidth) / 2),
+                x: galleryPos.x,
                 force3D: true,
                 lazy: true
             });
