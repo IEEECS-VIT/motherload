@@ -3,39 +3,11 @@ $(document).ready(function() {
         $('body').addClass('loaded');
         $('h1').css('color', '#222222');
     }, 3000);
-    if ($(window).width() < 330) {
-        var
-            imageWidth = 170;
-    }
-    else if ($(window).width() < 370) {
-        var
-            imageWidth = 190;
-    }
-    else if ($(window).width() < 380) {
-        var
-            imageWidth = 200;
-    }
-    else if ($(window).width() < 420) {
-        var
-            imageWidth = 220;
-    }
-    else if ($(window).width() < 440) {
-        var
-            imageWidth = 230;
-    }
-    else if ($(window).width() < 599) {
-        var
-            imageWidth = 220;
-    }
-    else if ($(window).width() < 800) {
-        var
-            imageWidth = 400;
-
-    }
-    else {
-        var
-            imageWidth = 700
-    }
+    var w=$(window).width();
+    var cw=$(".cards").width();
+    var tw=(w-cw-100)/2;
+    var shift=tw+100+cw-120;
+    var imageWidth = shift;
     var
         $gravitas = $(".gravitas"),
         $gravitasSection = $(".gravitas-section"),
@@ -82,13 +54,13 @@ $(document).ready(function() {
     if ($(window).width() < 599) {
         function updateGalleryPos() {
             TweenMax.set($gravitasSection, {
-                x: galleryPos.x + (($(window).width() - imageWidth) / 2),
+                x: galleryPos.x,
                 // x:galleryPos.x+((imageWidth-$(window).width())/100),
                 force3D: true,
                 lazy: true
             });
             //var speed=lastPos.x-galleryPos.x;
-            var speed = galleryPos.x - lastPos.x;
+            //var speed = galleryPos.x - lastPos.x;
           //  var blur = Math.abs(Math.round(speed * blurMultiplier));
            // setBlur(blur);
             lastPos.x = galleryPos.x;
@@ -111,7 +83,7 @@ $(document).ready(function() {
                 force3D: true,
                 lazy: true
             });
-            var speed = lastPos.x - galleryPos.x;
+           // var speed = lastPos.x - galleryPos.x;
            // var blur = Math.abs(Math.round(speed * blurMultiplier));
            // setBlur(blur);
             lastPos.x = galleryPos.x;
@@ -148,14 +120,16 @@ $(document).ready(function() {
         if (dragging) {
             updateGalleryPos();
             var dist = dragPos.x - lastDragPos.x;
+            console.log("last drag position:"+dist);
             lastDragPos.x = dragPos.x;
             totalDist += dist;
+            console.log("total dist:"+totalDist)
             distLog.push(dist);
             while (distLog.length > distLogLimit) {
                 distLog.splice(0, 1);
             }
-            ;
             galleryPos.x += dist;
+            console.log("gallerypos:"+galleryPos.x);
             requestAnimationFrame(updateGalleryPosLoop)
         }
     }
@@ -172,6 +146,7 @@ $(document).ready(function() {
 
             var targetX = galleryPos.x + (releaseSpeed * 20);
             targetX = Math.round(targetX / imageTotalWidth) * imageTotalWidth;
+            console.log("targetX:"+targetX);
             var targetImage = -targetX / imageTotalWidth;
             var excess = 0;
             if (targetImage < 0) {
@@ -248,7 +223,7 @@ $(document).ready(function() {
 
     });
 
-})
+});
 
 
 
