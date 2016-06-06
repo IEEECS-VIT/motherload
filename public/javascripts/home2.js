@@ -6,6 +6,9 @@ $(document).ready(function() {
     var w=$(window).width();
     var cw=$(".cards").width();
     var tw=(w-cw-100)/2;
+    if(w<=800)
+    var shift=tw+100+cw-80;
+    else
     var shift=tw+100+cw-120;
     var imageWidth = shift;
     var

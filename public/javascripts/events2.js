@@ -571,7 +571,10 @@ function change(){
     var cw=$(".cards").width();
     var tw=(w-cw-100)/2;
     $(".gravitas-section").css("margin-left",tw);
-    $(".cards").css("margin-right",(tw-120));
+    if(w<=800)
+        $(".cards").css("margin-right",(tw-80));
+    else
+        $(".cards").css("margin-right",(tw-120));
     var firsth=$("#first").height();
     $(".card-gravitas").css("min-height",firsth);
     $(".graphics").css("height",h/2);
