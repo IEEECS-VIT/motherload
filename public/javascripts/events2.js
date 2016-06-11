@@ -399,31 +399,38 @@ var robotics=[
     {
         'subcat':'roboWARS',
         'club':'roboVITics',
-        'description':''
-    },{
+        'description':'"Sparks, battles and zest is all what roboWARs is about. The individual team prepares a fighting bot. Then according to the fixtures generated matches are done. The whole procedure is round based. A total of 3 rounds are planned with the final round of royal rumble for which only 6 bots would qualify. Round two and round three will be knockout rounds.'+
+        'Rules for round 1:'+
+        'A team can touch their bot for a total for 2 mins two times in a fight. Each fight is given a maximum time limit of 6 mins.'+
+        'Rules for round 2:'+
+'Each fight will be of 8 mins'+
+'Teams can touch their bot for a total of 5 mins which can be used in broken pieces.'+
+'    Last would be the royal rumble round in which the top 6 bots will be inside one arena to fight for the ultimate championship.'
+    },
+    {
         'subcat':'PacMan',
         'club':'International Society of Automation (ISA)',
-        'description':''
+        'description':'The event will be conducted in a team of two. A gesture controlled robot will be provided to participants (If they want they can bring their own robot). It would basically follow the pac-man game. Some balls will be kept in a maze structure that will have to be collected by moving the robot. Now for the challenge, organizers will be using the same robots and if they catch the player-bot then the participant gets out and the score is calculated on the basis of the number of balls touched. For the second round other team will be the challengers.'
     },
     {
         'subcat':'The Robo Laser Battles',
         'club':'IEEE RAS',
-        'description':''
+        'description':'The Robo Laser Battles is basically a fun event in which robots with a laser genrator and a reciever at one end will compete. Each team contains 5 players with remote controls controling the robots. The job is to target the recievers installed on the robots of the opponent team. Each hit will score points and the team with maximum points wins. The game is a thrilling event and takes place after dark in an arena.'
     },
     {
         'subcat':'Event1',
         'club':'ISA-VIT',
-        'description':''
+        'description':'This is the robotic form of the game cricket. In each round 2 participating team each consisting of 3 members, will play against each other. For batting team, only 1 bot is allowed in the arena. Participants are welcomed with their own bots. In case of a failure of the above case, the team has to play with what we are providing. For bowling team, 2 fielding bots will be provided by us, which will be handled by 2 mates. For bowling, the remaining mate will have to throw the ball through pipes from the area marked in the arena.'
     },
     {
         'subcat':'Hill Climber',
         'club':'IET',
-        'description':''
+        'description':'The event will be based around a hill like structure on which the participants would race uphill using their mini bots to be titled king of the hill. The objective of the event is to design a robotic mini-locomotive that could climb steep slopes with increasing elevation. Most of the mobile robot design by the beginners is based on the fact that the robot will at all time be on a level ground. This event encourages the participants to design a robot that can conquer the hills as well.'
     },
     {
         'subcat':'Lanka Reloaded',
         'club':'IEEE ROBOTICS and AUTOMATION SOCIETY',
-        'description':''
+        'description':'A fun eevent comsisting a person to use a robotics arm to pick up a ball and drop ot after completing an arena of difficulties and hurdles. At the secons round the arena will become more complex and the team woth best time will win'
     }
 
 
@@ -432,104 +439,396 @@ var mdd=[
     {
         'club':'Toastmasters International-VIT',
         'subcat':'IEYS 2016',
-        'description':''
+        'description':'India Emerge Youth Summit 2016 is a summit that is going to be conducted for 5th time in VIT, it is a forum where speakers from various fields of interest come and deliver their key note add in order to motivate the youth. Along with that we would like to organize a competition (month before IEYS), a grand launch for IEYS(a week before IEYS) and a  gala dinner for the team IEYS at the end of the event.'
     },
     {
         'subcat':'VIT Debating Tournament',
         'club':'Debate Society VIT',
-        'description':''
+        'description':'"In line with the theme of GraVITas 2016, ‘Social Innovations’, we intend to provide a platform to students across India to debate the most relevant issues in a way that brings out the best of their ideas. We aim to offer them an opportunity to truly explore their personalities and freely engage with the ideas of others, because it is only by examining oneself that an individual can bloom into the seed that generates change in society. We believe that the VIT Debating tournament can provide just the chance all of these motivated young individuals are looking for after all these are the people who will lead these Social Innovations .'+
+        'In the lead up to the tournament itself, we will be organizing a workshop for VIT students called Speak Up, where one of our stellar invited Chief Adjudicators will teach students valuable critical thinking and public speaking skills to help with their personality development on a one-on-one basis. '
+
     },
     {
         'subcat':'Shipwrecked',
         'club':'Hindu E Plus Club, ELA',
-        'description':''
+        'description':'The participants will be given a personality to impersonate as they try to convince the judges that they are the best person to be saved from the proverbial storm. For example, a participant will be given the character of Barack Obama, and they have to convince the judge why it should be Obama.'
     },{
         'subcat':'STOCKASTIC',
         'club':'Creativity Club, Bulls and Bears',
-        'description':''
+        'description':'A heated debate dicussion on shares and investments where groups of 5 are formed representing the top companies  known  and debate on them ,more like a business debate.'
     },{
         'subcat':'StartUp Street 2.0',
         'club':'Shield and CSED',
-        'description':''
+        'description':'"The stairway to the land where your dreams and ideas get the financial boost that they required.<br>'+
+        "StartUp Street 2.0 is the successor of the immensely appreciated event of graVITas'15, StartUp Street."+
+        "This event makes up for the lack of technical knowledge that hindered the chances of participants to get the investment they wanted. The first day of the event involves guest lectures and interactive sessions by investors and experts which focus on the essentials required by a startup during the important phase of business plan development, presentation and pitching. This will be followed by a time period where the participants can interact and network with the experts of the specific fields. This helps them to brush up their different aspects and skills before the big second day. The second day provides a chance to the participating startups to present their startup ideas in front of the investors, aiming to add some financial muscle to their brain childs."+
+    "The workshop includes -<br>"+
+"Marketing and sales<br>"+
+"Finance and accounting<br>"+
+"Arts of pitching<br>"+
+"Idea discovery<br>"+
+"Customer validation<br>"+
+"MVP and product development<br>"+
+"Growth and distribution<br>"+
+"International and establishment<br>"+
+"Exit and IPO"
     },
     {
         'subcat':'Event',
         'club':'VIT Spartans',
-        'description':''
+        'description':"It is an advertisement making competition for students who will be judged by the creativity in marketing and services. Participants need to design ,script and create an ad in a stipulated time.For example: PUR -water based purification system in collaboration with US center for disease control for commercial market, targeting low income customers This competition judges the participant's creativity streak and will enhance social innovation among them."
     },
     {
         'subcat':'Social Hub',
         'club':'The Hindu E Plus Club',
-        'description':''
+        'description':'Social Hub<br>'+
+        '3 round on social issues<br>'+
+        'Round 1 writing<br>'+
+        'Round 2 debate/ GD<br>'+
+        'Round 3 Poster making<br>'
     },
     {
         'subcat':'SELF',
         'club':'Esquare',
-        'description':''
+        'description':' SELF is Social Entrepreneurship and Leadership forum where we are trying to promote social innovations and budding Entrepreneurs to showcase their creativity, and to create awareness among students regarding startups and entrepreneurship. It will be series of guest lectures from five different verticals.'
     },{
         'subcat':'Event 1',
         'club':'Shield and CSED',
-        'description':''
+        'description':'Ever thought of a place which offers you Internships, Mentorships, Connections and an Entrepreneurial Exposure? Here we present Startup Fair, the perfect place for all of this. A 2 day Premium Event which features various established startups of different sectors from all over India. These startups get a chance to publicize themselves to the students as well as connect with them and select some for internships/jobs etc. Our event also includes a formal Conference between the startups and mentors for networking and presenting their startups in front of others. The startups get to pitch in front of other startups and mentors seeking for any help. The networking will be in the form of a formal dinner.'
     },{
         'subcat':'SUITS',
         'club':'Creativity Club',
-        'description':''
+        'description':'SUITS<br>'+
+       'Teams of 2 will be made to debate in the given Cases<br>'+
+      'They will have to show their talents, convincing skills,  etc<br>'+
+     'Judges will give points to the teams and only qualified teams will move to next round.<br>'+
+    '3 rounds will be conducted  and winner will be decided .<br>'
+
     },{
         'subcat':'Corporate Innovator',
         'club':'Visual Bloggers Club VIT',
-        'description':''
+        'description':'Corporate Innovator is a collection of management games to test your business acumen, skills, and knowledge.<br>'+
+
+        'The game is designed to throw the worst at you to bring out the best in you. The participants need to show their caliber, the power of persuasion and the ability to handle pressure. Preparing the participants yourself to withstand the harsh reality of the corporate world.<br>'+
+            'Round 1:'+
+            'Each Team may have 3-6 members. And the team members have to find a solution for a tricky situation as per the given scenario by the VBC team.'+
+    'This will be a knock-off round where teams will play to beat the other teams'+
+'Which includes all the basic and strategical solving of given tricky scenario.<br>'+
+
+    'Round 2:'+
+'The selected teams in round 1 are eligible for the next round where the members of the team works with other team members so that they could know how they adjust to the environment and other aspects and can also know their own strengths and weaknesses in teamwork and the finalists are allowed to make a website on the given scenario.'+
+
+
+    'Judging Criteria: Rules of VBC team will be followed. Their will be a Team to judge and provide a result based on all criteria.'
+
     },
 
     {
         'subcat':'Contender',
         'club':'Visual Bloggers Club VIT',
-        'description':''
+        'description':'This event is related to the content writing. It will consists of 4 rounds in which the participants will be judged by their writing skill. Participant will have to go through the basic theme writing , picture perception test, climax writing, blogging on VBC page. The participant will be judged by a faculty and the shortlisted participants of the final round will be judged by the VBC.'+
+
+        'Objective: It will help the participant to improve their writing skills, creativity, presentation of the content , imagination and help them to get a basic knowledge of writing a visual blogs.<br>'+
+        'Arena:The arena for the event will be the smart classroom with a minimum capacity of 120 members.<br>'+
+    'Specifications:Their will be 4 rounds :<br>'+
+    'ROUND 1: There will be random distribution of envelope which will have the random topic related tosports ,humour , lifestyle, travel, history etc. In this participantswill have to write a content/blog on paper related to the given topic or theme.<br>'+
+
+    'ROUND 2: Picture perception test-•You will see a slideshow of some pictures for short time and then you will get time to note down few details and then time will be given to write your story. The story written by the participant will be judged based on creativity, imagination and the relation to the given images.<br>'+
+
+    'ROUND 3: Change the end- In this round the participant will be given a famous movie or a novel as a topic and they have to the change the end of the given movie or novel in limited words on paper.They need to write an alternate ending to the world class story.<br>'+
+
+    'ROUND 4: The VBC account- The participant will have to make the bluegape user account on VBC website. The participant will have to write a blog through their respective VBC account related to the given interesting topic and their blogs will be judged by the VBC itself.<br>'+
+
+    'RESULT: The participant will be eliminated in each and every round according to the result of the judges.<br>'
+
     },{
         'subcat':'Incentivizing speaker',
         'club':'Nature Club',
-        'description':''
+        'description':'Our young minds have lot of craze for providing solutions to issues faced by our country.'+
+        'Now its time for such minds to socialize their conspiracy which could reach the thousands and may incentivize our fellow mates and all others who can hear you.<br>'+
+'1. Every candidate is given a social issue to speak in for 5 minutes.<br>'+
+'2. Topic would be surprise and 2 minutes will be given to him to prepare.<br>'+
+'3. Factual data provided by candidate during speech will be verified .<br>'+
+'4. Body language, ideology on issue, feasablility of solution and effectiveness in speaker '+
+'Would be considered for judging criteria.'
     },{
         'subcat':'WOLF of WALL STREET',
         'club':'IEEE-PES',
-        'description':''
+        'description':'The Wolf of Wall Street is an online virtual stock market game with real time stock exchange from Indian (NSE,BSE) and American (NASDAQ,NYSE) stock market. It is your chance to experience and lead the real life market. Event start at the opening of the stock market it is a five day event NSE, BSE starts at actual Indian time of share market and NYSE, NASDAQ starts at their actual timing of operation. Every participant will be given 2 million dollars virtual money to spend on shares. Everyone has the brainpower to follow the stock market. If you made it through fifth-grade math, you can do it !!'+
+    'The Shares and their market prices are real time and will be synchronized with the real market prices using a server.'
     }
 ];
 var biochem=[
     {
         'subcat':'Event',
         'club':'IIChE',
-        'description':''
+        'description':"An event, which has remained as IIChe's premium event for years, chem e car is a platform in which young aspiring minds come together to run a car on chemical reactions. A team of 3 people come together with their model of vehicle run solely on chemical reactions. The participants are not allowed to use motor or any other conventional sources of primary batteries."+
+        "Our event emphasizes the need for alternative sources of power for vehicles today and encourage engineering minds to open new possibilites of future powering. "
+
     },
     {
         'subcat':'Event',
         'club':'IIChE-VIT',
-        'description':''
+        'description':'Firstly, there will be a session in which we will invite some faculties & entrepreneurs to have some word on the current scenario of chemical industry & what is the scope in having a start-up in this particular sector. This will be a team competition having 2 members in a team . We will provide them 2 hours to solve any problem in the current scenario of chemical industry by designing a start-up on it. We will provide them internet for having their research done in given time & pitch their  ideas in front of judges within time limit of 5 minutes & 1 minute will be a cross questioning round by judges & participants.'
     },
     {
         'subcat':'True Detective',
         'club':'IEEE-WIE',
-        'description':''
+        'description':'Round-1: 3 clues are given for tracking back the murder on the campus which will lead the team to the location of the crime in the major buildings like sjt, smv or tt. The clues could also  lead to witnesses and finally the victims.'+
+    'The first 15 teams are selected for the round 2.<br>'+
+'Round-2: they will be provided with a set of reactions and depending upon the situation they get they have to apply 3 basic reactions based on their knowledge from the given list of chemical reactions (related to forensic analysis) to come to the conclusion. All the necessary components for the experiments will be provided and due to their limited quality the participants have to use it wisely.'+
+    'Now the first 5 teams who are fastest to complete the task of round-2 are qualified to enter the round-3.<br>'+
+'Round-3: in this round the 5 teams will be given a sheet and a pen and they have to write their observations, conclusion and inference as to who was guilty, why he/she committed the crime and by which means i.e. how he did it…? i.e. they have to draw conclusions and the team whose answer is closest to the original answer wins the the title of “true detectives”.'
     },
     {
         'subcat':'Chain Reaction',
         'club':'IEEE-WIE',
-        'description':''
+        'description':'Number of Rounds: 2<br>'+
+        'First Round: Participants will be given a set of questions, each with four options(multiple choice question).All the four options will lead to a different set of succeeding questions forming a pathway. The questions will be based on chemical reactions, periodic table and basic laboratory experiments. Top 20 teams solving the pathway maze of questions in minimum time will be promoted to the second round.'+
+    'Second Round: This is the practical round in which each will have to perform various practical experiments like redox titrations, color change experiments etc. After each experiment they will get a new color or a new value of titration which is their hint to a location for the final complex. Once they find the location and the final complex of the chain reaction, top three teams fetching it in minimum time will be awarded as the winner'
+
     },
     {
         'subcat':'Event',
         'club':'AIChE-VIT',
-        'description':''
+        'description':'This event is being proposed for the second time after its success in gravitas’15'+
+        'To find innovative ways to measure time and control a reaction without using electricity.'+
+        'You have to try your hand at making a challenging model which incorporates multiple mechanisms into it like measuring time and triggering trap.'+
+        'Make a model which incorporates a Chemical/Mechanical device to measure time and trigger open a trap door after a pre-set time, and simultaneously carry out a Chemical Reaction.'+
+        'The more accurate your time and higher the yields, the better your chances at winning!'
+
     },{
         'subcat':'Event',
         'club':'AIChE-VIT',
-        'description':''
+        'description':'AIChE-VIT brings to you a small and a fun-filled event for all the labomanics out here in VIT and abroad that checks the practical precision of the participants .To begin the event, we will first show them a youtube video of an expert of NIT Trichy who has performed the experiment of estimating the type of alkalinity in waste water i.e., (finding out the presence of OH-,CO32-and HCO3-  ions in given water sample) by doing two easy titrations. Participants shall be provided with formulae to calculate the strength of HCl and finding the type of alkalinity. The event can be performed in SMV G09 chemistry with the consent of KANNADASAN SIR. Out of all the groups participating, the three groups that gets the answer most accurately (calculated with respect to reading that lab experts obtain) will qualify for the round 2. The three participants of the groups that wins the first round will qualify for the second round. In the second round we will have a small quiz of five questions on the topic alkalinity without providing any MCQ’s and based on the result the prizes will be given.'
     },{
         'subcat':'Lubrislide',
         'club':'AIChE-VIT',
-        'description':''
+        'description':'Lubrislide can be considered but the only constraint being that the slide and the chemicals should be taken into strict account. Expense clarification. Initial setup cost. How the second team will start over since the chemicals will still be there.'
     }
 
 
+
+];
+var sctech=[
+    {
+        'subcat':'event',
+        'club':'SEDS-VIT',
+        'description':'The event consists of two sessions (theory and practical). It will be held on both days of the fest, entertaining a maximum of 125 participants per day, and will span a total duration of 7 hours (2 hours theory + 5 hours practical) each day. The theory session consists of 2 hours of image processing, methods and techniques in astrophotography and basics of visual or observational astronomy (through naked eyes, binoculars and telescopes). This session will also provide a layout of the practical counterpart and familiarize the participants with the theory, rules, pre-requisites and setup of the latter.'+
+    'The practical session will commence at the TT rooftop/Ground during the night. This will be divided into several zones and the participants will be visiting all the zones in turns. The zones will cover the following aspects; astrophotography (star trails, prime photography, Afocal photography, lunar imaging through webcam, picturing using a T-Ring, piggyback photography and light painting), general cosmology and astrophysics (including recent discoveries), observation techniques (star charts, maps and Stellarium), visual astronomy (through naked eyes, binoculars and telescopes) and finally an individual task sheet to test what each person has learnt.'
+    },
+    {
+        'subcat':'Junkyard Genius 3.0',
+        'club':'Codechef-Vit',
+        'description':'Junkyard Genius 3.0 is a legacy event. It was organized in Gravitas-14 & 15 and attracted a huge audience. Over 250 participants registered in previous versions of this event. The event is technical and consists of two rounds. It tests the creativity of the participant as well as his/her knowledge in science.'+
+        'It is a team event with team of 2.'
+    },
+    {
+        'subcat':'event',
+        'club':'Creativity Club, IE(I)',
+        'description':'A team of 2 participants should be formed. Each team should be given disassembled parts of computer and must be asked to assemble them in proper order. The team which assembles all the parts in proper order in least time should be declared the winner. Along with the disassembled parts some unknown parts should be mixed to confuse  the participants.'
+    },
+    {
+        'subcat':'Ultimate Engineer',
+        'club':'SMCE',
+        'description':'This event will comprise a series of rounds testing the knowledge of the participants in various fields of engineering like, computer science, mechanical engineering, biotechnology, etc. These rounds will consist of questions and tasks respective to the field of engineering selected by the participant in that particular round.'
+    },
+    {
+        'subcat':'M. Md (MASTERS OF MORSE DECODING)',
+        'club':'IEEE-PES',
+        'description':'Round 1:Questions will be asked to participants where they will be encoding and decoding the morse code (written and audio beeps).'+
+'Here both the members of a team will have to give the answers indiviually.'+
+    'They will be required to complete the task in a limited time frame.'+
+    'The scores of both the indiviuals of the team add up, which will be the basis of their selection.'+
+    'The team with highest score advances to the next round.'+
+'5 teams will be selected.<br>'+
+
+    'Round 2:A message will be given to one of the team members.'+
+    'This message is expected to be communicated with the use of a torch to the other member using morse codes.'+
+    'The correctness of the message decoded and the time taken are the criteria for declaring the winner.'+
+    'The one with less mistakes in decoded message and less time taken wins.<br>'+
+
+    'Note: Basics of Morse Decoding will be taught during the event.'
+    },
+    {
+        'subcat':'Snakes and Ladder',
+        'club':'IEEE-MTTS',
+        'description':'Basically,in this event there will be a huge poster of snakes and ladder laid on the ground and a screen displaying numbers . now the participant has to choose a number from the lot . there will be a question behind every number along with the points being displayed on the screen. if the participant answers the question correctly , he/she will move in the snakes and ladder according to the points they earned. this will be a team event consisting of two members each.also each team will be given two minutes. whichever team reaches the maximum point in the snakes and ladder will be the winner of the day.'
+    },
+    {
+        'subcat':'',
+        'club':'IEEE-IAS',
+        'description':'"This event will be a team event consisting of two participants in a team. The event will be conducted in two rounds.<br>'+
+        'First round: Quiz Round<br>'+
+'It will be a quiz round, where teams will be given 20 questions to solve based on general logical thinking. Top 20 teams will be selected from this round based on their quiz scores and will compete in round 2.<br>'+
+
+'Second Round: Mystery Maze<br>'+
+'Each team will be asked to pick up a card, each card consists of two questions. After that, all of them together will be shown a poster consisting of 16 squares, containing images related to the answers of those questions.'+
+    'The teams to find the answers earliest will win.'
+
+    },
+
+];
+var informals=[
+    {
+        'subcat':'MINUTE TO WIN IT ',
+        'club':'Innovator Quest, Creativity Club',
+        'description':'IT WILL HAVE MANY GAMES/CHALLENGE IN IT:-<br>'+
+        '1.COOKIE FACE:Each player places a cookie on their forehead, and the goal is to get the cookie into your mouth using only your facial muscles in under 1 minute. No hands.<br>'+
+        '2.STACK IT UP:Players must stack 25 pennies in under a minute using only one hand.<br>'+
+        '3.SUCK IT UP:Players place a straw in their mouth and use suction to transfer a pile of 25 M&M’s chocolate from one plate to another in under one minute. Only one hand may be used to hold the straw. Everyone gets to eat their candy when the round is finished<br>'+
+'4.PONG TAC TOE:In This three trays are required and is assigned one to each of the three players. Each player had one minute to bounce ping pong balls down the length of the table and into their tray – 3 in a row (in any direction) wins!<br>'+
+    '5.SCOOP IT UP:Using nothing but a spoon in your mouth, transfer six ping pong balls from one bowl to another) in less than one minute.<br>'+
+'6.MOVIN’ ON UP: Each player starts with a stack of 25 red cups with one blue cup at the top of the stack. Start by moving the top blue cup to the bottom of the stack, and continue moving cups from the top to the bottom until the blue cup is back at the bottom of the stack again.<br>'+
+"7.NUTSTACKER:Thread five hex nuts onto a wooden stick. Using only one hand on the stick, stack up all of the nuts in under one minute. Only two players compete per round.<br>"+
+'8.DEFY GRAVITY:Using only one hand, players must keep two or even three  balloons from touching the ground for one minute.'
+    },
+    {
+        'subcat':'THE AMAZING RACE',
+        'club':'Indian Society for Technical Education',
+        'description':"The Amazing Race is inspired by the TV Show, TAR, which will require the participants to race around the campus by solving clues based on their technical knowledge and performing some technical tasks to find the next clue.The event overall is informal, but technical touches will be added to it to match with graVITas'16 and its theme."
+    },
+    {
+        'subcat':'Game-a-thon',
+        'club':'Indian Society for Technical Education',
+        'description':'"Game-a-thon is an e-sport tournament which is organised every year during gravitas. There will be 5 games , namely DOTA 2, Cs Go, COD 4, FIFA 16 and NFS.'+
+        'It will be a full time event in gravitas. Teams and individuals from all over the country take part and few teams from outside the country take part in this tournament online. Prize pool is huge and attractive to attract any good team for this event. Vit students will get chance to unleash there potential in e sport.'
+    },
+    {
+        'subcat':'Beg Borrow Steal',
+        'club':'IE(I)',
+        'description':'Round 1: Each group will be given a list of things that they have to collect and submit within the given time interval.'+
+    'They can use any means to collect the items.<br>'+
+    'Round 2: Each group will be given a list of funny tasks to perform in front of a crowd and they will have submit videos and pictures of the same.'+
+    "Tasks given will be fun like breaking eggs on someone's head!"
+    },
+    {
+        'subcat':'Mini Militia',
+        'club':'VIT Spartans',
+        'description':'Mini militia experience intense multiplayer combat with up to 6 players online or locally in multiplayer mode. Hear the whiz of bullets flying past your face as you tumble for over. Out smart the enemy with a well placed grenade and watch them explode into bloody confetti.'+
+
+        '<br>Rules:'+
+            '<br>Game Rules:'+
+        '<br>Game mode: Team death.'+
+        '<br>Time: 6mins 30secs.'+
+    '<br>Players: 3 per team'+
+'-Coin Toss is used to decide which map is to be selected.'+
+'-In the incident of tie the other team gets to choose the map for rematch.'+
+                                                                  '-Each team can choose a variety of weapons depending upon the map.'+
+'-If one of the players forfeits the match, the team will be disqualified and the other team will be declared winner(IRRESPECTIVE OF THE SCORE).'
+    },
+    {
+        'subcat':'Risa',
+        'club':'Creativity Club',
+        'description':'Risa will be held for the second time in VIT. Laughter is to the soul, what chutney is to pakoda, what biscuit is to chai, what melodrama is to Karan Johar and what `NO APT` is to VITian.'+
+        'It heals your spirit, soothes your mind and boosts your zest. Coming soon is the RISA fest charged with humour, wit and awesomeness thats gonna sweep you off your feet. Get ready to roll on the floor laughing till your tummy hurts.'+
+    'It is the humor fest in which:'+
+'DAY I- TVF(5 Celebrities)'+
+'3 Hours [8:00pm-11:00pm]**(10 mins for the crowd to settle down+10 mins introduction to Risa+15 min Filler(one performance) +15 min introduction of TVF+2 HOURS TVF Performance+10 mins Closing Ceremony)'+
+'DAY II-Apurv Gupta   and Biswa'+
+'3 Hours [8:00pm-11:00pm]**(10 mins for the crowd to settle down+5 min Introduction of Apurv Gupta +1 hour performance by Apurv Gupta+10 min Filler (one performance)+5 min Introduction of Biswa +1 hour 15 min Performance by Biswa+15 mins Closing Ceremony)'+
+'Reg. Fee-600/per head(DAY I+DAY II)'
+    },
+    {
+        'subcat':'The 13 cards Film Festival',
+        'club':'VIT FILM SOCIETY',
+        'description':'The 13 cards Film Festival is an event that we are planning to organise during this gravitas. This is first time that VIT FILM SOCIETY is organising an event in Gravitas.'+
+        'This event basically is a film festival, where teams would be sending their short films from across the country. Out of which, 13 films will be shortlisted and will be judged. They would be judged on the various  technical aspects. Prizes of worth 6000 would be given for different categories. '
+
+    },
+    {
+        'subcat':"Rubic's cube",
+        'club':'Creativity club, TLA',
+        'description':"Rubic's cube will be given to the participants and the person who takes less time wins it would not be a knockout rounds it will be a league ."
+    },
+    {
+        'subcat':'Segway',
+        'club':'Creativity Club',
+        'description':'• A FREEGO is a battery operated two wheel vehicle where a person stands on it and controls it with their body weight and pressure. It’s an EASY-TO-RIDE vehicle which anyone of us can ride without much of a training.<br>'+
+'• Firstly, participants will be taught how to ride the vehicle before the start of the game.<br>'+
+'• In this event, two arenas (40 m long) on the road will be created. It has two entry points through which participants will be entering the arena. There will be ropes tied overhead around the area. On the ropes, there will be 10 different TAGS are tied, in the path of the participant. Participants will have to open the tags while riding the freego and reach the centre of the arena where one GOLDEN BALL is kept. They have to lift the golden ball and finish the game'
+
+    },
+    {
+        'subcat':'Pillow Fight',
+        'club':'Creativity Club',
+        'description':'A team of two players. One person from each team will be made to sit on a ft high pole.Mattresses will be laid below the pole .  Another person has to hit the opponent sitting on the pole with the help of a pillow. The person to fall first loses.'
+    },
+    {
+        'subcat':'event',
+        'club':'indiviual',
+        'description':'It is a celebration of innovation in engineering which will attract large number of automotive enthusiasts from both VIT and across India.'
+    },
+    {
+        'subcat':'Goonj',
+        'club':'VIT Spartans',
+        'description':'Goonj will be a two day show in per graVITas featuring extra ordinary performances in of all genres by very renowned artists coming from all across India. Performances will feature standup comedy, music and talks over social innovation.'+
+        'Goonj will also feature interactive session by the speakers with the crowd.The sole aim of goonj is to refresh the students from their monotonous lives and to create a positive impact in their lives.'+
+
+    '<br>Day wise Description<br>'+
+'Day 1- Extra Ordinary show of Music and Comedy<br>'+
+'Day 2- Extra Ordinary show of Comedy and motivating talks on social innovation.'
+    },
+    {
+        'subcat':'Human Foosball',
+        'club':'Indian Society for Technical Education',
+        'description':'Human Foosball is the LIFESIZE version of the table game Foosball. Participants will be playing in teams of 5 and it will be a versus match where teams will try to score maximum goals. A knockout tournament will follow on the final day which will decide the winners.'
+    },
+    {
+        'subcat':'Go-Karting',
+        'club':'SIAM',
+        'description':'If you love driving, this is the event for you. Go‐Karting is a fun event where people will release their stress. Kart away to happiness by sitting on a mechanical kart. Two Go‐Karts will be available to the participants at a time.You can drive across the arena showing off your motor skills. All safety precautions will be taken by our team. And skilled drivers will also be present to guide the participants.'
+    }
+];
+var online=[
+    {
+        'subcat':'CSI Riddler',
+        'club':'Computer Society of India- VIT Chapter',
+        'description':'CSI Riddler having been a huge success over its past 5 editions, it would be fun to have a tech spin off of Riddler. Now coding is something we all have to live with for the next ~4 years. So, in Codein, We can have riddles, visual puzzles, limericks, etc pertaining to SOCIAL ISSUES. Now these “questions”, will be scattered all over the campus. All participants will be provided with their first chit with the riddle and from there on, they have to FIND them. Unlocking the riddle directs them to their next destination which gives them their next clue.'
+    },
+    {
+        'subcat':'GPL 3.0',
+        'club':'IEEE-CS',
+        'description':'Gravitas premier league is an online event where the participants are required to make their own cricket team by buying the players using the amount of money they will be given at the start. There are three rounds in this event and for qualifying from one round to the next, the participant has to win a certain number of matches. Winning or losing a match is purely based on an online simulation between the competing teams. The final round will be an online auction among the top ten teams.'
+    },
+    {
+        'subcat':'Dubsmash',
+        'club':'nil',
+        'description':'When the world goes crazy over the latest trend dubsmash. What if you can win actually by showing your fun side. This is the most unique in-trend competition of 2016, ""Dubsmash Competition""'+
+        '<br>RULES FOR DUBSMASH COMPETITION:<br>'+
+'ROUND 1-<br>'+
+'1) this event is of Individual participation.<br>'+
+'2) Short audio ranging from movies to television shows, songs, internet hits, and much more.<br>'+
+'3) exclusively, Participants can choose any audio they want from the dubsmash android application.<br>'+
+'3) Time limit is (10-30) secs.<br>'+
+'4) Participants will have to lip-sync with the audio on stage.<br>'+
+'5) One retake will be allowed in first round.<br>'+
+"6) The judge's decision will be final.<br>"+
+'7) Any participant not following the rules or exceeding the time limit will be disqualified.<br>'+
+'ROUND 2-<br>'+
+'this round will be in a team of 2 and they have to dubsmash a scene or conversation of a movie.'
+    }
+
+];
+var ssic=[
+    {
+        'subcat':'Bioideathon',
+        'club':'SABEST-VIT',
+        'description':'This is a technical event. In this event participants will be given bio related problem and they need to give an idea to solve it. The team who comes up with the most innovative and feasible solution wins. For this event they will be judged by our faculty."'
+    },
+    {
+        'subcat':'Urbanization Innovation',
+        'club':'INDIVIDUAL',
+        'description':'This event mainly focuses on the social sustainable innovation on the concept of smart city .'+
+        'There will be different problem statements regarding the problems faced by the people on the existing city infrastructure which need to be solved with an innovative idea covering the smart city concept of the government  and also the carbon credit concept.'+
+    'the problem statement may be technical dealing with sewage, waste management or an efficient electrical supply or it can be a social problem dealing with day to day life problems like parking, traffic jams etc .the solution should be feasible and after winning the certain amount will be allocated for the pilot project regarding the idea and then the total winning amount will be given .'
+    },
+    {
+        'subcat':'SOCIAL ENTREPRENEURSHIP',
+        'club':'AYUDA',
+        'description':"The participants will be provided with a social problem, a day before the event via e-mail. The participants have to come up with an innovative and feasible solution of the given problem, and convert it into a startup at their level. They have to pitch their idea in front of the panel of judges and have to answer the questions regarding their idea and it's feasibility in real life. Points will be awarded based on the idea, pitching and question answer session."+
+    'This event will not only bring out the creative sides of the participants but also help in eradicating several social issues.'
+    }
 
 ];
 var e;
@@ -588,14 +887,14 @@ function change(){
 function displayevents(){
     var ev=document.getElementById('events1');
     var l=events.length;
-    var a='<div id="events2"><div class="container"><div class="row"><div class="col s12 l12 m12"><h1><span style="color:white">Events</span></h1></div>';
+    var a='<div id="events2"><div class="container"><div class="row"><div class="col s12 l12 m12 wow fadeInRight" data-wow-duration="2s" data-wow-delay="500ms"><h1><span style="color:white">Events</span></h1></div>';
     for(var i=0;i<l;i++)
     {
-        a+='<div class="col s12 m4 l4" onclick="display(\''+events[i].name+'\')"><article class="material-card Indigo"><h2 class="z-depth-2"><span>'+events[i].name+'</span><strong><i class="fa fa-fw fa-star"></i>Know More...</strong></h2><div class="mc-content"><div class="img-container waves-effect waves-light z-depth-3">'+
+        a+='<div class="col s12 m4 l4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="500ms" data-wow-offset="100" onclick="display(\''+events[i].name+'\')"><article class="material-card Indigo"><h2 class="z-depth-2"><span>'+events[i].name+'</span><strong><i class="fa fa-fw fa-star"></i>Know More...</strong></h2><div class="mc-content"><div class="img-container waves-effect waves-light z-depth-3">'+
         '<img src="'+events[i].url+'"></div></div><div class="mc-footer">'+
         '</div></article></div>'
     }
-    a+='<div id="bottom_fade"></div>'
+    a+='<div id="bottom_fade"></div>';
     a+='</div></div></div>';
     e=a;
     ev.innerHTML=a;
@@ -679,7 +978,7 @@ function display(a)
     }
     else if(a=='Applied Engineering')
     {
-        var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a><h1>Applied Engineering</h1></div>';
+        var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Applied Engineering</h1></div>';
         for(var i=0;i<appeng.length;i++)
         {
             x+='<div class="col s12 l4 m4">'+
@@ -932,15 +1231,15 @@ function display(a)
     else if(a=='Science and tech')
     {
         var x='<div class="category"> <div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Science and Tech</h1></div>';
-        for(var i=0;i<workshops.length;i++)
+        for(var i=0;i<sctech.length;i++)
         {
             x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
-            '<span>'+workshops[i].subcat+'</span>'+
+            '<span>'+sctech[i].subcat+'</span>'+
             '<strong>'+
             '<i class="fa fa-fw fa-star"></i>'+
-            workshops[i].club+
+            sctech[i].club+
             '</strong>'+
             '</h2>'+
             '<div class="mc-content">'+
@@ -948,7 +1247,7 @@ function display(a)
             '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
             '</div>'+
             '<div class="mc-description">'+
-            workshops[i].description+
+            sctech[i].description+
             '</div>'+
             '</div>'+
             '<a class="mc-btn-action">'+
@@ -968,15 +1267,15 @@ function display(a)
     else if(a=='Informals')
     {
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Informals</h1></div>';
-        for(var i=0;i<workshops.length;i++)
+        for(var i=0;i<informals.length;i++)
         {
             x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
-            '<span>'+workshops[i].subcat+'</span>'+
+            '<span>'+informals[i].subcat+'</span>'+
             '<strong>'+
             '<i class="fa fa-fw fa-star"></i>'+
-            workshops[i].club+
+            informals[i].club+
             '</strong>'+
             '</h2>'+
             '<div class="mc-content">'+
@@ -984,7 +1283,7 @@ function display(a)
             '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
             '</div>'+
             '<div class="mc-description">'+
-            workshops[i].description+
+            informals[i].description+
             '</div>'+
             '</div>'+
             '<a class="mc-btn-action">'+
@@ -1004,15 +1303,15 @@ function display(a)
     else if(a=='Online')
     {
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>Online</h1></div>';
-        for(var i=0;i<workshops.length;i++)
+        for(var i=0;i<online.length;i++)
         {
             x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
-            '<span>'+workshops[i].subcat+'</span>'+
+            '<span>'+online[i].subcat+'</span>'+
             '<strong>'+
             '<i class="fa fa-fw fa-star"></i>'+
-            workshops[i].club+
+            online[i].club+
             '</strong>'+
             '</h2>'+
             '<div class="mc-content">'+
@@ -1020,7 +1319,7 @@ function display(a)
             '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
             '</div>'+
             '<div class="mc-description">'+
-            workshops[i].description+
+            online[i].description+
             '</div>'+
             '</div>'+
             '<a class="mc-btn-action">'+
@@ -1040,15 +1339,15 @@ function display(a)
     else if(a=='SSIC')
     {
         var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></a><h1>SSIC</h1></div>';
-        for(var i=0;i<workshops.length;i++)
+        for(var i=0;i<ssic.length;i++)
         {
             x+='<div class="col s12 l4 m4">'+
             '<article class="material-card Indigo">'+
             '<h2 class="z-depth-2">'+
-            '<span>'+workshops[i].subcat+'</span>'+
+            '<span>'+ssic[i].subcat+'</span>'+
             '<strong>'+
             '<i class="fa fa-fw fa-star"></i>'+
-            workshops[i].club+
+            ssic[i].club+
             '</strong>'+
             '</h2>'+
             '<div class="mc-content">'+
@@ -1056,7 +1355,7 @@ function display(a)
             '<img class="img-responsive" src="https://res.cloudinary.com/events-gravitas/image/upload/v1444243732/prev/random6.jpg">'+
             '</div>'+
             '<div class="mc-description">'+
-            workshops[i].description+
+            ssic[i].description+
             '</div>'+
             '</div>'+
             '<a class="mc-btn-action">'+
