@@ -185,35 +185,37 @@ $(document).ready(function() {
 
     setGalleryPos(0, false);
     function start() {
-        $('#b1').click();
-        i = 1;
-        slider();
-        function slider() {
+        if($(window).width()>700) {
+            $('#b1').click();
+            i = 1;
+            slider();
+            function slider() {
 
-            setInterval(function () {
-                $("#b" + i).click();
-                i++;
-                if (i == 6) {
-                    rotate();
-                }
-            }, 3000);
+                setInterval(function () {
+                    $("#b" + i).click();
+                    i++;
+                    if (i == 6) {
+                        rotate();
+                    }
+                }, 3000);
 
 
-        }
+            }
 
-        function rotate() {
-            j = 0;
-            k = 1;
-            setGalleryPos(j, false);
-            setInterval(function () {
+            function rotate() {
+                j = 0;
+                k = 1;
+                setGalleryPos(j, false);
+                setInterval(function () {
 
-                $("#b" + k).click();
-                k++;
-                if (k >= 6) {
-                    setGalleryPos(j, false);
-                    k = 1;
-                }
-            }, 4000)
+                    $("#b" + k).click();
+                    k++;
+                    if (k >= 6) {
+                        setGalleryPos(j, false);
+                        k = 1;
+                    }
+                }, 4000)
+            }
         }
     }
 
