@@ -849,6 +849,7 @@ footer.page-footer {
 }
 @media screen and (max-width: 599px)
 {
+
     .large-visible{
         display: none;
     }

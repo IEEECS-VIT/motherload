@@ -107,18 +107,35 @@ function change(){
     var w=$(window).width();
     var cw=$(".cards").width();
     var tw=(w-cw-100)/2;
-    $(".gravitas-section").css("margin-left",tw);
-    if(w<=800)
+
+    if(w>=600&&w<=800)
         $(".cards").css("margin-right",(tw-80));
+    else if(w<600)
+        $(".cards").css('margin-right',0);
     else
         $(".cards").css("margin-right",(tw-120));
     var firsth=$("#first").height();
+    if(w>=600)
     $(".card-gravitas").css("min-height",firsth);
+    else
+        $(".cards").css("min-height",firsth);
     $(".graphics").css("height",h/2);
     var gh=$(".gravitas").height();
     var fh=$(".page-footer").height();
     var nh=$(".nav-wrapper").height();
-    var th=(h-gh-fh-nh)/2;
+    if(w>=600)
+    {
+        var th=(h-gh-fh-nh)/2;
+        $(".gravitas-section").css("margin-left",tw);
+    }
+    else
+    {
+        console.log(h/2);
+        console.log(firsth);
+        var th=(h-(gh+nh+fh))/2;
+        $(".gravitas-section").css("margin-left",0);
+    }
+    console.log(th);
     $(".gravitas").css("margin-top",th);
     $(".gravitas").css("margin-bottom",th);
 }
