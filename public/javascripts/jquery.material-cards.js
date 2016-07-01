@@ -8,7 +8,6 @@
         this.timing         = this.getTransitionTiming();
 
         var that = this;
-
         if (that.card_activator == 'click') {
             if (!this.icon.hasClass(this.options.icon_open)) {
                 this.icon.attr('class', this.icon.attr('class').replace(/\bfa-.*\b/g, '')).addClass(this.options.icon_open);
@@ -33,7 +32,7 @@
 
     MaterialCard.defaults = {
         icon_close: 'fa-arrow-left',
-        icon_open: 'fa-bars',
+        icon_open: 'fa-thumbs-o-up',
         icon_spin: 'fa-spin-fast',
         card_activator: 'click'
     };
@@ -109,7 +108,6 @@
             var $this    = $(this);
             var $MCData    = $this.data('material-card');
             var $options = $.extend({}, MaterialCard.defaults, typeof options == 'object' && options);
-
             if (!$MCData) {
                 $this.data('material-card', ($MCData = new MaterialCard(this, $options)));
             }

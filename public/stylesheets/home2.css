@@ -406,9 +406,32 @@ svg {
 #events1{
     font-family: "Roboto", sans-serif;
     font-size: 10px;
-    text-align: center;
-    color: white;
 
+}
+#events1 .card{
+    border-top: 10px solid #6a68ff;
+    height: 90px;
+    margin-top: 40px;
+}
+#events1 a {
+    position: absolute;
+    bottom: -15px;
+    right: 10px;
+}
+.card-heading{
+    padding: 5px;
+    max-height: 90px;
+
+}
+.card-heading h5{
+    text-align: left;
+}
+#events1 .card-content{
+    text-align: justify;
+}
+#events1 .footer{
+    border-top: 1px solid grey;
+    background-color: #7f8eff;
 }
 #events2 h1{
     position: relative;
