@@ -413,7 +413,7 @@ svg {
     height: 90px;
     margin-top: 40px;
 }
-#events1 a {
+.card-heading a {
     position: absolute;
     bottom: -15px;
     right: 10px;
@@ -921,4 +921,7 @@ li a h5{
 
 .category{
     margin-bottom: 120px;
+}
+#events1 a .back{
+    position: relative;
 }
