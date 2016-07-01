@@ -130,12 +130,12 @@ function change(){
     }
     else
     {
-        console.log(h/2);
-        console.log(firsth);
+
+
         var th=(h-(gh+nh+fh))/2;
         $(".gravitas-section").css("margin-left",0);
     }
-    console.log(th);
+
     $(".gravitas").css("margin-top",th);
     $(".gravitas").css("margin-bottom",th);
 }

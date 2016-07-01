@@ -123,16 +123,13 @@ $(document).ready(function() {
         if (dragging) {
             updateGalleryPos();
             var dist = dragPos.x - lastDragPos.x;
-            console.log("last drag position:"+dist);
             lastDragPos.x = dragPos.x;
             totalDist += dist;
-            console.log("total dist:"+totalDist)
             distLog.push(dist);
             while (distLog.length > distLogLimit) {
                 distLog.splice(0, 1);
             }
             galleryPos.x += dist;
-            console.log("gallerypos:"+galleryPos.x);
             requestAnimationFrame(updateGalleryPosLoop)
         }
     }
@@ -149,7 +146,6 @@ $(document).ready(function() {
 
             var targetX = galleryPos.x + (releaseSpeed * 20);
             targetX = Math.round(targetX / imageTotalWidth) * imageTotalWidth;
-            console.log("targetX:"+targetX);
             var targetImage = -targetX / imageTotalWidth;
             var excess = 0;
             if (targetImage < 0) {
