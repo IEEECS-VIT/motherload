@@ -925,3 +925,8 @@ li a h5{
 #events1 a .back{
     position: relative;
 }
+.sp
+{
+    width: 50%;
+    padding: 5%;
+}
