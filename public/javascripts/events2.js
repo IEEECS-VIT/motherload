@@ -1,7 +1,7 @@
 var events=[
     {
         'name':"Workshops",
-        'url': "https://res.cloudinary.com/events-gravitas/image/upload/v1444243710/prev/ios2.jpg",
+        'url': "https://res.cloudinary.com/events-gravitas/image/upload/v1444243707/prev/ios3.jpg",
         'color':'Red'
     },
     {
@@ -20,7 +20,7 @@ var events=[
         'color': 'Indigo'
     },
     {
-        'name':'Circuit',
+        'name':"Circuitrix",
         'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243738/prev/robotix1.jpg',
         'color':'Cyan'
     },
@@ -35,8 +35,8 @@ var events=[
         'color':'Green'
     },
     {
-        'name':'Management/ Debate/ Discussion',
-        'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243707/prev/ios3.jpg',
+        'name':'Management',
+        'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243718/prev/moz4.jpg',
         'color':'Deep-Orange'
     },
     {
@@ -227,7 +227,7 @@ function display(a)
     }
     else if(a=='Circuit')
     {
-        var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back left" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Circuit</h1></div>';
+        var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back left" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Circuitrix</h1></div>';
         for(var i=0;i<circuit.length;i++)
         {
             x+='<div class="col s6 m6 l4 offset-s3 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1000ms">'+
@@ -278,7 +278,7 @@ function display(a)
     }
     else if(a=="Management/ Debate/ Discussion")
     {
-        var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back left" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Management/ Debate/ Discussion</h1></div>';
+        var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back left" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Management</h1></div>';
         for(var i=0;i<mdd.length;i++)
         {
             x+='<div class="col s6 m6 l4 offset-s3 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1000ms">'+
@@ -295,7 +295,7 @@ function display(a)
     }
     else if(a=='Bio/Chemical')
     {
-        var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back left" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Bio/ Chemical</h1></div>';
+        var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back left" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Biotechnology</h1></div>';
         for(var i=0;i<biochem.length;i++)
         {
             x+='<div class="col s6 m6 l4 offset-s3 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1000ms">'+
@@ -312,7 +312,7 @@ function display(a)
     }
     else if(a=='Science and tech')
     {
-        var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back left" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Science and Tech</h1></div>';
+        var x='<div class="category"><div class="container"><div class="row"><div class="col s12 l12 m12"><a href="#" class="back left" onclick="displayevents()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h1>Science and Technology</h1></div>';
         for(var i=0;i<sctech.length;i++)
         {
             x+='<div class="col s6 m6 l4 offset-s3 wow fadeInDown" data-wow-delay="300ms" data-wow-duration="1000ms">'+
