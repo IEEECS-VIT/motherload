@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html ng-app="gravitas">
+<head lang="en">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="Gravitas 2015 was an international Technical fest. This page contains glimpses of the fest.">
+    <meta name="keywords" content="gravitas | memories | gravitas15 | 2015 | technical | fest | festival | college | engineering | graVITas16 | 2016 | VIT University | Technical Fest | Vellore | 632014">
+    <meta content="index, follow" name="robots" />
+    <meta content="index, follow" name="googlebot" />
+    <meta charset="utf-8">
+    <link href="/images/favicon-96x96.png" rel="icon" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <title>graVITas'16 | VIT University | Technical Fest | Vellore - 632014</title>
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/zmd.hierarchical-display.css" rel="stylesheet">
+    <link href="/stylesheets/material-cards.css" rel="stylesheet">
+    <link href="/bower/materialize/dist/css/materialize.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/stretchy-navigation.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/loading-bar.min.css"/>
+    <link href="/stylesheets/home2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/animate.min.css">
+    <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-78645903-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+<div id="loader-wrapper">
+    <div id="loader">
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+</div>
+<div id="whole">
+    <div class="graphics">
+        <h1 style="display: none">gravitas 16</h1>
+    </div>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper z-depth-3">
+                <div class="brand-logo col m3 l3 s4" id="gravitas-logo"><a href="#"> <img src="/images/gravitas.png"/></a></div>
+
+                <ul class="right large-visible">
+
+                    <li><a href="/images/gravitas16-brochure.pdf" target="_blank" style="font-size: 80%;"> graVITas E-Brochure</a></li>
+                    <li><div id="vit"><a href="http://www.vit.ac.in"  target="_blank"> <img src="/images/vitlogowhitepng.png" align="center" style=""/></a></div></li>
+
+                </ul>
+
+                <a href="#" data-activates="mobile-demo" class="button-collapse large-not-visible"><i class="material-icons">menu</i></a>
+                <ul class="side-nav large-not-visible" id="mobile-demo">
+                    <li class="waves-effect waves-teal" ><a href="/images/gravitas16-brochure.pdf" target="_blank"><h5 style="font-size: 125%"> graVITas E-Brochure</h5></a></li>
+                    <li class="waves-effect waves-teal"><a href="#" id="home2" style="padding-left: 0"><img class="left" src="/images/home.svg" style="margin-top: 18px; margin-right: 5px; margin-left: 20px;float: left;width: 30px;height: 30px;vertical-align: baseline;"><p style="margin-top: 0">Home</p></a></li>
+                    <li class="waves-effect waves-teal"><a href="#aboutmodal" id="about2" class="modal-trigger"><img class="left" src="/images/info.svg"><p>About</p></a></li>
+                    <li class="waves-effect waves-teal"><a href="#" id="events2" style="padding-left: 0"><img class="left" src="/images/events.svg" style="margin-top: 18px; margin-right: 5px; margin-left: 20px;float: left;width: 30px;height: 30px;vertical-align: baseline;"><p style="margin-top: 0">Events</p></a></li>
+                    <li class="waves-effect waves-teal"><a href="#registermodal" class="modal-trigger"><img class="left" src="/images/register.svg"><p>Register</p></a></li>
+                    <li class="waves-effect waves-teal"><a href="#sponsormodal" class="modal-trigger"><img class="left" src="/images/sponsors.svg"><p>Sponsors</p></a></li>
+                    <li class="waves-effect waves-teal"><a href="#teammodal" class="modal-trigger"><img class="left" src="/images/team.svg"><p>Team graVITas</p></a></li>
+                    <li class="waves-effect waves-teal"><a href="#contactmodal" class="modal-trigger"><img class="left" src="/images/contact.svg"><p>Contact</p></a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+<!-- views will be loaded here -->
+    <ng-view>
+
+    </ng-view>
+
+<div class="dock large-visible" id="dock2">
+    <div class="dock-container2">
+        <a class="dock-item2" href="#/" id="home"><span>HOME</span><img src="/images/home.svg" alt="home" /></a>
+        <a class="dock-item2" href="#/about" id="about"><span>ABOUT</span><img src="/images/info.svg" alt="contact" /></a>
+        <a class="dock-item2" href="#/events" id="events"><span>EVENTS</span><img src="/images/events.svg" alt="events" /></a>
+        <a class="dock-item2" href="#/register" id="register"><span>REGISTER</span><img src="/images/register.svg" alt="Register" /></a>
+        <a class="dock-item2" href="#/sponsors" id="sponsors"><span>SPONSORS</span><img src="/images/sponsors.svg" alt="sponsors" /></a>
+        <a class="dock-item2" href="#/team" id="tg"><span>TEAM GRAVITAS</span><img src="/images/team.svg" alt="links"/></a>
+        <a class="dock-item2" href="#/contact" id="cpg"><span>CONTACT</span><img src="/images/contact.svg" alt="rss" /></a>
+
+    </div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<footer class="page-footer large-not-visible">
+    <div class="footer-copyright">
+        <div class="container">
+            © 2016 graVITas
+            <a class="grey-text text-lighten-4 right" href="https://www.vit.ac.in"><img src="/images/vitlogowhitepng.png" align="center"/></a>
+        </div>
+    </div>
+</footer>
+</div>
+
+<!--dock menu JS options -->
+<script type="text/javascript" src="/bower/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(
+            function()
+            {
+                $('#dock').Fisheye(
+                        {
+                            maxWidth: 50,
+                            items: 'a',
+                            itemsText: 'span',
+                            container: '.dock-container',
+                            itemWidth: 40,
+                            proximity: 90,
+                            halign : 'center'
+                        }
+                );
+                $('#dock2').Fisheye(
+                        {
+                            maxWidth: 100,
+                            items: 'a',
+                            itemsText: 'span',
+                            container: '.dock-container2',
+                            itemWidth: 70,
+                            proximity: 85,
+                            alignment : 'left',
+                            valign: 'bottom',
+                            halign : 'center'
+                        }
+                )
+            }
+    );
+
+</script><script type="text/javascript" src="/bower/materialize/dist/js/materialize.js"></script>
+
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.js"></script>-->
+<script type="text/javascript" src="/javascripts/TweenMax.min.js"></script>
+<script type="text/javascript" src="/javascripts/home2.js"></script>
+<script src="/javascripts/jquery.material-cards.js"></script>
+<script type="text/javascript" src="/javascripts/interface.js"></script>
+<script src="javascripts/wow.js"></script>
+<!-- angular scripts -->
+<script src="/bower/angular/angular.min.js"></script>
+<script src="/bower/angular-route/angular-route.min.js"></script>
+<script src="/bower/angular-loading-bar/build/loading-bar.min.js"></script>
+<script type="text/javascript" src="/javascripts/angular_app/app.js"></script>
+<script type="text/javascript" src="/javascripts/angular_app/controllers.js"></script>
+<script type="text/javascript" src="/javascripts/angular_app/routes.js"></script>
+<script type="text/javascript" src="/javascripts/angular_app/helpers.js"></script>
+
+<script>
+    new WOW().init();
+</script>
+</body>
+</html>

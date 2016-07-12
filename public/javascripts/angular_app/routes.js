@@ -1,34 +1,43 @@
 app.config(function ($routeProvider) {
     $routeProvider
-        .when('/input', {
-            templateUrl: '/input',
-            controller: 'input'
+        .when('/', {
+            templateUrl: '/main',
+            controller: 'main'
         })
-        .when('/login', {
-            templateUrl: '/login',
-            controller: 'login'
+        .when('/events', {
+            templateUrl: '/events',
+            controller: 'events'
         })
-        .when('/test',{
-            templateUrl: '/test',
-            controller: 'test'
+        .when('/about',{
+            templateUrl: '/about',
+            controller: 'about'
+        })
+        .when('/contact',{
+            templateUrl: '/contact',
+            controller: 'contact'
+        })
+        .when('/contact',{
+            templateUrl: '/contact',
+            controller: 'contact'
+        })
+        .when('/about',{
+            templateUrl: '/about',
+            controller: 'about'
+        })
+        .when('/register',{
+            templateUrl: '/register',
+            controller: 'register'
+        })
+        .when('/sponsors',{
+            templateUrl: '/sponsors',
+            controller: 'sponsors'
+        })
+        .when('/team',{
+            templateUrl:'/team',
+            controller: 'team'
         })
         .otherwise({
-            redirectTo: '/login'
+            redirectTo: '/'
         });
 });
 /*
-app.run( function($rootScope, $location) {
-
-    // register listener to watch route changes
-    $rootScope.$on( "$routeChangeStart", function(event, next, current) {
-        if ( $rootScope. == null ) {
-            // no logged user, we should be going to #login
-            if ( next.templateUrl == "partials/login.html" ) {
-                // already going to #login, no redirect needed
-            } else {
-                // not going to #login, we should redirect now
-                $location.path( "/login" );
-            }
-        }
-    });
-})*/

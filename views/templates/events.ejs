@@ -1,0 +1,15 @@
+<div>
+    <ul>
+        <li ng-repeat="category in categories">
+            <!--insert categories then same for individual events -->
+            {{category.name}}
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        if (window.location.href.indexOf("/#/events") == -1) {
+            window.location.assign("/#/events")
+        }
+    };
+</script>

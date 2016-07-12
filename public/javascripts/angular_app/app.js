@@ -1,1 +1,1 @@
-var app = angular.module('gravitas', ['ngRoute', 'angularFileUpload']);
+var app = angular.module('gravitas', ['ngRoute', 'angular-loading-bar']);

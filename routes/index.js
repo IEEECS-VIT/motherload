@@ -62,10 +62,10 @@ router.get('/search',function(req,res){
 });
 router.get('/mainpage',function(req,res){
     res.render('mainpage');
-});
+});/*
 router.get('/register',function(req,res){
     res.render('registration');
-});
+});*/
 
 router.post('/login', function (req, res) {
     var user = req.body.username;
@@ -185,4 +185,29 @@ router.get('/index2',function(req,res){
     res.render('index2');
 });
 
+/** Angular */
+router.get('/index',function(req,res){
+    res.render('templates/index');
+});
+router.get('/main',function(req,res){
+    res.render('templates/main');
+});
+router.get('/about',function(req,res){
+    res.render('templates/about');
+});
+router.get('/register',function(req,res){
+    res.render('templates/register');
+});
+router.get('/contact',function(req,res){
+    res.render('templates/contact');
+});
+router.get('/team',function(req,res){
+    res.render('templates/team');
+});
+router.get('/events',function(req,res){
+    res.render('templates/events');
+});
+router.get('/sponsors',function(req,res){
+    res.render('templates/sponsors');
+});
 module.exports = router;
