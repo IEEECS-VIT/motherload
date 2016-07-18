@@ -40,12 +40,12 @@ var events=[
         'color':'Deep-Orange'
     },
     {
-        'name':'Bio/Chemical',
+        'name':'Biotechnology',
         'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243731/prev/random8.jpg',
         'color':'Light-Green'
     },
     {
-        'name':'Science and Tech',
+        'name':'Science and Technology',
         'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243714/prev/contraptions.jpg',
         'color':'Amber'
     },
