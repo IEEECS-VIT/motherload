@@ -3,14 +3,58 @@ controllers.main =function($scope){};
 controllers.contact =function($scope){};
 controllers.events =function($scope){
     // add all categories here and use these arrays with ng repeat to genrate page
-    $scope.categories =[
+    $scope.categories=[
         {
-            'name':"Bits and Bytes",
-            'img': ''
+            'name':"Workshops",
+            'url': "https://res.cloudinary.com/events-gravitas/image/upload/v1444243710/prev/ios2.jpg"
         },
         {
-            'name': 'Category 2',
-            'img': 'Image of the category'
+            'name':"Builtrix",
+            'url':"https://res.cloudinary.com/events-gravitas/image/upload/v1444243708/prev/jenga.jpg"
+        },
+        {
+            'name':'Applied Engineering',
+            'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243740/prev/robotix2.jpg'
+        },
+        {
+            'name':'Bits and Bytes',
+            'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243709/prev/jumble.jpg'
+        },
+        {
+            'name':'Circuitrix',
+            'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243738/prev/robotix1.jpg'
+        },
+        {
+            'name':'Quiz',
+            'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243725/prev/quiz1.jpg'
+        },
+        {
+            'name':'Robotics',
+            'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243740/prev/robotix2.jpg'
+        },
+        {
+            'name':'Management',
+            'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243707/prev/ios3.jpg'
+        },
+        {
+            'name':'Biotechnology',
+            'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243731/prev/random8.jpg'
+        },
+        {
+            'name':'Science and Technology',
+            'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243714/prev/contraptions.jpg'
+        },
+        {
+            'name':'Informals',
+            'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243677/prev/dynasty.jpg'
+        },
+        {
+            'name':'Online',
+            'url':'http://res.cloudinary.com/events-gravitas/image/upload/v1444243746/prev/young3.jpg'
+        },
+        {
+            'name':'SSIC',
+            'url':'http://res.cloudinary.com/events-gravitas/image/upload/v1444243745/prev/young2.jpg'
         }
     ];
     $scope.workshop=[
@@ -22,7 +66,7 @@ controllers.events =function($scope){
         {
             'subcat':'Matlab',
             'club':'ASME VIT, ISTE',
-            'description':"MATLAB- The MATLAB platform is optimized for solving engineering and scientific problems. The matrix-based MATLAB language is the world’s most natural way to express computational mathematics.A great resource for the students interested in control design of mechanical systems.Mechanical Engineers of the Design and Manufacturing fields use MATLAB heavily.You can do almost everything in MATLAB, any simulation, plotting, coding, making GUI. That makes it one of the most used software in all graduate schools. Solving assignments, writing codes, plotting graphs, simulating models.MATLAB will be taught according to Mechanical based operations.<br>"+
+            'description':"MATLAB- The MATLAB platform is optimized for solving engineering and scientific problems. The matrix-based MATLAB language is the worldï¿½s most natural way to express computational mathematics.A great resource for the students interested in control design of mechanical systems.Mechanical Engineers of the Design and Manufacturing fields use MATLAB heavily.You can do almost everything in MATLAB, any simulation, plotting, coding, making GUI. That makes it one of the most used software in all graduate schools. Solving assignments, writing codes, plotting graphs, simulating models.MATLAB will be taught according to Mechanical based operations.<br>"+
             "Curriculum<br>"+"Day 1: Details of Matlab tools and hand's on session on Matlab"
         },
         {
@@ -53,7 +97,7 @@ controllers.events =function($scope){
         {
             'subcat':'Ui/UX',
             'club':'VIT ANIMATION CLUB',
-            'description':'The workshop aims at educating/empowering the participants with the knowledge of the following software:<br>Adobe Master<br>• Photoshop<br>• Illustrator<br>• After Effects<br>• Indesign'
+            'description':'The workshop aims at educating/empowering the participants with the knowledge of the following software:<br>Adobe Master<br>ï¿½ Photoshop<br>ï¿½ Illustrator<br>ï¿½ After Effects<br>ï¿½ Indesign'
         },
         {
             'subcat':'Digital image processing',
@@ -188,12 +232,12 @@ controllers.events =function($scope){
         {
             'subcat':'Catia',
             'club':'ASME/SME VIT',
-            'description':' This software is used for simulation of solids. It’s a kind of design software through which an engineer can put forth his ideas in designing of machines.'
+            'description':' This software is used for simulation of solids. Itï¿½s a kind of design software through which an engineer can put forth his ideas in designing of machines.'
         },
         {
             'subcat':'iOS Fusion',
             'club':'APPLE DEVELOPERS GROUP',
-            'description':'The focus will be on teaching students the fundamentals behind the application’s code rather than the coding itself. The 2 day event will cover all the necessary aspects of a full fledged working iOS app which students can use as a reference to learn and develop their own apps.'
+            'description':'The focus will be on teaching students the fundamentals behind the applicationï¿½s code rather than the coding itself. The 2 day event will cover all the necessary aspects of a full fledged working iOS app which students can use as a reference to learn and develop their own apps.'
         }
 
     ];
@@ -201,7 +245,7 @@ controllers.events =function($scope){
         {
             'subcat':'Contraption (Bitzer)',
             'club':'ASCE, Creativity Club, Spartans, ESquare',
-            'description': 'Think intelligent: Make use of the following objects in this module to the best as possible – CANDLE, SPOON, BOOK, MOBILE, '+'CLOTHESPIN, BRICK etc... Put your basic engineering skills to test with so many twists and turns. And then all you need is planning, innovation,'+ 'efficiency in steps and use of material to stay in the reckoning. '+
+            'description': 'Think intelligent: Make use of the following objects in this module to the best as possible ï¿½ CANDLE, SPOON, BOOK, MOBILE, '+'CLOTHESPIN, BRICK etc... Put your basic engineering skills to test with so many twists and turns. And then all you need is planning, innovation,'+ 'efficiency in steps and use of material to stay in the reckoning. '+
             'Remarks: Combine with Crerativity Club, Spartns, Esquare.( 4 clubs). Increase Prize Money. PREMIUM! (MOU should be crisp)'
 
         },
@@ -241,7 +285,7 @@ controllers.events =function($scope){
         {
             'subcat':'IC drag race',
             'club':'ASME',
-            'description':'There will be two stages for this completion.1)Qualification Round: Slalom-and-Sprint Competitions shall be held on one combined' +'track, by individual runs, with Best Elapsed Times determining Seeding for Bracket match-up’s in the Baja Event. 2)Drag round: The drag'+ 'Competition shall be vehicle vs. vehicle, on two lanes of full width and matching lengths to the Finish Line'
+            'description':'There will be two stages for this completion.1)Qualification Round: Slalom-and-Sprint Competitions shall be held on one combined' +'track, by individual runs, with Best Elapsed Times determining Seeding for Bracket match-upï¿½s in the Baja Event. 2)Drag round: The drag'+ 'Competition shall be vehicle vs. vehicle, on two lanes of full width and matching lengths to the Finish Line'
 
 
         },
@@ -290,7 +334,7 @@ controllers.events =function($scope){
         {
             'subcat':'Cook-Off 2.0',
             'club':'Codechef-VIT',
-            'description':'This 12 hour event will be providing the participants with a specific set of questions. Based on one’s speed and ability to complete '+ 'a task in the given time frame correctly winners will be decided. '
+            'description':'This 12 hour event will be providing the participants with a specific set of questions. Based on oneï¿½s speed and ability to complete '+ 'a task in the given time frame correctly winners will be decided. '
 
         },
         {
@@ -365,7 +409,7 @@ controllers.events =function($scope){
             'subcat':'Greatest  Heist ',
             'club':'IETE',
             'description':'Greatest Heist is an exciting classroom maze event wherein the participants (in teams of 2) make their way through a'+
-            'challengingobstacle course –  dodging the lasers, crossing the ropes, avoiding different types of sensors : IR sensors, Piezoelectric sensors,'+ 'PIR sensors and much more. '
+            'challengingobstacle course ï¿½  dodging the lasers, crossing the ropes, avoiding different types of sensors : IR sensors, Piezoelectric sensors,'+ 'PIR sensors and much more. '
 
         },
         {
@@ -465,7 +509,7 @@ controllers.events =function($scope){
         {
             'subcat':'Social Innovation Debate',
             'club':'Debate Society VIT',
-            'description':'In line with the theme of GraVITas 2016, ‘Social Innovations’, we intend to provide a platform to students across India to debate the'+'most relevant issues in a way that brings out the best of their ideas. We aim to offer them an opportunity to truly explore their personalities and'+'freely engage with the ideas of others, because it is only by examining oneself that an individual can bloom into the seed that generates change in'+'society. We believe that the VIT Debating tournament can provide just the chance all of these motivated young individuals are looking for after all'+'these are the people who will lead these Social Innovations . '
+            'description':'In line with the theme of GraVITas 2016, ï¿½Social Innovationsï¿½, we intend to provide a platform to students across India to debate the'+'most relevant issues in a way that brings out the best of their ideas. We aim to offer them an opportunity to truly explore their personalities and'+'freely engage with the ideas of others, because it is only by examining oneself that an individual can bloom into the seed that generates change in'+'society. We believe that the VIT Debating tournament can provide just the chance all of these motivated young individuals are looking for after all'+'these are the people who will lead these Social Innovations . '
 
         },
         {
@@ -562,7 +606,7 @@ controllers.events =function($scope){
             'club':'IEEE-WIE',
             'description':'Round-1: 3 clues are given for tracking back the murder on the campus which will lead the team to the location of the crime in the'+ 'major buildings like sjt, smv or tt.<br>'+
             'Round-2: they will be provided with a set of reactions and depending upon the situation they get they have to apply 3 basic reactions based on'+ 'their knowledge from the given list of chemical reactions (related to forensic analysis) to come to the conclusion.<br>'+
-            'Round-3: in this round the 5 teams will be given a sheet and a pen and they have to write their observations, conclusion and inference as to who was guilty, why he/she committed the crime and by which means i.e. how he did it…? '
+            'Round-3: in this round the 5 teams will be given a sheet and a pen and they have to write their observations, conclusion and inference as to who was guilty, why he/she committed the crime and by which means i.e. how he did itï¿½? '
         },
         {
             'subcat':'Lubrislide',
@@ -574,7 +618,7 @@ controllers.events =function($scope){
             'subcat':'FORENSICS 4.0',
             'club':'IET',
             'description':'The first round will consist of participants being tested of their logical and analytical skills in a general scenario.<br>'+
-            'The second round will consists of participants being divided into teams, after which they’ll be moving in and around the campus to find in the clues for the murder mystery.<br>'+
+            'The second round will consists of participants being divided into teams, after which theyï¿½ll be moving in and around the campus to find in the clues for the murder mystery.<br>'+
             'The third round will consist of participants investigating a murder mystery, as they will interview their suspects and work on the case study which will include the forensics clues.<br>'
 
 
@@ -629,10 +673,10 @@ controllers.events =function($scope){
             'club':'Innovators Quest, Creativity Club',
             'description':'COOKIE FACE:Each player places a cookie on their forehead, and the goal is to get the cookie into your mouth using only your facial muscles in under 1 minute. No hands.<br>'+
             'STACK IT UP:Players must stack 25 pennies in under a minute using only one hand. <br>'+
-            'SUCK IT UP:Players place a straw in their mouth and use suction to transfer a pile of 25 M&M’s chocolate from one plate to another in under one minute. Only one hand may be used to hold the straw. Everyone gets to eat their candy when the round is finished.<br>'+
-            'PONG TAC TOE:In This three trays are required and is assigned one to each of the three players. Each player had one minute to bounce ping pong balls down the length of the table and into their tray – 3 in a row (in any direction) wins!<br>'+
+            'SUCK IT UP:Players place a straw in their mouth and use suction to transfer a pile of 25 M&Mï¿½s chocolate from one plate to another in under one minute. Only one hand may be used to hold the straw. Everyone gets to eat their candy when the round is finished.<br>'+
+            'PONG TAC TOE:In This three trays are required and is assigned one to each of the three players. Each player had one minute to bounce ping pong balls down the length of the table and into their tray ï¿½ 3 in a row (in any direction) wins!<br>'+
             'SCOOP IT UP:Using nothing but a spoon in your mouth, transfer six ping pong balls from one bowl to another) in less than one minute. <br>'+
-            'MOVIN’ ON UP: Each player starts with a stack of 25 red cups with one blue cup at the top of the stack. Start by moving the top blue cup to the bottom of the stack, and continue moving cups from the top to the bottom until the blue cup is back at the bottom of the stack again. <br>'+
+            'MOVINï¿½ ON UP: Each player starts with a stack of 25 red cups with one blue cup at the top of the stack. Start by moving the top blue cup to the bottom of the stack, and continue moving cups from the top to the bottom until the blue cup is back at the bottom of the stack again. <br>'+
             'NUTSTACKER:Thread five hex nuts onto a wooden stick. Using only one hand on the stick, stack up all of the nuts in under one minute. Only two players compete per round.<br>'+
             'DEFY GRAVITY:Using only one hand, players must keep two or even three balloons from touching the ground for one minute.<br>'
 
@@ -669,7 +713,7 @@ controllers.events =function($scope){
 
         },
         {
-            'subcat':'Rubik’s Cube Challenge',
+            'subcat':'Rubikï¿½s Cube Challenge',
             'club':'Creativity club, TLA',
             'description':'Rubik\'s cube will be given to the participants and the person who takes less time wins it would not be a knockout rounds it will be a league .'
 
@@ -677,7 +721,7 @@ controllers.events =function($scope){
         {
             'subcat':'Segway',
             'club':'Creativity Club',
-            'description':'A FREEGO is a battery operated two wheel vehicle where a person stands on it and controls it with their body weight and pressure. It’s an EASY-TO-RIDE vehicle which anyone of us can ride without much of a training. <br>'+
+            'description':'A FREEGO is a battery operated two wheel vehicle where a person stands on it and controls it with their body weight and pressure. Itï¿½s an EASY-TO-RIDE vehicle which anyone of us can ride without much of a training. <br>'+
             'Firstly, participants will be taught how to ride the vehicle before the start of the game.<br>'+
             'In this event, two arenas (40 m long) on the road will be created. It has two entry points through which participants will be entering the arena. There will be ropes tied overhead around the area. On the ropes, there will be 10 different TAGS are tied, in the path of the participant. '
 
@@ -725,7 +769,7 @@ controllers.events =function($scope){
         {
             'subcat':'Riddler',
             'club':'CSI',
-            'description':'Having been a huge success over its past 5 editions, it would be fun to have a tech spin off of Riddler. Now coding is something we all have to live with for the next ~4 years. So, in Codein, We can have riddles, visual puzzles, limericks, etc pertaining to SOCIAL ISSUES. Now these “questions”, will be scattered all over the campus. All participants will be provided with their first chit with the riddle and from there on, they have to FIND them. Unlocking the riddle directs them to their next destination which gives them their next clue. '
+            'description':'Having been a huge success over its past 5 editions, it would be fun to have a tech spin off of Riddler. Now coding is something we all have to live with for the next ~4 years. So, in Codein, We can have riddles, visual puzzles, limericks, etc pertaining to SOCIAL ISSUES. Now these ï¿½questionsï¿½, will be scattered all over the campus. All participants will be provided with their first chit with the riddle and from there on, they have to FIND them. Unlocking the riddle directs them to their next destination which gives them their next clue. '
 
         },
         {

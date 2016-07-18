@@ -1,9 +1,27 @@
 <div>
     <ul>
-        <li ng-repeat="category in categories">
-            <!--insert categories then same for individual events -->
-            {{category.name}}
-        </li>
+            <div id="events2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 l12 m12 wow fadeInRight" data-wow-duration="2s" data-wow-delay="500ms">
+                            <h1><span style="color:white">Events</span></h1>
+                        </div>
+                        <div ng-repeat="category in categories" class="col s12 m4 l4 wow fadeInDown" data-wow-duration="2s" data-wow-delay="500ms">
+                            <article class="material-card Indigo">
+                                <h2 class="z-depth-2"><span>{{category.name}}</span><strong><i class="fa fa-fw fa-star"></i>Know More...</strong></h2>
+                                <div class="mc-content">
+                                    <div class="img-container waves-effect waves-light z-depth-3">
+                                        <img src="{{category.url}}"></div></div><div class="mc-footer">
+                                    </div>
+                            </article>
+                        </div>
+                        <div id="bottom_fade">
+
+                        </div>
+                        </div>
+                </div>
+            </div>
+
     </ul>
 </div>
 <!--<script type="text/javascript">
