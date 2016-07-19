@@ -930,3 +930,15 @@ li a h5{
     width: 50%;
     padding: 5%;
 }
+.display-categories-true{
+    display: block;
+}
+.display-categories-false{
+    display: none;
+}
+.display-events-true{
+    display: block;
+}
+.display-events-false{
+    display: none;
+}
