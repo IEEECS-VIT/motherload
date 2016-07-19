@@ -408,6 +408,12 @@ svg {
     font-size: 10px;
 
 }
+.sponsor
+{
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 20%;
+}
 #events1 .card{
     border-top: 10px solid #6a68ff;
     height: 90px;
@@ -927,8 +933,10 @@ li a h5{
 }
 .sp
 {
+    margin-left: 78%;
     width: 50%;
     padding: 5%;
+
 }
 .display-categories-true{
     display: block;
