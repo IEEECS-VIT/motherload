@@ -6,6 +6,7 @@ controllers.events =function($scope){
     $scope.categoriesFlag=true;
     $scope.eventsFlag=false;
     $scope.events=[];
+    $scope.index=0;
     $scope.categories=[
         {
             'name':"Workshops",
@@ -481,8 +482,8 @@ controllers.events =function($scope){
             'url':'https://res.cloudinary.com/events-gravitas/image/upload/v1444243707/prev/ios3.jpg',
             'events':[
             {
-                'club':'IEYS',
-                'subcat':'TOASTMASTERS INTERNATIONAL',
+                'club':'TOASTMASTERS INTERNATIONAL',
+                'subcat':'IEYS',
                 'description':'India Emerge Youth Summit 2016 is a summit that is going to be conducted for 5th time in VIT, it is a forum where speakers from'+ 'various fields of interest come and deliver their key note add in order to motivate the youth. Along with that we would like to organize a'+ 'competition (month before IEYS), a grand launch for IEYS(a week before IEYS) and a gala dinner for the team IEYS at the end of the event.'
             },
             {
@@ -667,7 +668,7 @@ controllers.events =function($scope){
                 'SUCK IT UP:Players place a straw in their mouth and use suction to transfer a pile of 25 M&M�s chocolate from one plate to another in under one minute. Only one hand may be used to hold the straw. Everyone gets to eat their candy when the round is finished.<br>'+
                 'PONG TAC TOE:In This three trays are required and is assigned one to each of the three players. Each player had one minute to bounce ping pong balls down the length of the table and into their tray � 3 in a row (in any direction) wins!<br>'+
                 'SCOOP IT UP:Using nothing but a spoon in your mouth, transfer six ping pong balls from one bowl to another) in less than one minute. <br>'+
-                'MOVIN� ON UP: Each player starts with a stack of 25 red cups with one blue cup at the top of the stack. Start by moving the top blue cup to the bottom of the stack, and continue moving cups from the top to the bottom until the blue cup is back at the bottom of the stack again. <br>'+
+                'MOVIN\' ON UP: Each player starts with a stack of 25 red cups with one blue cup at the top of the stack. Start by moving the top blue cup to the bottom of the stack, and continue moving cups from the top to the bottom until the blue cup is back at the bottom of the stack again. <br>'+
                 'NUTSTACKER:Thread five hex nuts onto a wooden stick. Using only one hand on the stick, stack up all of the nuts in under one minute. Only two players compete per round.<br>'+
                 'DEFY GRAVITY:Using only one hand, players must keep two or even three balloons from touching the ground for one minute.<br>'
 
@@ -812,7 +813,11 @@ controllers.events =function($scope){
         $scope.categoriesFlag=false;
         $scope.eventsFlag=true;
         $scope.events=$scope.categories[i].events;
-
+        $scope.index=i;
+    };
+    $scope.showCategories=function(){
+        $scope.categoriesFlag=true;
+        $scope.eventsFlag=false;
     }
 };
 

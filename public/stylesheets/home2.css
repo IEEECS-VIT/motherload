@@ -474,17 +474,7 @@ p{
 .card{
     z-index: 0;
 }
-.back
-{
-    font-size: x-large;
-    text-align: left;
-    margin-left: 10px;
-    left:0;
-    color: white;
-    font-weight: 300;
-    position: absolute;
-    margin-top: 3%;
-}
+
 canvas{
     z-index: -10;
     position:fixed;
@@ -949,4 +939,16 @@ li a h5{
 }
 .display-events-false{
     display: none;
+}
+.events{
+    border-top: solid rgb(69, 89, 201) 5px;
+    margin-top: 20px;
+    min-height: 100px;
+}
+.back{
+    position: fixed;
+    left: 4px;
+    top: 100px;
+    font-size: larger;
+    color: white;
 }
