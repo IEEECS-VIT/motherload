@@ -7,6 +7,8 @@ controllers.events =function($scope){
     $scope.eventsFlag=false;
     $scope.events=[];
     $scope.index=0;
+    $scope.singleevent=null;
+    $scope.singleFlag=false;
     $scope.categories=[
         {
             'name':"Workshops",
@@ -818,7 +820,17 @@ controllers.events =function($scope){
     $scope.showCategories=function(){
         $scope.categoriesFlag=true;
         $scope.eventsFlag=false;
+    };
+    $scope.showevent = function(i){
+        $scope.eventsFlag=true;
+        $scope.singleFlag=true;
+        $scope.singleevent=$scope.events[i];
+        console.log($scope.singleevent.subcat);
+    };
+    $scope.removeevent = function(){
+        $scope.singleFlag=false;
     }
+
 };
 
 controllers.team =function($scope){

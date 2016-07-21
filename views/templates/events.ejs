@@ -20,18 +20,28 @@
                             <div class="card events z-depth-2">
                                 <div class="card-heading">
                                     <h5>{{event.subcat}}<br><small>{{event.club}}</small></h5>
-                                    <a href="#eventsmodal"class="btn-floating btn-small waves-effect waves-light red right"><i class="material-icons">add</i></a>
+                                    <a href="#/events" class="btn-floating btn-small waves-effect waves-light red right" ng-click="showevent($index)"><i class="material-icons">add</i></a>
                                 </div>
                             </div>
                         </div>
+                        <div class="col s6 m6 l6 offset-s2 offset-m2 offset-l2 single-display-{{singleFlag}} wow fadeInUpBig card single z-depth-2" data-wow-duration="1s" data-wow-delay="0ms">
+
+                                <div class="card-title"><h3>{{singleevent.subcat}}<br><small>{{singleevent.club}}</small></h3><span class="material-icons close" ng-click="removeevent()"><i>close</i></span></div>
+                                <hr>
+                                <div class="card-content">{{singleevent.description}}</div>
+
+                        </div>
 
                     </div>
+
+
                         <div id="bottom_fade">
 
                         </div>
                         </div>
+                <div class="overlay single-display-{{singleFlag}}"></div>
                 </div>
-            </div>
+
 
     </ul>
 </div>
