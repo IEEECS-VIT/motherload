@@ -975,3 +975,11 @@ li a h5{
     color: red;
     cursor: pointer;
 }
+.events .material-icons{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.events .material-icons{
+    cursor:pointer;
+}
