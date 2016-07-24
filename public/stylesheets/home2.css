@@ -758,7 +758,7 @@ iframe{
     visibility: visible;
 }
 footer{
-    position: fixed;
+    position: relative;
     margin-bottom: 0;
     bottom: 0;
     width: 100%;
