@@ -54,12 +54,7 @@ router.get('/mainhome',function(req,res){
 router.get('/home2',function(req,res){
     res.render('home2');
 });
-router.get('/modal',function(req,res){
-    res.render('modal');
-});
-router.get('/search',function(req,res){
-    res.render('search');
-});
+
 router.get('/mainpage',function(req,res){
     res.render('mainpage');
 });/*
