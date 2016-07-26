@@ -15,7 +15,8 @@
                                     </div>
                             </article>
                         </div>
-                        <div class="col s12 m12 l12 wow fadeInLeft display-events-{{eventsFlag}}" data-wow-duration="1000ms" data-wow-delay="0ms"><a href="/index#/events" ng-click="showCategories()" class="back left-align"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h3 class="center-align" style="color: white">{{categories[index].name}}</h3></div>
+                        <div id="top" class="col s12 m12 l12 wow fadeInLeft display-events-{{eventsFlag}}" data-wow-duration="1000ms" data-wow-delay="0ms"><a href="/index#/events" ng-click="showCategories()" class="back left-align"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h3 class="center-align" style="color: white">{{categories[index].name}}</h3></div>
+                        <a href="/events/#top" class="top-button btn-floating btn-large waves-effect waves-light red z-depth-3 display-events-{{eventsFlag}}"><i class="material-icons">arrow_upward</i></a>
                         <div ng-repeat="event in events" class="col s12 m6 l4 wow fadeInDown display-events-{{eventsFlag}}" data-wow-duration="1000ms" data-wow-delay="0ms">
                             <div class="card events z-depth-2">
                                 <div class="card-heading">
