@@ -83,10 +83,8 @@ controllers.events =function($scope, $http) {
     $scope.showEvent=function(a)
     {
         $scope.singleEvent=a;
-        $scope.heading=null;
+        console.log(a);
         $scope.showSingleEvent=true;
-        $scope.showAllEvents=false;
-        $scope.showWorkshops=false;
     };
     $scope.showEvents=function(i)
     {

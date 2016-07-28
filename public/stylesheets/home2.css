@@ -408,11 +408,13 @@ svg {
     font-size: 10px;
 
 }
-.sponsor
-{
-    width: 70%;
-    margin-top: 5%;
-    margin-left: 20%;
+.subcategory{
+    border-top: 5px solid #6a68ff;
+    border-bottom: 5px solid #6a68ff;
+    height: 80px;
+}
+.subcategory .card-title{
+    margin-top: 20px;
 }
 #events1 .card{
     border-top: 10px solid #6a68ff;
@@ -1014,4 +1016,19 @@ padding-bottom: 10%;
 #events2 h2
 {
     color: white;
+}
+.single-event{
+
+    z-index: 10000;
+    position: fixed;
+    top: 100px;
+}
+.single-event .card{
+    position: fixed;
+    top: 20%;
+    border-radius: 4px;
+    z-index: 10000;
+    margin: 0;
+    overflow: scroll;
+    max-height: 70%;
 }

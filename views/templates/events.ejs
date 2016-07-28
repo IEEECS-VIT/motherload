@@ -24,8 +24,8 @@
 
                         </div>
                         <div class="col s6 m6 l4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="subcat in subCategories" ng-click="showEvents($index)" ng-show="showSubcategories">
-                            <div class="card">
-                                <div class="card-title">{{subcat | uppercase}}</div>
+                            <div class="card subcategory">
+                                <div class="card-title"><h5>{{subcat | uppercase}}<h5></h5></h5></div>
                             </div>
                         </div>
                         <div class="col s6 m6 l4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="event in events | filter: {subCategory: scat}" ng-click="showEvent(event)" ng-show="showAllEvents">
@@ -40,15 +40,17 @@
                             </div>
 
                         </div>
-                        <div class="col s12 m8 l6 offset-m1 offset-l2 wow fadeIn card single-event" data-wow-duration="500ms" data-wow-delay="0" ng-show="showSingleEvent">
-                            <div class="card-title"><h2>{{singleEvent.name}}<small ng-repeat="org in singleEvent.organization">{{org}}</small></h2></div>
-                            <hr>
-                            <div class="card-content">
-                                <p>{{singleEvent.description}}</p>
-                                <h6>{{singleEvent.coordinators.name}}</h6>
-                                <h6>{{singleEvent.coordinators.reg_no}}</h6>
-                                <h6>{{singleEvent.coordinators.phone}}</h6>
-                                <h6>{{singleEvent.coordinators.email}}</h6>
+                        <div class="col s12 m12 l12 wow fadeIn single-event" data-wow-duration="500ms" data-wow-delay="0" ng-show="showSingleEvent">
+                            <div class="card">
+                                <div class="card-title"><h2>{{singleEvent.name}}<small ng-repeat="org in singleEvent.organization">{{org}}</small></h2></div>
+                                <hr>
+                                <div class="card-content">
+                                    <p>{{singleEvent.description}}</p>
+                                    <h6>{{singleEvent.coordinators.name}}</h6>
+                                    <h6>{{singleEvent.coordinators.reg_no}}</h6>
+                                    <h6>{{singleEvent.coordinators.phone}}</h6>
+                                    <h6>{{singleEvent.coordinators.email}}</h6>
+                                </div>
                             </div>
                         </div>
 
