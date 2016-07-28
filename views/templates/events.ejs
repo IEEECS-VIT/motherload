@@ -3,19 +3,42 @@
             <div id="events2">
                 <div class="container">
                     <div class="row">
-                        <div class="col s12 m12 l12 wow fadeInDown" data-wow-duration="700ms" data-wow-delay="0"><h1>{{heading | uppercase}}</h1></div>
-                        <div class="col s6 m6 l6 wow fadeInDown card" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="category in categories" ng-click="showCategory($index)" ng-show="showCategories">
-                            {{category}}
+                        <div class="col s12 m12 l12 wow fadeInDown center" data-wow-duration="700ms" data-wow-delay="0"><h2>{{heading | uppercase}}</h2></div>
+                        <div class="col s6 m6 l6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="category in categories" ng-click="showCategory($index)" ng-show="showCategories">
+                            <div class="card category z-depth-3">
+                                <div class="card-title">
+                                    <h4>{{category | uppercase}}</h4>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col s6 m6 l4 wow fadeInDown card event" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="event in events | filter: {category: 'workshop'}" ng-click="showEvent(event)" ng-show="showWorkshops">
-                            <div class="card-title"><h3>{{event.name}}<br><small ng-repeat="org in event.organization">{{org}}</small><br><small>{{event.category}}</small></h3></div>
+                        <div class="col s6 m6 l4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="event in events | filter: {category: 'workshop'}" ng-click="showEvent(event)" ng-show="showWorkshops">
+                            <div class="card events z-depth-2">
+                                <div class="card-title">
+                                    <h5>{{event.name | uppercase}}
+                                        <br>
+                                        <small ng-repeat="org in event.organization">{{org}}</small>
+                                    </h5>
+                                </div>
+
+                            </div>
 
                         </div>
-                        <div class="col s6 m6 l4 wow fadeInDown card" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="subcat in subCategories" ng-click="showEvents($index)" ng-show="showSubcategories">
-                            {{subcat}}
+                        <div class="col s6 m6 l4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="subcat in subCategories" ng-click="showEvents($index)" ng-show="showSubcategories">
+                            <div class="card">
+                                <div class="card-title">{{subcat | uppercase}}</div>
+                            </div>
                         </div>
-                        <div class="col s6 m6 l4 wow fadeInDown card event" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="event in events | filter: {subCategory: scat}" ng-click="showEvent(event)" ng-show="showAllEvents">
-                            <div class="card-title"><h3>{{event.name}}<br><small ng-repeat="org in event.organization">{{org}}</small><br><small>{{event.subcategory}}</small></h3></div>
+                        <div class="col s6 m6 l4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="event in events | filter: {subCategory: scat}" ng-click="showEvent(event)" ng-show="showAllEvents">
+                            <div class="card events z-depth-2">
+                                <div class="card-title">
+                                    <h5>
+                                        {{event.name | uppercase}}
+                                        <br>
+                                        <small ng-repeat="org in event.organization">{{org}}</small>
+                                    </h5>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="col s12 m8 l6 offset-m1 offset-l2 wow fadeIn card single-event" data-wow-duration="500ms" data-wow-delay="0" ng-show="showSingleEvent">
                             <div class="card-title"><h2>{{singleEvent.name}}<small ng-repeat="org in singleEvent.organization">{{org}}</small></h2></div>
