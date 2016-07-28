@@ -3,34 +3,30 @@
             <div id="events2">
                 <div class="container">
                     <div class="row">
-                        <div class="col s12 l12 m12 wow fadeInRight display-categories-{{categoriesFlag}}" data-wow-duration="2s" data-wow-delay="0ms">
-                            <h1 class="center">Events</h1>
+                        <div class="col s12 m12 l12 wow fadeInDown" data-wow-duration="700ms" data-wow-delay="0"><h1>{{heading | uppercase}}</h1></div>
+                        <div class="col s6 m6 l6 wow fadeInDown card" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="category in categories" ng-click="showCategory($index)" ng-show="showCategories">
+                            {{category}}
                         </div>
-                        <div ng-repeat="category in categories" ng-click="showEvents($index)" class="col s12 m4 l4 wow fadeInDown display-categories-{{categoriesFlag}}" data-wow-duration="2s" data-wow-delay="0ms">
-                            <article class="material-card Indigo">
-                                <h2 class="z-depth-2"><span>{{category.name}}</span><strong><i class="fa fa-fw fa-star"></i>Know More...</strong></h2>
-                                <div class="mc-content">
-                                    <div class="img-container waves-effect waves-light z-depth-3">
-                                        <img src="{{category.url}}"></div></div><div class="mc-footer">
-                                    </div>
-                            </article>
-                        </div>
-                        <div id="top" class="col s12 m12 l12 wow fadeInLeft display-events-{{eventsFlag}}" data-wow-duration="1000ms" data-wow-delay="0ms"><a href="/index#/events" ng-click="showCategories()" class="back left-align"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><h3 class="center-align" style="color: white">{{categories[index].name}}</h3></div>
-                        <a href="/events/#top" class="top-button btn-floating btn-large waves-effect waves-light red z-depth-3 display-events-{{eventsFlag}}"><i class="material-icons">arrow_upward</i></a>
-                        <div ng-repeat="event in events" class="col s12 m6 l4 wow fadeInDown display-events-{{eventsFlag}}" data-wow-duration="1000ms" data-wow-delay="0ms">
-                            <div class="card events z-depth-2">
-                                <div class="card-heading">
-                                    <h5>{{event.subcat}}<br><small>{{event.club}}</small><span class="material-icons" ng-click="showevent($index)"><i style="font-style: normal">more_vert</i> </span></h5>
+                        <div class="col s6 m6 l4 wow fadeInDown card event" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="event in events | filter: {category: 'workshop'}" ng-click="showEvent(event)" ng-show="showWorkshops">
+                            <div class="card-title"><h3>{{event.name}}<br><small ng-repeat="org in event.organization">{{org}}</small><br><small>{{event.category}}</small></h3></div>
 
-                                </div>
+                        </div>
+                        <div class="col s6 m6 l4 wow fadeInDown card" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="subcat in subCategories" ng-click="showEvents($index)" ng-show="showSubcategories">
+                            {{subcat}}
+                        </div>
+                        <div class="col s6 m6 l4 wow fadeInDown card event" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="event in events | filter: {subCategory: scat}" ng-click="showEvent(event)" ng-show="showAllEvents">
+                            <div class="card-title"><h3>{{event.name}}<br><small ng-repeat="org in event.organization">{{org}}</small><br><small>{{event.subcategory}}</small></h3></div>
+                        </div>
+                        <div class="col s12 m8 l6 offset-m1 offset-l2 wow fadeIn card single-event" data-wow-duration="500ms" data-wow-delay="0" ng-show="showSingleEvent">
+                            <div class="card-title"><h2>{{singleEvent.name}}<small ng-repeat="org in singleEvent.organization">{{org}}</small></h2></div>
+                            <hr>
+                            <div class="card-content">
+                                <p>{{singleEvent.description}}</p>
+                                <h6>{{singleEvent.coordinators.name}}</h6>
+                                <h6>{{singleEvent.coordinators.reg_no}}</h6>
+                                <h6>{{singleEvent.coordinators.phone}}</h6>
+                                <h6>{{singleEvent.coordinators.email}}</h6>
                             </div>
-                        </div>
-                        <div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 single-display-{{singleFlag}} wow fadeIn card single z-depth-2" data-wow-duration="1s" data-wow-delay="0ms">
-
-                                <div class="card-title"><h3>{{singleevent.subcat}}<br><small>{{singleevent.club}}</small></h3><span class="material-icons close" ng-click="removeevent()"><i style="font-style: normal">close</i></span></div>
-                                <hr>
-                                <div class="card-content">{{singleevent.description}}</div>
-
                         </div>
 
                     </div>
@@ -41,7 +37,7 @@
                         </div>
 </div>
                         </div>
-                <div class="overlay single-display-{{singleFlag}}"></div>
+                <div class="overlay" ng-show="showSingleEvent"></div>
                 </div>
 
 

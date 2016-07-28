@@ -24,6 +24,8 @@ catch (err)
         throw "Failure to compile run time requirement: bcrypt(js)";
     }
 }
+var app = express();
+app.use(require('cors')());
 var router = express.Router();
 
 /* GET home page. */
