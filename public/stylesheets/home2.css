@@ -514,9 +514,15 @@ canvas{
 .graphics{
     position: fixed;
     width: 100%;
-    height: 55%;
+    height: 80%;
     background-color: #3f51b5;
     z-index: -1;
+}
+.graphics img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
 }
 nav
 {
@@ -1031,6 +1037,9 @@ h5{
 }
 .category .card-title h4{
     font-size: 1em;
+}
+#events2{
+    margin-bottom: 90px;
 }
 #events2 h2
 {
