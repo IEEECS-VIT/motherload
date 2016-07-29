@@ -760,7 +760,7 @@ iframe{
     visibility: visible;
 }
 footer{
-    position: relative;
+    position: fixed;
     margin-bottom: 0;
     bottom: 0;
     width: 100%;
@@ -945,11 +945,19 @@ padding-bottom: 10%;
     overflow: visible;
 }
 .back{
-    position: fixed;
+    position: absolute;
     left: 4px;
+    padding-left: 5px;
     top: 100px;
     font-size: larger;
     color: white;
+    cursor: pointer;
+}
+h5{
+    font-size: 80%;
+}
+#events2 .card-content h5{
+    font-size: 80%;
 }
 .single-display-true{
     display: block;
@@ -988,6 +996,12 @@ padding-bottom: 10%;
     right: 5px;
     color: red;
     cursor: pointer;
+
+}
+.close i
+{
+    font-style: normal;
+    font-size: 1em;
 }
 .events .material-icons{
     position: absolute;
@@ -1002,16 +1016,21 @@ padding-bottom: 10%;
     bottom: 20px;
     right: 20px;
 }
+.button-collapse i{
+    margin-left: 5px;
+}
 .category
 {
     margin-top: 70px;
     border-top: solid rgb(69, 89, 201) 20px;
     border-bottom: solid rgb(69, 89, 201) 20px;
-    height: 200px;
     text-align: center;
 }
 .category .card-title{
-    margin: 50px;
+    margin: 5%;
+}
+.category .card-title h4{
+    font-size: 1em;
 }
 #events2 h2
 {
@@ -1031,4 +1050,43 @@ padding-bottom: 10%;
     margin: 0;
     overflow: scroll;
     max-height: 70%;
+    width: 80%;
+}
+.single-event h6{
+    color: black;
+    text-align: left;
+    font-size: large;
+    margin: 0;
+
+}
+.single-event .card-title{
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.single-event .card-title h3{
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.single-event .card-title small
+{
+    font-size: large;
+    color: grey;
+}
+.single-event img{
+    padding-right: 10px;
+}
+.single-event .card-content p{
+    text-align: justify;
+}
+.single-event .card-content h5{
+    text-align: left;
+}
+.single-event .card-content h4{
+    text-align: left;
+    font-size: 1.5em;
+}
+#event2 .card{
+    cursor: pointer;
 }

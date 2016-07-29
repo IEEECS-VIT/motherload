@@ -9,7 +9,7 @@ controllers.events =function($scope, $http) {
     $scope.subCategories = [];
     $scope.showCategories = true;
     $scope.categorySelected='';
-    $scope.heading='Events';
+    $scope.heading='Categories';
     $scope.array=[];
     $scope.showSingleEvent=false;
     $scope.showWorkshops=false;
@@ -94,6 +94,19 @@ controllers.events =function($scope, $http) {
         $scope.heading=$scope.subCategories[i];
         $scope.scat=$scope.subCategories[i];
         $scope.showSubcategories=false;
+    };
+    $scope.hideEvent=function(){
+        $scope.showSingleEvent=false;
+
+    };
+    $scope.backToCategories=function(){
+        $scope.showWorkshops=false;
+        $scope.showCategories=true;
+        $scope.showSubcategories=false;
+    };
+    $scope.backToSubcategories=function(){
+        $scope.showSubcategories=true;
+        $scope.showAllEvents=false;
     }
 };
 controllers.team =function($scope){
