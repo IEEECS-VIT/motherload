@@ -1042,15 +1042,37 @@ h5{
     position: fixed;
     top: 100px;
 }
-.single-event .card{
-    position: fixed;
-    top: 20%;
-    border-radius: 4px;
-    z-index: 10000;
-    margin: 0;
-    overflow: scroll;
-    max-height: 70%;
-    width: 80%;
+@media screen and (min-width: 993px){
+    .single-event .card{
+        position: fixed;
+        border-radius: 4px;
+        z-index: 10000;
+        padding: 5px;
+        top: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        overflow: scroll;
+        height: 70%;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .single-event .card{
+        position: fixed;
+        border-radius: 4px;
+        z-index: 10000;
+        padding: 5px;
+        top: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 15%;
+        margin-top: 20%;
+        overflow: scroll;
+        height: 70%;
+        width: 80%;
+    }
 }
 .single-event h6{
     color: black;
@@ -1086,7 +1108,4 @@ h5{
 .single-event .card-content h4{
     text-align: left;
     font-size: 1.5em;
-}
-#event2 .card{
-    cursor: pointer;
 }
