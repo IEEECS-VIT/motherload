@@ -30,7 +30,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home2');
+  res.render('templates/index');
 });
 router.get('/gallery', function(req, res, next) {
     res.render('gallery');

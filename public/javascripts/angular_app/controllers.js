@@ -17,6 +17,7 @@ controllers.events =function($scope, $http) {
     $scope.showSubcategories=false;
     $http.get("http://gravitas16-portals.herokuapp.com/api/events/name?q=").then(function (response) {
         $scope.mydata = response.data;
+        console.log(response.data);
         $scope.events = $scope.mydata.events;
         for (var i = 0; i < $scope.events.length; i++) {
             var cat = $scope.events[i].category;
@@ -39,6 +40,7 @@ controllers.events =function($scope, $http) {
             }
 
         }
+        console.log($scope.categories);
         for (var i = 0; i < $scope.events.length; i++) {
             if ($scope.events[i].subCategory != null) {
                 var scat = $scope.events[i].subCategory;
@@ -61,6 +63,7 @@ controllers.events =function($scope, $http) {
                 }
             }
         }
+        console.log($scope.subCategories);
 
     });
     $scope.showCategory=function(i)
