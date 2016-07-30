@@ -11,7 +11,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="back" ng-show="showWorkshops" ng-click="backToCategories()"><img src="/images/back-arrow.svg" width="10%" height="10%"/></div>
+                        <div class="back" ng-show="showWorkshops" ng-click="backToCategories()"><i class="material-icons">arrow_back</i></div>
                         <div class="col s6 m6 l4 wow fadeInDown black-text" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="event in events | filter: {category: 'workshop'}" ng-click="showEvent(event)" ng-show="showWorkshops">
                             <div class="card events z-depth-2">
                                 <div class="card-title">
@@ -24,13 +24,13 @@
                             </div>
 
                         </div>
-                        <div class="back" ng-show="showSubcategories" ng-click="backToCategories()"><img src="/images/back-arrow.svg" width="10%" height="10%"/></div>
+                        <div class="back" ng-show="showSubcategories" ng-click="backToCategories()"><i class="material-icons">arrow_back</i></div>
                         <div class="col s6 m6 l4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="subcat in subCategories" ng-click="showEvents($index)" ng-show="showSubcategories">
                             <div class="card subcategory">
                                 <div class="card-title"><h5  class="black-text">{{subcat | uppercase}}</h5></div>
                             </div>
                         </div>
-                        <div class="back" ng-show="showAllEvents" ng-click="backToSubcategories()"><img src="/images/back-arrow.svg" width="10%" height="10%"/></div>
+                        <div class="back" ng-show="showAllEvents" ng-click="backToSubcategories()"><i class="material-icons">arrow_back</i></div>
                         <div class="col s6 m6 l4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="event in events | filter: {subCategory: scat}" ng-click="showEvent(event)" ng-show="showAllEvents">
                             <div class="card events z-depth-2">
                                 <div class="card-title">
