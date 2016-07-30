@@ -67,7 +67,7 @@ controllers.events =function($scope, $http) {
     {
         $scope.categorySelected=$scope.categories[i];
         $scope.showCategories=false;
-        $scope.heading=$scope.categories[i];
+        $scope.heading=titleCase($scope.categories[i]);
         if(i==0)
         {
             $scope.showWorkshops=true;
@@ -83,7 +83,6 @@ controllers.events =function($scope, $http) {
     $scope.showEvent=function(a)
     {
         $scope.singleEvent=a;
-        console.log(a);
         $scope.showSingleEvent=true;
     };
     $scope.showEvents=function(i)
@@ -91,7 +90,7 @@ controllers.events =function($scope, $http) {
         $scope.showAllEvents=true;
         $scope.showWorkshops=false;
         $scope.showSingleEvent=false;
-        $scope.heading=$scope.subCategories[i];
+        $scope.heading=titleCase($scope.subCategories[i]);
         $scope.scat=$scope.subCategories[i];
         $scope.showSubcategories=false;
     };
@@ -103,12 +102,18 @@ controllers.events =function($scope, $http) {
         $scope.showWorkshops=false;
         $scope.showCategories=true;
         $scope.showSubcategories=false;
+        $scope.heading='Categories';
     };
     $scope.backToSubcategories=function(){
         $scope.showSubcategories=true;
         $scope.showAllEvents=false;
+        $scope.heading='Events';
     }
 };
+function titleCase(x){
+    var word = x.charAt(0).toUpperCase()+ x.slice(1);
+    return word;
+}
 controllers.team =function($scope){
     $scope.chief = [
         {
