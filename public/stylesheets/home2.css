@@ -238,7 +238,7 @@ a.dock-item2 {
     font-weight: 400;
     font-family: "Roboto", sans-serif;
 	width: 70px;
-	color: #525252;
+	color: #222222;
 	bottom: 0px;
     margin-left: 10px;
 	position: absolute;
@@ -913,7 +913,7 @@ li a h5{
         z-index: 99;
         position: fixed;
         bottom: 0;
-        background:linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0,0,0,0) 100%);
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.6) 20%, rgba(0,0,0,0) 80%);
     }
 }
 @media screen and (max-width: 599px)
