@@ -523,7 +523,7 @@ canvas{
 }
 nav
 {
-    background-color: transparent;
+    background-color: white;
     z-index: 10;
 }
 .material-card{
@@ -1138,6 +1138,8 @@ h5{
     font-size: 1.5em;
 }
 .dock-item2 img:hover{
-    border-radius: 100%;
-    border-width: 3px;
+    border-bottom: 3px solid white;
+
+
+
 }
