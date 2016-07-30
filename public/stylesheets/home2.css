@@ -1,3 +1,4 @@
+
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -178,7 +179,7 @@ h1 {
     transition: all 0.3s 1s ease-out;
 }
 body {
-    /**background: url('/images/homeback.jpg');**/
+    /*background: url('/images/vit.png');*/
     /*background-color: #f57951;*/
 	/*font: 16em/1 Arial;*/
 	-moz-background-size: cover;
@@ -510,8 +511,8 @@ canvas{
 .graphics{
     position: fixed;
     width: 100%;
-    height: 80%;
-    background-color: #3f51b5;
+    height: 100%;
+    /*background-color: #3f51b5;*/
     z-index: -1;
 }
 .graphics img{
