@@ -30,7 +30,7 @@
                                 <div class="card-title"><h5  class="black-text">{{subcat | uppercase}}</h5></div>
                             </div>
                         </div>
-                        <div class="back" ng-show="showAllEvents" ng-click="backToSubcategories()"><i class="material-icons">arrow_back</i></div>
+                        <div class="back" ng-show="showAllEvents" ng-click="backToSubcategories()"><i class="material-icons" style="color: #3F51B5;">arrow_back</i></div>
                         <div class="col s6 m6 l4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="event in events | filter: {subCategory: scat}" ng-click="showEvent(event)" ng-show="showAllEvents">
                             <div class="card events z-depth-2">
                                 <div class="card-title">
