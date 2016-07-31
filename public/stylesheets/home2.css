@@ -508,6 +508,10 @@ canvas{
 #energy-text{
     font: 16em/1 Roboto;
 }
+.tool
+{
+    color: black;
+}
 .graphics{
     position: fixed;
     width: 100%;
