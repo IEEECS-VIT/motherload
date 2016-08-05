@@ -963,7 +963,7 @@ padding-bottom: 10%;
 .back{
     position: absolute;
     top: 100px;
-    color: b lack;
+    color: white;
     cursor: pointer;
 }
 @media screen and (min-width: 600px){
@@ -972,6 +972,8 @@ padding-bottom: 10%;
         width: 10%;
         height: 10%;
         padding: 10px;
+        color: white;
+        cursor: pointer;
     }
 
 }
@@ -982,7 +984,9 @@ padding-bottom: 10%;
         margin-top: 10px;
         width: 7%;
         height: 7%;
+        color: white;
         padding-left: 1px;
+        cursor: pointer;
     }
 }
 h5{
@@ -990,6 +994,9 @@ h5{
 }
 #events2 .card-content h5{
     font-size: 80%;
+}
+#events2 .card{
+    cursor: pointer;
 }
 .single-display-true{
     display: block;
