@@ -15,7 +15,7 @@ controllers.events =function($scope, $http) {
     $scope.showWorkshops=false;
     $scope.showAllEvents=false;
     $scope.showSubcategories=false;
-    $http.get("http://gravitas16-portals.herokuapp.com/api/events/name?q=").then(function (response) {
+    $http.get("http://gravitas-api.herokuapp.com/api/events/name?q=").then(function (response) {
         $scope.mydata = response.data;
         console.log(response.data);
         $scope.events = $scope.mydata.events;
