@@ -185,25 +185,16 @@ closeOnClick: true
             scope: SCOPES,
             immediate: true
         };
-        var check = 0;
-        while(!check) {
-            if (gapi.auth) {
-                check = 1;
-                console.log(gapi);
-                gapi.auth.authorize(authData, function (response) {
-                    // var authButton = document.getElementById('auth-button');
-                    if (response.error) {
-                        // authButton.hidden = false;
-                    }
-                    else {
-                        // authButton.hidden = true;
-                        queryAccounts();
-                    }
-                });
-            } else {
-                check = 0;
+        gapi.auth.authorize(authData, function(response) {
+           // var authButton = document.getElementById('auth-button');
+            if (response.error) {
+               // authButton.hidden = false;
             }
-        }
+            else {
+               // authButton.hidden = true;
+                queryAccounts();
+            }
+        });
     }
 
 
@@ -313,6 +304,7 @@ closeOnClick: true
     }
 
     // Add an event listener to the 'auth-button'.
+    authorize();
     authorize();
 </script>
 
