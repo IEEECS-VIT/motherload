@@ -1,611 +1,156 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta name="description" content="Gravitas 2015 was an international Technical fest. This page contains glimpses of the fest.">
-    <meta name="keywords" content="gravitas | memories | gravitas15 | 2015 | technical | fest | festival | college | engineering | graVITas16 | 2016 | VIT University | Technical Fest | Vellore | 632014">
-    <meta content="index, follow" name="robots" />
-    <meta content="index, follow" name="googlebot" />
+<head>
     <meta charset="utf-8">
-    <link href="/images/favicon-96x96.png" rel="icon" />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-    <title>graVITas'16 | VIT University | Technical Fest | Vellore - 632014</title>
-    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-    <link href="/stylesheets/zmd.hierarchical-display.css" rel="stylesheet">
-    <link href="/stylesheets/material-cards.css" rel="stylesheet">
-    <link href="/bower/materialize/dist/css/materialize.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/stretchy-navigation.css" type="text/css">
-    <link href="/stylesheets/home2.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="stylesheets/animate.min.css">
-    <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css" type="text/css">
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-78645903-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
+    <title>Hello Analytics - A quickstart guide for JavaScript</title>
 </head>
 <body>
-<div id="loader-wrapper">
-    <div id="loader">
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div>
-</div>
-<div id="whole">
-<div class="graphics">
-    <h1 style="display: none">gravitas 16</h1>
-</div>
-<div class="navbar-fixed">
-    <nav>
-    <div class="nav-wrapper z-depth-3">
-        <div class="brand-logo col m3 l3 s4" id="gravitas-logo"><a href="#"> <img src="/images/gravitas.png"/></a></div>
 
-        <ul class="right large-visible">
+<button id="auth-button" hidden>Authorize</button>
 
-            <li><a href="/images/gravitas16-brochure.pdf" target="_blank" style="font-size: 80%;"> graVITas E-Brochure</a></li>
-            <li><div id="vit"><a href="http://www.vit.ac.in"  target="_blank"> <img src="/images/vitlogowhitepng.png" align="center" style=""/></a></div></li>
+<h1>Hello Analytics</h1>
 
-        </ul>
-
-        <a href="#" data-activates="mobile-demo" class="button-collapse large-not-visible"><i class="material-icons">menu</i></a>
-        <ul class="side-nav large-not-visible" id="mobile-demo">
-            <li class="waves-effect waves-teal" ><a href="/images/gravitas16-brochure.pdf" target="_blank"><h5 style="font-size: 125%"> graVITas E-Brochure</h5></a></li>
-            <li class="waves-effect waves-teal"><a href="#" id="home2" style="padding-left: 0"><img class="left" src="/images/home.svg" style="margin-top: 18px; margin-right: 5px; margin-left: 20px;float: left;width: 30px;height: 30px;vertical-align: baseline;"><p style="margin-top: 0">Home</p></a></li>
-            <li class="waves-effect waves-teal"><a href="#aboutmodal" id="about2" class="modal-trigger"><img class="left" src="/images/info.svg"><p>About</p></a></li>
-            <li class="waves-effect waves-teal"><a href="#" id="events2" style="padding-left: 0"><img class="left" src="/images/events.svg" style="margin-top: 18px; margin-right: 5px; margin-left: 20px;float: left;width: 30px;height: 30px;vertical-align: baseline;"><p style="margin-top: 0">Events</p></a></li>
-            <li class="waves-effect waves-teal"><a href="#registermodal" class="modal-trigger"><img class="left" src="/images/register.svg"><p>Register</p></a></li>
-            <li class="waves-effect waves-teal"><a href="#sponsormodal" class="modal-trigger"><img class="left" src="/images/sponsors.svg"><p>Sponsors</p></a></li>
-            <li class="waves-effect waves-teal"><a href="#teammodal" class="modal-trigger"><img class="left" src="/images/team.svg"><p>Team graVITas</p></a></li>
-            <li class="waves-effect waves-teal"><a href="#contactmodal" class="modal-trigger"><img class="left" src="/images/contact.svg"><p>Contact</p></a></li>
-
-        </ul>
-    </div>
-</nav>
-    </div>
-
-
-<div id="events1">
-
-</div>
-
-<div id="schedulemodal" class="modal">
-    <div class="modal-content">
-        <h4 align="center">Schedule</h4>
-        <hr>
-        <p>Some Schedule</p>
-    </div>
-
-</div>
-<div id="aboutmodal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="about">X</span>
-        <h4 align="center">graVITas '16</h4>
-        <hr />
-        <p style="text-align: justify">
-            graVITas is VIT University’s annual knowledge carnival which aims to empower the young minds by giving them a national platform to showcase their genius and innovation. The Technical festival is spread over 3 days with over 100 events, 50 workshops with over 30,000 footfalls. Started in 2009 by a group of enthusiastic VITians, graVITas now in its 8th edition has become the largest technical festival of its kind. Each year graVITas bring in a new theme, thus providing the eager participants a new experience every time. “Sustainable social innovations” is the theme for graVITas’16 were students will showcase various ideas, lend a framework to transform latent concepts into viable technical solutions to real world problems faced by our society.  </p>
-
-        <h4 align="center">Theme</h4>
-
-        <hr>
-        <p style="text-align: justify">This time graVITas 2016 brings along a surge of innovation with itself because the need of the hour is to create something that is not only new but also sustainable and implementable for our needs; for India’s needs. The theme for graVITas 2016 is “Sustainable social innovations”. We define social innovation as the development and implementation of new ideas to meet social needs. These innovations are driven by social values as primary imperative rather than private financial appropriation and the products developed eliminate harmful impacts on ecological systems, human health and communities.  We wish to empower the youth by channeling their ideas for the overall good of the society and thus graVITas’ 16 is a stepping stone for all such innovations and innovators. </p>
-        <br>
-        <h4>About VIT</h4>
-        <hr>
-        <p style="text-align: justify">Founded in 1984 as Vellore Engineering College, the institute was declared as a University in recognition of its academic excellence by the Ministry of Human Resources Development, Government of India in 2001 and was renamed VIT University. Established with the aim of providing world-class higher education, the multicultural atmosphere, best student to teacher ratio and an incomparable eco-friendly infrastructure VIT University has become the most favored destination of students for holistic improvement. VIT is the first educational institution in India to get international accreditations for its programs. To fulfill the vision of the founder and chancellor, Dr. G. Viswanathan, VIT today comprises nine constituent schools and interdisciplinary centers offering graduate, post graduate and research programs up to Ph.D. level. With each year our relentless pursuit of excellence through research and innovation motivates and guides us towards greater achievements.</p>
-        <br>
-        <h4 align="center">Statistics</h4>
-        <hr>
-        <p>400+ Colleges</p>
-        <p>100+ Events</p>
-        <p>50+ Workshops</p>
-        <p>40+ Countries</p>
-    </div>
-
-</div>
-<div id="sponsormodal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="sponsor">X</span>
-        <h3 align="center">Sponsors</h3>
-        <hr>
-        <br>
-        <h4>Major Sponsors</h4>
-        <hr>
-        <br>
-        <div class="row" style="text-align: center">
-            <br>
-            <div class="col s12 ">
-                <img class=" sp responsive-img" src="/images/schiender.png"/>
-            </div>
-            <div class="col s12 ">
-                <img class="sp responsive-img" src="/images/microsoft.png"/>
-            </div>
-            <div class="col s12">
-                <img class=" sp responsive-img" src="/images/ebay.png"/>
-            </div>
-
-    </div>
-
-</div>
-    </div>
-<div id="contactmodal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="contact">X</span>
-        <h3 align="center"> Contact Us</h3>
-        <hr>
-        <br>
-        <h4 align="center">Email-Us</h4>
-        <hr>
-        <p align="center">info@vitgravitas.com</p>
-        <p align="center">convenor.gravitas16@vit.ac.in</p>
-        </div>
-        <div class="modal-footer">
-            <div class="row social" style="text-align: center">
-                <h4 align="center">Social Media</h4><hr><br>
-                <div class="col s12 m3 l3">
-                   <a href="https://www.facebook.com/graVITasVITU"  target="_blank"> <img class="social responsive-img" src="/images/facebook.svg" style="margin-left: 2%"/></a><br>
-                    /graVITasVITU
-                </div>
-
-              <div class="col s12 m3 l3">
-                    <a href="https://www.instagram.com/vitgravitas" target="_blank"> <img class="social responsive-img" src="/images/instagram.svg"/></a>
-<br>/vitgravitas
-                </div>
-
-                <div class="col s12 m3 l3">
-                    <a href="https://www.twitter.com/gravitas_vit" target="_blank"><img class="social responsive-img" src="/images/twitter.svg"/></a>
-<br>/gravitas_vit
-                </div>
-                <div class="col s12 m3 l3">
-                    <img class="social responsive-img" src="/images/whatsapp.svg"/>
-<br>+91-9424482006
-                </div>
-
-
-            </div>
-        </div>
-
-    </div>
-
-<div id="teammodal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="team">X</span>
-        <h4 align="center">Team graVITas'16</h4>
-        <hr>
-        <div id="team">
-            <br>
-            <div class="row">
-                <div class='col s12 m4 l4 offset-l4 offset-m4'>
-                    <h4>Chief Patron</h4>
-                    <img class="circle responsive-img" src="/images/GV.jpg"/>
-                    <p>Dr. G. Viswanathan<br>Chancellor & Founder<br>VIT University</p>
-                </div>
-            </div>
-            <hr>
-            <br>
-            <div class="row">
-                <h4 align="center">Patrons</h4>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/ShankarV.jpg"/>
-                    <p>Mr. Sankar Viswanathan<br>Vice President<br>VIT University</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/ShekarV.jpg"/>
-                    <p>Dr. Sekar Viswanathan<br>Vice President<br>VIT University</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/GVS.jpg"/>
-                    <p>Mr. G. V. Selvam<br>Vice President<br>VIT University</p>
-                </div>
-            </div>
-            <hr>
-            <br>
-            <div class="row">
-                <h4>Co-Patrons</h4>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/AAS.png"/>
-                    <p>Dr. Anand A Samuel<br>Vice Chancellor<br>VIT University</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/VR.jpg"/>
-                    <p>Dr. V. Raju<br>Pro-Vice Chancellor<br>VIT University</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/SN.png"/>
-                    <p>Dr. S. Narayanan<br>Pro-Vice Chancellor<br>VIT University</p>
-                </div>
-            </div>
-            <hr>
-            <br>
-            <div class="row">
-                <h4 align="center">Convenors</h4>
-                <div class="col s12 m3 l3">
-                    <img class="circle responsive-img" src="/images/SKK.jpg"/>
-                    <p>Dr. S. Karthi</p>
-                </div>
-                <div class="col s12 m3 l3">
-                    <img class="circle responsive-img" src="/images/naiju.jpg"/>
-                    <p>Dr. C. D. Naiju</p>
-                </div>
-                <div class="col s12 m3 l3">
-                    <img class="circle responsive-img" src="/images/ramesh.jpg"/>
-                    <p>Dr. K. Ramesh Babu</p>
-                </div>
-                <div class="col s12 m3 l3">
-                    <img class="circle responsive-img" src="/images/sudhakar.jpg"/>
-                    <p>Dr. N. Sudhakar</p>
-                </div>
-            </div>
-            <hr>
-            <br>
-            <div class="row">
-                <h4 align="center">Faculty Coordinators</h4>
-
-            </div>
-            <div class="row">
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/senthilkumar.PNG"/>
-                    <p>Prof. Senthil Kumar M </p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/bala.PNG"/>
-                    <p>Prof.Balasubramanian V</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/saravananaguru.PNG"/>
-                    <p>Prof.Saravananaguru RA  K</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/prabhu.PNG"/>
-                    <p>Prof.Prabhu K R</p>
-                </div>
-
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/rameshn.jpg"/>
-                    <p>Prof. Ramesh N</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/sunthi.PNG"/>
-                    <p>Prof.Suthindhiran K</p>
-                </div>
-                 </div>
-            <div class="row">
-
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/jaya.PNG"/>
-                    <p>Prof.Jayakumar S</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/bhaskar.PNG"/>
-                    <p>Prof. Bhaskar Das</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/mahesh.PNG"/>
-                    <p>Prof.Mahesh Ganesapillai</p>
-                </div>
-
-            </div>
-            <div class="row">
-                <!--<div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/saravananaguru.PNG"/>
-                    <p>Prof.Saravananaguru RA  K</p>
-                </div>-->
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/sasikumar.PNG"/>
-                    <p>Prof.Sasikumar P</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/jayaram.PNG"/>
-                    <p>Prof.Jayaram Reddy A</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/saravanan.PNG"/>
-                    <p>Prof.Saravanan B</p>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/joel.PNG"/>
-                    <p>Prof. Joel J</p>
-                </div>
-
-
-
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/kishore.PNG"/>
-                    <p>Prof.Kishore V Krishnan</p>
-                </div>
-                <div class="col s12 m4 l4">
-                    <img class="circle responsive-img" src="/images/karthikeyan.jpg"/>
-                    <p>Prof.Karthikeyan J</p>
-                </div>
-
-            </div>
-
-
-        </div>
-
-        </div>
-    </div>
-
-</div>
-<div id="guestsmodal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="guests">X</span>
-        <h4 align="center">Guests</h4>
-        <hr>
-        <p>guests this gravitas are</p>
-    </div>
-
-</div>
-<div id="registermodal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="register">X</span>
-        <h4 align="center">Register</h4>
-        <hr>
-        <br>
-        <!--<iframe src="https://gravitas16-portals.herokuapp.com/external/register" style=" width:100%; border: none;"></iframe>-->
-        <p style="text-align:center">Registrations will open soon!</p>
-    </div>
-
-</div>
-
-<div id="home">
-<div class="content">
-    <div class="gravitas">
-        <ul class="gravitas-section " >
-            <li class="cards" id="first" >
-
-                <svg viewBox="0 0 800 600" class="card-gravitas z-depth-2">
-                    <symbol id="s-text">
-                        <text text-anchor="middle"
-                              x="50%"
-                              y="35%"
-                              class="text--line"
-                                >
-                            graVITas
-                        </text>
-                        <text text-anchor="middle"
-                              x="50%"
-                              y="68%"
-                              class="text--line2"
-                                >
-                            2016
-                        </text>
-
-                    </symbol>
-
-                    <g class="g-ants">
-                        <use xlink:href="#s-text"
-                             class="text-copy" id="gravitas"></use>
-                        <use xlink:href="#s-text"
-                             class="text-copy" id="gravitas"></use>
-                        <use xlink:href="#s-text"
-                             class="text-copy" id="gravitas"></use>
-                        <use xlink:href="#s-text"
-                             class="text-copy" id="gravitas"></use>
-                        <use xlink:href="#s-text"
-                             class="text-copy" id="gravitas"></use>
-                    </g>
-
-
-                </svg>
-            </li>
-            <li class="cards large-visible">
-                <svg viewBox="0 0 1000 600" class="card-gravitas z-depth-2">
-                    <symbol id="g-text">
-                        <text text-anchor="middle"
-                              x="50%"
-                              y="25%"
-                              class="text--line"
-                                >
-                            Reduce
-                        </text>
-                        <text text-anchor="middle"
-                              x="50%"
-                              y="45%"
-                              class="text--line2"
-                                >
-                            Reuse
-                        </text>
-                        <text text-anchor="middle"
-                              x="50%"
-                              y="65%"
-                              class="text--line2"
-                                >
-                            Recycle
-                        </text>
-
-                    </symbol>
-
-                    <g class="g-ants">
-                        <use xlink:href="#g-text"
-                             class="text-copy" id="reduce"></use>
-                        <use xlink:href="#g-text"
-                             class="text-copy" id="reduce"></use>
-                        <use xlink:href="#g-text"
-                             class="text-copy" id="reduce"></use>
-                        <use xlink:href="#g-text"
-                             class="text-copy" id="reduce"></use>
-                        <use xlink:href="#g-text"
-                             class="text-copy" id="reduce"></use>
-                    </g>
-
-
-                </svg>
-            </li>
-            <li class="cards large-visible">
-                <svg viewBox="0 0 800 600" class="card-gravitas z-depth-2">
-                    <symbol id="water-text">
-                        <text text-anchor="middle"
-                              x="50%"
-                              y="35%"
-                              class="text--line"
-                                >
-                           Save
-                        </text>
-                        <text text-anchor="middle"
-                              x="50%"
-                              y="68%"
-                              class="text--line2"
-                                >
-                            Water
-                        </text>
-
-                    </symbol>
-
-                    <g class="g-ants">
-                        <use xlink:href="#water-text"
-                             class="text-copy" id="water"></use>
-                        <use xlink:href="#water-text"
-                             class="text-copy" id="water"></use>
-                        <use xlink:href="#water-text"
-                             class="text-copy" id="water"></use>
-                        <use xlink:href="#water-text"
-                             class="text-copy" id="water"></use>
-                        <use xlink:href="#water-text"
-                             class="text-copy" id="water"></use>
-                    </g>
-
-
-                </svg>
-            </li>
-            <li class="cards large-visible">
-                <svg viewBox="0 0 800 600" class="card-gravitas z-depth-2 ">
-                    <symbol id="energy-text">
-                        <text text-anchor="middle"
-                              x="50%"
-                              y="35%"
-                              class="text--line"
-                                >
-                            Conserve
-                        </text>
-                        <text text-anchor="middle"
-                              x="50%"
-                              y="68%"
-                              class="text--line2"
-                                >
-                            Energy
-                        </text>
-
-                    </symbol>
-
-                    <g class="g-ants">
-                        <use xlink:href="#energy-text"
-                             class="text-copy" id="energy"></use>
-                        <use xlink:href="#energy-text"
-                             class="text-copy" id="energy"></use>
-                        <use xlink:href="#energy-text"
-                             class="text-copy" id="energy"></use>
-                        <use xlink:href="#energy-text"
-                             class="text-copy" id="energy"></use>
-                        <use xlink:href="#energy-text"
-                             class="text-copy"id="energy"></use>
-                    </g>
-
-
-                </svg>
-            </li>
-
-
-        </ul>
-        <div class="gallery-pagination large-visible">
-            <button class="gallery-pagination-dot" id="b1"></button>
-            <button class="gallery-pagination-dot" id="b2"></button>
-            <button class="gallery-pagination-dot" id="b3"></button>
-            <button class="gallery-pagination-dot" id="b4"></button>
-
-        </div>
-    </div>
-</div>
-</div>
-<div class="dock large-visible" id="dock2">
-    <div class="dock-container2">
-        <a class="dock-item2" href="#" id="home"><span>HOME</span><img src="/images/home.svg" alt="home" /></a>
-        <a class="modal-trigger dock-item2" href="#aboutmodal" id="about"><span>ABOUT</span><img src="/images/info.svg" alt="contact" /></a>
-        <a class="dock-item2" href="#" id="events"><span>EVENTS</span><img src="/images/events.svg" alt="events" /></a>
-       <a class="modal-trigger dock-item2" href="#registermodal" id="register"><span>REGISTER</span><img src="/images/register.svg" alt="Register" /></a>
-        <a class="modal-trigger dock-item2" href="#sponsormodal" id="sponsors"><span>SPONSORS</span><img src="/images/sponsors.svg" alt="sponsors" /></a>
-        <a class="modal-trigger dock-item2" href="#teammodal" id="tg"><span>TEAM GRAVITAS</span><img src="/images/team.svg" alt="links"/></a>
-        <a class="modal-trigger dock-item2" href="#contactmodal" id="cpg"><span>CONTACT</span><img src="/images/contact.svg" alt="rss" /></a>
-
-    </div>
-</div>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters">
-    <defs>
-        <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
-        </filter>
-    </defs>
-</svg>
-<footer class="page-footer large-not-visible">
-    <div class="footer-copyright">
-        <div class="container">
-            © 2016 graVITas
-            <a class="grey-text text-lighten-4 right" href="https://www.vit.ac.in"><img src="/images/vitlogowhitepng.png" align="center"/></a>
-        </div>
-    </div>
-</footer>
-    </div>
-
-<!--dock menu JS options -->
-<script type="text/javascript" src="/bower/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript">
-
-    $(document).ready(
-            function()
-            {
-                $('#dock').Fisheye(
-                        {
-                            maxWidth: 50,
-                            items: 'a',
-                            itemsText: 'span',
-                            container: '.dock-container',
-                            itemWidth: 40,
-                            proximity: 90,
-                            halign : 'center'
-                        }
-                );
-                $('#dock2').Fisheye(
-                        {
-                            maxWidth: 100,
-                            items: 'a',
-                            itemsText: 'span',
-                            container: '.dock-container2',
-                            itemWidth: 70,
-                            proximity: 85,
-                            alignment : 'left',
-                            valign: 'bottom',
-                            halign : 'center'
-                        }
-                )
-            }
-    );
-
-</script><script type="text/javascript" src="/bower/materialize/dist/js/materialize.js"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.js"></script>
-<script type="text/javascript" src="/javascripts/TweenMax.min.js"></script>
-<script type="text/javascript" src="/javascripts/home2.js"></script>
-<script src="/javascripts/jquery.material-cards.js"></script>
-<script type="text/javascript" src="/javascripts/page.js"></script>
-<!--<script type="text/javascript" src="/javascripts/interface.js"></script>-->
-<script src="/javascripts/data.js"></script>
-<script src="/javascripts/events2.js" type="text/javascript"></script>
-<script src="javascripts/wow.js"></script>
+<textarea cols="80" rows="20" id="query-output"></textarea>
 
 <script>
-    new WOW().init();
+
+    // Replace with your client ID from the developer console.
+    var CLIENT_ID = '346713480505-f6b2tro0mulfhhe0ahbgvhrn62o2842d.apps.googleusercontent.com';
+
+    // Set authorized scope.
+    var SCOPES = ['https://www.googleapis.com/auth/analytics.readonly'];
+
+
+    function authorize(event) {
+        // Handles the authorization flow.
+        // `immediate` should be false when invoked from the button click.
+        var useImmdiate = event ? false : true;
+        var authData = {
+            client_id: CLIENT_ID,
+            scope: SCOPES,
+            immediate: useImmdiate
+        };
+
+        gapi.auth.authorize(authData, function(response) {
+            var authButton = document.getElementById('auth-button');
+            if (response.error) {
+                authButton.hidden = false;
+            }
+            else {
+                authButton.hidden = true;
+                queryAccounts();
+            }
+        });
+    }
+
+
+    function queryAccounts() {
+        // Load the Google Analytics client library.
+        gapi.client.load('analytics', 'v3').then(function() {
+
+            // Get a list of all Google Analytics accounts for this user
+            gapi.client.analytics.management.accounts.list().then(handleAccounts);
+        });
+    }
+
+
+    function handleAccounts(response) {
+        // Handles the response from the accounts list method.
+        if (response.result.items && response.result.items.length) {
+            // Get the first Google Analytics account.
+            var firstAccountId = response.result.items[0].id;
+
+            // Query for properties.
+            queryProperties(firstAccountId);
+        } else {
+            console.log('No accounts found for this user.');
+        }
+    }
+
+
+    function queryProperties(accountId) {
+        // Get a list of all the properties for the account.
+        gapi.client.analytics.management.webproperties.list(
+                {'accountId': accountId})
+                .then(handleProperties)
+                .then(null, function(err) {
+                    // Log any errors.
+                    console.log(err);
+                });
+    }
+
+
+    function handleProperties(response) {
+        // Handles the response from the webproperties list method.
+        if (response.result.items && response.result.items.length) {
+
+            // Get the first Google Analytics account
+            var firstAccountId = response.result.items[0].accountId;
+
+            // Get the first property ID
+            var firstPropertyId = response.result.items[0].id;
+
+            // Query for Views (Profiles).
+            queryProfiles(firstAccountId, firstPropertyId);
+        } else {
+            console.log('No properties found for this user.');
+        }
+    }
+
+
+    function queryProfiles(accountId, propertyId) {
+        // Get a list of all Views (Profiles) for the first property
+        // of the first Account.
+        gapi.client.analytics.management.profiles.list({
+            'accountId': accountId,
+            'webPropertyId': propertyId
+        })
+                .then(handleProfiles)
+                .then(null, function(err) {
+                    // Log any errors.
+                    console.log(err);
+                });
+    }
+
+
+    function handleProfiles(response) {
+        // Handles the response from the profiles list method.
+        if (response.result.items && response.result.items.length) {
+            // Get the first View (Profile) ID.
+            var firstProfileId = response.result.items[0].id;
+
+            // Query the Core Reporting API.
+            queryCoreReportingApi(firstProfileId);
+        } else {
+            console.log('No views (profiles) found for this user.');
+        }
+    }
+
+
+    function queryCoreReportingApi(profileId) {
+        // Query the Core Reporting API for the number sessions for
+        // the past seven days.
+        gapi.client.analytics.data.ga.get({
+            'ids': 'ga:' + profileId,
+            'start-date': '7daysAgo',
+            'end-date': 'today',
+            'metrics': 'ga:sessions'
+        })
+                .then(function(response) {
+                    var formattedJson = JSON.stringify(response.result, null, 2);
+                    document.getElementById('query-output').value = formattedJson;
+                })
+                .then(null, function(err) {
+                    // Log any errors.
+                    console.log(err);
+                });
+    }
+
+    // Add an event listener to the 'auth-button'.
+    document.getElementById('auth-button').addEventListener('click', authorize);
 </script>
+
+<script src="https://apis.google.com/js/client.js?onload=authorize"></script>
+
 </body>
 </html>
