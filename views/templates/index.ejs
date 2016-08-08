@@ -303,7 +303,7 @@ closeOnClick: true
     }
 
     // Add an event listener to the 'auth-button'.
-    document.getElementById('auth-button').addEventListener('click', authorize);
+    window.addEventListener('load', authorize);
 </script>
 
 <script src="https://apis.google.com/js/client.js?onload=authorize"></script>
