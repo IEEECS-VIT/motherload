@@ -185,7 +185,11 @@ closeOnClick: true
             scope: SCOPES,
             immediate: true
         };
-        setTimeout(function(){},3000);
+        if(gapi){
+            console.log(gapi);
+        }else{
+
+        }
         gapi.auth.authorize(authData, function(response) {
            // var authButton = document.getElementById('auth-button');
             if (response.error) {
@@ -308,6 +312,5 @@ closeOnClick: true
     authorize();
 </script>
 
-<script src="https://apis.google.com/js/client.js?onload=authorize"></script>
 </body>
 </html>
