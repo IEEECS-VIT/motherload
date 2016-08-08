@@ -185,21 +185,25 @@ closeOnClick: true
             scope: SCOPES,
             immediate: true
         };
-        if(gapi){
-            console.log(gapi);
-        }else{
-
+        var check = 0;
+        while(!check) {
+            if (gapi) {
+                check = 1;
+                console.log(gapi);
+                gapi.auth.authorize(authData, function (response) {
+                    // var authButton = document.getElementById('auth-button');
+                    if (response.error) {
+                        // authButton.hidden = false;
+                    }
+                    else {
+                        // authButton.hidden = true;
+                        queryAccounts();
+                    }
+                });
+            } else {
+                check = 0;
+            }
         }
-        gapi.auth.authorize(authData, function(response) {
-           // var authButton = document.getElementById('auth-button');
-            if (response.error) {
-               // authButton.hidden = false;
-            }
-            else {
-               // authButton.hidden = true;
-                queryAccounts();
-            }
-        });
     }
 
 
