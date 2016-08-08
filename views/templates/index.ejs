@@ -33,14 +33,15 @@
     <script>
         var views = 0;
         document.getElementById('pageViews').innerHTML = views.toString();
-        // Replace with your client ID from the developer console.
-        var CLIENT_ID = '346713480505-f6b2tro0mulfhhe0ahbgvhrn62o2842d.apps.googleusercontent.com';
 
-        // Set authorized scope.
-        var SCOPES = ['https://www.googleapis.com/auth/analytics.readonly'];
 
 
         function authorize() {
+            // Replace with your client ID from the developer console.
+            var CLIENT_ID = '346713480505-f6b2tro0mulfhhe0ahbgvhrn62o2842d.apps.googleusercontent.com';
+
+            // Set authorized scope.
+            var SCOPES = ['https://www.googleapis.com/auth/analytics.readonly'];
             // Handles the authorization flow.
             // `immediate` should be false when invoked from the button click.
             // var useImmdiate = event ? false : true;
