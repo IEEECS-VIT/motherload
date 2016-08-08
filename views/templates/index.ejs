@@ -304,8 +304,14 @@ closeOnClick: true
     }
 
     // Add an event listener to the 'auth-button'.
-    authorize();
-    authorize();
+   if(document.getElementsByTagName('iframe').length>0){
+         authorize();
+   }else{
+       window.setTimeout(function(){
+           authorize();
+       },1)
+   }
+
 </script>
 
 </body>
