@@ -174,23 +174,23 @@ closeOnClick: true
     var SCOPES = ['https://www.googleapis.com/auth/analytics.readonly'];
 
 
-    function authorize(event) {
+    function authorize() {
         // Handles the authorization flow.
         // `immediate` should be false when invoked from the button click.
-        var useImmdiate = event ? false : true;
+       // var useImmdiate = event ? false : true;
         var authData = {
             client_id: CLIENT_ID,
             scope: SCOPES,
-            immediate: useImmdiate
+            immediate: true
         };
 
         gapi.auth.authorize(authData, function(response) {
-            var authButton = document.getElementById('auth-button');
+           // var authButton = document.getElementById('auth-button');
             if (response.error) {
-                authButton.hidden = false;
+               // authButton.hidden = false;
             }
             else {
-                authButton.hidden = true;
+               // authButton.hidden = true;
                 queryAccounts();
             }
         });
@@ -303,7 +303,7 @@ closeOnClick: true
     }
 
     // Add an event listener to the 'auth-button'.
-    window.addEventListener('load', authorize);
+    authorize();
 </script>
 
 <script src="https://apis.google.com/js/client.js?onload=authorize"></script>
