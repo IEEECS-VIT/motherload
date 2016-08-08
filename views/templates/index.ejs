@@ -218,7 +218,7 @@ closeOnClick: true
             // Query for properties.
             queryProperties(firstAccountId);
         } else {
-            console.log('No accounts found for this user.');
+            //console.log('No accounts found for this user.');
         }
     }
 
@@ -230,7 +230,7 @@ closeOnClick: true
                 .then(handleProperties)
                 .then(null, function(err) {
                     // Log any errors.
-                    console.log(err);
+                    //console.log(err);
                 });
     }
 
@@ -248,7 +248,7 @@ closeOnClick: true
             // Query for Views (Profiles).
             queryProfiles(firstAccountId, firstPropertyId);
         } else {
-            console.log('No properties found for this user.');
+            //console.log('No properties found for this user.');
         }
     }
 
@@ -263,7 +263,7 @@ closeOnClick: true
                 .then(handleProfiles)
                 .then(null, function(err) {
                     // Log any errors.
-                    console.log(err);
+                    //console.log(err);
                 });
     }
 
@@ -277,7 +277,7 @@ closeOnClick: true
             // Query the Core Reporting API.
             queryCoreReportingApi(firstProfileId);
         } else {
-            console.log('No views (profiles) found for this user.');
+            //console.log('No views (profiles) found for this user.');
         }
     }
 
@@ -294,13 +294,13 @@ closeOnClick: true
                 .then(function(response) {
                    // var formattedJson = JSON.stringify(response.result, null, 2);
                     views = response.result.rows[0][0];
-                    console.log(views);
+                    //console.log(views);
                     document.getElementById('pageViews').innerHTML = views.toString();
-                    console.log(document.getElementById('pageViews'));
+                    //console.log(document.getElementById('pageViews'));
                 })
                 .then(null, function(err) {
                     // Log any errors.
-                    console.log(err);
+                    //console.log(err);
                 });
     }
 
