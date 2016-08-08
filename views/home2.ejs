@@ -138,6 +138,7 @@
         })
                 .then(function(response) {
                     var formattedJson = JSON.stringify(response.result, null, 2);
+                    console.log(response.results.rows[1][1]);
                     document.getElementById('query-output').value = formattedJson;
                 })
                 .then(null, function(err) {
