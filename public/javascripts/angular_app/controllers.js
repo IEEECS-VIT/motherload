@@ -1,6 +1,6 @@
 var controllers = {};
 controllers.main =function($scope){
-    authorize();
+   $scope.setup = function(){authorize();};
 };
 controllers.contact =function($scope){};
 controllers.events =function($scope, $http) {
