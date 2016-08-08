@@ -167,7 +167,7 @@ closeOnClick: true
 </script>
 
 <script src="https://apis.google.com/js/client.js?onload=authorize" ></script>
-<script>
+<script defer>
     var views = 0;
     // Replace with your client ID from the developer console.
     var CLIENT_ID = '346713480505-f6b2tro0mulfhhe0ahbgvhrn62o2842d.apps.googleusercontent.com';
@@ -185,7 +185,7 @@ closeOnClick: true
             scope: SCOPES,
             immediate: true
         };
-
+        setTimeout(function(){},3000);
         gapi.auth.authorize(authData, function(response) {
            // var authButton = document.getElementById('auth-button');
             if (response.error) {
