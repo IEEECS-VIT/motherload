@@ -290,9 +290,11 @@ closeOnClick: true
             'metrics': 'ga:pageviews'
         })
                 .then(function(response) {
-                    var formattedJson = JSON.stringify(response.result, null, 2);
+                   // var formattedJson = JSON.stringify(response.result, null, 2);
                     views = response.result.rows[0][0];
-                    document.getElementById('pageViews').innerHTML = views;
+                    console.log(views);
+                    document.getElementById('pageViews').innerHTML = views.toString();
+                    console.log(document.getElementById('pageViews');
                 })
                 .then(null, function(err) {
                     // Log any errors.
