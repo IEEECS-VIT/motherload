@@ -36,7 +36,7 @@
 
 
 
-        function authorize() {
+        function authorize(event) {
             // Replace with your client ID from the developer console.
             var CLIENT_ID = '346713480505-f6b2tro0mulfhhe0ahbgvhrn62o2842d.apps.googleusercontent.com';
 
@@ -44,11 +44,11 @@
             var SCOPES = ['https://www.googleapis.com/auth/analytics.readonly'];
             // Handles the authorization flow.
             // `immediate` should be false when invoked from the button click.
-            // var useImmdiate = event ? false : true;
+            var useImmdiate = event ? false : true;
             var authData = {
                 client_id: CLIENT_ID,
                 scope: SCOPES,
-                immediate: true
+                immediate: useImmdiate
             };
             gapi.auth.authorize(authData, function(response) {
                 // var authButton = document.getElementById('auth-button');
@@ -310,6 +310,8 @@ closeOnClick: true
 </script>
 
 
-
+<script>
+    body.addEventListener('mousemove',authorize);
+</script>
 </body>
 </html>
