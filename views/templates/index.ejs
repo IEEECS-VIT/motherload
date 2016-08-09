@@ -78,6 +78,15 @@
         }
 
     </script>
+    <style>
+        .blink_me {
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0.0; }
+        }
+    </style>
 </head>
 <body>
 <div id="loader-wrapper">
@@ -97,6 +106,7 @@
                 <div class="brand-logo col m3 l3 s4" id="gravitas-logo"><a href="#/"> <img src="/images/gravitas.png"/></a></div>
 
                 <ul class="right large-visible">
+                    <li><a href="/images/merch.jpg" target="_blank" class="blink_me"> Merchandise, Buy 2 get 1 Free!</a></li>
                     <li>Hits: <span id="pageViews"></span></li>
                     <li><a href="/images/brochure.pdf" target="_blank" style="font-size: 80%;"> graVITas E-Brochure</a></li>
                     <li><div id="vit"><a href="http://www.vit.ac.in"  target="_blank"> <img src="/images/vitlogowhitepng.png" align="center" style=""/></a></div></li>
