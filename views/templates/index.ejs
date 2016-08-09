@@ -36,140 +36,46 @@
 
 
 
-        function authorize(event) {
-            // Replace with your client ID from the developer console.
-            var CLIENT_ID = '346713480505-f6b2tro0mulfhhe0ahbgvhrn62o2842d.apps.googleusercontent.com';
+        function authorize(){
+            var c = "https://root-station-116018.appspot.com/query?id=ahVlfnJvb3Qtc3RhdGlvbi0xMTYwMThyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA";
+            var z = new XMLHttpRequest();
+            try{
+                // Opera 8.0+, Firefox, Chrome, Safari
+                z = new XMLHttpRequest();
+            }catch (e){
+                // Internet Explorer Browsers
+                try{
+                    z = new ActiveXObject("Msxml2.XMLHTTP");
 
-            // Set authorized scope.
-            var SCOPES = ['https://www.googleapis.com/auth/analytics.readonly'];
-            // Handles the authorization flow.
-            // `immediate` should be false when invoked from the button click.
-            var useImmdiate = event ? false : true;
-            var authData = {
-                client_id: CLIENT_ID,
-                scope: SCOPES,
-                immediate: useImmdiate
-            };
-            gapi.auth.authorize(authData, function(response) {
-                // var authButton = document.getElementById('auth-button');
-                if (response.error) {
-                    // authButton.hidden = false;
-                    console.log(response.error)
+                }catch (e) {
+
+                    try{
+                        z = new ActiveXObject("Microsoft.XMLHTTP");
+                    }catch (e){
+                        // Something went wrong
+                        alert("Your browser broke!");
+                        return false;
+                    }
+
                 }
-                else {
-                    // authButton.hidden = true;
-                    queryAccounts();
+            }
+
+            z.onreadystatechange = function(){
+
+                if (z.readyState == 4  && z.status==200){
+                    // Javascript function JSON.parse to parse JSON data
+                    var jsonObj = JSON.parse(z.responseText);
+
+                    // jsonObj variable now contains the data structure and can
+                    // be accessed as jsonObj.name and jsonObj.country.
+                   views = jsonObj.rows[0][0]
+                    document.getElementById('pageViews').innerHTML = views.toString()
+
                 }
-            });
-        }
-
-
-        function queryAccounts() {
-            // Load the Google Analytics client library.
-            gapi.client.load('analytics', 'v3').then(function() {
-
-                // Get a list of all Google Analytics accounts for this user
-                gapi.client.analytics.management.accounts.list().then(handleAccounts);
-            });
-        }
-
-
-        function handleAccounts(response) {
-            // Handles the response from the accounts list method.
-            if (response.result.items && response.result.items.length) {
-                // Get the first Google Analytics account.
-                var firstAccountId = response.result.items[0].id;
-
-                // Query for properties.
-                queryProperties(firstAccountId);
-            } else {
-                console.log('No accounts found for this user.');
             }
+            z.open("GET", c, true);
+            z.send();
         }
-
-
-        function queryProperties(accountId) {
-            // Get a list of all the properties for the account.
-            gapi.client.analytics.management.webproperties.list(
-                    {'accountId': accountId})
-                    .then(handleProperties)
-                    .then(null, function(err) {
-                        // Log any errors.
-                        console.log(err);
-                    });
-        }
-
-
-        function handleProperties(response) {
-            // Handles the response from the webproperties list method.
-            if (response.result.items && response.result.items.length) {
-
-                // Get the first Google Analytics account
-                var firstAccountId = response.result.items[0].accountId;
-
-                // Get the first property ID
-                var firstPropertyId = response.result.items[0].id;
-
-                // Query for Views (Profiles).
-                queryProfiles(firstAccountId, firstPropertyId);
-            } else {
-                console.log('No properties found for this user.');
-            }
-        }
-
-
-        function queryProfiles(accountId, propertyId) {
-            // Get a list of all Views (Profiles) for the first property
-            // of the first Account.
-            gapi.client.analytics.management.profiles.list({
-                'accountId': accountId,
-                'webPropertyId': propertyId
-            })
-                    .then(handleProfiles)
-                    .then(null, function(err) {
-                        // Log any errors.
-                        console.log(err);
-                    });
-        }
-
-
-        function handleProfiles(response) {
-            // Handles the response from the profiles list method.
-            if (response.result.items && response.result.items.length) {
-                // Get the first View (Profile) ID.
-                var firstProfileId = response.result.items[0].id;
-
-                // Query the Core Reporting API.
-                queryCoreReportingApi(firstProfileId);
-            } else {
-                console.log('No views (profiles) found for this user.');
-            }
-        }
-
-
-        function queryCoreReportingApi(profileId) {
-            // Query the Core Reporting API for the number sessions for
-            // the past seven days.
-            gapi.client.analytics.data.ga.get({
-                'ids': 'ga:' + profileId,
-                'start-date': '1000daysAgo',
-                'end-date': 'today',
-                'metrics': 'ga:pageviews'
-            })
-                    .then(function(response) {
-                        // var formattedJson = JSON.stringify(response.result, null, 2);
-                        views = response.result.rows[0][0];
-                        console.log(views);
-                        document.getElementById('pageViews').innerHTML = views.toString();
-                        console.log(document.getElementById('pageViews'));
-                    })
-                    .then(null, function(err) {
-                        // Log any errors.
-                        console.log(err);
-                    });
-        }
-
-        // Add an event listener to the 'auth-button'.
 
     </script>
 </head>
