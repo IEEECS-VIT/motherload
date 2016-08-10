@@ -13,5 +13,8 @@
     "normalize-strings": "normalize#~1.1.0",
     "milligram": "~1.1.0",
     "angular-sanitize": "~1.5.8"
+  },
+  "resolutions": {
+    "angular": "~1.5.3"
   }
 }
