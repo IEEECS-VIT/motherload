@@ -7,6 +7,11 @@
     "materialize": "~0.97.1",
     "bootstrap": "~3.3.5",
     "angular-route": "~1.4.8",
-    "angular-loading-bar": "~0.9.0"
+    "angular-loading-bar": "~0.9.0",
+    "toastr": "~2.1.3",
+    "vex": "~2.3.4",
+    "normalize-strings": "normalize#~1.1.0",
+    "milligram": "~1.1.0",
+    "angular-sanitize": "~1.5.8"
   }
 }

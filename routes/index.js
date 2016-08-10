@@ -63,7 +63,11 @@ router.get('/mainpage',function(req,res){
 router.get('/register',function(req,res){
     res.render('registration');
 });*/
-
+router.get('/analytics',function(req,res){
+    res.render(
+        'templates/analytics'
+    );
+});
 router.post('/login', function (req, res) {
     var user = req.body.username;
     var password = req.body.password;
