@@ -17,9 +17,13 @@ controllers.events =function($scope, $http) {
     $scope.showWorkshops=false;
     $scope.showAllEvents=false;
     $scope.showSubcategories=false;
-    $http.get("http://gravitas-api.herokuapp.com/api/events/name?q=").then(function (response) {
+    $http.get("https://sheets.googleapis.com/v4/spreadsheets/1Dvte1G3lvQCUW_EFDrwa85SGt7asl_2CTk7MnUTj6tg/values/10-09!A3:N15").then(function (response){
+        $scope.x=response.data;
+        console.log(x);
+    });
+    $http.get("http://register.vitgravitas.com/api/events/name?q=").then(function (response) {
         $scope.mydata = response.data;
-        console.log(response.data);
+
         $scope.events = $scope.mydata.events;
         for (var i = 0; i < $scope.events.length; i++) {
             var cat = $scope.events[i].category;
@@ -42,7 +46,7 @@ controllers.events =function($scope, $http) {
             }
 
         }
-        console.log($scope.categories);
+
         for (var i = 0; i < $scope.events.length; i++) {
             if ($scope.events[i].subCategory != null) {
                 var scat = $scope.events[i].subCategory;
@@ -65,7 +69,7 @@ controllers.events =function($scope, $http) {
                 }
             }
         }
-        console.log($scope.subCategories);
+
 
     });
     $scope.showCategory=function(i)
