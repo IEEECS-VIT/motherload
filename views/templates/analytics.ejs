@@ -1,0 +1,223 @@
+<html ng-app="app" class="ng-scope">
+<head>
+    <style type="text/css">@charset "UTF-8";
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }</style>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/bower/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/bower/milligram/dist/milligram.min.css">
+    <link rel="stylesheet" href="/bower/vex/css/vex.css">
+    <link rel="stylesheet" href="/bower/vex/css/vex-theme-os.css">
+    <link rel="stylesheet" href="/bower/toastr/toastr.min.css">
+    <link rel="stylesheet" href="/bower/vex/css/vex.css">
+    <link rel="stylesheet" href="/bower/vex/css/vex-theme-os.css">
+    <script src="/bower/jquery/dist/jquery.min.js"></script>
+    <script src="/bower/angular/angular.min.js"></script>
+    <script src="/bower/ng-csv/build/ng-csv.min.js"></script>
+    <script src="/bower/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/bower/vex/js/vex.combined.min.js"></script>
+    <script>vex.defaultOptions.className = 'vex-theme-os';</script>
+    <script src="/bower/toastr/toastr.min.js"></script>
+    <!--//--></head>
+<body ng-controller="HomeCtrl" class="ng-scope">
+<div class="container">
+    <div class="row">
+        <button ng-click="analytics()"></button>
+    </div>
+</div>
+<script>
+
+    var app = angular.module('app', ['ngSanitize']);
+    app.controller('HomeCtrl', ['$scope', '$http', function ($scope, $http) {
+        $http.defaults.headers.common['Accept'] = 'application/json';
+        $http.get('http://register.vitgravitas.com/organizer/participant/list').then(participantSuccess, failure);
+        $http.get('http://register.vitgravitas.com/organizer/receipt/list').then(receiptSuccess, failure);
+        $http.get('http://register.vitgravitas.com/api/events/list').then(eventSuccess, failure);
+        $http.get('http://register.vitgravitas.com/api/events/remaining').then(countSuccess, failure);
+
+        $scope.participants = null;
+        $scope.receipts = null;
+        $scope.events = null;
+        $scope.records = [];
+        $scope.working = true;
+        $scope.eventNames = ["all"];
+        $scope.gender = "all";
+        $scope.paymentType = "all";
+        $scope.eventName = "all"
+        $scope.startDate = new Date();
+        $scope.startDate.setHours(0, 0, 0);
+        $scope.endDate = new Date($scope.startDate.getTime() + 24 * 60 * 60 * 1000)
+        var nTasks = 4;
+
+        function failure(response) {
+            //alert('error');
+            toastr["error"]("Please check your internet connection.");
+
+        }
+
+        function countSuccess(response) {
+            $scope.countData = response.data.count;
+            $scope.remainingData = response.data.remaining;
+            complete();
+        }
+
+        function participantSuccess(response) {
+            $scope.participants = response.data.participants;
+            complete();
+        }
+
+        function receiptSuccess(response) {
+            $scope.receipts = response.data.receipts;
+            complete();
+        }
+
+        function eventSuccess(response) {
+            $scope.events = response.data.events;
+            $scope.events.forEach(function (e) {
+                $scope.eventNames.push(e.name);
+            });
+            complete();
+        }
+
+        function complete() {
+            nTasks -= 1;
+            if (nTasks == 0) {
+                toastr["success"]("Data successfully fetched!");
+                $scope.convertData();
+                setTimeout(function () {
+                    $scope.working = false;
+                    toastr["success"]("You can now export Excel Sheet!");
+                    $scope.$apply();
+                }, 5000)
+            }
+        }
+
+        $scope.convertData = function () {
+            console.log('start');
+
+            if ($scope.participants == null || $scope.receipts == null || $scope.events == null) {
+                console.log('null;')
+                return;
+            }
+            function findParticipantById(id) {
+                var result = $scope.participants.filter(function (p) {
+                    return p._id == id;
+                });
+
+                if (result.length == 0) {
+                    return null;
+                }
+                return result[0];
+            }
+
+            function findEventById(id) {
+
+                var result = $scope.events.filter(function (e) {
+                    return e.name == id;
+                });
+
+
+                if (result.length == 0) {
+                    return null;
+                }
+                return result[0];
+            }
+
+            console.log($scope.receipts);
+            $scope.receipts.forEach(function (receipt) {
+
+                var participant = findParticipantById(receipt.participantId);
+                receipt.eventIds.forEach(function (eventName) {
+                    var event = findEventById(eventName);
+                    $scope.records.push({
+                        'receiptId': receipt._id,
+                        'timestamp': new Date(Date.parse((receipt.createdAt))),
+                        'paymentType': receipt.payment.paymentType,
+                        'participantId': participant._id,
+                        'participantName': participant.name,
+                        'gender': participant.gender,
+                        'event': event.name,
+                        'fee': event.participationFee,
+                        'user': receipt.userId
+                    })
+
+                })
+
+
+            })
+        }
+
+        $scope.getArray = function () {
+            console.log($scope.records)
+            /*return $scope.records.filter(function (e) {
+             return $scope.gender == "all" || e.gender == $scope.gender;
+             }).filter(function (e) {
+             return $scope.paymentType == "all" || e.paymentType == $scope.paymentType;
+             }).filter(function (e) {
+             return $scope.startDate <= e.timestamp && $scope.endDate >= e.timestamp;
+             }).filter(function (e) {
+             return $scope.eventName == "all" || $scope.eventName == e.event;
+             })*/
+            return $scope.records;
+        }
+        $scope.analytics = function () {
+            var data = $scope.getArray();
+            console.log(data);
+            var newList = [];
+            var total = 0;
+            var totalCount = 0;
+            //console.log( $scope.events);
+            $scope.events.forEach(function (e) {
+                //console.log($scope.countData);
+                var item={
+                    '_id': e.name,
+                    'count': 0,
+                    'revenue': 0,
+                    'cash':0,
+                    'card':0,
+                    'cost': e.participationFee
+
+                };
+                $scope.data.forEach(function (id) {
+                    //console.log(id);
+                    if (e.name == id.event) {
+                        if(id.paymentType=='cash'){
+                            item.cash++;
+                        }else{
+                            item.card++;
+                        }
+                        item.count++;
+                    }
+                });
+                item.count = item.cash + item.card;
+                item.revenue = item.count * item.cost;
+                total+=item.revenue;
+                totalCount+=item.count;
+                newList.push(item);
+
+            });
+            console.log(total);
+            console.log(totalCount);
+            console.log(newList);
+
+
+        };
+    }]);
+</script>
+<div data-tap-disabled="true"></div>
+</body>
+</html>
