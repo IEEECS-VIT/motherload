@@ -112,6 +112,9 @@
     </div>
 
 <script>
+    $('ul.tabs').tabs();
+
+    $('ul.tabs').tabs('select_tab', 'tab_id');
     $('a.menu').click(function(){
         $('a.menu').removeClass("active");
         $(this).addClass("active");
