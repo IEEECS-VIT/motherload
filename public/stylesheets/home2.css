@@ -1164,3 +1164,40 @@ h5{
 .hits li{
     margin-left: 12%;
 }
+.schedule .card{
+    border-radius: 5px;
+    position: fixed;
+    top: 15%;
+    bottom: 10%;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 60%;
+    left: 20%;
+    right: 20%;
+}
+@media only screen and (min-width: 993px) {
+    .schedule .card .container {
+        width: 90%;
+    }
+}
+.tabs .tab a{
+    color: #3f51b5;
+    font-weight: 400;
+    font-size: larger;
+
+}
+.tabs .tab a:hover {
+    color: rgba(63, 81, 181, 0.55);
+}
+.schedule h4{
+    font-size: 2em;
+}
+.fixed{
+    position: fixed;
+    width: 60%;
+
+}
+.actual-schedule{
+    margin-top: 7%;
+}

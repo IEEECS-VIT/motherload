@@ -41,7 +41,7 @@ app.config(function ($routeProvider) {
             controller: 'schedule'
         })
         .otherwise({
-            redirectTo: '/'
+
         });
 });
 
