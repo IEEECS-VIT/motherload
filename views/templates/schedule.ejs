@@ -7,16 +7,16 @@
                         <div class="row fixed">
 
                             <div class="col s12">
-                                <ul class="tabs">
-                                    <li class="tab col s3"><a class="active" >10 Sept</a></li>
-                                    <li class="tab col s3"><a>11 Sept</a></li>
-                                    <li class="tab col s3"><a>17 Sept</a></li>
-                                    <li class="tab col s3"><a>18 Sept</a></li>
-                                    <li class="tab col s3"><a>20 Sept</a></li>
-                                    <li class="tab col s3"><a>21 Sept</a></li>
-                                    <li class="tab col s3"><a>23 Sept</a></li>
-                                    <li class="tab col s3"><a>24 Sept</a></li>
-                                    <li class="tab col s3"><a>25 Sept</a></li>
+                                <ul class="tabs ">
+                                    <li class="tab col s3"><a class="menu active" >10 Sept</a></li>
+                                    <li class="tab col s3"><a class="menu">11 Sept</a></li>
+                                    <li class="tab col s3"><a class="menu">17 Sept</a></li>
+                                    <li class="tab col s3"><a class="menu">18 Sept</a></li>
+                                    <li class="tab col s3"><a class="menu">20 Sept</a></li>
+                                    <li class="tab col s3"><a class="menu">21 Sept</a></li>
+                                    <li class="tab col s3"><a class="menu">23 Sept</a></li>
+                                    <li class="tab col s3"><a class="menu">24 Sept</a></li>
+                                    <li class="tab col s3"><a class="menu">25 Sept</a></li>
                                 </ul>
                             </div>
 
@@ -37,62 +37,62 @@
 
                         </div>
                         <div id="eleventh" class="row" ng-repeat="event in dates.eleventh">
-                            <div class="col s4 l4 m4"><p>event[0]</p></div>
-                            <div ng-repeat="i in events">
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{i*2}}:00 onwards</p></div>
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{event[i]}}</p></div>
+                            <div ng-repeat="i in range(0,event.length)">
+                                <div class="col s4 l4 m4"><p ng-if="i==0 && flag==0">{{event[0]}}</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0 && i!=13 ">{{(i-1)*2}}:00 onwards</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0">{{event[i]}}</p></div>
                             </div>
 
                         </div>
                         <div id="seventeenth" class="row" ng-repeat="event in dates.seventeenth">
-                            <div class="col s4 l4 m4"><p>event[0]</p></div>
-                            <div ng-repeat="i in events">
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{i*2}}:00 onwards</p></div>
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{event[i]}}</p></div>
+                            <div ng-repeat="i in range(0,event.length)">
+                                <div class="col s4 l4 m4"><p ng-if="i==0 && flag==0">{{event[0]}}</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0 && i!=13 ">{{(i-1)*2}}:00 onwards</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0">{{event[i]}}</p></div>
+                            </div>
+                        </div>
+                        <div id="eighteenth" class="row" ng-repeat="event in dates.eighteenth">
+                            <div ng-repeat="i in range(0,event.length)">
+                                <div class="col s4 l4 m4"><p ng-if="i==0 && flag==0">{{event[0]}}</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0 && i!=13 ">{{(i-1)*2}}:00 onwards</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0">{{event[i]}}</p></div>
+                            </div>
+                        </div>
+                        <div id="twentieth" class="row" ng-repeat="event in dates.twentieth">
+                            <div ng-repeat="i in range(0,event.length)">
+                                <div class="col s4 l4 m4"><p ng-if="i==0 && flag==0">{{event[0]}}</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0 && i!=13 ">{{(i-1)*2}}:00 onwards</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0">{{event[i]}}</p></div>
+                            </div>
+                        </div>
+                        <div id="twentyone" class="row" ng-repeat="event in dates.twentyone">
+                            <div ng-repeat="i in range(0,event.length)">
+                                <div class="col s4 l4 m4"><p ng-if="i==0 && flag==0">{{event[0]}}</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0 && i!=13 ">{{(i-1)*2}}:00 onwards</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0">{{event[i]}}</p></div>
                             </div>
 
-                        </div><div id="eighteenth" class="row" ng-repeat="event in dates.eighteenth">
-                            <div class="col s4 l4 m4"><p>event[0]</p></div>
-                            <div ng-repeat="i in events">
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{i*2}}:00 onwards</p></div>
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{event[i]}}</p></div>
-                            </div>
-
-                        </div><div id="twentieth" class="row" ng-repeat="event in dates.twentieth">
-                            <div class="col s4 l4 m4"><p>event[0]</p></div>
-                            <div ng-repeat="i in events">
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{i*2}}:00 onwards</p></div>
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{event[i]}}</p></div>
-                            </div>
-
-                        </div><div id="twentyone" class="row" ng-repeat="event in dates.twentyone">
-                            <div class="col s4 l4 m4"><p>event[0]</p></div>
-                            <div ng-repeat="i in events">
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{i*2}}:00 onwards</p></div>
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{event[i]}}</p></div>
-                            </div>
-
-                        </div><div id="twentythree" class="row" ng-repeat="event in dates.twentythree">
-                            <div class="col s4 l4 m4"><p>event[0]</p></div>
-                            <div ng-repeat="i in events">
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{i*2}}:00 onwards</p></div>
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{event[i]}}</p></div>
+                        </div>
+                        <div id="twentythree" class="row" ng-repeat="event in dates.twentythree">
+                            <div ng-repeat="i in range(0,event.length)">
+                                <div class="col s4 l4 m4"><p ng-if="i==0 && flag==0">{{event[0]}}</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0 && i!=13 ">{{(i-1)*2}}:00 onwards</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0">{{event[i]}}</p></div>
                             </div>
 
                         </div>
                         <div id="twentyfour" class="row" ng-repeat="event in dates.twentyfour">
-                            <div class="col s4 l4 m4"><p>event[0]</p></div>
-                            <div ng-repeat="i in events">
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{i*2}}:00 onwards</p></div>
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{event[i]}}</p></div>
+                            <div ng-repeat="i in range(0,event.length)">
+                                <div class="col s4 l4 m4"><p ng-if="i==0 && flag==0">{{event[0]}}</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0 && i!=13 ">{{(i-1)*2}}:00 onwards</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0">{{event[i]}}</p></div>
                             </div>
-
                         </div>
                         <div id="twentyfive" class="row" ng-repeat="event in dates.twentyfive">
-                            <div class="col s4 l4 m4"><p>event[0]</p></div>
-                            <div ng-repeat="i in events">
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{i*2}}:00 onwards</p></div>
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0'">{{event[i]}}</p></div>
+                            <div ng-repeat="i in range(0,event.length)">
+                                <div class="col s4 l4 m4"><p ng-if="i==0 && flag==0">{{event[0]}}</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0 && i!=13 ">{{(i-1)*2}}:00 onwards</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0">{{event[i]}}</p></div>
                             </div>
 
                         </div>
@@ -105,7 +105,12 @@
         </ul>
     </div>
 
-
+<script>
+    $('a.menu').click(function(){
+        $('a.menu').removeClass("active");
+        $(this).addClass("active");
+    });
+</script>
 
 <!--<script type="text/javascript">
     window.onload = function () {

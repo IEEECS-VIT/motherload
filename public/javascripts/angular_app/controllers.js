@@ -392,7 +392,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                500
+              //  500
             ],
             [
                 "IEYS",
@@ -408,7 +408,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                1300
+                //1300
             ],
             [
                 "Mozilla Firefox",
@@ -424,7 +424,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                250
+                //250
             ],
             [
                 "Cryptography",
@@ -440,7 +440,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                200
+                //200
             ],
             [
                 "Comic Design",
@@ -456,7 +456,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                150
+                //150
             ],
             [
                 "Sensor Development",
@@ -472,7 +472,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                200
+                //200
             ],
             [
                 "Cyber Forensic",
@@ -488,7 +488,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                250
+                //250
             ],
             [
                 "Floating Concrete",
@@ -504,7 +504,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                100
+               // 100
             ],
             [
                 "Stockgyaan",
@@ -520,7 +520,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                100
+               // 100
             ],
             [
                 "Quadcopter",
@@ -536,7 +536,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                200
+                //200
             ],
             [
                 "Nanotechnology",
@@ -552,7 +552,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                150
+                //150
             ],
             [
                 "Staad Pro",
@@ -568,7 +568,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                100
+                //100
             ],
             [
                 "Transportation",
@@ -584,7 +584,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                100
+                //100
             ],
             [
                 "iOS Fusion",
@@ -600,7 +600,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                200
+                //200
             ]
         ]
     },
@@ -620,7 +620,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                200
+                //200
             ],
             [
                 "Under The Hood",
@@ -636,7 +636,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                250
+                //250
             ],
             [
                 "Uni Dev",
@@ -652,7 +652,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                200
+                //200
             ],
             [
                 "Propeller Display",
@@ -668,7 +668,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                180
+                //180
             ],
             [
                 "RobotiX",
@@ -684,7 +684,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                400
+                //400
             ],
             [
                 "Bio Streaking",
@@ -700,7 +700,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                100
+                //100
             ],
             [
                 "Sensored",
@@ -716,7 +716,7 @@ controllers.schedule=function($scope){
                 "",
                 "",
                 "",
-                160
+                //160
             ],
             [
                 "AERO MODELLING",

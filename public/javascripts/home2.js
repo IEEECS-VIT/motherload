@@ -263,7 +263,9 @@ function change(){
 
     $(".gravitas").css("margin-top",th);
     $(".gravitas").css("margin-bottom",th);
+
 }
+
 
 
 
