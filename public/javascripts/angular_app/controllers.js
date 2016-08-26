@@ -3233,4 +3233,5 @@ controllers.schedule=function($scope){
         ]
     }
 };
+
 app.controller(controllers);
