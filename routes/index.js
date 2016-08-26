@@ -44,9 +44,7 @@ router.get('/home',function(req,res,next){
 router.get('/login',function(req,res){
     res.render('login');
 });
-router.get('/socialinnovation',function(req,res){
-    res.render('socialinnovation');
-});
+
 router.get('/social1',function(req,res){
     res.render('social1');
 });
@@ -210,5 +208,8 @@ router.get('/events',function(req,res){
 });
 router.get('/sponsors',function(req,res){
     res.render('templates/sponsors');
+});
+router.get('/schedule',function(req,res){
+    res.render('templates/schedule');
 });
 module.exports = router;

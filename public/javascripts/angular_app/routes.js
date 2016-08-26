@@ -36,6 +36,10 @@ app.config(function ($routeProvider) {
             templateUrl:'/team',
             controller: 'team'
         })
+        .when('/schedule',{
+            templateUrl:'/schedule',
+            controller: 'schedule'
+        })
         .otherwise({
             redirectTo: '/'
         });
