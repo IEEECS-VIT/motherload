@@ -164,8 +164,8 @@ controllers.schedule=function($scope){
             "LAB (SJT 416, 417, 418, 419)",
             "",
             "",
-            "",
-            500
+            ""
+
         ],
         [
             "IEYS",
@@ -181,7 +181,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            1300
+            //1300
         ],
         [
             "Mozilla Firefox",
@@ -197,7 +197,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            250
+            //250
         ],
         [
             "Cloud Computing",
@@ -213,7 +213,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            100
+            //100
         ],
         [
             "Digital Image Processing",
@@ -229,7 +229,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            120
+            //120
         ],
         [
             "Cyber Forensic",
@@ -245,7 +245,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            250
+            //250
         ],
         [
             "Quadcopter",
@@ -261,7 +261,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            200
+            //200
         ],
         [
             "Floating Concrete",
@@ -277,7 +277,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            100
+            //100
         ],
         [
             "Speak Up",
@@ -293,7 +293,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            150
+            //150
         ],
         [
             "Antenna Design",
@@ -309,7 +309,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            70
+            //70
         ],
         [
             "Staad Pro",
@@ -325,7 +325,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            100
+            //100
         ],
         [
             "iOS Fusion",
@@ -341,7 +341,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            200
+            //200
         ],
         [
             "Do it Yourself",
@@ -357,7 +357,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            400
+            //400
         ],
         [
             "UI / UX",
@@ -373,7 +373,7 @@ controllers.schedule=function($scope){
             "",
             "",
             "",
-            75
+            //75
         ]
     ]},
     {

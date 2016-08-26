@@ -30,9 +30,9 @@
 
 
                             <div ng-repeat="i in range(0,event.length)">
-                                <div class="col s4 l4 m4"><p ng-show="i==0 && flag==0">{{event[0]}}</p></div>
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0' && flag==0">{{i*2}}:00 onwards</p></div>
-                                <div class="col s4 m4 l4"><p ng-if="event[i]!='\0' && flag==0"><p>{{event[i]}}</p></div>
+                                <div class="col s4 l4 m4"><p ng-if="i==0 && flag==0">{{event[0]}}</p></div>
+                               <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0 && i!=13 ">{{(i-1)*2}}:00 onwards</p></div>
+                                <div class="col s4 m4 l4"><p ng-if="i >0 && event[i]!='' && flag==0">{{event[i]}}</p></div>
                             </div>
 
                         </div>
