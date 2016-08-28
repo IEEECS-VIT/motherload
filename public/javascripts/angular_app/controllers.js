@@ -3233,5 +3233,330 @@ controllers.schedule=function($scope){
         ]
     }
 };
+controllers.organizers = function($scope){
+    $scope.org[
+    {
+        url:'/images/aayush1.jpg',
+        name:'AAYUSH',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/aayush2',
+        name:'AAYUSH PODDAR',
+        committee: ''
+    },
+    {
+        url:'/images/abhishek.jpg',
+        name:'ABHISHEK',
+        committee: 'SPONSORSHIP'
+    },
+    {
+        url:'/images/akash.jpg',
+        name:'AKASH',
+        committee: 'EVENTS'
+    },
+    {
+        url:'/images/akhil.jpg',
+        name:'AKHIL',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/amit.jpg',
+        name:'AMIT',
+        committee: 'GC'
+    },
+    {
+        url:'/images/ananya.jpg',
+        name:'ANANYA',
+        committee: 'RNR'
+    },
+    {
+        url:'/images/animesh.jpg',
+        name:'ANIMESH',
+        committee: 'STALLS'
+    },
+    {
+        url:'/images/anish.jpg',
+        name:'ANISH',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/anjali1.jpg',
+        name:'ANJALI',
+        committee: 'DOCUMENTATION'
+    },
+    {
+        url:'/images/anjali2.jpg',
+        name:'ANJALI MISHRA',
+        committee: 'MEDIA'
+    },
+    {
+        url:'/images/arjun.jpg',
+        name:'ARJUN',
+        committee: 'PURCHASE'
+    },
+    {
+        url:'/images/',
+        name:'ARUSHI',
+        committee: 'RNR'
+    },
+    {
+        url:'/images/aswath.jpg',
+        name:'ASWATH',
+        committee: 'DOCUMENTATION'
+    },
+    {
+        url:'/images/bhanu.jpg',
+        name:'BHANU',
+        committee: 'GC'
+    },
+    {
+        url:'/images/bhaskar.jpg',
+        name:'BHASKAR',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/deboleena.jpg',
+        name:'DEBOLEENA',
+        committee: 'GC'
+    },
+    {
+        url:'/images/dhiraj.jpg',
+        name:'DHIRAJ',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/',
+        name:'DIVYADITYA',
+        committee: 'EVENTS'
+    },
+    {
+        url:'/images/geerthathanna.jpg',
+        name:'GEERTHATHANNA',
+        committee: 'SGC'
+    },
+    {
+        url:'/images/golcha.jpg',
+        name:'GOLCHA',
+        committee: 'RNR'
+    },
+    {
+        url:'/images/gopikrishnan.jpg',
+        name:'GOPIKRISHNAN',
+        committee: 'PURCHASE'
+    },
+    {
+        url:'/images/harsh.png',
+        name:'HARSH CHANDRA',
+        committee: 'FINANCE'
+    },
+    {
+        url:'/images/jerowin.jpg',
+        name:'JEROWIN',
+        committee: 'SPONSORSHIP'
+    },
+    {
+        url:'/images/karan1.jpg',
+        name:'KARAN',
+        committee: 'EVENTS'
+    },
+    {
+        url:'/images/kartik1.jpg',
+        name:'KARTIK',
+        committee: 'HALL'
+    },
+    {
+        url:'/images/khushbu.jpg',
+        name:'KHUSHBU',
+        committee: 'RNR'
+    },
+    {
+        url:'/images/nishith.jpg',
+        name:'NISHITH',
+        committee: 'GC'
+    },
+    {
+        url:'/images/nitish.jpg',
+        name:'NITISH',
+        committee: 'HALL'
+    },
+    {
+        url:'/images/paramita.jpg',
+        name:'PARAMITA',
+        committee: 'PNM'
+    },{
+        url:'/images/pavan.jpg',
+        name:'PAVAN',
+        committee: 'EVENTS'
+    },
+    {
+        url:'/images/pranav.jpg',
+        name:'PRANAV',
+        committee: 'EVENTS'
+    },
+    {
+        url:'/images/pranjal.jpg',
+        name:'PRANJAL',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/priyanka.jpg',
+        name:'PRIYANKA',
+        committee: 'GC'
+    },
+    {
+        url:'/images/',
+        name:'RAHUL',
+        committee: 'SPONSORSHIP'
+    },
+    {
+        url:'/images/rama.jpg',
+        name:'RAMA CHANDRA GUPTA',
+        committee: 'HALL'
+    },
+    {
+        url:'/images/rashmi.jpg',
+        name:'RASHMI',
+        committee: ''
+    },{
+        url:'/images/rishav.jpg',
+        name:'RISHAV SHAW',
+        committee: 'PNM'
+    },{
+        url:'/images/ritwika.jpg',
+        name:'RITWIKA',
+        committee: 'MEDIA'
+    },
+    {
+        url:'/images/riya.jpg',
+        name:'RIYA',
+        committee: 'GC'
+    },
+    {
+        url:'/images/rola.jpg',
+        name:'ROLA',
+        committee: 'SGC'
+    },
+    {
+        url:'/images/roop.jpg',
+        name:'ROOP SAGAR',
+        committee: 'SPONSORSHIP'
+    },
+    {
+        url:'/images/sairam.jpg',
+        name:'SAIRAM',
+        committee: 'RNR'
+    },
+    {
+        url:'/images/sameer.jpg',
+        name:'SAMEER',
+        committee: 'GC'
+    },
+    {
+        url:'/images/sandeep.jpg',
+        name:'SANDEEP',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/santosh.jpg',
+        name:'SANTOSH VADDI',
+        committee: 'EVENTS'
+    },
+    {
+        url:'/images/sarath.jpg',
+        name:'SARATH CHANDRA',
+        committee: 'GC'
+    },
+    {
+        url:'/images/sarawagi.jpg',
+        name:'SARAWAGI',
+        committee: 'EVENTS'
+    },
+    {
+        url:'/images/sarthak.jpg',
+        name:'SARTHAK',
+        committee: 'SGC'
+    },
+    {
+        url:'/images/saumya.jpg',
+        name:'SAUMYA',
+        committee: 'EVENTS'
+    },
+    {
+        url:'/images/shivangee.jpg',
+        name:'SHIVANGEE',
+        committee: 'EVENTS'
+    },
+    {
+        url:'/images/shubham1.jpg',
+        name:'SHUBHAM NAIR',
+        committee: 'MEDIA'
+    },
+    {
+        url:'/images/shubham2.jpg',
+        name:'SHUBHAM',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/sohini.jpg',
+        name:'SOHINI',
+        committee: 'GC'
+    },
+
+    {
+        url:'/images/sonali.jpg',
+        name:'SONALI',
+        committee: 'RNR'
+    },
+    {
+        url:'/images/syed.jpg',
+        name:'SYED',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/tarun.jpg',
+        name:'TARUN',
+        committee: 'RNR'
+    },
+    {
+        url:'/images/vaishali.jpg',
+        name:'VAISHALI',
+        committee: 'SALES'
+    },
+    {
+        url:'/images/vamsi.jpg',
+        name:'VAMSI',
+        committee: 'RNR'
+    },
+    {
+        url:'/images/virangna.jpg',
+        name:'VIRANGNA',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/vishal.jpg',
+        name:'VISHAL',
+        committee: 'MEDIA'
+    },
+    {
+        url:'/images/yashweer.jpg',
+        name:'YASHVEER',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/karan2.jpg',
+        name:'KARAN',
+        committee: 'PNM'
+    },
+    {
+        url:'/images/kartik2.jpg',
+        name:'KARTIK',
+        committee: 'SPONSORSHIP'
+    }
+
+
+
+        ]
+};
 
 app.controller(controllers);

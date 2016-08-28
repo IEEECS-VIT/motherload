@@ -40,6 +40,10 @@ app.config(function ($routeProvider) {
             templateUrl:'/schedule',
             controller: 'schedule'
         })
+        .when('/organizers',{
+            templateUrl:'/organizers',
+            controller: 'organizers'
+        })
         .otherwise({
 
         });

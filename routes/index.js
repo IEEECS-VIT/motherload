@@ -203,6 +203,9 @@ router.get('/contact',function(req,res){
 router.get('/team',function(req,res){
     res.render('templates/team');
 });
+router.get('/organizers',function(req,res){
+    res.render('templates/organizers');
+});
 router.get('/events',function(req,res){
     res.render('templates/events');
 });
