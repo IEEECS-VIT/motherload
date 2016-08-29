@@ -1,5 +1,5 @@
 
-<!--<div ng-app>
+<div ng-app>
 <div id="organizers" class="organizers">
 <h1 class="center" style="color: white;">Organizers</h1>
     <div class="container">
@@ -8,11 +8,12 @@
                 <div class="card z-depth-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
                     <div class="card-content">
                         <div class="container">
-                            <div class="row"  ng-repeat="org in organizer">
-                                <div class="col s12 l3 m3">
-                                    <img src="{{org.url}}" alt="{{org.name}}" style="width: 100px; height: 100px;">
-                                    <h3>{{org.name}}</h3>
-                                    <h5>{{org.committee}}</h5>
+                            <div class="row">
+                                <div class="col s12 l4 m4" ng-repeat="org in organizer">
+                                    <img class="circle responsive-img" src="{{org.url}}" alt="{{org.name}}">
+                                    <p>{{org.name}}</p>
+                                    <p>{{org.committee}}</p>
+                                    <br>
                                 </div>
                             </div>
                         </div>
@@ -22,4 +23,4 @@
     </div>
 </div>
 </div>
-</div>-->
+</div>

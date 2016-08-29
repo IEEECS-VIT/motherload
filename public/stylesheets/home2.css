@@ -878,7 +878,10 @@ footer.page-footer {
     }
 
 }
-
+#organizers
+{
+  text-align: center;
+}
 li .modal-trigger{
     padding-left: 0;
 }

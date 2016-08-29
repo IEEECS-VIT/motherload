@@ -3299,7 +3299,7 @@ controllers.organizers = function($scope){
         committee: 'PURCHASE'
     },
     {
-        url:'/images/',
+        url:'/images/arushi.jpg',
         name:'ARUSHI',
         committee: 'RNR'
     },
@@ -3329,7 +3329,7 @@ controllers.organizers = function($scope){
         committee: 'PNM'
     },
     {
-        url:'/images/',
+        url:'/images/divyaditya.jpg',
         name:'DIVYADITYA',
         committee: 'EVENTS'
     },
@@ -3344,7 +3344,7 @@ controllers.organizers = function($scope){
         committee: 'RNR'
     },
     {
-        url:'/images/gopikrishnan.jpg',
+        url:'/images/gopikrishnan.png',
         name:'GOPIKRISHNAN',
         committee: 'PURCHASE'
     },
@@ -3369,7 +3369,7 @@ controllers.organizers = function($scope){
         committee: 'HALL'
     },
     {
-        url:'/images/khushbu.jpg',
+        url:'/images/khushbu.png',
         name:'KHUSHBU',
         committee: 'RNR'
     },
@@ -3408,7 +3408,7 @@ controllers.organizers = function($scope){
         committee: 'GC'
     },
     {
-        url:'/images/',
+        url:'/images/rahul.jpg',
         name:'RAHUL',
         committee: 'SPONSORSHIP'
     },
