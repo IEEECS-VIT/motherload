@@ -150,7 +150,9 @@ controllers.schedule=function($scope){
         }
         return input;
     };
-    $scope.dates={"tenth":[
+    $scope.dates=
+    {
+        "tenth":[
         [
             "CODE-A-THON",
             "",
@@ -1737,8 +1739,8 @@ controllers.schedule=function($scope){
                 120
             ]
         ]
-    },{
-        "twentyfour":[
+    }, {
+        "twentyfour": [
             [
                 "STOCKASTIC",
                 "",
@@ -2541,6 +2543,7 @@ controllers.schedule=function($scope){
             ]
         ]
     },{
+
         "twentyfive":[
             [
                 "Start up street 2.0",
@@ -3234,7 +3237,7 @@ controllers.schedule=function($scope){
     }
 };
 controllers.organizers = function($scope){
-    $scope.org[
+    $scope.organizer=[
     {
         url:'/images/aayush1.jpg',
         name:'AAYUSH',

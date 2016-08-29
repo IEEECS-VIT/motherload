@@ -8,8 +8,8 @@
                 <div class="card z-depth-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="100ms">
                     <div class="card-content">
                         <div class="container">
-                            <div class="row">
-                                <div class="s12 l3 m3" ng-repeat="org in organizers">
+                            <div class="row"  ng-repeat="org in organizer">
+                                <div class="col s12 l3 m3">
                                     <img src="{{org.url}}" alt="{{org.name}}" style="width: 100px; height: 100px;">
                                     <h3>{{org.name}}</h3>
                                     <h5>{{org.committee}}</h5>
