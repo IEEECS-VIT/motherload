@@ -916,7 +916,7 @@ controllers.organizers = function($scope){
         committee: 'MEDIA'
     },
     {
-        url:'/images/arjun.jpg',
+        url:'/images/arjun.JPG',
         name:'ARJUN',
         committee: 'PURCHASE'
     },
