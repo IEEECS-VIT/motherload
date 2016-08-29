@@ -3244,7 +3244,7 @@ controllers.organizers = function($scope){
         committee: 'PNM'
     },
     {
-        url:'/images/aayush2',
+        url:'/images/aayush2.jpg',
         name:'AAYUSH PODDAR',
         committee: ''
     },
