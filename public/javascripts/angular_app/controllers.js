@@ -90,8 +90,9 @@ controllers.events =function($scope, $http) {
         $scope.singleEvent=a;
         $scope.showSingleEvent=true;
     };
-    $scope.showEvents=function(i)
+    $scope.showEvents=function(subCatName)
     {
+        var i = $scope.subCategories.lastIndexOf(subCatName);
         $scope.showAllEvents=true;
         $scope.showWorkshops=false;
         $scope.showSingleEvent=false;

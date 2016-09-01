@@ -17,7 +17,7 @@
                                 <div class="card-title">
                                     <h5  class="black-text">{{event.name | uppercase}}
                                         <br>
-                                        <small ng-repeat="org in event.organization">{{org}}</small>
+                                        <small ng-repeat="org in event.organization">{{org + ($index+1 != event.organization.length ? ', ' : '' ) }}</small>
                                     </h5>
                                 </div>
 
@@ -25,7 +25,7 @@
 
                         </div>
                         <div class="back" ng-show="showSubcategories" ng-click="backToCategories()"><i class="material-icons" >arrow_back</i></div>
-                        <div class="col s6 m6 l4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="subcat in subCategories" ng-click="showEvents($index)" ng-show="showSubcategories">
+                        <div class="col s6 m6 l4 wow fadeInDown" data-wow-duration="1s" data-wow-delay="100ms" ng-repeat="subcat in subCategories | filter : '!Workshop' " ng-click="showEvents(subcat)" ng-show="showSubcategories">
                             <div class="card subcategory">
                                 <div class="card-title"><h5  class="black-text">{{subcat | uppercase}}</h5></div>
                             </div>
@@ -37,7 +37,7 @@
                                     <h5 class="black-text">
                                         {{event.name | uppercase}}
                                         <br>
-                                        <small ng-repeat="org in event.organization">{{org}}</small>
+                                        <small ng-repeat="org in event.organization">{{org + ($index+1 != event.organization.length ? ', ' : '' ) }}</small>
                                     </h5>
                                 </div>
                             </div>
