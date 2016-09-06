@@ -44,6 +44,14 @@ app.config(function ($routeProvider) {
             templateUrl:'/organizers',
             controller: 'organizers'
         })
+        .when('/papers',{
+            templateURL: '/papers',
+            controller: 'papers'
+        })
+        .when('/accommodation',{
+            templateURL: '/accomodation',
+            controllers: 'accomodation'
+        })
         .otherwise({
 
         });

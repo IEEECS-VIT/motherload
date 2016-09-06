@@ -215,4 +215,10 @@ router.get('/sponsors',function(req,res){
 router.get('/schedule',function(req,res){
     res.render('templates/schedule');
 });
+router.get('/papers',function(req,res){
+    res.render('templates/papers');
+});
+router.get('/accommodation',function(req,res){
+    res.render('templates/accomodation');
+});
 module.exports = router;

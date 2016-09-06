@@ -28,6 +28,9 @@ var arr=[
     },
     {
         'id':'cpg'
+    },
+    {
+        'id':'papers'
     }
 ];
 $(document).ready(function() {
