@@ -1201,5 +1201,6 @@ controllers.organizers = function($scope){
         ]
 
 };
-
+controllers.accommodation = function($scope){};
+controllers.papers = function($scope){};
 app.controller(controllers);

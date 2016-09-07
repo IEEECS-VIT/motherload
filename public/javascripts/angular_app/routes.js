@@ -1,5 +1,6 @@
 app.config(function ($routeProvider) {
     $routeProvider
+
         .when('/', {
             templateUrl: '/main',
             controller: 'main'
@@ -43,17 +44,12 @@ app.config(function ($routeProvider) {
         .when('/organizers',{
             templateUrl:'/organizers',
             controller: 'organizers'
-        })
-        .when('/papers',{
-            templateURL: '/papers',
+        }).when('/papers',{
+            templateUrl:'/papers',
             controller: 'papers'
-        })
-        .when('/accommodation',{
-            templateURL: '/accomodation',
-            controller: 'accommodation'
-        })
-        .otherwise({
-
-        });
+        }).when('/accommodation',{
+                templateUrl:'/accommodation',
+                controller: 'accommodation'
+            }).otherwise({redirect:'/'});
 });
 
