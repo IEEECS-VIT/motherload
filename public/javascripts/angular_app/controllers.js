@@ -2,6 +2,8 @@ var controllers = {};
 controllers.main =function($scope){
    $scope.setup = function(){authorize();};
 };
+controllers.papers=function(scope){};
+controllers.accommodation=function(scope){};
 controllers.contact =function($scope){};
 controllers.events =function($scope, $http) {
     // add all categories here and use these arrays with ng repeat to generate page

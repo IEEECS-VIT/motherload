@@ -50,7 +50,7 @@ app.config(function ($routeProvider) {
         })
         .when('/accommodation',{
             templateURL: '/accomodation',
-            controllers: 'accomodation'
+            controller: 'accommodation'
         })
         .otherwise({
 
