@@ -199,7 +199,7 @@ controllers.schedule=function($scope){
             "10:00-16:00",
             "LAB (GDN 153)		",
             "iOS Fusion",
-            "10:00-18:00",
+            "14:00-22:00",
             "GALLERY (SJT 412)			",
             "Do it Yourself",
             "8:00-18:00",
@@ -230,9 +230,6 @@ controllers.schedule=function($scope){
             "Cyber Forensic",
             "10:00-18:00",
             "Bhagat Singh Gallery SJT 8th floor",
-            "Floating Concrete",
-            "10:00-16:00",
-            "CLASS (GDN 106, 107)",
             "Stockgyaan",
             "14:00-18:00",
             "Rajaji Hall MB230",
@@ -427,7 +424,7 @@ controllers.schedule=function($scope){
             "12:00-18:00",
             "CLASS (CDMM 302, 303)		",
             "Apollo Infinite",
-            "14:00-20:00",
+            "14:00-18:00",
             "CLASS (SJT 503)		",
             "Re-Assemble",
             "12:00-18:00",
@@ -457,7 +454,7 @@ controllers.schedule=function($scope){
             "12:00-14:00",
             "FOODYS",
             "GAME A THON",
-            "6:00-00:00",
+            "00:00-23:59",
             "LAB (SJT G17, G18, G19, G20,  119, 120, 121, 122) (FROM 22-08-26,  22:00 HRS)											",
             "The 13 Cards Fim Festival",
             "12:00-20:00",
@@ -505,10 +502,10 @@ controllers.schedule=function($scope){
             "8:00-16:00",
             "KAMRAJ AUDI (TT 712, 713)			",
             "Java Problem Solving",
-            "8:00-16:00",
+            "12:00-20:00",
             "GALLERY (SJT 412)			",
             "PCB Fabrication",
-            "12:00-20:00",
+            "12:00-22:00",
             "TT GALLERY 1 (TT 28, 29)				",
             "Asset Creation for Game Development",
             "10:00-22:00",
@@ -569,7 +566,7 @@ controllers.schedule=function($scope){
             "TT BASKETBALL COURT",
 
             "Apollo Infinite",
-            "10:00-16:00",
+            "10:00-14:00",
 
             "CLASS (SJT 503)",
 
@@ -606,7 +603,7 @@ controllers.schedule=function($scope){
             "10:00-18:00",
             "CLASS (TT 415)",
             "Circuitronix ",
-            "10:00-14:00",
+            "10:00-16:00",
             "CLASS (TT 621)",
             "Buzzer quiz",
             "10:00-14:00",
@@ -708,12 +705,13 @@ controllers.schedule=function($scope){
             "LabVIEW",
             "10:00-16:00",
             "TT GALLERY 1 (TT 28, 29)",
-        "Sixth Sense Technology",
-        "",
-        "TT GALLERY 2 (TT 233, 234)",
     "Asset Creation for Game Development",
         "12:00-18:00",
     "LAB (SJT 219)",
+            "Auto Expo",
+            "8:00-22:00",
+            "In front of SJT"
+
 
 
         ],
@@ -756,7 +754,7 @@ controllers.schedule=function($scope){
             "8:00-20:00",
             "TT BASKETBALL COURT",
             "Ultimate Engineer",
-            "10:00-12:00",
+            "8:00-12:00",
             "CLASS (SJT 324)",
             "Reverse Engineering",
             "12:00-18:00",
@@ -791,9 +789,6 @@ controllers.schedule=function($scope){
             "True Detective",
             "10:00-16:00",
             "CLASS (SMV 130)",
-            "Labomania",
-            "",
-            "LAB (SMV G09)",
             "Lubrislide",
             "10:00-14:00",
             "FOODYS",
@@ -868,6 +863,13 @@ controllers.schedule=function($scope){
             "Scibiz tech quiz",
             "12:00-18:00",
             "SMART CLASS(TT312)",
+            "Best Out Of Waste",
+            "10:00-16:00",
+            "Woodstock",
+            "Management Guru",
+            "12:00-18:00",
+            "SJT 301"
+
 
 
         ]
