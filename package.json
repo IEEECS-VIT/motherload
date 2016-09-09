@@ -11,6 +11,8 @@
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.14.2",
     "bower": "^1.5.2",
+    "chai": "^3.5.0",
+    "connect-rest": "^2.8.0",
     "cookie-parser": "^1.4.1",
     "cors": "^2.7.1",
     "debug": "^2.2.0",
@@ -22,10 +24,14 @@
     "googleapis": "^12.4.0",
     "jfum": "^1.0.3",
     "mongodb": "^2.0.46",
+    "mongoose": "^4.6.0",
     "morgan": "^1.6.0",
     "multer": "^1.1.0"
   },
   "cacheDirectories": [
     "public/bower"
-  ]
+  ],
+  "devDependencies": {
+    "restler": "^3.4.0"
+  }
 }
