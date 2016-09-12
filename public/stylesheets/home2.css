@@ -878,6 +878,10 @@ footer.page-footer {
     }
 
 }
+h1
+{
+    color:white !important;
+}
 #organizers
 {
   text-align: center;

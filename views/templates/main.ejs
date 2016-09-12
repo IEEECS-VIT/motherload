@@ -1,223 +1,48 @@
 <!-- make this work -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 
+<script>
+
+        $('.collapsible').collapsible({
+            accordion : true// A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        });
+
+</script>
 <div id="home" ng-init="setup()">
     <div class="content">
+<div class="container">
+    <div class="row">
+    <div class="col l6 m12 s12">
         <div class="gravitas">
-            <h5 class="center" style="color: white; font-size: 2em; font-weight: 500; margin-top:2%">VIT University<br></h5>
-            <h5 style="color: white; font-size: 1.5em">presents</h5>
-            <h5 style="color: white; font-size: 1.5em">8th Edition</h5>
-
-
-                <div class="row">
-                    <div class="col s12 l12 m12" style="margin-top: -3%">
-                        <div class="center"><img class="gravitas-logo" src="/images/gravitas.png" width="60%"></div>
-                    </div>
-                </div>
-
-
-            <!--<ul style="width: 100%" >
-                <li class="cards hide-on-med-and-down" style="width:40%;margin-left: 30%">
-
-                    <svg viewBox="0 0 800 600" class="card-gravitas z-depth-2">
-                        <symbol id="s-text">
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="35%"
-                                  class="text--line"
-                                    >
-                                graVITas
-                            </text>
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="68%"
-                                  class="text--line2"
-                                    >
-                                2016
-                            </text>
-
-                        </symbol>
-
-                        <g class="g-ants">
-                            <use xlink:href="#s-text"
-                                 class="text-copy" id="gravitas"></use>
-                            <use xlink:href="#s-text"
-                                 class="text-copy" id="gravitas"></use>
-                            <use xlink:href="#s-text"
-                                 class="text-copy" id="gravitas"></use>
-                            <use xlink:href="#s-text"
-                                 class="text-copy" id="gravitas"></use>
-                            <use xlink:href="#s-text"
-                                 class="text-copy" id="gravitas"></use>
-                        </g>
-
-
-                    </svg>
-                </li>
-                <li class="cards hide-on-med-and-up" style="width:100%;"  >
-
-                    <svg viewBox="0 0 800 600" class="card-gravitas z-depth-2">
-                        <symbol id="s-text">
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="35%"
-                                  class="text--line"
-                                    >
-                                graVITas
-                            </text>
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="68%"
-                                  class="text--line2"
-                                    >
-                                2016
-                            </text>
-
-                        </symbol>
-
-                        <g class="g-ants">
-                            <use xlink:href="#s-text"
-                                 class="text-copy" id="gravitas"></use>
-                            <use xlink:href="#s-text"
-                                 class="text-copy" id="gravitas"></use>
-                            <use xlink:href="#s-text"
-                                 class="text-copy" id="gravitas"></use>
-                            <use xlink:href="#s-text"
-                                 class="text-copy" id="gravitas"></use>
-                            <use xlink:href="#s-text"
-                                 class="text-copy" id="gravitas"></use>
-                        </g>
-
-
-                    </svg>
-                </li><!--
-                <li class="cards large-visible">
-                    <svg viewBox="0 0 1000 600" class="card-gravitas z-depth-2">
-                        <symbol id="g-text">
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="25%"
-                                  class="text--line"
-                                    >
-                                Reduce
-                            </text>
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="45%"
-                                  class="text--line2"
-                                    >
-                                Reuse
-                            </text>
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="65%"
-                                  class="text--line2"
-                                    >
-                                Recycle
-                            </text>
-
-                        </symbol>
-
-                        <g class="g-ants">
-                            <use xlink:href="#g-text"
-                                 class="text-copy" id="reduce"></use>
-                            <use xlink:href="#g-text"
-                                 class="text-copy" id="reduce"></use>
-                            <use xlink:href="#g-text"
-                                 class="text-copy" id="reduce"></use>
-                            <use xlink:href="#g-text"
-                                 class="text-copy" id="reduce"></use>
-                            <use xlink:href="#g-text"
-                                 class="text-copy" id="reduce"></use>
-                        </g>
-
-
-                    </svg>
-                </li>
-                <li class="cards large-visible">
-                    <svg viewBox="0 0 800 600" class="card-gravitas z-depth-2">
-                        <symbol id="water-text">
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="35%"
-                                  class="text--line"
-                                    >
-                                Save
-                            </text>
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="68%"
-                                  class="text--line2"
-                                    >
-                                Water
-                            </text>
-
-                        </symbol>
-
-                        <g class="g-ants">
-                            <use xlink:href="#water-text"
-                                 class="text-copy" id="water"></use>
-                            <use xlink:href="#water-text"
-                                 class="text-copy" id="water"></use>
-                            <use xlink:href="#water-text"
-                                 class="text-copy" id="water"></use>
-                            <use xlink:href="#water-text"
-                                 class="text-copy" id="water"></use>
-                            <use xlink:href="#water-text"
-                                 class="text-copy" id="water"></use>
-                        </g>
-
-
-                    </svg>
-                </li>
-                <li class="cards large-visible">
-                    <svg viewBox="0 0 800 600" class="card-gravitas z-depth-2 ">
-                        <symbol id="energy-text">
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="35%"
-                                  class="text--line"
-                                    >
-                                Conserve
-                            </text>
-                            <text text-anchor="middle"
-                                  x="50%"
-                                  y="68%"
-                                  class="text--line2"
-                                    >
-                                Energy
-                            </text>
-
-                        </symbol>
-
-                        <g class="g-ants">
-                            <use xlink:href="#energy-text"
-                                 class="text-copy" id="energy"></use>
-                            <use xlink:href="#energy-text"
-                                 class="text-copy" id="energy"></use>
-                            <use xlink:href="#energy-text"
-                                 class="text-copy" id="energy"></use>
-                            <use xlink:href="#energy-text"
-                                 class="text-copy" id="energy"></use>
-                            <use xlink:href="#energy-text"
-                                 class="text-copy"id="energy"></use>
-                        </g>
-
-
-                    </svg>
-                </li>
-
-
-            </ul>-->
-            <div class="gallery-pagination large-visible">
-                <!--<button class="gallery-pagination-dot" id="b1"></button>
-               <button class="gallery-pagination-dot" id="b2"></button>
-                <button class="gallery-pagination-dot" id="b3"></button>
-                <button class="gallery-pagination-dot" id="b4"></button>-->
-
+            <h5 class="center" style="color: white; font-size: 2em; font-weight: 500; margin-top:2%">VIT University and Classic Polo<br></h5>
+            <h5 style="color: white; font-size: 1.5em">co-presents<br></h5>
+            <h3 class="center" style=" font-weight: 500; color: white; margin-top:2%">graVITas'16<br></h3>
+            <h5 style="color: white; font-size: 1.5em">in association with digital partner<br></h5>
+            <h5 style="color: white;font-weight: 500;font-size: 2em; font-weight: 500; margin-top:2% ">Classic Polo</h5>
             </div>
+        </div>
+        <div class="col l6 m12 s12">
+            <ul class="collapsible popout" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header">First Section</div>
+                    <div class="collapsible-body"><p>This is first section.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Second Section</div>
+                    <div class="collapsible-body"><p>This is second section.</p></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Third Section</div>
+                    <div class="collapsible-body"><p>This is third section.</p></div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
+    </div>
+</div>
+
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters">
     <defs>
