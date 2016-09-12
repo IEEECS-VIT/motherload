@@ -1191,6 +1191,33 @@ controllers.organizers = function($scope){
         ]
 
 };
+controllers.speakers = function($scope){
+    $scope.speaker=[
+        {
+            name: 'VIT RUBIKS CUBE CHALLENGE',
+            speaker_name:'Nitesh',
+            photo:'/images/nitesh.jpg',
+            designation:'',
+            description:''
+
+
+        },
+        {
+            name: '',
+            photo:'',
+            speakername:'',
+            designation:'',
+            description:''
+        },
+        {
+            name: '',
+            photo:'',
+            speakername:'',
+            designation:'',
+            description:''
+        }
+        ]
+};
 controllers.accommodation = function($scope){};
 controllers.papers = function($scope){};
 app.controller(controllers);
