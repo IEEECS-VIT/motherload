@@ -221,4 +221,7 @@ router.get('/papers',function(req,res){
 router.get('/accommodation',function(req,res){
     res.render('templates/accomodation');
 });
+router.get('/tcs',function(req,res){
+    res.render('tcs');
+});
 module.exports = router;
