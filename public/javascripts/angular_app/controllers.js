@@ -1,6 +1,54 @@
 var controllers = {};
 controllers.main =function($scope){
    $scope.setup = function(){authorize();};
+    $scope.speaker=[
+        {
+            name: 'VIT Rubiks Cube Challenge',
+            speaker_name:'Hari Anirudh ',
+            photo:'/images/Anirudh.jpg',
+            designation:'Candidate delegate at world cube association ' +
+            'Assistant Manager at Citicorp Services India Pvt Ltd'
+        },
+        {
+            name:'CRYPTOGRAPHY WORKSHOP',
+            speaker_name:'Mr. Somitra Kumar Sanadhya',
+            photo:'/images/somitra.png',
+            designation:'Assistant Professor at IIIT Delhi since Jan, 2010 and Adjunct Assistant'+
+            'Professor at CR Rao AIMSCS, Hyderabad since Oct 2011. Founding member'+
+            'of Cryptology Research Group (CRG) at IIIT Delhi.'
+        },
+        {
+            name:'Java And Problem Solving Workshop',
+            speaker_name:'Kashish Singhal',
+            photo:'/images/Kashish.jpg',
+            designation:'Software Development Engineer at Whizdm Innovations Pvt. Ltd'
+        },
+        {
+            name:'Stockgyaan',
+            speaker_name:'Mr.Vivek Karwa',
+            photo:'/images/vivek.png',
+            designation:'Mr. Vivek Karwa is a Certified Personal Financial Planner, Investment Adviser and Trainer. He'+
+
+            'is one of the most reputed and recognized Financial Planner, Investment Advisor and trainer'+
+
+            'across spectrum of clients, from Individuals to Ultra-HNIs, Salaries-Businessmen- Professionals,'+
+
+        'Celebrities etc.,. He has an experience of more than 16 years in the world of Financial Services'+
+
+    ' Stock Market. His Expertise are Comprehensive Personal Financial Planning, Equity Research'+
+
+    'and Wealth Management.'
+        },
+     /* {
+            name:'Do It Yourself',
+            speaker_name:'Mr.P Murali',
+            photo:'/images/murali.jpg',
+            designation:'Director at'+
+           'Integrated cellphones technology(ICT),Vellore'
+
+        },*/
+
+    ]
 };
 controllers.papers=function(scope){};
 controllers.accommodation=function(scope){};
@@ -1191,33 +1239,7 @@ controllers.organizers = function($scope){
         ]
 
 };
-controllers.speakers = function($scope){
-    $scope.speaker=[
-        {
-            name: 'VIT RUBIKS CUBE CHALLENGE',
-            speaker_name:'Nitesh',
-            photo:'/images/nitesh.jpg',
-            designation:'',
-            description:''
 
-
-        },
-        {
-            name: '',
-            photo:'',
-            speakername:'',
-            designation:'',
-            description:''
-        },
-        {
-            name: '',
-            photo:'',
-            speakername:'',
-            designation:'',
-            description:''
-        }
-        ]
-};
 controllers.accommodation = function($scope){};
 controllers.papers = function($scope){};
 app.controller(controllers);

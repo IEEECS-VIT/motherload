@@ -1,34 +1,41 @@
 <!-- make this work -->
 
-
+<div ng-app>
 <div id="home" ng-init="setup()">
     <div class="content">
 <div class="container">
     <div class="row">
+
     <div class="col l12 m12 s12">
         <div class="gravitas" style="">
-            <h5 class="center" style="color: white; font-size: 2em; font-weight: 500; margin-top:2%">VIT University and Classic Polo<br></h5>
+            <h5 class="center" style="color: white; font-size: 2em; font-weight: 500; margin-top:2%">VIT University and <img src="/images/classiclogo.png" width="50%" height="50%" style="display:inline; vertical-align: middle;"> <br></h5>
             <h5 style="color: white; font-size: 1.5em">co-presents<br></h5>
-            <h3 class="center" style=" font-weight: 500; color: white; margin-top:2%">graVITas'16<br></h3>
-            <h5 style="color: white; font-size: 1.5em">in association with digital partner<br></h5>
-            <h5 style="color: white;font-weight: 500;font-size: 2em; font-weight: 500; margin-top:2% ">Classic Polo</h5>
+            <h3 class="center" style=" font-weight: 500; color: white; margin-top:2%">graVITas'16</h3>
+            <h5 style="color: white; font-size: 1.5em">in association with digital partner <img src="/images/campus.png" width="15%" height="50%"  align="center" style="display:inline;  vertical-align: middle;"></h5>
+
             </div>
         </div>
-        <div class="col l3 m12 s12 ">
-            <div class="card">
+        </div>
+    </div>
+        <div class="container">
+        <div class="row" >
+        <div class="col l3 m12 s12" ng-repeat="x in speaker">
+            <div class="card ">
                 <div class="card-image waves-effect waves-block waves-light responsive-img">
-                    <img class="activator" src="/images/nitesh.jpg" style="height: 200px">
+                    <img class="activator" ng-src="{{x.photo}}" style="height: 200px">
                 </div>
                 <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Rubiks Cube Challenge<i class="material-icons right">more_vert</i></span>
+                    <span class="card-title activator grey-text text-darken-4">{{x.name}}<i class="material-icons right">more_vert</i></span>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Nitesh deshmukh <i class="material-icons right">close</i></span>
-                    <p>Cubelelo (sponsor)</p>
+                    <span class="card-title grey-text text-darken-4">{{x.speaker_name}}<i class="material-icons right">close</i></span>
+                    <p align="justify">{{x.designation}}</p>
                 </div>
             </div>
         </div>
-            <div class="col l3 m12 s12">
+            </div>
+            </div>
+           <!-- <div class="col l3 m12 s12">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light responsive-img">
                         <img class="activator" src="/images/somitra.png" style="height: 200px">
@@ -50,13 +57,13 @@
                             of Cryptology Research Group (CRG) at IIIT Delhi.</p>
                     </div>
                 </div>
-        </div>
-  
+        </div>-->
+
 
 </div>
     </div>
 </div>
-
+</div>
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters">
     <defs>
