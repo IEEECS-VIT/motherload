@@ -557,11 +557,16 @@ nav
     margin-top: 0px;
     margin-left:5px;
 }
+#vit
+{
+    color: white; font-size: 3em; font-weight: 500; margin-top:2%;
+}
 
 .brand-logo img{
     width: 130px;
     height: 50px;
     margin-top: 5px;
+    margin-left: -15%;
 
 }
 #vit img{
@@ -890,9 +895,16 @@ h1
 {
     margin-left: 10%;
 }
+ .fa-check
+{
+    vertical-align: text-top;
+    margin-top: -10%;
+    margin-left: -13%;
+}
+
 .date
 {
-    padding-left: 0.5%;
+    padding-left: 0.75%;
 }
 li .modal-trigger{
     padding-left: 0;
