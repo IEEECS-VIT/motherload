@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        TCS count
+    </title>
+
+</head>
+<body>
+<div id="pageViews">
+
+</div>
+<script>
+    var views = 0;
+    document.getElementById('pageViews').innerHTML = views.toString();
+
+
+
+    function authorize(){
+        var c = "https://superproxy-143010.appspot.com/query?id=ahNzfnN1cGVycHJveHktMTQzMDEwchULEghBcGlRdWVyeRiAgICAuqiOCgw";
+        var z = new XMLHttpRequest();
+        try{
+            // Opera 8.0+, Firefox, Chrome, Safari
+            z = new XMLHttpRequest();
+        }catch (e){
+            // Internet Explorer Browsers
+            try{
+                z = new ActiveXObject("Msxml2.XMLHTTP");
+
+            }catch (e) {
+
+                try{
+                    z = new ActiveXObject("Microsoft.XMLHTTP");
+                }catch (e){
+                    // Something went wrong
+                    alert("Your browser broke!");
+                    return false;
+                }
+
+            }
+        }
+
+        z.onreadystatechange = function(){
+
+            if (z.readyState == 4  && z.status==200){
+                // Javascript function JSON.parse to parse JSON data
+                var jsonObj = JSON.parse(z.responseText);
+                console.log(jsonObj);
+
+                // jsonObj variable now contains the data structure and can
+                // be accessed as jsonObj.name and jsonObj.country.
+                views = jsonObj.totalResults;
+                document.getElementById('pageViews').innerHTML = views.toString()
+
+            }
+        }
+        z.open("GET", c, true);
+        z.send();
+    }
+    window.onload = authorize;
+</script>
+</body>
+</html>

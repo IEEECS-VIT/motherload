@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var mongoUsers = require(path.join(__dirname, '..', 'db', 'mongo-users'));
 var bcrypt;
+var request = require('request');
 var record = {
     _id: '',
     dob: '',
@@ -220,5 +221,14 @@ router.get('/papers',function(req,res){
 });
 router.get('/accommodation',function(req,res){
     res.render('templates/accomodation');
+});
+router.get('/tcs',function(req,res){
+    request("https://superproxy-143010.appspot.com/query?id=ahNzfnN1cGVycHJveHktMTQzMDEwchULEghBcGlRdWVyeRiAgICAuqiOCgw", function(error, response, body) {
+        if(error){console.log(error)}
+        else{
+                  res.send(JSON.parse(body).rows);
+        }
+    });
+
 });
 module.exports = router;
