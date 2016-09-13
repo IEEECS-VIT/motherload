@@ -519,6 +519,10 @@ canvas{
     background-color: #3f51b5;
     z-index: -1;
 }
+.a
+{
+    border-radius:5px;
+}
 .graphics img{
     position: relative;
     width: 100%;
@@ -893,12 +897,7 @@ h1
 {
     margin-left: 10%;
 }
- .fa-check
-{
-    vertical-align: text-top;
-    margin-top: -10%;
-    margin-left: -13%;
-}
+
 
 .date
 {
