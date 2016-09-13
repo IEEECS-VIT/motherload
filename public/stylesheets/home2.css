@@ -1212,3 +1212,10 @@ h5{
     position: relative;
 
 }
+.img-circle{
+    border-radius: 100%;
+    margin: 3%;
+}
+.speakers .card{
+    border-radius: 2px;
+}

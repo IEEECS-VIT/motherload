@@ -222,6 +222,9 @@ router.get('/papers',function(req,res){
 router.get('/accommodation',function(req,res){
     res.render('templates/accomodation');
 });
+router.get('/speakers',function(req,res){
+    res.render('templates/speakers');
+});
 router.get('/tcs',function(req,res){
     request("https://superproxy-143010.appspot.com/query?id=ahNzfnN1cGVycHJveHktMTQzMDEwchULEghBcGlRdWVyeRiAgICAuqiOCgw", function(error, response, body) {
         if(error){console.log(error)}

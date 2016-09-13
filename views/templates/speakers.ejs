@@ -1,0 +1,22 @@
+<div>
+    <div id="speakers" class="speakers">
+    <h1 class="center" style="color: white;">Speakers</h1>
+    <div class="container">
+        <div class="row" ng-repeat="speaker in speakers">
+            <div class="card z-depth-3 col s12 m8 l8 {{$index%2==0?'':'offset-l4 offset-m4'}} wow fadeInDown" data-wow-delay="500ms" data-wow-duration="1000ms">
+                <img src="{{speaker.photo}}" class="img-circle img-small img-thumbnail {{$index%2==0?'right': 'left'}}" width="200px" height="200px">
+                <h4 class="center">{{speaker.speaker_name}}<br><small>{{speaker.name}}</small></h4>
+                <p>{{speaker.designation}}</p>
+
+            </div>
+<!--<script type="text/javascript">
+    window.onload = function () {
+        if (window.location.href.indexOf("/#/about") == -1) {
+            window.location.assign("/#/about")
+        }
+    };
+</script>-->
+            </div>
+        </div>
+    </div>
+</div>
