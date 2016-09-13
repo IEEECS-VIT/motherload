@@ -1231,9 +1231,22 @@ h5{
 
 }
 .img-circle{
+    position: fixed;
     border-radius: 100%;
-    margin: 3%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 }
-.speakers .card{
-    border-radius: 2px;
+.speakers .card-r{
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    height: 210px;
+
+
+
+}
+.speakers .card-l{
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    height: 210px;
 }

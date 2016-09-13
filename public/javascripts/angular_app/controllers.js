@@ -6,54 +6,54 @@ controllers.speakers=function($scope){
             name: 'IEYS',
             speaker_name:'Lalit S. Kanodia',
             photo:'/images/lalit.jpg',
-            'designation':'Chairman of Datamatics Group of Companies.\n\nFounder CEO of Tata Consultancy Services (TCS).\n\nRecipient of the Indian Affairs \n\'Indian of the Year\n\' Award for IT, Consulting and BPO services, Special Achievement Award at Asia Pacific Entrepreneurship Awards and Global Achiever Award for Business Excellence.'
+            'designation':'Chairman of Datamatics Group of Companies.\n\nFounder CEO of Tata Consultancy Services (TCS).\n\nRecipient of the Indian Affairs \n\'Indian of the Year\n\' Award for IT, Consulting and BPO services.'
         },{
             name: 'IEYS',
             'speaker_name':'RJ Naved',
             'photo':'/images/rj_naved.jpg',
-            'designation':'RJ Naved is a Radio Mirchi host and is a great entertainer. He has hosted the famous show \'Dilli Ka Don\' on the radio channel Radio Mirchi 98.3. He has won three awards - IRF: Best Sparkler, National Television Award and Indian Icon Award. He is famous for the \'Mirchi Murga\' segment on his radio show.'
+            'designation':'RJ Naved is a Radio Mirchi host. He has hosted the famous show \'Dilli Ka Don\'. He has won three awards - IRF: Best Sparkler, National Television Award and Indian Icon Award. He is famous for the \'Mirchi Murga\' segment on his radio show.'
         },
         {
             name: 'IEYS',
             'speaker_name':'Benny Prasad',
             'photo':'/images/benny.jpg',
-            'designation':'Benny Prasad is an instrumental guitarist from India. He designed the bentar as well as the world\'s first bongo guitar. He has travelled all around the world and has also performed in the Olympics in 2004 and FIFA Football World Cup in 2006. He has travelled to more than 218 countries as a musical performer, earning the honour of being the most travelled Indian  musician (Limca book of records).'
+            'designation':'Benny Prasad is an instrumental guitarist from India. He designed the bentar as well as the world\'s first bongo guitar. He has travelled all around the world and has also performed in the Olympics in 2004 and FIFA Football World Cup in 2006.'
         },
         {
             name: 'IEYS',
             'speaker_name':'Mohammed Adeeb',
             'photo':'/images/mohammed_adeeb.jpg',
-            'designation':'Former Rajya Sabha MP. Represented India with his statement on \'Necessity of Ending the Economic, Commercial and Financial Blockade against Cuba\' at the 68th session of the United Nations General Assembly.\n\nMember of Committee on Labour, Member of Committee on Commerce, Member of Committee on Information Technology, Select Committee to the Wakf (Amendment) Bill, Member of the Consultative Committee for the Ministry of Information and Broadcasting March and Member of Court of the Aligarh Muslim University.'
+            'designation':'Former Rajya Sabha MP. Represented India with his statement on \'Necessity of Ending the Economic, Commercial and Financial Blockade against Cuba\' at the 68th session of the United Nations General Assembly.'
         },
         {
             name: 'IEYS',
             'speaker_name':'CK Kumaravel',
             'photo':'/images/ckk.jpg',
-            'designation':'CEO and Co-Founder of Naturals. Nationally acknowledged as a leader and trend setter in the Beauty and Hair Salon industry.\n\nHe has taken Naturals to a 200+ crore enterprise, giving rise to over 230 women entrepreneurs and over 500 salons. It has also been awarded the Best Salon of the Year, the Best Retailer and the Best Franchiser, multiple times, to name a few.'
+            'designation':'CEO and Co-Founder of Naturals. Nationally acknowledged as a leader and trend setter in the Beauty and Hair Salon industry.\n\nHe has taken Naturals to a 200+ crore enterprise, giving rise to over 230 women entrepreneurs and over 500 salons. '
         },
         {
             name: 'IEYS',
             'speaker_name':'Ram Subramanian',
             'photo':'/images/Ram-Subramanian.jpg',
-            'designation':'Ram Subramanian is a Mumbai based writer, philosopher, innovator, peace-activist and ad-filmmaker. His ideas and innovations has re-defined dissent and have sparked revolutions, both in the online and real world. Ram\'s strategic and creative inputs helped the Aam Aadmi Party win the last elections in Delhi with a historic mandate.'
+            'designation':'Ram Subramanian is a Mumbai based writer, philosopher, innovator, peace-activist and ad-filmmaker. His ideas and innovations has re-defined dissent and have sparked revolutions, both in the online and real world.'
         },
         {
             name: 'IEYS',
             'speaker_name':'Aseem Trivedi',
             'photo':'/images/aseem.jpg',
-            'designation':'Aseem Trivedi (born 17 February 1987) is a political cartoonist and activist, best known for his anti corruption campaign Cartoons Against Corruption. He is a founder member of Save Your Voice, a movement against Internet Censorship in India.He has been announced as the 2012 recipient of the "Courage in Editorial Cartooning Award" of Virginia based Cartoonists Rights Network International. He is sharing the award with Syrian cartoonist Ali Ferzat. He was also nominated for the Freedom of Expression Awards 2013 by free speech organization Index on Censorship.He was also a contestant in Indian TV reality show Bigg Boss (season 6).'
+            'designation':'Aseem Trivedi (born 17 February 1987) is a political cartoonist and activist, best known for his anti corruption campaign Cartoons Against Corruption. He is a founder member of Save Your Voice, a movement against Internet Censorship in India.'
         },
         {
             name: 'IEYS',
             'speaker_name':"Obadya Ray",
             'photo':"/images/obadya.jpg",
-            'designation':"Shaguri Obadya Ray (Born in 1992), is a writer, journalist, corporate communicator and marketer, volunteer for causes and social activist. Born and brought up in India, Obadya is associated with the Indian Student Parliament as the President for the state of Andhra Pradesh and is the Indian Ambassador at the Global Student Leaders Summit.\nObadya has also worked as: a sports and political journalist, writer, editor and as a political analyst. He has volunteered at Hyderabad Marathon, Ragging Action Force and Young Indian Communicators Conclave as well."
+            'designation':"Shaguri Obadya Ray (Born in 1992), is a writer, journalist, corporate communicator and marketer, volunteer for causes and social activist. Born and brought up in India, Obadya is associated with the Indian Student Parliament."
         },
         {
             name: 'IEYS',
             'speaker_name':'Sumit Rajwade',
             'photo':'/images/sumit.jpg',
-            'designation':'Sumit Rajwade has been associated with Rediff India for nearly 20 years now. He started his career as a trainee programmer and is now the Vice President Technology for Rediff India. He is a down to earth person who has the solution for almost all the problems. He has an active interest in algorithms, data mining and search query analysis and specialises n technology management.'
+            'designation':'Sumit Rajwade has been associated with Rediff India for nearly 20 years now. He started his career as a trainee programmer and is now the Vice President Technology for Rediff India.'
         },
 
         {
@@ -84,16 +84,10 @@ controllers.speakers=function($scope){
             photo:'/images/vivek.png',
             designation:'Mr. Vivek Karwa is a Certified Personal Financial Planner, Investment Adviser and Trainer. He'+
 
-            'is one of the most reputed and recognized Financial Planner, Investment Advisor and trainer'+
+            'is one of the most reputed and recognized Financial Planner, Investment Advisor and trainer '+
 
-            'across spectrum of clients, from Individuals to Ultra-HNIs, Salaries-Businessmen- Professionals,'+
-
-            'Celebrities etc.,. He has an experience of more than 16 years in the world of Financial Services'+
-
-            ' Stock Market. His Expertise are Comprehensive Personal Financial Planning, Equity Research'+
-
-            'and Wealth Management.'
-        },
+            'across spectrum of clients.'
+        }
         /* {
          name:'Do It Yourself',
          speaker_name:'Mr.P Murali',
