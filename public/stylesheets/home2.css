@@ -886,6 +886,14 @@ h1
 {
   text-align: center;
 }
+.dates
+{
+    margin-left: 10%;
+}
+.date
+{
+    padding-left: 0.5%;
+}
 li .modal-trigger{
     padding-left: 0;
 }

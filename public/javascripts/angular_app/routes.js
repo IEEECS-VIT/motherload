@@ -50,6 +50,9 @@ app.config(function ($routeProvider) {
         }).when('/accommodation',{
                 templateUrl:'/accommodation',
                 controller: 'accommodation'
-            }).otherwise({redirect:'/'});
+            }).when('/accommodation',{
+            templateUrl:'/accommodation',
+            controller: 'accommodation'
+        }).otherwise({redirect:'/'});
 });
 
