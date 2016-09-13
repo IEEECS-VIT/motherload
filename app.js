@@ -22,12 +22,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET || 'randomsecretstring', {signed: true}));
 app.use(express.static(path.join(__dirname, 'public')));
-var mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/gravitas16';
+//var mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/gravitas16';
 
 //cloudinary.config(process.env.CLOUDINARY_URL);
 //console.log('Cloudinary set');
 
-app.use(mongodb(mongoURI));
+//app.use(mongodb(mongoURI));
 
 app.use('/', routes);
 app.use('/users', users);
