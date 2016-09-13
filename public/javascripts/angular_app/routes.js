@@ -48,9 +48,9 @@ app.config(function ($routeProvider) {
             templateUrl:'/papers',
             controller: 'papers'
         }).when('/accommodation',{
-                templateUrl:'/accommodation',
-                controller: 'accommodation'
-            }).when('/speakers',{
+            templateUrl:'/accommodation',
+            controller: 'accommodation'
+        }).when('/speakers',{
             templateUrl:'/speakers',
             controller: 'speakers'
         })
