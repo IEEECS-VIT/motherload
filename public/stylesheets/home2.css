@@ -557,10 +557,7 @@ nav
     margin-top: 0px;
     margin-left:5px;
 }
-#vit
-{
-    color: white; font-size: 3em; font-weight: 500; margin-top:2%;
-}
+
 
 .brand-logo img{
     width: 130px;
@@ -802,6 +799,7 @@ footer.page-footer {
     }
 
     #gravitas-logo {
+
         left: 0;
         margin-left: 2%;
         transform: translateX(0);
