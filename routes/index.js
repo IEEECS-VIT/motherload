@@ -224,7 +224,10 @@ router.get('/accommodation',function(req,res){
 });
 router.get('/tcs',function(req,res){
     request("https://superproxy-143010.appspot.com/query?id=ahNzfnN1cGVycHJveHktMTQzMDEwchULEghBcGlRdWVyeRiAgICAuqiOCgw", function(error, response, body) {
-        res.send(JSON.parse(body).rows);
+        if(error){console.log(error)}
+        else{
+                  res.send(JSON.parse(body).rows);
+        }
     });
 
 });
