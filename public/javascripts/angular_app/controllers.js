@@ -1044,7 +1044,7 @@ controllers.organizers = function($scope){
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799095/organizers16/Ayush_Agarwal_web.jpg',
         name:'Ayush Agarwal',
-        committee: 'Web'
+        committee: 'Technical'
     },
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799226/organizers16/Ayush_Jain_P___M.jpg',
@@ -1324,7 +1324,7 @@ controllers.organizers = function($scope){
         {
             url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799839/organizers16/Shivam_Mathur_web.jpg',
             name:'Shivam Mathur',
-            committee: 'Web'
+            committee: 'Technical'
         },{
             url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799700/organizers16/Jerowin_S___S.jpg',
             name:'Jerowin',
