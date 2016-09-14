@@ -1101,11 +1101,7 @@ controllers.organizers = function($scope){
         name:'Hemanth Varma',
         committee: 'S & S'
     },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799700/organizers16/Jerowin_S___S.jpg',
-        name:'Jerowin',
-        committee: 'S & S'
-    },
+
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798515/organizers16/KARAN_PITTIE_Events.jpg',
         name:'Karan Pittie',
@@ -1121,7 +1117,7 @@ controllers.organizers = function($scope){
         committee: 'S & S'
     },
     {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798697/organizers16/KARTHIK_GOWTHAM_S_n_S.jpg',
+        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798697/organizers16/Khushbu_R___R.jpg',
         name:'Khushbu',
         committee: 'R & R'
     },
@@ -1204,11 +1200,6 @@ controllers.organizers = function($scope){
         committee: 'GC'
     },
     {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799634/organizers16/Sandeep_Yadav_P___M.jpg',
-        name:'Sandeep Yadav',
-        committee: 'P & M'
-    },
-    {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799753/organizers16/SANJU_YAMASANI_Hall.jpg',
         name:'Sanju Yamasani',
         committee: 'Hall'
@@ -1227,11 +1218,6 @@ controllers.organizers = function($scope){
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799755/organizers16/Sharath_Chandra_gc.jpg',
         name:'Sharath Chandra',
         committee: 'GC'
-    },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799839/organizers16/Shivam_Mathur_web.jpg',
-        name:'Shivam Mathur',
-        committee: 'Web'
     },
 
     {
@@ -1284,11 +1270,7 @@ controllers.organizers = function($scope){
         name:'Sreejith',
         committee: 'Purchase'
     },
-        {
-            url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_center,h_100,w_100/v1473799990/organizers16/Syed_Shoeb_P___M.jpg',
-            name:'Syed Shoeb',
-            committee:'P & M'
-        },
+
         {
             url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800186/organizers16/T_L_R_CH_GUPTA_Hall.jpg',
             name:'T L R CH Gupta',
@@ -1338,7 +1320,26 @@ controllers.organizers = function($scope){
 
 
     ];
-
+    $scope.arrear = [
+        {
+            url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799839/organizers16/Shivam_Mathur_web.jpg',
+            name:'Shivam Mathur',
+            committee: 'Web'
+        },{
+            url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799700/organizers16/Jerowin_S___S.jpg',
+            name:'Jerowin',
+            committee: 'S & S'
+        },
+        {
+            url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799634/organizers16/Sandeep_Yadav_P___M.jpg',
+            name:'Sandeep Yadav',
+            committee: 'P & M'
+        }, {
+            url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_center,h_100,w_100/v1473799990/organizers16/Syed_Shoeb_P___M.jpg',
+            name:'Syed Shoeb',
+            committee:'P & M'
+        }
+    ];
     $scope.formTeam=function(){
         for( var i =0; i<$scope.organizer.length;i++){
             var a=$scope.organizer[i].committee;
