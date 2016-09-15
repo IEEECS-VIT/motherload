@@ -1063,7 +1063,7 @@ controllers.organizers = function($scope){
     },
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799289/organizers16/DBOLEENA_GC.jpg',
-        name:'Dboleena',
+        name:'Deboleena',
         committee: 'GC'
     },
     {
@@ -1167,7 +1167,7 @@ controllers.organizers = function($scope){
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799230/organizers16/Rashmi_P___M.jpg',
         name:'Rashmi',
-        committee: 'R & R'
+        committee: 'P & M'
     },
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799382/organizers16/RITWIKA_CHAKRABORTI_Media.jpg',
@@ -1262,7 +1262,7 @@ controllers.organizers = function($scope){
     },
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800067/organizers16/SONALI_R_n_R.jpg',
-        name:'Sonali',
+        name:'Sonali Kashyap',
         committee: 'R & R'
     },
     {
@@ -1278,7 +1278,7 @@ controllers.organizers = function($scope){
         },
         {
             url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800198/organizers16/Tarun_R___R.jpg',
-            name:'Tarun',
+            name:'Tarun Parbhat',
             committee:'R & R'
         },
         {
