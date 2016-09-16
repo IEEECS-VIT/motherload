@@ -9,68 +9,32 @@
 
                                 <div class="col s12 l12 m12">
                                     <ul class="tabs">
-                                        <li class="tab col s3"><a class="active" href="#tenth" >10 Sept</a></li>
-                                        <li class="tab col s3"><a class="" href="#eleventh">11 Sept</a></li>
-                                        <li class="tab col s3"><a class="" href="#seventeenth">17 Sept</a></li>
-                                        <li class="tab col s3"><a class="" href="#eighteenth">18 Sept</a></li>
-                                        <li class="tab col s3"><a class="" href="#twentieth">20 Sept</a></li>
-                                        <li class="tab col s3"><a class="" href="#twentyone">21 Sept</a></li>
-                                        <li class="tab col s3"><a class="" href="#twentythree">23 Sept</a></li>
-                                        <li class="tab col s3"><a class="" href="#twentyfour">24 Sept</a></li>
-                                        <li class="tab col s3"><a class="" href="#twentyfive">25 Sept</a></li>
+                                        <li class="tab col s3"><a class="active" href="#tenth" ng-click="showSchedule('10-09-2016')">10 Sept</a></li>
+                                        <li class="tab col s3"><a class="" href="#eleventh" ng-click="showSchedule('11-09-2016')">11 Sept</a></li>
+                                        <li class="tab col s3"><a class="" href="#seventeenth" ng-click="showSchedule('17-09-2016')">17 Sept</a></li>
+                                        <li class="tab col s3"><a class="" href="#eighteenth" ng-click="showSchedule('18-09-2016')">18 Sept</a></li>
+                                        <li class="tab col s3"><a class="" href="#twentieth" ng-click="showSchedule('20-09-2016')">20 Sept</a></li>
+                                        <li class="tab col s3"><a class="" href="#twentyone" ng-click="showSchedule('21-09-2016')">21 Sept</a></li>
+                                        <li class="tab col s3"><a class="" href="#twentythree" ng-click="showSchedule('23-09-2016')">23 Sept</a></li>
+                                        <li class="tab col s3"><a class="" href="#twentyfour" ng-click="showSchedule('24-09-2016')">24 Sept</a></li>
+                                        <li class="tab col s3"><a class="" href="#twentyfive" ng-click="showSchedule('25-09-2016')">25 Sept</a></li>
                                     </ul>
 
                                 </div>
                             </div>
                         <hr class="fixed">
                         <div class="container actual-schedule">
-
-
                             <div class="row">
-                                <div class="col s4 l4 m4 center"><h4>Event Name</h4></div>
-                                <div class="col s4 m4 l4 center"><h4>Timing</h4></div>
-                                <div class="col s4 m4 l4 center"><h4>Location</h4></div>
+                                <div class="col s4 m4 l4"><h4 class="center">Event Name</h4></div>
+                                <div class="col s4 m4 l4"><h4 class="center">Time</h4></div>
+                                <div class="col s4 m4 l4"><h4 class="center">Venue</h4></div>
                             </div>
-                            <div id="tenth" class="row"  >
+                            <div class="row" ng-repeat="s in schedule" ng-show="s.startDate==selectedDate">
 
-                                    <div class="col s4 l4 m4 center" ng-repeat="i in range(0,date.tenth.length)"><p>{{date.tenth[i]}}</p></div>
-                            </div>
-                            <div id="eleventh" class="row">
-                                <div class="col s4 l4 m4 center" ng-repeat="i in range(0,date.eleventh.length)"><p>{{date.eleventh[i]}}</p></div>
+                                <div class="col s4 m4 l4"><p class="center">{{s.name}}</p></div>
+                                <div class="col s4 m4 l4"><p class="center" ng-repeat="i in range(0,s.startTime.length,1)">{{s.startTime[i]}}-{{s.endTime[i]}}<br></p></div>
+                                <div class="col s4 m4 l4"><p class="center" ng-repeat="i in range(0,s.venue.length,1)">{{s.venue[i]}}<br></p></div>
 
-
-                            </div>
-                            <div id="seventeenth" class="row">
-                                <div class="col s4 l4 m4 center" ng-repeat="i in range(0,date.seventeenth.length)"><p>{{date.seventeenth[i]}}</p></div>
-
-                            </div>
-                            <div id="eighteenth" class="row" >
-                                <div class="col s4 l4 m4 center" ng-repeat="i in range(0,date.eighteenth.length)"><p>{{date.eighteenth[i]}}</p></div>
-
-                            </div>
-                            <div id="twentieth" class="row">
-                                <div class="col s4 l4 m4 center" ng-repeat="i in range(0,date.twentieth.length)"><p>{{date.twentieth[i]}}</p></div>
-
-                            </div>
-                            <div id="twentyone" class="row" >
-                                <div class="col s4 l4 m4 center" ng-repeat="i in range(0,date.twentyone.length)"><p>{{date.twentyone[i]}}</p></div>
-
-                            </div>
-                            <div id="twentythree" class="row" >
-                                <div class="col s4 l4 m4 center" ng-repeat="i in range(0,date.twentythree.length)"><p>{{date.twentythree[i]}}</p></div>
-
-                            </div>
-                            <div id="twentyfour" class="row" >
-                                <div class="col s4 l4 m4 center" ng-repeat="i in range(0,date.twentyfour.length)"><p>{{date.twentyfour[i]}}</p></div>
-                            </div>
-                            <div id="twentyfive" class="row">
-                                <div class="col s4 l4 m4 center" ng-repeat="i in range(0,date.twentyfive.length)"><p>{{date.twentyfive[i]}}</p></div>
-
-                            </div>
-                            <div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

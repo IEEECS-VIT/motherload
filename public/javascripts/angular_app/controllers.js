@@ -241,16 +241,9 @@ controllers.sponsors =function($scope){
     //Do same for other sponsors when they turn up
 };
 controllers.about =function($scope){};
-controllers.schedule=function($scope){
+/*controllers.schedule=function($scope){
     $scope.flag=0;
-    $scope.range = function(min, max, step) {
-        step = step || 1;
-        var input = [];
-        for (var i = min; i <= max; i += step) {
-            input.push(i);
-        }
-        return input;
-    };
+
     $scope.date=
     {
         "tenth": [
@@ -962,7 +955,7 @@ controllers.schedule=function($scope){
 
 
     }
-    };
+    };*/
 controllers.organizers = function($scope){
     $scope.teams=[];
     $scope.organizer=[
@@ -1364,7 +1357,38 @@ controllers.organizers = function($scope){
 
 };
 
+controllers.schedule=function($scope,$http){
+    $scope.schedule=[];
+    $scope.selectedDate='10-09-2016';
+    $scope.range = function(min, max, step) {
+        step = step || 1;
+        var input = [];
+        for (var i = min; i <= max; i += step) {
+            input.push(i);
+        }
+        return input;
+    };
+    console.log('jekt');
+    $http.get("http://schedule2016.herokuapp.com/api").then(function (response){
+        $scope.mydata=response.data;
+        console.log($scope.mydata[0]);
+        for(var i=0;i<$scope.mydata.length;i++){
+            var x=$scope.mydata[i];
 
+            var y={
+                'name': x.name,
+                'startDate':x.startDate,
+                'startTime': x.startTime[0].split(";"),
+                'endTime': x.endTime[0].split(";"),
+                'venue': x.venue[0].split(";")
+            };
+            $scope.schedule.push(y);
+        }
+        $scope.showSchedule=function(a){
+            $scope.selectedDate=a;
+        }
+    });
+};
 controllers.accommodation = function($scope){};
 controllers.papers = function($scope){};
 

@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var mongoUsers = require(path.join(__dirname, '..', 'db', 'mongo-users'));
 var bcrypt;
+
 var request = require('request');
 var record = {
     _id: '',
@@ -26,9 +27,10 @@ catch (err)
     }
 }
 var app = express();
-app.use(require('cors')());
-var router = express.Router();
 
+var router = express.Router();
+var cors=require('cors');
+app.use(cors());
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('templates/index');
