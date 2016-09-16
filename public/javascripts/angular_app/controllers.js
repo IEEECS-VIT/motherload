@@ -1,4 +1,4 @@
-var controllers = {};
+﻿var controllers = {};
 controllers.main =function($scope) {};
 controllers.speakers=function($scope){
     $scope.speakers=[
@@ -966,31 +966,26 @@ controllers.schedule=function($scope){
 controllers.organizers = function($scope){
     $scope.teams=[];
     $scope.organizer=[
+	{
+        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798561/organizers16/AKASH_MISHRA_Events.jpg',
+        name:'Akash Mishra',
+        committee: 'Events'
+    },{
+        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798455/organizers16/Akhil_Ranjan_P___M.jpg',
+        name:'Akhil Ranjan',
+        committee: 'P & M'
+    },{
+        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798505/organizers16/ANANYA_DAS_R_n_R.jpg',
+        name:'Ananya Das',
+        committee: 'R & R'
+    },
     {
         url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800389/organizers16/Aayush_media.jpg',
         name:'Aayush',
         committee: 'Media'
     },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800487/organizers16/ABRAHAM_Purchase.jpg',
-        name:'Abraham',
-        committee: 'Purchase'
-    },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800462/organizers16/Akanksha_M_P___M.jpg',
-        name:'Akanksha M',
-        committee: 'P & M'
-    },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798561/organizers16/AKASH_MISHRA_Events.jpg',
-        name:'Akash Mishra',
-        committee: 'Events'
-    },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798455/organizers16/Akhil_Ranjan_P___M.jpg',
-        name:'Akhil Ranjan',
-        committee: 'P & M'
-    },
+    
+    
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798470/organizers16/Amit_Kumar_gc.jpg',
         name:'Amit Kumar',
@@ -1001,11 +996,7 @@ controllers.organizers = function($scope){
         name:'Anant Goyal',
         committee: 'P & M'
     },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798505/organizers16/ANANYA_DAS_R_n_R.jpg',
-        name:'Ananya Das',
-        committee: 'R & R'
-    },
+    
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798563/organizers16/Anish_Kumar_P___M.jpg',
         name:'Anish Kumar',
@@ -1077,11 +1068,6 @@ controllers.organizers = function($scope){
         committee: 'Design'
     },
     {
-        url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799389/organizers16/Dinesh_Bishnoi_sales.jpg',
-        name:'Dinesh Bishnoi',
-        committee: 'Sales'
-    },
-    {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_center,h_100,w_100/v1473799459/organizers16/Geerththanna_gc.jpg',
         name:'Geerththanna',
         committee: 'GC'
@@ -1127,19 +1113,9 @@ controllers.organizers = function($scope){
         committee: 'Hall'
     },
     {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798677/organizers16/Lakshya_media.jpg',
-        name:'Lakshya',
-        committee: 'Media'
-    },
-    {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798721/organizers16/Nikhil_Mathur_R___R.jpg',
         name:'Nikhil Mathur',
         committee: 'R & R'
-    },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799036/organizers16/NITISH_TADIKONDA_Hall.jpg',
-        name:'Nitish Tadikonda',
-        committee: 'Hall'
     },
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798890/organizers16/Paramita_P___M.jpg',
@@ -1147,7 +1123,7 @@ controllers.organizers = function($scope){
         committee: 'P & M'
     },{
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799046/organizers16/PRANAV_ORI_Events.jpg',
-        name:'Pranav Ori',
+        name:'Pranav Ohri',
         committee: 'Events'
     },{
         url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798989/organizers16/Pranjal_Singh_P___M.jpg',
@@ -1182,12 +1158,7 @@ controllers.organizers = function($scope){
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799355/organizers16/Rony_P___M.jpg',
         name:'Rony',
-        committee: 'P & M'
-    },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799505/organizers16/ROOP_SAGAR_S_n_S.jpg',
-        name:'Roop Sagar',
-        committee: 'S & S'
+        committee: 'Events'
     },
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799514/organizers16/Sairam_R___R.jpg',
@@ -1242,7 +1213,7 @@ controllers.organizers = function($scope){
     },
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799942/organizers16/Shubham_Sarwagi_events.jpg',
-        name:'Shubham Sarwagi',
+        name:'Shubham Sarawagi',
         committee: 'Events'
     },
     {
@@ -1264,11 +1235,6 @@ controllers.organizers = function($scope){
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800067/organizers16/SONALI_R_n_R.jpg',
         name:'Sonali Kashyap',
         committee: 'R & R'
-    },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800195/organizers16/SREEJITH_Purchase.jpg',
-        name:'Sreejith',
-        committee: 'Purchase'
     },
 
         {
@@ -1321,6 +1287,12 @@ controllers.organizers = function($scope){
 
     ];
     $scope.arrear = [
+,
+    {
+        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800462/organizers16/Akanksha_M_P___M.jpg',
+        name:'Akanksha M',
+        committee: 'P & M'
+    },
         {
             url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799839/organizers16/Shivam_Mathur_web.jpg',
             name:'Shivam Mathur',
@@ -1338,7 +1310,37 @@ controllers.organizers = function($scope){
             url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_center,h_100,w_100/v1473799990/organizers16/Syed_Shoeb_P___M.jpg',
             name:'Syed Shoeb',
             committee:'P & M'
-        }
+        },
+    {
+        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799036/organizers16/NITISH_TADIKONDA_Hall.jpg',
+        name:'Nitish Tadikonda',
+        committee: 'Hall'
+    },
+    {
+        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800195/organizers16/SREEJITH_Purchase.jpg',
+        name:'Sreejith',
+        committee: 'Purchase'
+    },
+    {
+        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800487/organizers16/ABRAHAM_Purchase.jpg',
+        name:'Abraham',
+        committee: 'Purchase'
+    },
+    {
+        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798677/organizers16/Lakshya_media.jpg',
+        name:'Lakshya',
+        committee: 'Media'
+    },
+    {
+        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799505/organizers16/ROOP_SAGAR_S_n_S.jpg',
+        name:'Roop Sagar',
+        committee: 'S & S'
+    },
+    {
+        url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799389/organizers16/Dinesh_Bishnoi_sales.jpg',
+        name:'Dinesh Bishnoi',
+        committee: 'Sales'
+    }
     ];
     $scope.formTeam=function(){
         for( var i =0; i<$scope.organizer.length;i++){
