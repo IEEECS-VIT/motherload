@@ -53,6 +53,9 @@ app.config(function ($routeProvider) {
         }).when('/speakers',{
             templateUrl:'/speakers',
             controller: 'speakers'
+        }).when('/tcsHack',{
+            templateUrl:'/tcsHack',
+            controller:'/tcsHack'
         })
 });
 
