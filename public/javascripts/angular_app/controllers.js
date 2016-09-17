@@ -1050,11 +1050,7 @@ controllers.organizers = function($scope){
         name:'Deboleena',
         committee: 'GC'
     },
-    {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799273/organizers16/Deepanshu_Dixit_P___M.jpg',
-        name:'Deepanshu Dixit',
-        committee: 'P & M'
-    },
+
     {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_center,h_100,w_100/v1473799436/organizers16/Dhiraj_Jhunjhunwala_Design.jpg',
         name:'Dhiraj Jhunjhunwala',
@@ -1273,6 +1269,27 @@ controllers.organizers = function($scope){
         {
             url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800357/organizers16/Yashveer_P___M.jpg',
             name:'Yashveer',
+            committee:'P & M'
+        },
+        {
+            url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,w_100/v1474105435/ABHISHEK_BALAJI-SPONSORSHIP.jpg',
+            name:'Abhishek Balaji',
+            committee:'SPONSORSHIP'
+        },
+        {
+            url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1474106041/UMANG_GOLCHHA-R_R.jpg',
+            name:'Umang Golcha',
+            committee:'R & R'
+        },
+        {
+            url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1474105922/NISHIT_BHOJANI-GC.jpg',
+            name:'Nishit Bhojani',
+            committee:'GC'
+
+        },
+        {
+            url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1474107010/20160914-DSC_1447.jpg',
+            name:'Ish Kumar Bansal',
             committee:'P & M'
         }
 
