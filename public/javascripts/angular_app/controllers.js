@@ -1026,7 +1026,7 @@ controllers.organizers = function($scope){
         committee: 'Media'
     },
     {
-        url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473799095/organizers16/Ayush_Agarwal_web.jpg',
+        url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1474107859/ayush.jpg',
         name:'Ayush Agarwal',
         committee: 'Technical'
     },
@@ -1274,7 +1274,7 @@ controllers.organizers = function($scope){
         {
             url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,w_100/v1474105435/ABHISHEK_BALAJI-SPONSORSHIP.jpg',
             name:'Abhishek Balaji',
-            committee:'SPONSORSHIP'
+            committee:'S & S'
         },
         {
             url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1474106041/UMANG_GOLCHHA-R_R.jpg',
