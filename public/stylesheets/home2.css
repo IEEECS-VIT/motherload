@@ -1244,6 +1244,10 @@ h5{
 
 
 }
+.image
+{
+    margin-top: -15%;
+}
 .speakers .card-l{
     border-bottom-left-radius: 100px;
     border-top-left-radius: 100px;
@@ -1259,5 +1263,5 @@ h5{
 }
 .main
 {
-    width:85%;
+
 }
