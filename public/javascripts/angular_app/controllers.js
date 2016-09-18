@@ -1305,7 +1305,7 @@ controllers.organizers = function($scope){
         {
             url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1474191986/facebook_1473616629411.jpg',
             name:'Rahul Kant Tiwari',
-            committee:'Media'
+            committee:'Sponsorship And Stalls'
         }
 
 
