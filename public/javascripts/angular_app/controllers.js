@@ -220,6 +220,11 @@ function titleCase(x){
     var word = x.charAt(0).toUpperCase()+ x.slice(1);
     return word;
 }
+app.filter('capitalize', function() {
+    return function (input) {
+        return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+    }
+});
 controllers.team =function($scope){
     $scope.chief = [
         {
@@ -1306,6 +1311,11 @@ controllers.organizers = function($scope){
             url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1474191986/facebook_1473616629411.jpg',
             name:'Rahul Kant Tiwari',
             committee:'Sponsorship And Stalls'
+        },
+        {
+            url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1474196796/PAVAN_EVENTS.jpg',
+            name:'Pavan Kumar',
+            committee:'Events'
         }
 
 

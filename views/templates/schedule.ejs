@@ -31,7 +31,7 @@
                             </div>
                             <div class="row" ng-repeat="s in schedule" ng-show="s.startDate==selectedDate">
 
-                                <div class="col s4 m4 l4"><p class="center">{{s.name}}</p></div>
+                                <div class="col s4 m4 l4"><p class="center">{{s.name|capitalize}}</p></div>
                                 <div class="col s4 m4 l4"><p class="center" ng-repeat="i in range(0,s.startTime.length,1)">{{s.startTime[i]}}-{{s.endTime[i]}}<br></p></div>
                                 <div class="col s4 m4 l4"><p class="center" ng-repeat="i in range(0,s.venue.length,1)">{{s.venue[i]}}<br></p></div>
 
