@@ -1244,6 +1244,7 @@ h5{
 
 
 }
+
 .image
 {
     margin-top: -15%;
@@ -1270,4 +1271,10 @@ h5{
 .main .con
 {
     padding: 1px;
+    font-size: small;
+}
+.main
+{
+    width:50%;
+    margin-left: 50%;
 }
