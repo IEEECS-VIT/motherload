@@ -977,6 +977,11 @@ controllers.organizers = function($scope){
         name:'Ananya Das',
         committee: 'Registration And Reception'
     },
+        {
+            url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1474371180/SANTOSH_VADDI_EVENTS.jpg',
+            name:'Santosh Vaddi',
+            committee:'Events'
+        },
     {
         url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473800389/organizers16/Aayush_media.jpg',
         name:'Aayush Poddar',
