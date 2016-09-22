@@ -972,7 +972,13 @@ controllers.organizers = function($scope){
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798455/organizers16/Akhil_Ranjan_P___M.jpg',
         name:'Akhil Ranjan',
         committee: 'Publicity And Marketing'
-    },{
+    },
+        {
+            url:'http://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_300,w_300/v1474530356/Vinay.jpg',
+            name:'Vinay Gupta',
+            committee:'Technical'
+        },
+        {
         url:'https://res.cloudinary.com/events-gravitas/image/upload/c_thumb,g_north,h_100,w_100/v1473798505/organizers16/ANANYA_DAS_R_n_R.jpg',
         name:'Ananya Das',
         committee: 'Registration And Reception'
