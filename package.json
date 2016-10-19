@@ -21,7 +21,7 @@
     "express-mongo-db": "^2.0.3",
     "finalhandler": "^0.4.1",
     "google-auth-library": "^0.9.8",
-    "googleapis": "^12.4.0",
+    "googleapis": "^14.1.0",
     "jfum": "^1.0.3",
     "mongodb": "^2.0.46",
     "mongoose": "^4.6.0",
