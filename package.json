@@ -26,7 +26,7 @@
     "mongodb": "^2.0.46",
     "mongoose": "^4.6.0",
     "morgan": "^1.6.0",
-    "multer": "^1.1.0",
+    "multer": "^1.2.1",
     "request": "^2.74.0"
   },
   "cacheDirectories": [
