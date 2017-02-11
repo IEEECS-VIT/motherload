@@ -24,7 +24,7 @@
     "googleapis": "^12.4.0",
     "jfum": "^1.0.3",
     "mongodb": "^2.0.46",
-    "mongoose": "^4.6.0",
+    "mongoose": "^4.8.2",
     "morgan": "^1.6.0",
     "multer": "^1.1.0",
     "request": "^2.74.0"
