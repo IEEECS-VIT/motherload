@@ -19,7 +19,7 @@
     "ejs": "~2.3.1",
     "express": "^4.4.4",
     "express-mongo-db": "^2.0.3",
-    "finalhandler": "^0.4.1",
+    "finalhandler": "^1.0.0",
     "google-auth-library": "^0.9.8",
     "googleapis": "^12.4.0",
     "jfum": "^1.0.3",
