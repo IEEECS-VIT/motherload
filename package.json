@@ -27,7 +27,7 @@
     "mongoose": "^4.6.0",
     "morgan": "^1.6.0",
     "multer": "^1.1.0",
-    "request": "^2.74.0"
+    "request": "^2.80.0"
   },
   "cacheDirectories": [
     "public/bower"
