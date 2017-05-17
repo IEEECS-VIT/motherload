@@ -17,7 +17,7 @@
     "cors": "^2.8.1",
     "debug": "^2.2.0",
     "ejs": "~2.3.1",
-    "express": "^4.4.4",
+    "express": "^4.15.3",
     "express-mongo-db": "^2.0.3",
     "finalhandler": "^0.4.1",
     "google-auth-library": "^0.9.8",
