@@ -9,7 +9,7 @@
   "dependencies": {
     "bcrypt": "^0.8.5",
     "bcryptjs": "^2.3.0",
-    "body-parser": "^1.14.2",
+    "body-parser": "^1.17.2",
     "bower": "^1.5.2",
     "chai": "^3.5.0",
     "connect-rest": "^2.8.0",
